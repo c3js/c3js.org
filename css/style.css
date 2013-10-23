@@ -1,0 +1,26 @@
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fdfdfd;
+}
+.main {
+  padding: 30px 15px;
+  text-align: center;
+}
+#chart {
+  margin: 0px auto;
+  text-align: center;
+}
+
+#message {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+#link {
+  margin-top: 48px;
+  text-align: center;
+}
+#link .git-icon {
+  height: 24px;
+}
