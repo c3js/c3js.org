@@ -1,71 +1,84 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
+    <meta name="description" content="D3 based reusable chart library">
     <meta name="author" content="Masayuki Tanaka">
-<!--    <link rel="shortcut icon" href="../../assets/ico/favicon.png">-->
-    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+<!--    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">-->
 
-    <title>C3.js</title>
+    <title>C3.js - D3-based chart library</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="/css/style.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="../../assets/js/html5shiv.js"></script>
-      <script src="../../assets/js/respond.min.js"></script>
-    <![endif]-->
-
     <!-- CSS for C3 -->
     <link rel="stylesheet" type="text/css" href="/css/c3.css">
+
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="{{ page.base_url }}docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
   </head>
 
-  <body style="">
-
-    <!--
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Project name</a>
-        </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    -->
-
+  <body>
     <div class="container">
 
-      <div class="main">
-        <h1>C3.js</h1>
-        <p class="lead">Integrate charts into web applications more deeply.</p>
+      <div class="page-header" style="margin-top:0;">
+        <h1 style="float:left;">C3.js <small>D3-based reusable chart library</small></h1>
+        <div id="link">
+          <a href="https://github.com/masayuki0812/c3" target="_blank"><img src="/img/GitHub-Mark-64px.png" class="git-icon"></a>
+        </div>
+        <div class="clearfix"></div>
       </div>
 
-      <div id="message">Starting Demo..</div>
-
-      <div id="chart"></div>
-
-      <div id="link">
-        <a href="https://github.com/masayuki0812/c3"><img src="/img/GitHub-Mark-64px.png" class="git-icon"></a>
+      <div style="margin-top: 42px;">
+        <div id="message">
+          <button type="button" class="btn btn-primary" onclick="startDemo();">Start Demo</button>
+        </div>
+        <div id="chart"></div>
       </div>
-    </div><!-- /.container -->
 
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+      <div class="page-header" style="margin-top:20px;">
+        <h2>Tips</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Heading</h3>
+          <p>hohohoho</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+          <h3>Heading</h3>
+          <p>aaa</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-md-4">
+          <h3>Heading</h3>
+          <p>hogehoge.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr style="margin-bottom:10px;">
+
+      <footer>
+        <p>&copy; Masayuki Tanaka 2013</p>
+      </footer>
+    </div> <!-- /container -->
+
+    <script src="/js/jquery-1.10.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+    <script src="/js/d3.min.js"></script>
     <script src="/js/c3.min.js"></script>
     <script>
       var chart = c3.generate({
@@ -87,11 +100,7 @@
     </script>
 
     <script>
-      function setMessage(message) {
-        document.getElementById('message').innerHTML = message;
-      }
-
-      var functions = [
+      var defaultMessage = $('#message').html(), currentIndex = 0, timer, demos = [
         function () {
           chart.load({
             columns: [['data2', 100, 30, 200, 320, 50, 150, 230, 80, 150]]
@@ -187,20 +196,23 @@
         }
       ];
 
-      var currentIndex = 0;
-      setInterval(function(){
-        if (currentIndex == functions.length) currentIndex = 0;
-        functions[currentIndex++]();
-      }, 2000);
-    </script>
+      function setMessage(message) {
+        document.getElementById('message').innerHTML = '<button id="demoMessage" type="button" class="btn btn-default" onclick="stopDemo();" data-toggle="tooltip" data-animation="false" title="Stop Demo" onclick="stopDemo();">'+message+'</button>';
+//        $('#demoMessage').tooltip('toggle');
+      }
 
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-42896059-3', 'c3js.org');
-      ga('send', 'pageview');
+      function startDemo() {
+        setMessage('Starting Demo..');
+        timer = setInterval(function(){
+          if (currentIndex == demos.length) currentIndex = 0;
+          demos[currentIndex++]();
+        }, 2000);
+      }
+
+      function stopDemo() {
+        clearInterval(timer);
+        document.getElementById('message').innerHTML = defaultMessage;
+      }
     </script>
   </body>
 </html>
