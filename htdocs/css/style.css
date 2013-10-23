@@ -4,6 +4,9 @@ body {
 footer {
   text-align: right;
 }
+footer hr {
+  margin-bottom: 10px;
+}
 
 #chart {
   margin: 0px auto;
@@ -25,6 +28,15 @@ footer {
   height: 32px;
 }
 
+.nav {
+  margin: 8px 0;
+}
+.page-header.title, .page-header.title h1 {
+  margin-top: 0;
+}
+.chart {
+  margin-top: 42px;
+}
 .sourcecode pre {
   background-color: #fdfdfd;
   border: none;
