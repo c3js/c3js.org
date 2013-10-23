@@ -32,7 +32,7 @@ footer hr {
   margin: 8px 0;
 }
 .page-header.title, .page-header.title h1 {
-  margin-top: 0;
+  margin-top: 12px;
 }
 .chart {
   margin-top: 42px;
