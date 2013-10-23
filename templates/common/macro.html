@@ -1,0 +1,28 @@
+{% macro generate(title, name) -%}
+<!DOCTYPE html>
+<html lang="en">
+  {% include 'common/header.html' %}
+  <body>
+    <div class="container">
+
+      <div class="page-header" style="margin-top:0;">
+        <h1>{{ title }}</h1>
+      </div>
+
+      <div style="margin-top: 42px;">
+        <div id="chart"></div>
+      </div>
+
+      <div class="sourcecode">
+        <h3># {{ name }}.js</h3>
+        <pre><code class="html javascript">{{ name|to_code }}</code></pre>
+      </div>
+
+    </div>
+
+    {% include 'common/scripts.html' %}
+    <script src="/js/samples/{{ name }}.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+{%- endmacro %}

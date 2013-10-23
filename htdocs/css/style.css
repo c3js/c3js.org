@@ -24,3 +24,17 @@ footer {
 #link .git-icon {
   height: 32px;
 }
+
+.sourcecode pre {
+  background-color: #fdfdfd;
+  border: none;
+  border-radius: 0;
+  padding: 12px 0px;
+  font-size: 1.2em;
+}
+.sourcecode h3 {
+  margin-left: 4px;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
