@@ -9,6 +9,7 @@ footer hr {
 }
 
 #chart {
+  height: 280px;
   margin: 0px auto;
   text-align: center;
 }
