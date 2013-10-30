@@ -54,3 +54,17 @@ footer hr {
   padding-bottom: 8px;
   border-bottom: 1px solid #eee;
 }
+.section > h2 {
+  color: #333;
+  margin-left: 24px;
+}
+.section > h2 > a{
+  color: #aaa;
+  position: absolute;
+  left: 50px;
+  width: 100%;
+  line-height: 1.2em;
+}
+.section > div {
+  padding-left: 26px;
+}
