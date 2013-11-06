@@ -40,7 +40,7 @@
       </div>
 
       <div class="page-header title">
-        <h1>Simple Chart</h1>
+        <h1>Row Oriented Data</h1>
       </div>
 
       <div class="chart">
@@ -48,11 +48,17 @@
       </div>
 
       <div class="sourcecode">
-        <h3># simple.js</h3>
+        <h3># data_rowed.js</h3>
         <pre><code class="html javascript">var chart = c3.generate({
     data: {
-        columns: [
-            ['sample', 30, 200, 100, 400, 150, 250]
+        rows: [
+            ['data1', 'data2', 'data3'],
+            [90, 120, 300],
+            [40, 160, 240],
+            [50, 200, 290],
+            [120, 160, 230],
+            [80, 130, 300],
+            [90, 220, 320],
         ]
     }
 });
@@ -70,7 +76,7 @@
 <script src="/js/highlight.pack.js"></script>
 <script src="/js/d3.min.js"></script>
 <script src="/js/c3.min.js?v=20131105"></script>
-    <script src="/js/samples/simple.js"></script>
+    <script src="/js/samples/data_rowed.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
