@@ -13,6 +13,7 @@ Define Vars
 pwd = os.path.dirname(os.path.abspath(__file__))
 html_dir = '%s/../htdocs/samples' % pwd
 js_dir = '%s/../htdocs/js/samples' % pwd
+data_dir = '%s/../htdocs/data' % pwd
 template_dir = '%s/../templates' % pwd
 env = Environment(loader=FileSystemLoader(template_dir))
 
@@ -22,10 +23,14 @@ Define Functions
 def to_code(name):
     return open('%s/%s.js' % (js_dir, name)).read()
 
+def to_data(data):
+    return open('%s/%s' % (data_dir, data)).read()
+
 """
 Main
 """
 env.filters['to_code'] = to_code
+env.filters['to_data'] = to_data
 
 for path in glob.glob('%s/*.html' % template_dir):
     template_name = os.path.basename(path)

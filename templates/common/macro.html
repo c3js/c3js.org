@@ -1,4 +1,4 @@
-{% macro generate(title, name) -%}
+{% macro generate(title, name, data = None) -%}
 <!DOCTYPE html>
 <html lang="en">
   {% include 'common/header.html' %}
@@ -21,7 +21,12 @@
         <h3># {{ name }}.js</h3>
         <pre><code class="html javascript">{{ name|to_code }}</code></pre>
       </div>
-
+{% if data %}
+      <div class="sourcecode">
+        <h3># {{ data }}</h3>
+        <pre><code class="html">{{ data|to_data }}</code></pre>
+      </div>
+{% endif %}
       <footer>
         <hr>
         <p>&copy; Masayuki Tanaka 2013</p>
