@@ -1,4 +1,4 @@
-{% macro generate(title, name, data = None) -%}
+{% macro generate(title, name, data = None, data2 = None) -%}
 <!DOCTYPE html>
 <html lang="en">
   {% include 'common/header.html' %}
@@ -25,6 +25,11 @@
       <div class="sourcecode">
         <h3># {{ data }}</h3>
         <pre><code class="html">{{ data|to_data }}</code></pre>
+      </div>
+{% endif %}{% if data2 %}
+      <div class="sourcecode">
+        <h3># {{ data2 }}</h3>
+        <pre><code class="html">{{ data2|to_data }}</code></pre>
       </div>
 {% endif %}
       <footer>
