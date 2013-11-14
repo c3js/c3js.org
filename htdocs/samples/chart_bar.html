@@ -40,7 +40,7 @@
       </div>
 
       <div class="page-header title">
-        <h1>Categorized Axis</h1>
+        <h1>Bar Chart</h1>
       </div>
 
       <div class="chart">
@@ -48,12 +48,17 @@
       </div>
 
       <div class="sourcecode">
-        <h3># categorized.js</h3>
+        <h3># chart_bar.js</h3>
         <pre><code class="html javascript">var chart = c3.generate({
     data: {
         columns: [
-            ['data1', 30, 200, 100, 400, 150, 250, 50, 100, 250]
-        ]
+            ['data1', 30, 200, 100, 400, 150, 250],
+            ['data2', 130, 100, 140, 200, 150, 50]
+        ],
+        types: {
+            data1: 'bar',
+            data2: 'bar'
+        }
     },
     axis: {
         x: {
@@ -75,7 +80,7 @@
 <script src="/js/highlight.pack.js"></script>
 <script src="/js/d3.min.js"></script>
 <script src="/js/c3.min.js?v=20131114"></script>
-    <script src="/js/samples/categorized.js"></script>
+    <script src="/js/samples/chart_bar.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
