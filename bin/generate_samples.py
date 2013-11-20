@@ -21,10 +21,10 @@ env = Environment(loader=FileSystemLoader(template_dir))
 Define Functions
 """
 def to_code(name):
-    return open('%s/%s.js' % (js_dir, name)).read()
+    return open('%s/%s.js' % (js_dir, name)).read().decode('utf-8')
 
 def to_data(data):
-    return open('%s/%s' % (data_dir, data)).read()
+    return open('%s/%s' % (data_dir, data)).read().decode('utf-8')
 
 """
 Main
@@ -39,5 +39,5 @@ for path in glob.glob('%s/*.html' % template_dir):
     html_path = '%s/%s' % (html_dir, template_name)
 
     f = open(html_path, 'w')
-    f.write(html)
+    f.write(html.encode('utf-8'))
     f.close()
