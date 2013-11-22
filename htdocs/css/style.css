@@ -65,10 +65,13 @@ footer hr {
 .highlight pre {
   padding: 0 8px;
 }
+.section {
+  margin-bottom: 48px;
+}
 .section > a > h2 {
   color: #aaa;
   line-height: 1.2em;
-  margin-bottom: 7px;
+  margin-bottom: 4px;
 }
 .section > a > h2 > span {
   color: #333;
