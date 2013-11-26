@@ -40,7 +40,7 @@
       </div>
 
       <div class="page-header title">
-        <h1>Chart Size</h1>
+        <h1>Legend</h1>
       </div>
 
       <div class="chart">
@@ -48,16 +48,15 @@
       </div>
 
       <div class="sourcecode">
-        <h3># options_size.js</h3>
+        <h3># options_legend.js</h3>
         <pre><code class="html javascript">var chart = c3.generate({
-    size: {
-        height: 240,
-        width: 480
-    },
     data: {
         columns: [
             ['sample', 30, 200, 100, 400, 150, 250]
         ]
+    },
+    legend: {
+        show: false
     }
 });
 </code></pre>
@@ -74,7 +73,7 @@
 <script src="/js/highlight.pack.js"></script>
 <script src="/js/d3.min.js"></script>
 <script src="/js/c3.min.js?v=20131114"></script>
-    <script src="/js/samples/options_size.js"></script>
+    <script src="/js/samples/options_legend.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
