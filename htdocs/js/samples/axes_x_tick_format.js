@@ -10,7 +10,8 @@ var chart = c3.generate({
         x : {
             type : 'timeseries',
             tick: {
-                format: '%Y'
+                format: function (x) { return x.getFullYear(); }
+              //format: '%Y' // format string is also available for timeseries data
             }
         }
     }
