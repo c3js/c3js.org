@@ -40,7 +40,7 @@
       </div>
 
       <div class="page-header title">
-        <h1>Grid Lines</h1>
+        <h1>Area Chart</h1>
       </div>
 
       <div class="chart">
@@ -48,19 +48,16 @@
       </div>
 
       <div class="sourcecode">
-        <h3># options_gridline.js</h3>
+        <h3># chart_area.js</h3>
         <pre><code class="html javascript">var chart = c3.generate({
     data: {
         columns: [
-            ['sample', 30, 200, 100, 400, 150, 250, 120, 200]
-        ]
-    },
-    grid: {
-        x: {
-            show: true
-        },
-        y: {
-            show: true
+            ['data1', 300, 350, 300, 0, 0, 0],
+            ['data2', 130, 100, 140, 200, 150, 50]
+        ],
+        types: {
+            data1: 'area',
+            data2: 'area-spline'
         }
     }
 });
@@ -78,7 +75,7 @@
 <script src="/js/highlight.pack.js"></script>
 <script src="/js/d3.min.js"></script>
 <script src="/js/c3.min.js?v=20140210"></script>
-    <script src="/js/samples/options_gridline.js"></script>
+    <script src="/js/samples/chart_area.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
