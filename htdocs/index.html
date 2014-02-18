@@ -76,19 +76,19 @@
         <div>
           <div class="row">
             <div class="col-md-4">
-              <h3>Simple Line Chart</h3>
-              <p>Simple line chart for getting started.</p>
-              <p><a class="btn btn-default" href="/samples/simple.html" role="button">View details &raquo;</a></p>
-            </div>
-            <div class="col-md-4">
-              <h3>Multiple Line Chart</h3>
-              <p>Multiple line chart with multiple data.</p>
+              <h3>Line Chart</h3>
+              <p>Line chart with sequential data.</p>
               <p><a class="btn btn-default" href="/samples/simple_multiple.html" role="button">View details &raquo;</a></p>
             </div>
             <div class="col-md-4">
               <h3>Timeseries Chart</h3>
               <p>Simple line chart with timeseries data.</p>
               <p><a class="btn btn-default" href="/samples/timeseries.html" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-md-4">
+              <h3>Spline Chart</h3>
+              <p>Display as Spline Chart</p>
+              <p><a class="btn btn-default" href="/samples/chart_spline.html" role="button">View details &raquo;</a></p>
             </div>
           </div>
           <div class="row">
@@ -120,9 +120,9 @@
               <p><a class="btn btn-default" href="/samples/chart_bar_stacked.html" role="button">View details &raquo;</a></p>
             </div>
             <div class="col-md-4">
-              <h3>Spline Chart</h3>
-              <p>Display as Spline Chart</p>
-              <p><a class="btn btn-default" href="/samples/chart_spline.html" role="button">View details &raquo;</a></p>
+              <h3>Bar Chart with Negative Values</h3>
+              <p>Bar chart can accept negative values.</p>
+              <p><a class="btn btn-default" href="/samples/chart_bar_negative.html" role="button">View details &raquo;</a></p>
             </div>
           </div>
           <div class="row">
@@ -417,7 +417,7 @@
         timer = setInterval(function(){
           if (currentIndex == demos.length) currentIndex = 0;
           demos[currentIndex++]();
-        }, 500);
+        }, 1500);
       }
 
       function stopDemo() {
