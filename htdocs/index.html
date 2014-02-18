@@ -291,7 +291,7 @@
     <script src="/js/bootstrap.min.js"></script>
 
     <script src="/js/d3.min.js"></script>
-    <script src="/js/c3.min.js?v=20140217-1"></script>
+    <script src="/js/c3.min.js?v=20140218"></script>
     <script>
       var chart = c3.generate({
         data: {
@@ -417,7 +417,7 @@
         timer = setInterval(function(){
           if (currentIndex == demos.length) currentIndex = 0;
           demos[currentIndex++]();
-        }, 2000);
+        }, 500);
       }
 
       function stopDemo() {
