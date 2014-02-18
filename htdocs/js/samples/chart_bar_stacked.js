@@ -1,9 +1,9 @@
 var chart = c3.generate({
     data: {
         columns: [
-            ['data1', 30, 200, 200, 400, 150, 250],
-            ['data2', 130, 100, 100, 200, 150, 50],
-            ['data3', 230, 200, 200, 300, 250, 250]
+            ['data1', -30, 200, 200, 400, -150, 250],
+            ['data2', 130, 100, -100, 200, -150, 50],
+            ['data3', -230, 200, 200, -300, 250, 250]
         ],
         type: 'bar',
         groups: [
@@ -14,6 +14,11 @@ var chart = c3.generate({
         x: {
             type: 'categorized'
         }
+    },
+    grid: {
+        y: {
+            lines: [{value:0}]
+        }
     }
 });
 
@@ -23,7 +28,7 @@ setTimeout(function () {
 
 setTimeout(function () {
     chart.load({
-        columns: [['data4', 100, 50, 150, 200, 300, 100]]
+        columns: [['data4', 100, -50, 150, 200, -300, -100]]
     });
 }, 1000);
 
