@@ -40,7 +40,7 @@
       </div>
 
       <div class="page-header title">
-        <h1>Spline Chart</h1>
+        <h1>Optional X Grid Lines</h1>
       </div>
 
       <div class="chart">
@@ -48,14 +48,17 @@
       </div>
 
       <div class="sourcecode">
-        <h3># chart_spline.js</h3>
+        <h3># grid_x_lines.js</h3>
         <pre><code class="html javascript">var chart = c3.generate({
     data: {
         columns: [
-            ['data1', 30, 200, 100, 400, 150, 250],
-            ['data2', 130, 100, 140, 200, 150, 50]
-        ],
-        type: 'spline'
+            ['sample', 30, 200, 100, 400, 150, 250]
+        ]
+    },
+    grid: {
+        x: {
+            lines: [{value: 3, text: 'Lable 3'}, {value: 4.5, text: 'Lable 4.5'}]
+        }
     }
 });
 </code></pre>
@@ -72,7 +75,7 @@
 <script src="/js/highlight.pack.js"></script>
 <script src="/js/d3.min.js"></script>
 <script src="/js/c3.min.js?v=20140218"></script>
-    <script src="/js/samples/chart_spline.js"></script>
+    <script src="/js/samples/grid_x_lines.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
