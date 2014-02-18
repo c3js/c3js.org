@@ -6,3 +6,23 @@ var chart = c3.generate({
         ]
     }
 });
+
+setTimeout(function () {
+    chart.load({
+        columns: [
+            ['data1', 230, 190, 300, 500, 300, 400]
+        ]
+    });
+}, 1000);
+
+setTimeout(function () {
+    chart.load({
+        columns: [
+            ['data3', 130, 150, 200, 300, 200, 100]
+        ]
+    });
+}, 1500);
+
+setTimeout(function () {
+    chart.unload('data1');
+}, 2000);
