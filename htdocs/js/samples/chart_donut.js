@@ -5,7 +5,7 @@ var chart = c3.generate({
             ['data1', 30],
             ['data2', 120],
         ],
-        type : 'dount'
+        type : 'donut'
     },
     arc: {
         title: "Iris Petal Width",
