@@ -11,7 +11,7 @@ var chart = c3.generate({
     },
     axis: {
         y: {
-            padding: {top: 200, bottom: 200}
+            padding: {top: 200, bottom: 0}
         },
         y2: {
             padding: {top: 100, bottom: 100},
