@@ -6,8 +6,8 @@ var chart = c3.generate({
     },
     axis: {
         y: {
-            max: 1000,
-            min: 0,
+            max: 400,
+            min: -400,
             // Range includes padding, set 0 if no padding needed
             // padding: {top:0, bottom:0}
         }
