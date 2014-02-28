@@ -9,7 +9,9 @@ var chart = c3.generate({
         groups: [
             ['data1', 'data2', 'data3']
         ],
-        order: 'desc'
+        order: 'desc' // stack order by sum of values descendantly.
+//      order: 'asc'  // stack order by sum of values ascendantly.
+//      order: null   // stack order by data definition. this is default.
     },
     axis: {
         x: {
@@ -27,15 +29,18 @@ setTimeout(function () {
     chart.load({
         columns: [
             ['data4', 200, 300, 450, 600, 520, 820],
-            ['data5', 1200, 1300, 1450, 1600, 1520, 1820],
         ]
     });
 }, 1000);
 
 setTimeout(function () {
-    chart.groups([['data1', 'data2', 'data3', 'data4', 'data5']])
+    chart.load({
+        columns: [
+            ['data5', 1200, 1300, 1450, 1600, 1520, 1820],
+        ]
+    });
 }, 2000);
 
 setTimeout(function () {
-    chart.groups([['data1', 'data2', 'data3'], ['data4', 'data5']])
+    chart.groups([['data1', 'data2', 'data3', 'data4', 'data5']])
 }, 3000);
