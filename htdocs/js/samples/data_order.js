@@ -28,7 +28,7 @@ var chart = c3.generate({
 setTimeout(function () {
     chart.load({
         columns: [
-            ['data4', 200, 300, 450, 600, 520, 820],
+            ['data4', 1200, 1300, 1450, 1600, 1520, 1820],
         ]
     });
 }, 1000);
@@ -36,7 +36,7 @@ setTimeout(function () {
 setTimeout(function () {
     chart.load({
         columns: [
-            ['data5', 1200, 1300, 1450, 1600, 1520, 1820],
+            ['data5', 200, 300, 450, 600, 520, 820],
         ]
     });
 }, 2000);
