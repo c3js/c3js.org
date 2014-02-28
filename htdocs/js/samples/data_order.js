@@ -13,11 +13,6 @@ var chart = c3.generate({
 //      order: 'asc'  // stack order by sum of values ascendantly.
 //      order: null   // stack order by data definition. this is default.
     },
-    axis: {
-        x: {
-            type: 'categorized'
-        }
-    },
     grid: {
         y: {
             lines: [{value:0}]
