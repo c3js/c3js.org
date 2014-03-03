@@ -10,11 +10,6 @@ var chart = c3.generate({
             ['data1', 'data2']
         ]
     },
-    axis: {
-        x: {
-            type: 'categorized'
-        }
-    },
     grid: {
         y: {
             lines: [{value:0}]
@@ -24,14 +19,14 @@ var chart = c3.generate({
 
 setTimeout(function () {
     chart.groups([['data1', 'data2', 'data3']])
-}, 500);
+}, 1000);
 
 setTimeout(function () {
     chart.load({
         columns: [['data4', 100, -50, 150, 200, -300, -100]]
     });
-}, 1000);
+}, 1500);
 
 setTimeout(function () {
     chart.groups([['data1', 'data2', 'data3', 'data4']])
-}, 1500);
+}, 2000);

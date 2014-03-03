@@ -17,10 +17,5 @@ var chart = c3.generate({
         groups: [
             ['data1','data2']
         ]
-    },
-    axis: {
-        x: {
-            type: 'categorized'
-        }
     }
 });

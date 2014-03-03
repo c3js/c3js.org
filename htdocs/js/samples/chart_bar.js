@@ -5,10 +5,5 @@ var chart = c3.generate({
             ['data2', 130, 100, 140, 200, 150, 50]
         ],
         type: 'bar'
-    },
-    axis: {
-        x: {
-            type: 'categorized'
-        }
     }
 });

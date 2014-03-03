@@ -6,11 +6,6 @@ var chart = c3.generate({
         ],
         type: 'bar'
     },
-    axis: {
-        x: {
-            type: 'categorized'
-        }
-    },
     grid: {
         y: {
             lines: [{value: 0}]
