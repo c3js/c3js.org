@@ -9,9 +9,6 @@ var chart = c3.generate({
         }
     },
     axis: {
-        rotated: true,
-        x: {
-            type: 'categorized'
-        }
+        rotated: true
     }
 });
