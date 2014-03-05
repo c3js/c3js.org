@@ -40,7 +40,7 @@
       </div>
 
       <div class="page-header title">
-        <h1>Show/Hide Legend</h1>
+        <h1>Legend Position</h1>
       </div>
 
       <div class="chart">
@@ -48,18 +48,38 @@
       </div>
 
       <div class="sourcecode">
-        <h3># options_legend.js</h3>
+        <h3># legend_position.js</h3>
         <pre><code class="html javascript">var chart = c3.generate({
     data: {
         columns: [
-            ['sample', 30, 200, 100, 400, 150, 250]
+            ['data1', 30, 200, 100, 400, 150, 250],
+            ['data2', 50, 20, 10, 40, 15, 25]
         ]
     },
     legend: {
-        show: false
+        position: 'right'
     }
 });
-</code></pre>
+
+setTimeout(function () {
+    chart.load({
+        columns: [
+            ['data3', 130, 150, 200, 300, 200, 100]
+        ]
+    });
+}, 1000);
+
+setTimeout(function () {
+    chart.unload('data1');
+}, 2000);
+
+setTimeout(function () {
+    chart.toPie();
+}, 3000);
+
+setTimeout(function () {
+    chart.toLine();
+}, 4000);</code></pre>
       </div>
 
       <footer>
@@ -73,7 +93,7 @@
 <script src="/js/highlight.pack.js"></script>
 <script src="/js/d3.min.js"></script>
 <script src="/js/c3.min.js?v=20140303"></script>
-    <script src="/js/samples/options_legend.js"></script>
+    <script src="/js/samples/legend_position.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>
