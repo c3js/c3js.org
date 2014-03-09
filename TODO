@@ -1,0 +1,6 @@
+1. Delete old scheme files
+delete bin
+delete htdocs
+delete templates
+
+2. Integrate with CI
