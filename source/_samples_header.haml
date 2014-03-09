@@ -1,0 +1,17 @@
+.nav
+  %a( href="/") Home
+
+.page-header.title
+  %h1 #{title}
+
+.chart
+  #chart
+
+.sourcecode
+  %h3 # #{id}.js
+  %pre
+    %code.html.javascript
+      = js_as_plain id
+
+= partial :script
+%script( src="/js/samples/#{id}.js" )

@@ -39,12 +39,19 @@
 # activate :livereload
 
 # Methods defined in the helpers block are available in templates
-# helpers do
+helpers do
+  def js_as_plain(id)
+    f = open("source/js/samples/" + id + ".js")
+    js = f.read
+    f.close
+    js
+  end
 #   def some_helper
 #     "Helping"
 #   end
-# end
-set :haml, { :ugly => false, :format => :html5 }
+end
+
+set :haml, { :ugly => true, :format => :html5 }
 
 set :css_dir, 'css'
 
