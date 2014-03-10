@@ -1,0 +1,81 @@
+body {
+  background-color: #fdfdfd;
+}
+footer {
+  text-align: right;
+}
+footer hr {
+  margin-bottom: 10px;
+}
+
+#chart {
+  height: 280px;
+  margin: 0px auto;
+  text-align: center;
+}
+
+#message {
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 24px;
+  height: 32px;
+}
+
+#link {
+  margin-top: 18px;
+  float: right;
+}
+#link .git-icon {
+  height: 32px;
+}
+
+.nav {
+  margin: 8px 0;
+}
+.page-header.title, .page-header.title h1 {
+  margin-top: 12px;
+}
+.page-header.sub {
+  margin-top: 0px;
+}
+.chart {
+  margin-top: 42px;
+}
+.sourcecode pre {
+  background-color: #fdfdfd;
+  border: none;
+  border-radius: 0;
+  padding: 12px 0px;
+  font-size: 1.2em;
+}
+.sourcecode h3 {
+  margin-left: 4px;
+  margin-bottom: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+.sourcecode code > .comment { color: #b33; }
+.sourcecode code > .tag { color: #33b; }
+.sourcecode code > .attr { color: #b3b; }
+.sourcecode code > .value { color: #393; }
+.highlight {
+  border-left: 4px solid #ccc;
+  padding: 0 12px;
+}
+.highlight pre {
+  padding: 0 8px;
+}
+.section {
+  margin-bottom: 48px;
+}
+.section > a > h2 {
+  color: #aaa;
+  line-height: 1.2em;
+  margin-bottom: 4px;
+}
+.section > a > h2 > span {
+  color: #333;
+}
+.section > div {
+  padding-left: 26px;
+}

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html class='no-js'>
+<head>
+<meta charset='utf-8'>
+<meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
+<meta content='D3 based reusable chart library' name='description'>
+<meta content='Masayuki Tanaka' name='author'>
+<meta content='width=device-width' name='viewport'>
+<title>C3.js - D3-based reusable chart library</title>
+<link href='/css/bootstrap.min.css' rel='stylesheet'>
+<link href='/css/tomorrow.css' rel='stylesheet'>
+<link href='/css/c3.css?v=20140220' rel='stylesheet'>
+<link href='/css/style.css' rel='stylesheet'>
+</head>
+<body>
+<div class='container'>
+<div class='page-header title'>
+<h1 style='float:left;'>
+C3.js
+<small>D3-based reusable chart library</small>
+</h1>
+<div id='link'>
+<a href='https://github.com/masayuki0812/c3' target='_blank'>
+<img class='git-icon' src='/img/GitHub-Mark-64px.png'>
+</a>
+</div>
+<div class='clearfix'></div>
+</div>
+<div class='chart'>
+<div id='message'>
+<button class='btn btn-primary' onclick='startDemo();' type='button'>Start Demo</button>
+</div>
+<div id='chart'></div>
+</div>
+<div class='page-header sub'>
+<h2>Setup</h2>
+</div>
+<div class='sourcecode highlight'>
+<pre><code class='html'><span class="comment">&lt;!-- Load css for c3 basic styles --&gt;</span>&#x000A;&lt;<span class="tag">link</span> <span class="attr">rel</span>=<span class="value">"stylesheet"</span> <span class="attr">type</span>=<span class="value">"text/css"</span> <span class="attr">href</span>=<span class="value">"/path/to/c3.css"</span>&gt;&#x000A;<span class="comment">&lt;!-- Load d3.js and c3.js --&gt;</span>&#x000A;&lt;<span class="tag">script</span> <span class="attr">src</span>=<span class="value">"/path/to/d3.v3.min.js"</span> <span class="attr">charset</span>=<span class="value">"utf-8"</span>&gt;&lt;/<span class="tag">script</span>&gt;&#x000A;&lt;<span class="tag">script</span> <span class="attr">src</span>=<span class="value">"/path/to/c3.min.js"</span>&gt;&lt;/<span class="tag">script</span>&gt;</code></pre>&#x000A;</code></pre>
+</div>
+<br>
+<div class='page-header sub'>
+<h2>Tips</h2>
+</div>
+<div class='section'>
+<a href='/#chart' name='chart'>
+<h2>#&nbsp;
+<span>Chart</span></h2>
+</a>
+
+<div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Line Chart</h3>
+<p>Line chart with sequentila data.</p>
+<p>
+<a class='btn btn-default' href='/samples/simple_multiple.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Timeseries Chart</h3>
+<p>Simple line chart with timeseries data.</p>
+<p>
+<a class='btn btn-default' href='/samples/timeseries.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Spline Chart</h3>
+<p>Display as Spline Chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/chart_spline.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Simple XY Line Chart</h3>
+<p>Simple line chart with custom x.</p>
+<p>
+<a class='btn btn-default' href='/samples/simple_xy.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Multiple XY Line Chart</h3>
+<p>Multiple line chart with multiple custom x.</p>
+<p>
+<a class='btn btn-default' href='/samples/simple_xy_multiple.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Line Chart with Regions</h3>
+<p>Set regions for each data with style.</p>
+<p>
+<a class='btn btn-default' href='/samples/simple_regions.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Bar Chart</h3>
+<p>Display as Bar Chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/chart_bar.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Bar Chart with Negative Values</h3>
+<p>Bar chart can accept negative values.</p>
+<p>
+<a class='btn btn-default' href='/samples/chart_bar_negative.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Stacked Bar Chart</h3>
+<p>Display as Stacked Bar Chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/chart_bar_stacked.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Scatter Plot</h3>
+<p>Display as Scatter Plot.</p>
+<p>
+<a class='btn btn-default' href='/samples/chart_scatter.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Pie Chart</h3>
+<p>Display as Pie Chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/chart_pie.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Donut Chart</h3>
+<p>Display as Donut Chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/chart_donut.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Area Chart</h3>
+<p>Display as Area Chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/chart_area.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Combination Chart</h3>
+<p>Display as Spline Chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/chart_combination.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div class='section'>
+<a href='/#axis' name='axis'>
+<h2>#&nbsp;
+<span>Axis</span></h2>
+</a>
+
+<div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Categorized Axis</h3>
+<p>Axis with ticks categorizing each data.</p>
+<p>
+<a class='btn btn-default' href='/samples/categorized.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Additional Axis</h3>
+<p>Additional y axis can be added.</p>
+<p>
+<a class='btn btn-default' href='/samples/axes_y2.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Rotated Axis</h3>
+<p>Axis can be rotated.</p>
+<p>
+<a class='btn btn-default' href='/samples/axes_rotated.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>X Axis Tick Format</h3>
+<p>Format x axis tick text.</p>
+<p>
+<a class='btn btn-default' href='/samples/axes_x_tick_format.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Y Axis Tick Format</h3>
+<p>Format y axis tick text.</p>
+<p>
+<a class='btn btn-default' href='/samples/axes_y_tick_format.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>X Axis Tick Culling</h3>
+<p>Set cull ticks or not on X Axis.</p>
+<p>
+<a class='btn btn-default' href='/samples/axes_x_tick_culling.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Axis Label</h3>
+<p>Set label for axis.</p>
+<p>
+<a class='btn btn-default' href='/samples/axes_label.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Axis Label Position</h3>
+<p>Set axis label position.</p>
+<p>
+<a class='btn btn-default' href='/samples/axes_label_position.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Padding for Y Axis</h3>
+<p>Set padding for y axis.</p>
+<p>
+<a class='btn btn-default' href='/samples/axes_y_padding.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Range for Y Axis</h3>
+<p>Set range for y axis.</p>
+<p>
+<a class='btn btn-default' href='/samples/axes_y_range.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div class='section'>
+<a href='/#data' name='data'>
+<h2>#&nbsp;
+<span>Data</span></h2>
+</a>
+
+<div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Column Oriented Data</h3>
+<p>Column-oriented data can be used as input.</p>
+<p>
+<a class='btn btn-default' href='/samples/data_columned.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Row Oriented Data</h3>
+<p>Row-oriented data can be used as input.</p>
+<p>
+<a class='btn btn-default' href='/samples/data_rowed.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Data from URL</h3>
+<p>Data from URL can be used as input.</p>
+<p>
+<a class='btn btn-default' href='/samples/data_url.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Load Data</h3>
+<p>Load data dynamically.</p>
+<p>
+<a class='btn btn-default' href='/samples/data_load.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Set Name</h3>
+<p>Set name for each data.</p>
+<p>
+<a class='btn btn-default' href='/samples/data_name.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Custom x for Timeseries</h3>
+<p>Change x data and format for timeseries data.</p>
+<p>
+<a class='btn btn-default' href='/samples/data_xformat.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Data Order</h3>
+<p>Define data order. This will be used for stacked bar chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/data_order.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Label on chart</h3>
+<p>Show value on chart as label.</p>
+<p>
+<a class='btn btn-default' href='/samples/data_label.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div class='section'>
+<a href='/#legend' name='legend'>
+<h2>#&nbsp;
+<span>Legend</span></h2>
+</a>
+
+<div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Hide Legend</h3>
+<p>Set visibility of legend.</p>
+<p>
+<a class='btn btn-default' href='/samples/options_legend.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Legend Position</h3>
+<p>Show legend on bottom or right side.</p>
+<p>
+<a class='btn btn-default' href='/samples/legend_position.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div class='section'>
+<a href='/#tooltip' name='tooltip'>
+<h2>#&nbsp;
+<span>Tooltip</span></h2>
+</a>
+
+<div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Hide Tootip</h3>
+<p>Set visibility of tooltip.</p>
+<p>
+<a class='btn btn-default' href='/samples/tooltip_show.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Tootip Format</h3>
+<p>Set format for title and value on tooltip.</p>
+<p>
+<a class='btn btn-default' href='/samples/tooltip_format.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div class='section'>
+<a href='/#grid' name='grid'>
+<h2>#&nbsp;
+<span>Grid</span></h2>
+</a>
+
+<div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Grid Lines</h3>
+<p>Show grid lines for x and y axis.</p>
+<p>
+<a class='btn btn-default' href='/samples/options_gridline.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Optional X Grid Lines</h3>
+<p>Add optional grid lines on x grid.</p>
+<p>
+<a class='btn btn-default' href='/samples/grid_x_lines.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Optional Y Grid Lines</h3>
+<p>Add optional grid lines on y grid.</p>
+<p>
+<a class='btn btn-default' href='/samples/grid_y_lines.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div class='section'>
+<a href='/#interaction' name='interaction'>
+<h2>#&nbsp;
+<span>Interaction</span></h2>
+</a>
+
+<div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Sub Chart</h3>
+<p>Show sub chart for zoom and selection range.</p>
+<p>
+<a class='btn btn-default' href='/samples/options_subchart.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Zoom</h3>
+<p>Zoom by mouse wheel event and slide by drag.</p>
+<p>
+<a class='btn btn-default' href='/samples/interaction_zoom.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div class='section'>
+<a href='/#chart_options' name='chart_options'>
+<h2>#&nbsp;
+<span>Chart Options</span></h2>
+</a>
+
+<div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Region</h3>
+<p>Show rects on chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/region.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Chart Size</h3>
+<p>Set chart size in px.</p>
+<p>
+<a class='btn btn-default' href='/samples/options_size.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>Padding</h3>
+<p>Change padding for y tick values.</p>
+<p>
+<a class='btn btn-default' href='/samples/options_padding.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Duration of Transition</h3>
+<p>Set duration of transition for chart animation.</p>
+<p>
+<a class='btn btn-default' href='/samples/transition_duration.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div class='section'>
+<a href='/#api' name='api'>
+<h2>#&nbsp;
+<span>API</span></h2>
+</a>
+
+<div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>Resize</h3>
+<p>Resize chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/api_resize.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div class='section'>
+<a href='/#transform' name='transform'>
+<h2>#&nbsp;
+<span>Transform</span></h2>
+</a>
+
+<div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>To Line Chart</h3>
+<p>Transform to line chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/transform_line.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>To Spline Chart</h3>
+<p>Transform to spline chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/transform_spline.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>To Bar Chart</h3>
+<p>Transform to bar chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/transform_bar.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>To Area Chart</h3>
+<p>Transform to area chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/transform_area.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>To Area Spline Chart</h3>
+<p>Transform to area spline chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/transform_areaspline.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>To Scatter Plot</h3>
+<p>Transform to scatter plot.</p>
+<p>
+<a class='btn btn-default' href='/samples/transform_scatter.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+<div class='row'>
+<div class='col-md-4'>
+<h3>To Pie Chart</h3>
+<p>Transform to pie chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/transform_pie.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+<div class='col-md-4'>
+<h3>To Donut Chart</h3>
+<p>Transform to donut chart.</p>
+<p>
+<a class='btn btn-default' href='/samples/transform_donut.html' role='button'>View details &raquo;</a>
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<footer>
+<hr>
+<p>&copy: Masayuki Tanaka 2014</p>
+</footer>
+
+<script src='/js/jquery-1.11.0.min.js'></script>
+<script src='/js/bootstrap.min.js'></script>
+<script src='/js/highlight.pack.js'></script>
+<script src='/js/d3.min.js'></script>
+<script src='/js/c3.min.js?v=20140305'></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+<script src='/js/index.js'></script>
+
+</div>
+</body>
+</html>
