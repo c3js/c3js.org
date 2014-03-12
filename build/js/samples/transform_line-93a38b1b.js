@@ -5,20 +5,15 @@ var chart = c3.generate({
             ['data2', 130, 100, 140, 200, 150, 50]
         ],
         type: 'bar'
-    },
-    axis: {
-        x: {
-            type: 'categorized'
-        }
     }
 });
 
 setTimeout(function () {
-    chart.toAreaSpline('data1');
+    chart.toLine('data1');
 }, 1000);
 
 setTimeout(function () {
-    chart.toAreaSpline('data2');
+    chart.toLine('data2');
 }, 2000);
 
 setTimeout(function () {
@@ -26,5 +21,5 @@ setTimeout(function () {
 }, 3000);
 
 setTimeout(function () {
-    chart.toAreaSpline();
+    chart.toLine();
 }, 4000);
