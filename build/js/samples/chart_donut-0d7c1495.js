@@ -1,6 +1,5 @@
 var chart = c3.generate({
     data: {
-        // iris data from R
         columns: [
             ['data1', 30],
             ['data2', 120],
@@ -8,10 +7,7 @@ var chart = c3.generate({
         type : 'donut'
     },
     arc: {
-        title: "Iris Petal Width",
-        label: {
-            format: function (d, ratio) { return ""; }
-        }
+        title: "Iris Petal Width"
     }
 });
 
