@@ -170,6 +170,10 @@ options_size:
   title: Chart Size
   desc: Set chart size in px.
 
+options_color:
+  title: Color Pattern
+  desc: Set custom color pattern.
+
 options_padding:
   title: Padding
   desc: Change padding for y tick values.
