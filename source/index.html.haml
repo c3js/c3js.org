@@ -60,14 +60,15 @@
       = partial :index_item, locals: { id: 'axes_rotated' }
     .row
       = partial :index_item, locals: { id: 'axes_x_tick_format' }
-      = partial :index_item, locals: { id: 'axes_y_tick_format' }
       = partial :index_item, locals: { id: 'axes_x_tick_culling' }
+      = partial :index_item, locals: { id: 'axes_x_tick_count' }
+    .row
+      = partial :index_item, locals: { id: 'axes_y_tick_format' }
+      = partial :index_item, locals: { id: 'axes_y_padding' }
+      = partial :index_item, locals: { id: 'axes_y_range' }
     .row
       = partial :index_item, locals: { id: 'axes_label' }
       = partial :index_item, locals: { id: 'axes_label_position' }
-      = partial :index_item, locals: { id: 'axes_y_padding' }
-    .row
-      = partial :index_item, locals: { id: 'axes_y_range' }
 
 .section
   = partial :index_item_title, locals: { id: 'data', name: 'Data' }
