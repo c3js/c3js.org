@@ -1,13 +1,16 @@
 var chart = c3.generate({
     data: {
+        // iris data from R
         columns: [
             ['data1', 30],
             ['data2', 120],
         ],
-        type : 'donut'
+        type : 'pie',
     },
-    arc: {
-        title: "Iris Petal Width"
+    pie: {
+        onclick: function (d, i) { console.log(d, i); },
+        onmouseover: function (d, i) { console.log(d, i); },
+        onmouseout: function (d, i) { console.log(d, i); }
     }
 });
 

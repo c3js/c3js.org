@@ -6,8 +6,11 @@ var chart = c3.generate({
         ],
         type : 'donut'
     },
-    arc: {
-        title: "Iris Petal Width"
+    donut: {
+        title: "Iris Petal Width",
+        onclick: function (d, i) { console.log(d, i); },
+        onmouseover: function (d, i) { console.log(d, i); },
+        onmouseout: function (d, i) { console.log(d, i); }
     }
 });
 
