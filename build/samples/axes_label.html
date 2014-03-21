@@ -36,15 +36,23 @@
 <pre><code class='html javascript'>var chart = c3.generate({
     data: {
         columns: [
-            ['sample', 30, 200, 100, 400, 150, 250]
-        ]
+            ['sample', 30, 200, 100, 400, 150, 250],
+            ['sample2', 130, 300, 200, 500, 250, 350]
+        ],
+        axes: {
+            sample2: 'y2'
+        }
     },
     axis: {
+        x: {
+            label: 'X Label'
+        },
         y: {
             label: 'Y Label'
         },
-        x: {
-            label: 'X Label'
+        y2: {
+            show: true,
+            label: 'Y2 Label'
         }
     }
 });
@@ -54,12 +62,12 @@
 <script src="/js/bootstrap.min-13213206.js" type="text/javascript"></script>
 <script src="/js/highlight.pack-4af5004d.js" type="text/javascript"></script>
 <script src="/js/d3.min-1e210c94.js" type="text/javascript"></script>
-<script src="/js/c3.min-3574f514.js" type="text/javascript"></script>
+<script src="/js/c3.min-d5820b47.js" type="text/javascript"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
 
-<script src="/js/samples/axes_label-d910c1e1.js" type="text/javascript"></script>
+<script src="/js/samples/axes_label-b4d10b43.js" type="text/javascript"></script>
 
 
 </div>
