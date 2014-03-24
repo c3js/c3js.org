@@ -46,6 +46,12 @@ helpers do
     f.close
     js
   end
+  def data_as_plain(name)
+    f = open("source/data/" + name)
+    data = f.read
+    f.close
+    data
+  end
 #   def some_helper
 #     "Helping"
 #   end

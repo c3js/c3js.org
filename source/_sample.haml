@@ -13,6 +13,14 @@
     %code.html.javascript
       = js_as_plain id
 
+- if defined? other_files
+  - other_files.each do |f|
+    .sourcecode
+      %h3 # #{f}
+      %pre
+        %code.html
+          = data_as_plain f
+
 = partial :footer
 = partial :script
 = javascript_include_tag "samples/#{id}.js"
