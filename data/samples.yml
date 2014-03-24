@@ -221,3 +221,7 @@ transform_pie:
 transform_donut:
   title: To Donut Chart
   desc: Transform to donut chart.
+
+style_region:
+  title: Style for Region
+  desc: Set style for regions.

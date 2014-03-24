@@ -146,6 +146,12 @@
       = partial :index_item, locals: { id: 'transform_pie' }
       = partial :index_item, locals: { id: 'transform_donut' }
 
+.section
+  = partial :index_item_title, locals: { id: 'style', name: 'Style' }
+  %div
+    .row
+      = partial :index_item, locals: { id: 'style_region' }
+
 = partial :footer
 = partial :script
 = javascript_include_tag 'index'

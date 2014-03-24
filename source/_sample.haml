@@ -13,6 +13,13 @@
     %code.html.javascript
       = js_as_plain id
 
+- if defined? other_css
+  .sourcecode
+    %h3 # #{other_css}
+    %pre
+      %code.css
+        = css_as_plain other_css
+
 - if defined? other_files
   - other_files.each do |f|
     .sourcecode

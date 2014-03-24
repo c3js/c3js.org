@@ -52,6 +52,12 @@ helpers do
     f.close
     data
   end
+  def css_as_plain(name)
+    f = open("source/css/samples/" + name)
+    css = f.read
+    f.close
+    css
+  end
 #   def some_helper
 #     "Helping"
 #   end
