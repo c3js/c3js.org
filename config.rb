@@ -58,6 +58,9 @@ helpers do
     f.close
     css
   end
+  def get_css_name(path)
+    path.gsub('.html', '')
+  end
 #   def some_helper
 #     "Helping"
 #   end
