@@ -122,6 +122,10 @@ data_xformat:
   title: Custom x for Timeseries
   desc: Change x data and format for timeseries data.
 
+data_stringx:
+  title: Data with String x values
+  desc: Load with String x values when categorized axis.
+
 data_order:
   title: Data Order
   desc: Define data order. This will be used for stacked bar chart.
