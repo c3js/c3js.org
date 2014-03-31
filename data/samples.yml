@@ -194,6 +194,10 @@ api_resize:
   title: Resize
   desc: Resize chart.
 
+api_data_name:
+  title: Data Name
+  desc: Update data names.
+
 transform_line:
   title: To Line Chart
   desc: Transform to line chart.
