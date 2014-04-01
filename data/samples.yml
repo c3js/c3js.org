@@ -198,6 +198,10 @@ api_data_name:
   title: Data Name
   desc: Update data names.
 
+api_axis_label:
+  title: Axis Label
+  desc: Update axis labels.
+
 transform_line:
   title: To Line Chart
   desc: Transform to line chart.
