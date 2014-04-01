@@ -14,3 +14,8 @@ var chart = c3.generate({
 setTimeout(function () {
     chart.data.names({data1: 'New name for data1', data2: 'New name for data2'});
 }, 1000);
+
+setTimeout(function () {
+    chart.data.names({data1: 'New name for data1 again'});
+}, 2000);
+

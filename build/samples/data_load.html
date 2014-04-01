@@ -49,17 +49,56 @@ setTimeout(function () {
 setTimeout(function () {
     chart.load({
         columns: [
-            ['data1', 30, 20, 50, 40, 60, 50],
-            ['data2', 200, 130, 90, 240, 130, 220],
-            ['data3', 300, 200, 160, 400, 250, 250]
-        ]
+            ['data1', 130, 120, 150, 140, 160, 150],
+            ['data4', 30, 20, 50, 40, 60, 50],
+        ],
+        unload: ['data2', 'data3'],
     });
 }, 2000);
 
 setTimeout(function () {
     chart.load({
         rows: [
-            ['data1', 'data2', 'data3'],
+            ['data2', 'data3'],
+            [120, 300],
+            [160, 240],
+            [200, 290],
+            [160, 230],
+            [130, 300],
+            [220, 320],
+        ],
+        unload: 'data4',
+    });
+}, 3000);
+
+setTimeout(function () {
+    chart.load({
+        columns:[
+            ['data4', 30, 20, 50, 40, 60, 50,100,200]
+        ]
+    });
+}, 4000);
+
+setTimeout(function () {
+    chart.unload('data4');
+}, 5000);
+
+setTimeout(function () {
+    chart.load({
+        columns:[
+            ['data2', null, 30, 20, 50, 40, 60, 50]
+        ]
+    });
+}, 6000);
+
+setTimeout(function () {
+    chart.unload();
+}, 7000);
+
+setTimeout(function () {
+    chart.load({
+        rows: [
+            ['data4', 'data2', 'data3'],
             [90, 120, 300],
             [40, 160, 240],
             [50, 200, 290],
@@ -68,15 +107,11 @@ setTimeout(function () {
             [90, 220, 320],
         ]
     });
-}, 3000);
+}, 8000);
 
 setTimeout(function () {
-    chart.load({
-        columns:[
-            ['data1', null, 30, 20, 50, 40, 60, 50, 100, 200]
-        ]
-    });
-}, 4000);
+    chart.unload(['data2', 'data3']);
+}, 9000);
 </code></pre>
 </div>
 <div class='sourcecode'>
@@ -106,12 +141,12 @@ setTimeout(function () {
 <script src="/js/bootstrap.min-13213206.js" type="text/javascript"></script>
 <script src="/js/highlight.pack-4af5004d.js" type="text/javascript"></script>
 <script src="/js/d3.min-3bff8220.js" type="text/javascript"></script>
-<script src="/js/c3.min-7078274d.js" type="text/javascript"></script>
+<script src="/js/c3.min-2ea81691.js" type="text/javascript"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
 
-<script src="/js/samples/data_load-a31e12df.js" type="text/javascript"></script>
+<script src="/js/samples/data_load-b4b545c2.js" type="text/javascript"></script>
 
 
 </div>
