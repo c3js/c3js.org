@@ -82,6 +82,10 @@ axes_x_tick_count:
   title: X Axis Tick Count
   desc: Set the number of ticks on X Axis.
 
+axes_x_tick_fit:
+  title: Fit X Axis Tick to X
+  desc: Set ticks potision to x of data.
+
 axes_label:
   title: Axis Label
   desc: Set label for axis.
