@@ -52,7 +52,7 @@ chart_area:
 
 chart_combination:
   title: Combination Chart
-  desc: Display as Spline Chart.
+  desc: Display all kinda charts up in here.
 
 categorized:
   title: Categorized Axis
