@@ -8,9 +8,11 @@ var chart = c3.generate({
         x: {
             type: 'categorized',
             tick: {
-                culling: true
-                // for normal axis, default true
-                // for categorized axis, default false
+                culling: {
+                    max: 4 // the number of tick texts will be adjusted to less than this value
+                }
+                // for normal axis, default on
+                // for categorized axis, default off
             }
         }
     }
