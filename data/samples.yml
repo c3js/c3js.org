@@ -206,6 +206,10 @@ api_axis_label:
   title: Axis Label
   desc: Update axis labels.
 
+api_axis_range:
+  title: Axis Range
+  desc: Update axis range.
+
 transform_line:
   title: To Line Chart
   desc: Transform to line chart.
