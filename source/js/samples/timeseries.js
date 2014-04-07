@@ -16,3 +16,11 @@ var chart = c3.generate({
         }
     }
 });
+
+setTimeout(function () {
+    chart.load({
+        columns: [
+            ['data3', 400, 500, 450, 700, 600, 500]
+        ]
+    });
+}, 1000);
