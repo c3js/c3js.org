@@ -7,9 +7,12 @@ var chart = c3.generate({
             ['data2', 130, 340, 200, 500, 250, 350]
         ]
     },
-    axis : {
-        x : {
-            type : 'timeseries'
+    axis: {
+        x: {
+            type: 'timeseries',
+            tick: {
+                format: '%Y-%m-%d'
+            }
         }
     }
 });

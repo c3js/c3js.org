@@ -1,6 +1,7 @@
 var chart = c3.generate({
     data: {
-        url: '/data/c3_test.csv'
+        url: '/data/c3_test.csv',
+        type: 'line'
     }
 });
 
@@ -39,7 +40,8 @@ setTimeout(function () {
     chart.load({
         columns:[
             ['data4', 30, 20, 50, 40, 60, 50,100,200]
-        ]
+        ],
+        type: 'bar'
     });
 }, 4000);
 
@@ -69,10 +71,26 @@ setTimeout(function () {
             [120, 160, 230],
             [80, 130, 300],
             [90, 220, 320],
-        ]
+        ],
+        type: 'bar'
     });
 }, 8000);
 
 setTimeout(function () {
-    chart.unload(['data2', 'data3']);
+    chart.load({
+        rows: [
+            ['data5', 'data6'],
+            [190, 420],
+            [140, 460],
+            [150, 500],
+            [220, 460],
+            [180, 430],
+            [190, 520],
+        ],
+        type: 'line'
+    });
 }, 9000);
+
+setTimeout(function () {
+    chart.unload(['data2', 'data3']);
+}, 10000);
