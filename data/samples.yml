@@ -66,6 +66,10 @@ axes_rotated:
   title: Rotated Axis
   desc: Axis can be rotated.
 
+axes_x_localtime:
+  title: X Axis Timezone
+  desc: Convert time to UTC or not.
+
 axes_x_tick_format:
   title: X Axis Tick Format
   desc: Format x axis tick text.
