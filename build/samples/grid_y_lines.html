@@ -37,12 +37,21 @@
 <pre><code class='html javascript'>var chart = c3.generate({
     data: {
         columns: [
-            ['sample', 30, 200, 100, 400, 150, 250]
-        ]
+            ['sample', 30, 200, 100, 400, 150, 250],
+            ['sample2', 1300, 1200, 1100, 1400, 1500, 1250],
+        ],
+        axes: {
+            sample2: 'y2'
+        }
+    },
+    axis: {
+        y2: {
+            show: true
+        }
     },
     grid: {
         y: {
-            lines: [{value: 50, text: 'Lable 50'}, {value: 300, text: 'Lable 300'}]
+            lines: [{value: 50, text: 'Lable 50'}, {value: 1300, text: 'Lable 1300', axis: 'y2'}]
         }
     }
 });
@@ -57,12 +66,12 @@
 <script src="/js/bootstrap.min-13213206.js" type="text/javascript"></script>
 <script src="/js/highlight.pack-4af5004d.js" type="text/javascript"></script>
 <script src="/js/d3.min-3bff8220.js" type="text/javascript"></script>
-<script src="/js/c3.min-53b33d27.js" type="text/javascript"></script>
+<script src="/js/c3.min-9c47e8f4.js" type="text/javascript"></script>
 <script>
   hljs.initHighlightingOnLoad();
 </script>
 
-<script src="/js/samples/grid_y_lines-7d1505af.js" type="text/javascript"></script>
+<script src="/js/samples/grid_y_lines-8fc2942e.js" type="text/javascript"></script>
 
 
 </div>
