@@ -15,7 +15,10 @@ var chart = c3.generate({
     },
     axis: {
         x: {
-            label: 'Sepal.Width'
+            label: 'Sepal.Width',
+            tick: {
+                fit: false
+            }
         },
         y: {
             label: 'Petal.Width'
