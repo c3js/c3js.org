@@ -146,6 +146,10 @@ data_label:
   title: Label on chart
   desc: Show value on chart as label.
 
+data_color:
+  title: Color by data
+  desc: Set color according to data.
+
 options_legend:
   title: Hide Legend
   desc: Set visibility of legend.

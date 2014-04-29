@@ -89,6 +89,8 @@
       = partial :index_item, locals: { id: 'data_stringx' }
       = partial :index_item, locals: { id: 'data_order' }
       = partial :index_item, locals: { id: 'data_label' }
+    .row
+      = partial :index_item, locals: { id: 'data_color' }
 
 .section
   = partial :index_item_title, locals: { id: 'legend', name: 'Legend' }
@@ -113,6 +115,12 @@
       = partial :index_item, locals: { id: 'grid_y_lines' }
 
 .section
+  = partial :index_item_title, locals: { id: 'region', name: 'Region' }
+  %div
+    .row
+      = partial :index_item, locals: { id: 'region' }
+
+.section
   = partial :index_item_title, locals: { id: 'interaction', name: 'Interaction' }
   %div
     .row
@@ -123,11 +131,10 @@
   = partial :index_item_title, locals: { id: 'chart_options', name: 'Chart Options' }
   %div
     .row
-      = partial :index_item, locals: { id: 'region' }
       = partial :index_item, locals: { id: 'options_size' }
       = partial :index_item, locals: { id: 'options_padding' }
-    .row
       = partial :index_item, locals: { id: 'options_color' }
+    .row
       = partial :index_item, locals: { id: 'transition_duration' }
 
 .section
