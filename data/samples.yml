@@ -214,6 +214,10 @@ api_data_name:
   title: Data Name
   desc: Update data names.
 
+api_data_color:
+  title: Data Color
+  desc: Update data colors.
+
 api_axis_label:
   title: Axis Label
   desc: Update axis labels.
