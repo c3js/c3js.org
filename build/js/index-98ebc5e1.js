@@ -111,7 +111,7 @@ var defaultMessage = $('#message').html(), currentIndex = 0, timer, duration = 1
 ];
 
 function setMessage(message) {
-    document.getElementById('message').innerHTML = '<button id="demoMessage" type="button" class="btn btn-default" onclick="stopDemo();" data-toggle="tooltip" data-animation="false" title="Stop Demo" onclick="stopDemo();">'+message+'</button>';
+    document.getElementById('message').innerHTML = '<a id="demoMessage" class="button small secondary" onclick="stopDemo();" title="Stop Demo" onclick="stopDemo();">'+message+'</button>';
 //        $('#demoMessage').tooltip('toggle');
 }
 

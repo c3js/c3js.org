@@ -7,6 +7,9 @@ footer {
 footer hr {
   margin-bottom: 10px;
 }
+footer p {
+  margin-bottom: 10px;
+}
 
 #chart {
   height: 280px;
@@ -29,7 +32,90 @@ footer hr {
   height: 32px;
 }
 
-.nav {
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+.container.sidemenu {
+  position: relative;
+}
+.container.sidemenu footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: #fdfdfd;
+}
+.container.sidemenu .column-menu {
+  position: fixed;
+  overflow: auto;
+  top: 60px;
+  bottom: 0;
+  padding-bottom: 0;
+}
+.container.sidemenu .column-menu .side-bar {
+  position: relative;
+}
+.container.sidemenu .column-content {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+.container hr.large {
+  margin: 48px 0;
+}
+.container h3.sub {
+  color: #999;
+  margin-bottom: 32px;
+}
+
+h1.title {
+  margin: 16px 0;
+}
+.button {
+  transition: none;
+}
+
+.top-bar .name h1 {
+  font-size: 0.94444rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: 300;
+}
+
+
+.chart {
+  margin-top: 42px;
+}
+
+.overview {
+  margin-bottom: 42px;
+  padding: 0 18px;
+}
+.features {
+  margin: 42px auto 30px;
+}
+
+
+.side-bar {
+}
+.side-bar h5 {
+  font-weight: bold;
+}
+
+
+.row {
+  max-width: 80rem;
+}
+
+
+
+/*.nav {
   margin: 8px 0;
 }
 .page-header.title, .page-header.title h1 {
@@ -38,9 +124,10 @@ footer hr {
 .page-header.sub {
   margin-top: 0px;
 }
-.chart {
-  margin-top: 42px;
-}
+*/
+
+
+/*
 .sourcecode pre {
   background-color: #fdfdfd;
   border: none;
@@ -48,23 +135,32 @@ footer hr {
   padding: 12px 0px;
   font-size: 1.2em;
 }
+*/
+/*
 .sourcecode h3 {
   margin-left: 4px;
   margin-bottom: 0;
   padding-bottom: 8px;
   border-bottom: 1px solid #eee;
 }
+
 .sourcecode code > .comment { color: #b33; }
 .sourcecode code > .tag { color: #33b; }
 .sourcecode code > .attr { color: #b3b; }
 .sourcecode code > .value { color: #393; }
+*/
+
 .highlight {
   border-left: 4px solid #ccc;
-  padding: 0 12px;
+  padding: 0 8px;
 }
 .highlight pre {
   padding: 0 8px;
+  line-height: 1.2em;
 }
+
+
+
 .section {
   margin-bottom: 48px;
 }

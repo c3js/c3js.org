@@ -1,0 +1,92 @@
+.container.sidemenu
+  .row
+    .large-3.medium-4.columns.column-menu
+      .side-bar
+        %ul.side-nav
+          %li GETTING STARTED
+          %li
+            %a( href="#setup" ) 1. Setup
+          %li
+            %a( href="#generate" ) 2. Generate chart
+          %li
+            %a( href="#customize" ) 3. Customize chart
+          %li
+            %a( href="#api" ) 4. Use APIs
+          %li
+            %a( href="#style" ) 5. Customize style
+          %li
+            %a( href="#more" ) 6. And more..
+
+    .large-9.medium-8.columns.column-content
+      %section
+        %h2 Getting Started
+        %p In this guide, we are going to show you how to get started with C3.
+
+      %hr
+
+      %section
+        %h3
+          %a( href="#setup" name="setup" ) 1. Setup
+        %p ...
+
+        .sourcecode.highlight
+          %pre
+            %code.html.xml
+              :preserve
+                <span class="comment">&lt;!-- Load c3.css --&gt;</span>
+                <span class="tag">&lt;<span class="title">link</span> <span class="attribute">href</span>=<span class="value">"/path/to/c3.css"</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">type</span>=<span class="value">"text/css"</span>&gt;</span>
+
+                <span class="comment">&lt;!-- Load d3.js and c3.js --&gt;</span>
+                <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"/path/to/d3.v3.min.js"</span> <span class="attribute">charset</span>=<span class="value">"utf-8"</span>&gt;</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+                <span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"/path/to/c3.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+
+      %hr
+
+      %section
+        %h3
+          %a( href="#generate" name="generate" ) 2. Generate Chart
+        %p ...
+
+      %hr
+
+      %section
+        %h3
+          %a( href="#customize" name="customize" ) 3. Customize Chart
+        %p ...
+
+      %hr
+
+      %section
+        %h3
+          %a( href="#api" name="api" ) 4. Use APIs
+        %p ...
+
+      %hr
+
+      %section
+        %h3
+          %a( href="#style" name="style" ) 5. Customize Style
+        %p ...
+
+      %hr
+
+      %section
+        %h3
+          %a( href="#more" name="more" ) 6. And More..
+        %p ...
+
+
+  = partial :footer
+
+= partial :script
+:javascript
+  $(function(){
+    $('a[href^=#]').click(function(){
+      var href= $(this).attr("href"),
+          target = $('.column-content a[href^=' + href + ']'), position;
+      if (!target) { return false; }
+      position = target.offset().top - 60;
+      $("html, body").animate({scrollTop:position}, 350, "swing");
+      return false;
+    });
+  });

@@ -6,11 +6,13 @@
     %meta( name="description" content="D3 based reusable chart library" )
     %meta( name="author" content="Masayuki Tanaka" )
     %meta( name="viewport" content="width=device-width" )
-    %title C3.js - D3-based reusable chart library
+    %title C3.js | D3-based reusable chart library
 
     -# Place favicon.ico and apple-touch-icon.png in the root directory
 
-    = stylesheet_link_tag 'bootstrap.min'
+    -#= stylesheet_link_tag 'bootstrap.min'
+    = stylesheet_link_tag 'normalize'
+    = stylesheet_link_tag 'foundation.min'
     = stylesheet_link_tag 'tomorrow'
     = stylesheet_link_tag 'c3'
     = stylesheet_link_tag 'style'
@@ -24,6 +26,29 @@
       ga('create', 'UA-42896059-3', 'c3js.org');
       ga('send', 'pageview');
 
-  %body
-    .container
-      = yield
+    = javascript_include_tag 'vendor/modernizr-2.6.1.min.js'
+
+  %body.antialiased
+    .sticky
+      %nav.top-bar( data-topbar data-options="sticky_on: large" )
+        %ul.title-area
+          %li.name
+            %h1
+              %a( href="/" ) C3.js | D3-based reusable chart library
+        %section.top-bar-section
+          %ul.right
+            %li.has-form
+              %a.button( href="/gettingstarted.html" ) Getting Started
+            %li.divider
+            %li
+              %a( href="/examples.html") Examples
+            %li.divider
+            %li
+              %a( href="#") Docs
+            %li.divider
+            %li
+              %a( href="https://github.com/masayuki0812/c3/issues?state=open" target="_blank") Forum
+            %li.divider
+            %li
+              %a( href="https://github.com/masayuki0812/c3" target="_blank") Source
+    = yield
