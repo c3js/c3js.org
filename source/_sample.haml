@@ -1,33 +1,32 @@
-.nav
-  %a( href="/") Home
+.container
 
-.page-header.title
-  %h1 #{data.samples[id].title}
+  %h1.title #{data.samples[id].title}
 
-.chart
-  #chart
+  .chart
+    #chart
 
-.sourcecode
-  %h3 # #{id}.js
-  %pre
-    %code.html.javascript
-      = js_as_plain id
-
-- if defined? other_css
-  .sourcecode
-    %h3 # #{other_css}
+  .sourcecode.margin-medium-v.margin-small-h
+    %h3 # #{id}.js
     %pre
-      %code.css
-        = css_as_plain other_css
+      %code.html.javascript
+        = js_as_plain id
 
-- if defined? other_files
-  - other_files.each do |f|
+  - if defined? other_css
     .sourcecode
-      %h3 # #{f}
+      %h3 # #{other_css}
       %pre
-        %code.html
-          = data_as_plain f
+        %code.css
+          = css_as_plain other_css
 
-= partial :footer
+  - if defined? other_files
+    - other_files.each do |f|
+      .sourcecode
+        %h3 # #{f}
+        %pre
+          %code.html
+            = data_as_plain f
+
+  = partial :footer
+
 = partial :script
 = javascript_include_tag "samples/#{id}.js"

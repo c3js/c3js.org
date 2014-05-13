@@ -69,6 +69,12 @@ footer p {
 .container hr.large {
   margin: 48px 0;
 }
+.container hr.medium {
+  margin: 24px 0;
+}
+.container hr.small {
+  margin: 12px 0;
+}
 .container h3.sub {
   color: #999;
   margin-bottom: 32px;
@@ -77,23 +83,24 @@ footer p {
 h1.title {
   margin: 16px 0;
 }
-.button {
-  transition: none;
-}
 
 .top-bar .name h1 {
   font-size: 0.94444rem;
 }
 
+.button {
+  transition: none;
+}
 h1, h2, h3, h4, h5 {
   font-weight: 300;
 }
-
+.row {
+  max-width: 80rem;
+}
 
 .chart {
   margin-top: 42px;
 }
-
 .overview {
   margin-bottom: 42px;
   padding: 0 18px;
@@ -110,46 +117,34 @@ h1, h2, h3, h4, h5 {
 }
 
 
-.row {
-  max-width: 80rem;
+.margin-medium-v {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.margin-small-h {
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
-
-
-/*.nav {
-  margin: 8px 0;
+.sourcecode h3 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
 }
-.page-header.title, .page-header.title h1 {
-  margin-top: 12px;
-}
-.page-header.sub {
-  margin-top: 0px;
-}
-*/
-
-
-/*
 .sourcecode pre {
-  background-color: #fdfdfd;
   border: none;
   border-radius: 0;
   padding: 12px 0px;
   font-size: 1.2em;
+  line-height: 1.428571429;
+  word-break: break-all;
+  word-wrap: break-word;
 }
-*/
-/*
-.sourcecode h3 {
-  margin-left: 4px;
-  margin-bottom: 0;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #eee;
+.sourcecode pre code {
+  background-color: #fdfdfd;
+  padding: 0;
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  font-weight: normal;
 }
-
-.sourcecode code > .comment { color: #b33; }
-.sourcecode code > .tag { color: #33b; }
-.sourcecode code > .attr { color: #b3b; }
-.sourcecode code > .value { color: #393; }
-*/
 
 .highlight {
   border-left: 4px solid #ccc;
@@ -160,19 +155,10 @@ h1, h2, h3, h4, h5 {
   line-height: 1.2em;
 }
 
-
-
 .section {
-  margin-bottom: 48px;
 }
 .section > a > h2 {
-  color: #aaa;
   line-height: 1.2em;
-  margin-bottom: 4px;
-}
-.section > a > h2 > span {
-  color: #333;
-}
-.section > div {
-  padding-left: 26px;
+  margin-top: 18px;
+  margin-bottom: 18px;
 }
