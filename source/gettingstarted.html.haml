@@ -324,6 +324,26 @@
 
         %p Please use <span class="code">unload</span> param in <span class="code">load()</span> API if load and unload need to run simultaneously. Please see <a href="/samples/data_load.html">this example</a>.
 
+        %h4 3. Show/Hide Data
+        %p By using <span class="code">show()</span> and <span class="code">hide()</span> API, you can show/hide the data dynamically as follows:
+
+        .sourcecode.highlight
+          %pre
+            %code.javascript
+              :preserve
+                // var chart = c3.generate({ ... });
+
+                chart.hide(['data2', 'data3']);
+                chart.show(['data2', 'data3']);
+
+        %p If you push the button "Show" and "Hide" below, this code will run and the chart will be updated.
+
+        %button.small( onclick="example4_3_2();" ) Hide
+        %button.small( onclick="example4_3_1();" ) Show
+
+        #chart4_3
+        %br
+
         %p The documentation about APIs is poor now, so please check the <a href="https://github.com/masayuki0812/c3/issues?state=open">issues on github</a>. There might be some hints about what you want to do. (We will add the document soon)
 
       %hr
