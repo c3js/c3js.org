@@ -11,7 +11,7 @@
 <link href="/css/foundation.min-978d4ce8.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/tomorrow-d7cf0921.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/c3-e07e76d4.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="/css/style-2a42039e.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/style-8f21da96.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/index-da39a3ee.css" media="screen" rel="stylesheet" type="text/css" />
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -44,10 +44,6 @@
 </li>
 <li class='divider'></li>
 <li>
-<a href='#'>Docs</a>
-</li>
-<li class='divider'></li>
-<li>
 <a href='https://github.com/masayuki0812/c3/issues?state=open' target='_blank'>Forum</a>
 </li>
 <li class='divider'></li>
@@ -70,14 +66,12 @@ C3.js
 <div id='chart'></div>
 </div>
 <hr class='large'>
-<h2 class='text-center'>Why should I use C3?</h2>
+<h2 class='text-center'>Why C3?</h2>
 <div class='row text-center features'>
 <div class='medium-4 large-4 columns supporticons'>
-<h3>It's Controllable</h3>
+<h3>It's Comfortable</h3>
 <p>
-C3 provides a variety of APIs and callbacks to access the state of the chart.
-<br>
-By using them, you can update the chart even if after it's rendered.
+C3 makes it easy to generate D3-based charts by wrapping the code required to construct the entire chart. We don't need to write D3 code any more.
 </p>
 </div>
 <div class='medium-4 large-4 columns supporticons'>
@@ -87,9 +81,9 @@ C3 gives some classes to each element when generating, so you can define a custo
 </p>
 </div>
 <div class='medium-4 large-4 columns supporticons'>
-<h3>It's Comfortable</h3>
+<h3>It's Controllable</h3>
 <p>
-C3 makes it easy to generate D3-based charts by wrapping the code required to construct the entire chart. We don't need to write D3 code any more.
+C3 provides a variety of APIs and callbacks to access the state of the chart. By using them, you can update the chart even if after it's rendered.
 </p>
 </div>
 </div>
@@ -98,8 +92,15 @@ C3 enables a deeper integration of charts into your application.
 </h3>
 <br>
 <div class='text-center'>
-<a class='button'>Getting Started</a>
+<a class='button' href='/gettingstarted.html'>Getting Started</a>
 </div>
+<hr>
+<h3>The Latest Version</h3>
+<ul>
+<li><a href="https://github.com/masayuki0812/c3/releases/tag/0.1.41">0.1.41</a></li>
+</ul>
+<h3>Browser Support</h3>
+<p>Because of the dependence on D3, C3 supports only modern browsers D3 supports. Please see <a href="https://github.com/mbostock/d3/wiki#browser-support">the description in D3</a>:</p>
 <footer>
 <hr>
 <p>&copy Masayuki Tanaka 2014</p>
@@ -114,6 +115,18 @@ C3 enables a deeper integration of charts into your application.
 <script>
   hljs.initHighlightingOnLoad();
   $(document).foundation();
+</script>
+<script>
+  $(function(){
+    $('a[href^=#]').click(function(){
+      var href= $(this).attr("href"),
+          target = $('.column-content a[href^=' + href + ']'), position;
+      if (!target) { return false; }
+      position = target.offset().top - 60;
+      $("html, body").animate({scrollTop:position}, 350, "swing");
+      return false;
+    });
+  });
 </script>
 
 <script src="/js/index-98ebc5e1.js" type="text/javascript"></script>
