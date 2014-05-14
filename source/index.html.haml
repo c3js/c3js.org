@@ -32,7 +32,16 @@
   %br
 
   .text-center
-    %a.button Getting Started
+    %a.button( href="/gettingstarted.html" ) Getting Started
+
+  %hr
+
+  %h3 The Latest Version
+  %ul
+    %li <a href="https://github.com/masayuki0812/c3/releases/tag/0.1.41">0.1.41</a>
+
+  %h3 Browser Support
+  %p Because of the dependence on D3, C3 supports only modern browsers. Please see <a href="https://github.com/mbostock/d3/wiki#browser-support">the description in D3</a>:
 
   = partial :footer
 
