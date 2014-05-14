@@ -7,3 +7,15 @@
 :javascript
   hljs.initHighlightingOnLoad();
   $(document).foundation();
+
+:javascript
+  $(function(){
+    $('a[href^=#]').click(function(){
+      var href= $(this).attr("href"),
+          target = $('.column-content a[href^=' + href + ']'), position;
+      if (!target) { return false; }
+      position = target.offset().top - 60;
+      $("html, body").animate({scrollTop:position}, 350, "swing");
+      return false;
+    });
+  });

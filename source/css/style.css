@@ -126,6 +126,9 @@ h1, h2, h3, h4, h5 {
   margin-right: 12px;
 }
 
+.sourcecode {
+  margin-bottom: 1.25rem;
+}
 .sourcecode h3 {
   border-bottom: 1px solid #ddd;
   padding-bottom: 4px;
@@ -144,6 +147,7 @@ h1, h2, h3, h4, h5 {
   padding: 0;
   font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
   font-weight: normal;
+  font-size: 0.9em;
 }
 
 .highlight {
@@ -161,4 +165,16 @@ h1, h2, h3, h4, h5 {
   line-height: 1.2em;
   margin-top: 18px;
   margin-bottom: 18px;
+}
+
+span.code {
+  display: inline-block;
+  background-color: #eee;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+}
+
+p + ul {
+  margin-left: 32px;
 }
