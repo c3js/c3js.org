@@ -146,6 +146,10 @@ data_label:
   title: Label on chart
   desc: Show value on chart as label.
 
+data_label_format:
+  title: Format Label on chart
+  desc: Format value shown on chart.
+
 data_color:
   title: Color by data
   desc: Set color according to data.
