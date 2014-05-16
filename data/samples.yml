@@ -204,7 +204,7 @@ options_color:
 
 options_padding:
   title: Padding
-  desc: Change padding for y tick values.
+  desc: Change padding for the chart.
 
 transition_duration:
   title: Duration of Transition
