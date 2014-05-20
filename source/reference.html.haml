@@ -1,0 +1,856 @@
+.container.sidemenu
+  .row
+    .large-3.medium-4.columns.column-menu
+      .side-bar
+        %ul.side-nav
+          %li OPTIONS
+
+          %li.divider
+
+          %li Chart
+          = partial :reference_menu_item, locals: { id: 'bindto' }
+          = partial :reference_menu_item, locals: { id: 'size.width' }
+          = partial :reference_menu_item, locals: { id: 'size.height' }
+          = partial :reference_menu_item, locals: { id: 'padding.left' }
+          = partial :reference_menu_item, locals: { id: 'padding.right' }
+          = partial :reference_menu_item, locals: { id: 'padding.top' }
+          = partial :reference_menu_item, locals: { id: 'padding.bottom' }
+          = partial :reference_menu_item, locals: { id: 'color.pattern' }
+          = partial :reference_menu_item, locals: { id: 'interaction.enabled' }
+          = partial :reference_menu_item, locals: { id: 'transition.duration' }
+          = partial :reference_menu_item, locals: { id: 'onenter' }
+          = partial :reference_menu_item, locals: { id: 'onleave' }
+          = partial :reference_menu_item, locals: { id: 'onresize' }
+          = partial :reference_menu_item, locals: { id: 'onresized' }
+
+          %li.divider
+
+          %li Data
+          = partial :reference_menu_item, locals: { id: 'data.x' }
+          = partial :reference_menu_item, locals: { id: 'data.xs' }
+          = partial :reference_menu_item, locals: { id: 'data.x_format' }
+          = partial :reference_menu_item, locals: { id: 'data.id_converter' }
+          = partial :reference_menu_item, locals: { id: 'data.names' }
+          = partial :reference_menu_item, locals: { id: 'data.classes' }
+          = partial :reference_menu_item, locals: { id: 'data.groups' }
+          = partial :reference_menu_item, locals: { id: 'data.axes' }
+          = partial :reference_menu_item, locals: { id: 'data.type' }
+          = partial :reference_menu_item, locals: { id: 'data.types' }
+          = partial :reference_menu_item, locals: { id: 'data.labels' }
+          = partial :reference_menu_item, locals: { id: 'data.order' }
+          = partial :reference_menu_item, locals: { id: 'data.regions' }
+          = partial :reference_menu_item, locals: { id: 'data.color' }
+          = partial :reference_menu_item, locals: { id: 'data.colors' }
+          = partial :reference_menu_item, locals: { id: 'data.hide' }
+          = partial :reference_menu_item, locals: { id: 'data.filter' }
+          = partial :reference_menu_item, locals: { id: 'data.selection.enabled' }
+          = partial :reference_menu_item, locals: { id: 'data.selection.grouped' }
+          = partial :reference_menu_item, locals: { id: 'data.selection.multiple' }
+          = partial :reference_menu_item, locals: { id: 'data.selection.isselectable' }
+          = partial :reference_menu_item, locals: { id: 'data.onclick' }
+          = partial :reference_menu_item, locals: { id: 'data.onenter' }
+          = partial :reference_menu_item, locals: { id: 'data.onleave' }
+          = partial :reference_menu_item, locals: { id: 'data.onselected' }
+          = partial :reference_menu_item, locals: { id: 'data.onunselected' }
+          = partial :reference_menu_item, locals: { id: 'data.ondragstart' }
+          = partial :reference_menu_item, locals: { id: 'data.ondragend' }
+
+          %li.divider
+
+          %li Axis
+          = partial :reference_menu_item, locals: { id: 'axis.rotated' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.show' }
+          -#= partial :reference_menu_item, locals: { id: 'axis.x.type' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.localtime' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.categories' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.centered' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.format' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.culling' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.culling.max' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.count' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.fit' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.values' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.rotate' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.max' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.min' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.padding' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.height' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.default' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.label' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.show' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.max' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.min' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.center' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.label' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.inner', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'axis.y.tick.format' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.padding' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.ticks' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.show' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.max' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.min' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.center' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.label' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.inner', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.tick.format' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.padding' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.ticks' }
+
+          %li.divider
+
+          %li Grid
+          = partial :reference_menu_item, locals: { id: 'grid.x.show' }
+          = partial :reference_menu_item, locals: { id: 'grid.x.type' }
+          = partial :reference_menu_item, locals: { id: 'grid.x.lines' }
+          = partial :reference_menu_item, locals: { id: 'grid.y.show' }
+          = partial :reference_menu_item, locals: { id: 'grid.y.lines' }
+          = partial :reference_menu_item, locals: { id: 'grid.y.ticks' }
+
+          %li.divider
+
+          %li Region
+          = partial :reference_menu_item, locals: { id: 'regions' }
+
+          %li.divider
+
+          %li Legend
+          = partial :reference_menu_item, locals: { id: 'legend.show' }
+          = partial :reference_menu_item, locals: { id: 'legend.position' }
+          = partial :reference_menu_item, locals: { id: 'legend.item.onclick' }
+          = partial :reference_menu_item, locals: { id: 'legend.item.onmouseover' }
+          = partial :reference_menu_item, locals: { id: 'legend.item.onmouseout' }
+          = partial :reference_menu_item, locals: { id: 'legend.equally' }
+
+          %li.divider
+
+          %li Tooltip
+          = partial :reference_menu_item, locals: { id: 'tooltip.show' }
+          = partial :reference_menu_item, locals: { id: 'tooltip.format.title' }
+          = partial :reference_menu_item, locals: { id: 'tooltip.format.value' }
+          = partial :reference_menu_item, locals: { id: 'tooltip.contents' }
+          = partial :reference_menu_item, locals: { id: 'tooltip.init.show' }
+          = partial :reference_menu_item, locals: { id: 'tooltip.init.x' }
+          = partial :reference_menu_item, locals: { id: 'tooltip.init.position' }
+
+          %li.divider
+
+          %li Subchart
+          = partial :reference_menu_item, locals: { id: 'subchart.show', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'subchart.size.height', experimental: true }
+
+          %li.divider
+
+          %li Zoom
+          = partial :reference_menu_item, locals: { id: 'zoom.enabled', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'zoom.extent', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'zoom.privileged', experimental: true }
+
+          %li.divider
+
+          %li Point
+          = partial :reference_menu_item, locals: { id: 'point.show' }
+          = partial :reference_menu_item, locals: { id: 'point.r' }
+          = partial :reference_menu_item, locals: { id: 'point.focus.line.enabled' }
+          = partial :reference_menu_item, locals: { id: 'point.focus.expand.enabled' }
+          = partial :reference_menu_item, locals: { id: 'point.focus.expand.r' }
+          = partial :reference_menu_item, locals: { id: 'point.select.r' }
+
+          %li.divider
+
+          %li Line
+          = partial :reference_menu_item, locals: { id: 'line.connect_null' }
+
+          %li.divider
+
+          %li Bar
+          = partial :reference_menu_item, locals: { id: 'bar.width' }
+          = partial :reference_menu_item, locals: { id: 'bar.width.ratio' }
+
+          %li.divider
+
+          %li Pie
+          = partial :reference_menu_item, locals: { id: 'pie.label.show' }
+          = partial :reference_menu_item, locals: { id: 'pie.label.format' }
+          = partial :reference_menu_item, locals: { id: 'pie.expand' }
+          = partial :reference_menu_item, locals: { id: 'pie.onclick' }
+          = partial :reference_menu_item, locals: { id: 'pie.onmouseover' }
+          = partial :reference_menu_item, locals: { id: 'pie.onmouseout' }
+
+          %li.divider
+
+          %li Donut
+          = partial :reference_menu_item, locals: { id: 'donut.label.show' }
+          = partial :reference_menu_item, locals: { id: 'donut.label.format' }
+          = partial :reference_menu_item, locals: { id: 'donut.expand' }
+          = partial :reference_menu_item, locals: { id: 'donut.title' }
+          = partial :reference_menu_item, locals: { id: 'donut.onclick' }
+          = partial :reference_menu_item, locals: { id: 'donut.onmouseover' }
+          = partial :reference_menu_item, locals: { id: 'donut.onmouseout' }
+        -#
+          %li.divider
+
+          %li CLASSES
+
+          %li.divider
+
+          %li Chart
+
+          %li Axis
+
+          %li Shape
+
+          %li Grid
+
+    .large-9.medium-8.columns.column-content
+      %section
+        %h2 Reference
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'bindto' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'size.width' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'size.height' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'padding.top' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'padding.right' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'padding.bottom' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'padding.left' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'color.pattern' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'interaction.enabled' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'transition.duration' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'onenter' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'onleave' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'onresize' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'onresized' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.x' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.xs' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.x_format' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.id_converter' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.names' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.classes' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.groups' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.axes' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.type' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.types' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.labels' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.order' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.regions' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.color' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.colors' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.hide' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.filter' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.selection.enabled' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.selection.grouped' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.selection.multiple' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.selection.isselectable' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.onclick' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.onenter' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.onleave' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.onselected' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.onunselected' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.ondragstart' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.ondragend' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.rotated' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.show' }
+        %p ...
+      %hr
+      -#%section
+        -#%h3
+          -#= partial :reference_item_link, locals: { id: 'axis.x.type' }
+        -#%p ...
+      -#%hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.localtime' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.categories' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.centered' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.format' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.culling' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.culling.max' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.count' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.fit' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.values' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.rotate' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.max' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.min' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.padding' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.height' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.default' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.label' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.max' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.min' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.center' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.label' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.inner', experimental: true }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.tick.format' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.padding' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.ticks' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.max' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.min' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.center' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.label' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.inner', experimental: true }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.tick.format' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.padding' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.ticks' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'grid.x.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'grid.x.type' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'grid.x.lines' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'grid.y.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'grid.y.lines' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'grid.y.ticks' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'regions' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'legend.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'legend.position' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'legend.item.onclick' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'legend.item.onmouseover' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'legend.item.onmouseout' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'legend.equally' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.format.title' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.format.value' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.contents' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.init.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.init.x' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.init.position' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'subchart.show', experimental: true }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'subchart.size.height', experimental: true }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'zoom.enabled', experimental: true }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'zoom.extent', experimental: true }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'zoom.privileged', experimental: true }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'point.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'point.r' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'point.focus.line.enabled' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'point.focus.expand.enabled' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'point.focus.expand.r' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'point.select.r' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'line.connect_null' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'bar.width' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'bar.width.ratio' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'pie.label.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'pie.label.format' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'pie.expand' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'pie.onclick' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'pie.onmouseover' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'pie.onmouseout' }
+        %p ...
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'donut.label.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'donut.label.format' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'donut.expand' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'donut.title' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'donut.onclick' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'donut.onmouseover' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'donut.onmouseout' }
+        %p ...
+      %hr
+
+  = partial :footer
+
+= partial :script
+

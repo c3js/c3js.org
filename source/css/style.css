@@ -54,15 +54,29 @@ footer p {
   overflow: auto;
   top: 60px;
   bottom: 0;
-  padding-bottom: 0;
+  padding-bottom: 60px;
 }
 .container.sidemenu .column-menu .side-bar {
   position: relative;
+}
+.container.sidemenu .column-menu .side-bar li a {
+  display: inline;
+}
+.container.sidemenu .column-menu .side-bar .label {
+  top: -2px;
+  padding: 0.22222rem 0.44444rem 0.33333rem;
+  font-size: 0.5rem;
+  margin-bottom: 0;
 }
 .container.sidemenu .column-content {
   padding-left: 40px;
   padding-top: 20px;
   padding-bottom: 60px;
+}
+.container.sidemenu .column-content section .label {
+  top: -4px;
+  padding: 0.22222rem 0.44444rem 0.33333rem;
+  font-size: 0.61rem;
 }
 .container hr.large {
   margin: 48px 0;
