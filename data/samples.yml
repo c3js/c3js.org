@@ -1,6 +1,6 @@
 simple_multiple:
   title: 'Line Chart'
-  desc: 'Line chart with sequentila data.'
+  desc: 'Line chart with sequential data.'
 
 timeseries:
   title: Timeseries Chart
