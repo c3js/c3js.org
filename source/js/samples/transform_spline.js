@@ -9,17 +9,17 @@ var chart = c3.generate({
 });
 
 setTimeout(function () {
-    chart.toSpline('data1');
+    chart.transform('spline', 'data1');
 }, 1000);
 
 setTimeout(function () {
-    chart.toSpline('data2');
+    chart.transform('spline', 'data2');
 }, 2000);
 
 setTimeout(function () {
-    chart.toBar();
+    chart.transform('bar');
 }, 3000);
 
 setTimeout(function () {
-    chart.toSpline();
+    chart.transform('spline');
 }, 4000);

@@ -8,17 +8,17 @@ var chart = c3.generate({
 });
 
 setTimeout(function () {
-    chart.toDonut();
+    chart.transform('donut');
 }, 1000);
 
 setTimeout(function () {
-    chart.toLine();
+    chart.transform('line');
 }, 2000);
 
 setTimeout(function () {
-    chart.toPie();
+    chart.transform('pie');
 }, 3000);
 
 setTimeout(function () {
-    chart.toDonut();
+    chart.transform('donut');
 }, 4000);

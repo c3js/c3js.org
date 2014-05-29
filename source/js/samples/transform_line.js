@@ -9,17 +9,17 @@ var chart = c3.generate({
 });
 
 setTimeout(function () {
-    chart.toLine('data1');
+    chart.transform('line', 'data1');
 }, 1000);
 
 setTimeout(function () {
-    chart.toLine('data2');
+    chart.transform('line', 'data2');
 }, 2000);
 
 setTimeout(function () {
-    chart.toBar();
+    chart.transform('bar');
 }, 3000);
 
 setTimeout(function () {
-    chart.toLine();
+    chart.transform('line');
 }, 4000);
