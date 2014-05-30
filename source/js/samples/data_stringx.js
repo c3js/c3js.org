@@ -13,7 +13,7 @@ var chart = c3.generate({
     },
     axis: {
         x: {
-            type: 'categorized' // this needed to load string x value
+            type: 'category' // this needed to load string x value
         }
     }
 });

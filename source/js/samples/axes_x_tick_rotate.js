@@ -9,7 +9,7 @@ var chart = c3.generate({
     },
     axis: {
         x: {
-            type: 'categorized',
+            type: 'category',
             tick: {
                 rotate: 75
             },

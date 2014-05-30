@@ -6,13 +6,13 @@ var chart = c3.generate({
     },
     axis: {
         x: {
-            type: 'categorized',
+            type: 'category',
             tick: {
                 culling: {
                     max: 4 // the number of tick texts will be adjusted to less than this value
                 }
                 // for normal axis, default on
-                // for categorized axis, default off
+                // for category axis, default off
             }
         }
     }
