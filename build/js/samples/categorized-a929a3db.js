@@ -6,7 +6,7 @@ var chart = c3.generate({
     },
     axis: {
         x: {
-            type: 'categorized',
+            type: 'category',
             categories: ['cat1', 'cat2', 'cat3', 'cat4', 'cat5', 'cat6', 'cat7', 'cat8', 'cat9']
         }
     }

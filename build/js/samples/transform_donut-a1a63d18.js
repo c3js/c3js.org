@@ -3,23 +3,22 @@ var chart = c3.generate({
         columns: [
             ['data1', 30, 200, 100, 400, 150, 250],
             ['data2', 130, 100, 140, 200, 150, 50]
-        ],
-        type: 'bar'
+        ]
     }
 });
 
 setTimeout(function () {
-    chart.toLine('data1');
+    chart.transform('donut');
 }, 1000);
 
 setTimeout(function () {
-    chart.toLine('data2');
+    chart.transform('line');
 }, 2000);
 
 setTimeout(function () {
-    chart.toBar();
+    chart.transform('pie');
 }, 3000);
 
 setTimeout(function () {
-    chart.toLine();
+    chart.transform('donut');
 }, 4000);

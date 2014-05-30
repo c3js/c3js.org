@@ -27,14 +27,14 @@ var chart = c3.generate({
 });
 
 setTimeout(function () {
-    chart.toScatter();
+    chart.transform('scatter');
 }, 1000);
 
 setTimeout(function () {
-    chart.toPie();
+    chart.transform('pie');
 }, 2000);
 
 setTimeout(function () {
-    chart.toScatter();
+    chart.transform('scatter');
 }, 3000)
 ;

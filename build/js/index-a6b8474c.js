@@ -9,7 +9,7 @@ var chart = c3.generate({
     },
     axis: {
         x: {
-            type: 'categorized'
+            type: 'category'
         }
     }
 });
@@ -76,7 +76,7 @@ var defaultMessage = $('#message').html(), currentIndex = 0, timer, duration = 1
         setMessage('Clear regions');
     },
     function () {
-        chart.toBar();
+        chart.transform('bar');
         setMessage('Show as bar chart');
     },
     function () {
@@ -89,7 +89,7 @@ var defaultMessage = $('#message').html(), currentIndex = 0, timer, duration = 1
     },
     function () {
         chart.groups([['data2', 'data3']]);
-        chart.toLine('data1');
+        chart.transform('line', 'data1');
         setMessage('Show data1 as line');
     },
     function () {
@@ -101,7 +101,7 @@ var defaultMessage = $('#message').html(), currentIndex = 0, timer, duration = 1
         setMessage('Unload data2');
     },
     function () {
-        chart.toLine(['data1','data2', 'data3']);
+        chart.transform('line', ['data1', 'data2', 'data3']);
         chart.groups([['data1'], ['data2'], ['data3']]);
         chart.load({
             columns: [['data1', 30, 200, 100, 400, 150, 250, 50, 100, 250]]

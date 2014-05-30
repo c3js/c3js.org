@@ -8,13 +8,13 @@ var chart = c3.generate({
 });
 
 setTimeout(function () {
-    chart.toPie();
+    chart.transform('pie');
 }, 1000);
 
 setTimeout(function () {
-    chart.toLine();
+    chart.transform('line');
 }, 2000);
 
 setTimeout(function () {
-    chart.toPie();
+    chart.transform('pie');
 }, 3000);

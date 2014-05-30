@@ -191,3 +191,14 @@ span.code {
 h3 + ul, p + ul {
   margin-left: 32px;
 }
+
+.gray {
+  color: #999;
+}
+
+li .label {
+  top: -3px;
+  padding: 0.22222rem 0.44444rem 0.33333rem;
+  font-size: 0.61rem;
+  margin: 0 8px;
+}
