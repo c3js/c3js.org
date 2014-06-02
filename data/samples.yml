@@ -126,6 +126,10 @@ data_rowed:
   title: Row Oriented Data
   desc: Row-oriented data can be used as input.
 
+data_json:
+  title: JSON Data
+  desc: JSON can be used as input.
+
 data_url:
   title: Data from URL
   desc: Data from URL can be used as input.

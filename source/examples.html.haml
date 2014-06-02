@@ -61,18 +61,18 @@
       .row
         = partial :index_item, locals: { id: 'data_columned' }
         = partial :index_item, locals: { id: 'data_rowed' }
+        = partial :index_item, locals: { id: 'data_json' }
+      .row
         = partial :index_item, locals: { id: 'data_url' }
-      .row
-        = partial :index_item, locals: { id: 'data_load' }
         = partial :index_item, locals: { id: 'data_stringx' }
-        = partial :index_item, locals: { id: 'data_name' }
+        = partial :index_item, locals: { id: 'data_load' }
       .row
+        = partial :index_item, locals: { id: 'data_name' }
         = partial :index_item, locals: { id: 'data_color' }
+        = partial :index_item, locals: { id: 'data_order' }
+      .row
         = partial :index_item, locals: { id: 'data_label' }
         = partial :index_item, locals: { id: 'data_label_format' }
-      .row
-        = partial :index_item, locals: { id: 'data_order' }
-        .large-4.columns
         .large-4.columns
 
   %hr.medium
