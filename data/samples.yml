@@ -42,6 +42,10 @@ chart_donut:
   title: Donut Chart
   desc: Display as Donut Chart.
 
+chart_step:
+  title: Step Chart
+  desc: Display as Step Chart.
+
 chart_area:
   title: Area Chart
   desc: Display as Area Chart.
