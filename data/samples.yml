@@ -130,10 +130,6 @@ data_name:
   title: Set Name
   desc: Set name for each data.
 
-data_xformat:
-  title: Custom x for Timeseries
-  desc: Change x data and format for timeseries data.
-
 data_stringx:
   title: Data with String x values
   desc: Load with String x values when categorized axis.
