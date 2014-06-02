@@ -3,9 +3,8 @@
     .large-3.medium-4.columns.column-menu
       .side-bar
         %ul.side-nav
-          %li OPTIONS
-
-          %li.divider
+          %li
+            %strong OPTIONS
 
           %li Chart
           = partial :reference_menu_item, locals: { id: 'bindto' }
@@ -22,8 +21,6 @@
           = partial :reference_menu_item, locals: { id: 'onleave' }
           = partial :reference_menu_item, locals: { id: 'onresize' }
           = partial :reference_menu_item, locals: { id: 'onresized' }
-
-          %li.divider
 
           %li Data
           = partial :reference_menu_item, locals: { id: 'data.x' }
@@ -54,8 +51,6 @@
           = partial :reference_menu_item, locals: { id: 'data.onunselected' }
           = partial :reference_menu_item, locals: { id: 'data.ondragstart' }
           = partial :reference_menu_item, locals: { id: 'data.ondragend' }
-
-          %li.divider
 
           %li Axis
           = partial :reference_menu_item, locals: { id: 'axis.rotated' }
@@ -96,8 +91,6 @@
           = partial :reference_menu_item, locals: { id: 'axis.y2.padding' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.ticks' }
 
-          %li.divider
-
           %li Grid
           = partial :reference_menu_item, locals: { id: 'grid.x.show' }
           -#= partial :reference_menu_item, locals: { id: 'grid.x.type' }
@@ -106,12 +99,8 @@
           = partial :reference_menu_item, locals: { id: 'grid.y.lines' }
           = partial :reference_menu_item, locals: { id: 'grid.y.ticks' }
 
-          %li.divider
-
           %li Region
           = partial :reference_menu_item, locals: { id: 'regions' }
-
-          %li.divider
 
           %li Legend
           = partial :reference_menu_item, locals: { id: 'legend.show' }
@@ -120,8 +109,6 @@
           = partial :reference_menu_item, locals: { id: 'legend.item.onmouseover' }
           = partial :reference_menu_item, locals: { id: 'legend.item.onmouseout' }
           = partial :reference_menu_item, locals: { id: 'legend.equally' }
-
-          %li.divider
 
           %li Tooltip
           = partial :reference_menu_item, locals: { id: 'tooltip.show' }
@@ -133,20 +120,14 @@
           -#= partial :reference_menu_item, locals: { id: 'tooltip.init.x' }
           -#= partial :reference_menu_item, locals: { id: 'tooltip.init.position' }
 
-          %li.divider
-
           %li Subchart
           = partial :reference_menu_item, locals: { id: 'subchart.show', experimental: true }
           = partial :reference_menu_item, locals: { id: 'subchart.size.height', experimental: true }
 
-          %li.divider
-
           %li Zoom
           = partial :reference_menu_item, locals: { id: 'zoom.enabled', experimental: true }
-          = partial :reference_menu_item, locals: { id: 'zoom.extent', experimental: true }
-          = partial :reference_menu_item, locals: { id: 'zoom.privileged', experimental: true }
-
-          %li.divider
+          -#= partial :reference_menu_item, locals: { id: 'zoom.extent', experimental: true }
+          -#= partial :reference_menu_item, locals: { id: 'zoom.privileged', experimental: true }
 
           %li Point
           = partial :reference_menu_item, locals: { id: 'point.show' }
@@ -156,18 +137,12 @@
           = partial :reference_menu_item, locals: { id: 'point.focus.expand.r' }
           = partial :reference_menu_item, locals: { id: 'point.select.r' }
 
-          %li.divider
-
           %li Line
           = partial :reference_menu_item, locals: { id: 'line.connect_null' }
-
-          %li.divider
 
           %li Bar
           = partial :reference_menu_item, locals: { id: 'bar.width' }
           = partial :reference_menu_item, locals: { id: 'bar.width.ratio' }
-
-          %li.divider
 
           %li Pie
           = partial :reference_menu_item, locals: { id: 'pie.label.show' }
@@ -177,8 +152,6 @@
           = partial :reference_menu_item, locals: { id: 'pie.onmouseover' }
           = partial :reference_menu_item, locals: { id: 'pie.onmouseout' }
 
-          %li.divider
-
           %li Donut
           = partial :reference_menu_item, locals: { id: 'donut.label.show' }
           = partial :reference_menu_item, locals: { id: 'donut.label.format' }
@@ -187,68 +160,125 @@
           = partial :reference_menu_item, locals: { id: 'donut.onclick' }
           = partial :reference_menu_item, locals: { id: 'donut.onmouseover' }
           = partial :reference_menu_item, locals: { id: 'donut.onmouseout' }
-        -#
-          %li.divider
 
-          %li APIs
+          %li.margin-medium-top
+            %strong API
 
-          %li focus
-          %li defocus
-          %li revert
-          %li show
-          %li hide
-          %li toggle
-          %li load
-          %li unload
-          %li flow
-          %li selected
-          %li select
-          %li unselect
-          %li transform
-          %li groups
-          %li xgrids
-          %li xgrids.add
-          %li xgrids.remove
-          %li ygrids
-          %li ygrids.add
-          %li ygrids.remove
-          %li regions
-          %li regions.add
-          %li regions.remove
-          %li data.get
-          %li data.getAsTarget
-          %li data.names
-          %li data.colors
-          %li x
-          %li xs
-          %li axis.labels
-          %li axis.max
-          %li axis.min
-          %li axis.range
-          %li legend.show
-          %li legend.hide
-          %li unzoom
-          %li resize
-          %li flush
-          %li destroy
+          = partial :reference_menu_item, locals: { id: 'api.focus' }
+          = partial :reference_menu_item, locals: { id: 'api.defocus' }
+          = partial :reference_menu_item, locals: { id: 'api.revert' }
+          = partial :reference_menu_item, locals: { id: 'api.show' }
+          = partial :reference_menu_item, locals: { id: 'api.hide' }
+          = partial :reference_menu_item, locals: { id: 'api.toggle' }
+          = partial :reference_menu_item, locals: { id: 'api.load' }
+          = partial :reference_menu_item, locals: { id: 'api.unload' }
+          = partial :reference_menu_item, locals: { id: 'api.flow' }
+          = partial :reference_menu_item, locals: { id: 'api.select' }
+          = partial :reference_menu_item, locals: { id: 'api.unselect' }
+          = partial :reference_menu_item, locals: { id: 'api.selected' }
+          = partial :reference_menu_item, locals: { id: 'api.transform' }
+          = partial :reference_menu_item, locals: { id: 'api.groups' }
+          = partial :reference_menu_item, locals: { id: 'api.xgrids' }
+          = partial :reference_menu_item, locals: { id: 'api.xgrids.add' }
+          = partial :reference_menu_item, locals: { id: 'api.xgrids.remove' }
+          = partial :reference_menu_item, locals: { id: 'api.ygrids' }
+          = partial :reference_menu_item, locals: { id: 'api.ygrids.add' }
+          = partial :reference_menu_item, locals: { id: 'api.ygrids.remove' }
+          = partial :reference_menu_item, locals: { id: 'api.regions' }
+          = partial :reference_menu_item, locals: { id: 'api.regions.add' }
+          = partial :reference_menu_item, locals: { id: 'api.regions.remove' }
+          = partial :reference_menu_item, locals: { id: 'api.data.get' }
+          = partial :reference_menu_item, locals: { id: 'api.data.getAsTarget' }
+          = partial :reference_menu_item, locals: { id: 'api.data.names' }
+          = partial :reference_menu_item, locals: { id: 'api.data.colors' }
+          = partial :reference_menu_item, locals: { id: 'api.data.targets' }
+          = partial :reference_menu_item, locals: { id: 'api.x' }
+          = partial :reference_menu_item, locals: { id: 'api.xs' }
+          = partial :reference_menu_item, locals: { id: 'api.color' }
+          = partial :reference_menu_item, locals: { id: 'api.axis.labels' }
+          = partial :reference_menu_item, locals: { id: 'api.axis.min' }
+          = partial :reference_menu_item, locals: { id: 'api.axis.max' }
+          = partial :reference_menu_item, locals: { id: 'api.axis.range' }
+          = partial :reference_menu_item, locals: { id: 'api.legend.show' }
+          = partial :reference_menu_item, locals: { id: 'api.legend.hide' }
+          = partial :reference_menu_item, locals: { id: 'api.unzoom' }
+          = partial :reference_menu_item, locals: { id: 'api.resize' }
+          = partial :reference_menu_item, locals: { id: 'api.flush' }
+          = partial :reference_menu_item, locals: { id: 'api.destroy' }
 
-          %li.divider
+          %li.margin-medium-top
+            %strong CLASS
 
-          %li CLASSES
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-line' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-lines' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-bar' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-bars' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-text' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-texts' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-arc' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-arcs' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-arcs-title' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-arcs-background' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-arcs-gauge-unit' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-arcs-gauge-max' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-chart-arcs-gauge-min' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-selected-circle' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-selected-circles' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-event-rect' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-event-rects' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-event-rects-single' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-event-rects-multiple' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-zoom-rect' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-brush' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-focused' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-region' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-regions' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-tooltip' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-tooltip-name' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-shape' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-shapes' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-line' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-lines' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-bar' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-bars' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-circle' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-circles' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-arc' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-arcs' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-area' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-areas' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-empty' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-text' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-texts' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-gauge-value' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-grid' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-xgrid' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-xgrids' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-xgrid-line' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-xgrid-lines' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-xgrid-focus' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-ygrid' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-ygrids' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-ygrid-line' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-ygrid-lines' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-axis' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-axis-x' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-axis-x-label' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-axis-y' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-axis-y-label' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-axis-y2' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-axis-y2-label' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-legend-item' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-legend-item-event' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-legend-item-tile' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-legend-item-hidden' }
+          = partial :reference_menu_item, locals: { id: 'class.c3-legend-item-focused' }
 
-          %li.divider
-
-          %li Chart
-
-          %li Axis
-
-          %li Shape
-
-          %li Grid
 
     .large-9.medium-8.columns.column-content
       %section
-        %h2 Reference
+        %h2 Options
       %hr
 
       %section
@@ -842,6 +872,548 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.onmouseout' }
+        %p ...
+      %hr
+
+      %br
+      %section
+        %h2 API
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.focus' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.defocus' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.revert' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.hide' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.toggle' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.load' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.unload' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.flow' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.select' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.unselect' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.selected' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.transform' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.groups' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.xgrids' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.xgrids.add' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.xgrids.remove' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.ygrids' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.ygrids.add' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.ygrids.remove' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.regions' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.regions.add' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.regions.remove' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.data.get' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.data.getAsTarget' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.data.names' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.data.colors' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.data.targets' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.x' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.xs' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.color' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.axis.labels' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.axis.min' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.axis.max' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.axis.range' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.legend.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.legend.hide' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.unzoom' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.resize' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.flush' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.destroy' }
+        %p ...
+      %hr
+
+      %br
+      %section
+        %h2 CLASS
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-line' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-lines' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-bar' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-bars' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-text' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-texts' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-arc' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs-title' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs-background' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs-gauge-unit' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs-gauge-max' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs-gauge-min' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-selected-circle' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-selected-circles' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-event-rect' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-event-rects' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-event-rects-single' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-event-rects-multiple' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-zoom-rect' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-brush' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-focused' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-region' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-regions' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-tooltip' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-tooltip-name' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-shape' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-shapes' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-line' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-lines' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-bar' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-bars' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-circle' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-circles' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-arc' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-arcs' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-area' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-areas' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-empty' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-text' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-texts' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-gauge-value' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-grid' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-xgrid' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-xgrids' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-xgrid-line' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-xgrid-lines' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-xgrid-focus' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-ygrid' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-ygrids' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-ygrid-line' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-ygrid-lines' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-axis' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-axis-x' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-axis-x-label' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-axis-y' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-axis-y-label' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-axis-y2' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-axis-y2-label' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-legend-item' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-legend-item-event' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-legend-item-tile' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-legend-item-hidden' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'class.c3-legend-item-focused' }
         %p ...
       %hr
 
