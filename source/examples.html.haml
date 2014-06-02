@@ -30,16 +30,16 @@
     %div
       .row
         = partial :index_item, locals: { id: 'categorized' }
-        = partial :index_item, locals: { id: 'axes_y2' }
         = partial :index_item, locals: { id: 'axes_rotated' }
+        = partial :index_item, locals: { id: 'axes_y2' }
       .row
-        = partial :index_item, locals: { id: 'axes_x_tick_rotate' }
         = partial :index_item, locals: { id: 'axes_x_tick_format' }
         = partial :index_item, locals: { id: 'axes_x_tick_count' }
-      .row
         = partial :index_item, locals: { id: 'axes_x_tick_culling' }
+      .row
         = partial :index_item, locals: { id: 'axes_x_tick_fit' }
         = partial :index_item, locals: { id: 'axes_x_localtime' }
+        = partial :index_item, locals: { id: 'axes_x_tick_rotate' }
       .row
         = partial :index_item, locals: { id: 'axes_y_tick_format' }
         = partial :index_item, locals: { id: 'axes_y_padding' }
@@ -60,14 +60,14 @@
         = partial :index_item, locals: { id: 'data_url' }
       .row
         = partial :index_item, locals: { id: 'data_load' }
-        = partial :index_item, locals: { id: 'data_name' }
-        = partial :index_item, locals: { id: 'data_color' }
-      .row
         = partial :index_item, locals: { id: 'data_stringx' }
-        = partial :index_item, locals: { id: 'data_order' }
-        = partial :index_item, locals: { id: 'data_label' }
+        = partial :index_item, locals: { id: 'data_name' }
       .row
+        = partial :index_item, locals: { id: 'data_color' }
+        = partial :index_item, locals: { id: 'data_label' }
         = partial :index_item, locals: { id: 'data_label_format' }
+      .row
+        = partial :index_item, locals: { id: 'data_order' }
         .large-4.columns
         .large-4.columns
 

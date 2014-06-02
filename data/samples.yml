@@ -56,19 +56,19 @@ chart_combination:
 
 categorized:
   title: Categorized Axis
-  desc: Axis with ticks categorizing each data.
+  desc: Show ticks as categorized by each data.
 
 axes_y2:
-  title: Additional Axis
+  title: Additional Y Axis
   desc: Additional y axis can be added.
 
 axes_rotated:
   title: Rotated Axis
-  desc: Axis can be rotated.
+  desc: Switch x and y axis position.
 
 axes_x_localtime:
   title: X Axis Timezone
-  desc: Convert time to UTC or not.
+  desc: Convert time to UTC.
 
 axes_x_tick_rotate:
   title: Rotate X Axis Tick Text
@@ -91,7 +91,7 @@ axes_x_tick_count:
   desc: Set the number of ticks on X Axis.
 
 axes_x_tick_fit:
-  title: Fit X Axis Tick to X
+  title: X Axis Tick Fitting
   desc: Set ticks potision to x of data.
 
 axes_label:
@@ -127,27 +127,27 @@ data_load:
   desc: Load data dynamically.
 
 data_name:
-  title: Set Name
+  title: Data Name
   desc: Set name for each data.
 
 data_stringx:
-  title: Data with String x values
-  desc: Load with String x values when categorized axis.
+  title: Category Data
+  desc: Load data with x values on category axis.
 
 data_order:
   title: Data Order
   desc: Define data order. This will be used for stacked bar chart.
 
 data_label:
-  title: Label on chart
-  desc: Show value on chart as label.
+  title: Data Label
+  desc: Show label of data.
 
 data_label_format:
-  title: Format Label on chart
-  desc: Format value shown on chart.
+  title: Data Label Format
+  desc: Format label of data.
 
 data_color:
-  title: Color by data
+  title: Data Color
   desc: Set color according to data.
 
 options_legend:
