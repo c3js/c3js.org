@@ -6,11 +6,6 @@ var chart = c3.generate({
         selection: {
             enabled: true
         }
-    },
-    axis: {
-        x: {
-            type: 'category'
-        }
     }
 });
 
@@ -64,16 +59,33 @@ var defaultMessage = $('#message').html(), currentIndex = 0, timer, duration = 1
         setMessage('Update data2');
     },
     function () {
-        chart.regions([{start:0.5,end:2.5}]);
+        chart.regions([{start:1,end:3}]);
         setMessage('Add region from 1 to 3');
         },
     function () {
-        chart.regions.add([{start:6.5}]);
-        setMessage('Add region from 7 to end');
+        chart.regions.add([{start:6}]);
+        setMessage('Add region from 6 to end');
     },
     function () {
         chart.regions([]);
         setMessage('Clear regions');
+    },
+    function () {
+        chart.xgrids([{value: 1, text:'Label 1'}, {value: 4, text: 'Label 4'}]);
+        setMessage('Add x grid lines for 1, 4');
+    },
+    function () {
+        chart.ygrids.add([{value: 450, text:'Label 450'}]);
+        setMessage('Add y grid lines for 450');
+    },
+    function () {
+        chart.xgrids.remove({value: 1});
+        chart.xgrids.remove({value: 4});
+        setMessage('Remove grid lines for 1, 4');
+    },
+    function () {
+        chart.ygrids.remove({value: 450});
+        setMessage('Remove grid line for 450');
     },
     function () {
         chart.transform('bar');
@@ -99,6 +111,22 @@ var defaultMessage = $('#message').html(), currentIndex = 0, timer, duration = 1
     function () {
         chart.unload('data2');
         setMessage('Unload data2');
+    },
+    function () {
+        chart.flow({
+            columns: [
+                ['data1', 390, 400, 200, 500]
+            ],
+        });
+        setMessage('Flow 4 data');
+    },
+    function () {
+        chart.flow({
+            columns: [
+                ['data1', 190, 230]
+            ],
+        });
+        setMessage('Flow 2 data');
     },
     function () {
         chart.transform('line', ['data1', 'data2', 'data3']);
