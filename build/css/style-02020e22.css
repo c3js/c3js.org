@@ -59,8 +59,9 @@ footer p {
 .container.sidemenu .column-menu .side-bar {
   position: relative;
 }
-.container.sidemenu .column-menu .side-bar li a {
+.container.sidemenu .column-menu .side-bar li > a {
   display: inline;
+  padding-left: 12px;
 }
 .container.sidemenu .column-menu .side-bar .label {
   top: -2px;
@@ -132,6 +133,9 @@ h1, h2, h3, h4, h5 {
 .margin-medium-v {
   margin-top: 24px;
   margin-bottom: 24px;
+}
+.margin-medium-top {
+  margin-top: 24px !important;
 }
 .margin-small-h {
   margin-left: 12px;

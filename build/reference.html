@@ -11,7 +11,7 @@
 <link href="/css/foundation.min-978d4ce8.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/tomorrow-d7cf0921.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/c3-f750e4d4.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="/css/style-c46d3541.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/style-02020e22.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/reference.css" media="screen" rel="stylesheet" type="text/css" />
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -63,8 +63,9 @@
 <div class='large-3 medium-4 columns column-menu'>
 <div class='side-bar'>
 <ul class='side-nav'>
-<li>OPTIONS</li>
-<li class='divider'></li>
+<li>
+<strong>OPTIONS</strong>
+</li>
 <li>Chart</li>
 <li>
 <a href='#bindto'>bindto</a>
@@ -136,7 +137,6 @@
 
 </li>
 
-<li class='divider'></li>
 <li>Data</li>
 <li>
 <a href='#data-x'>data.x</a>
@@ -268,7 +268,6 @@
 
 </li>
 
-<li class='divider'></li>
 <li>Axis</li>
 <li>
 <a href='#axis-rotated'>axis.rotated</a>
@@ -435,7 +434,6 @@
 
 </li>
 
-<li class='divider'></li>
 <li>Grid</li>
 <li>
 <a href='#grid-x-show'>grid.x.show</a>
@@ -462,14 +460,12 @@
 
 </li>
 
-<li class='divider'></li>
 <li>Region</li>
 <li>
 <a href='#regions'>regions</a>
 
 </li>
 
-<li class='divider'></li>
 <li>Legend</li>
 <li>
 <a href='#legend-show'>legend.show</a>
@@ -501,7 +497,6 @@
 
 </li>
 
-<li class='divider'></li>
 <li>Tooltip</li>
 <li>
 <a href='#tooltip-show'>tooltip.show</a>
@@ -528,7 +523,6 @@
 
 </li>
 
-<li class='divider'></li>
 <li>Subchart</li>
 <li>
 <a href='#subchart-show'>subchart.show</a>
@@ -542,7 +536,6 @@
 
 </li>
 
-<li class='divider'></li>
 <li>Zoom</li>
 <li>
 <a href='#zoom-enabled'>zoom.enabled</a>
@@ -550,19 +543,6 @@
 
 </li>
 
-<li>
-<a href='#zoom-extent'>zoom.extent</a>
-<span class="secondary label">Experimental</span>
-
-</li>
-
-<li>
-<a href='#zoom-privileged'>zoom.privileged</a>
-<span class="secondary label">Experimental</span>
-
-</li>
-
-<li class='divider'></li>
 <li>Point</li>
 <li>
 <a href='#point-show'>point.show</a>
@@ -594,14 +574,12 @@
 
 </li>
 
-<li class='divider'></li>
 <li>Line</li>
 <li>
 <a href='#line-connect_null'>line.connect_null</a>
 
 </li>
 
-<li class='divider'></li>
 <li>Bar</li>
 <li>
 <a href='#bar-width'>bar.width</a>
@@ -613,7 +591,6 @@
 
 </li>
 
-<li class='divider'></li>
 <li>Pie</li>
 <li>
 <a href='#pie-label-show'>pie.label.show</a>
@@ -645,7 +622,6 @@
 
 </li>
 
-<li class='divider'></li>
 <li>Donut</li>
 <li>
 <a href='#donut-label-show'>donut.label.show</a>
@@ -682,12 +658,548 @@
 
 </li>
 
+<li class='margin-medium-top'>
+<strong>API</strong>
+</li>
+<li>
+<a href='#api-focus'>focus</a>
+
+</li>
+
+<li>
+<a href='#api-defocus'>defocus</a>
+
+</li>
+
+<li>
+<a href='#api-revert'>revert</a>
+
+</li>
+
+<li>
+<a href='#api-show'>show</a>
+
+</li>
+
+<li>
+<a href='#api-hide'>hide</a>
+
+</li>
+
+<li>
+<a href='#api-toggle'>toggle</a>
+
+</li>
+
+<li>
+<a href='#api-load'>load</a>
+
+</li>
+
+<li>
+<a href='#api-unload'>unload</a>
+
+</li>
+
+<li>
+<a href='#api-flow'>flow</a>
+
+</li>
+
+<li>
+<a href='#api-select'>select</a>
+
+</li>
+
+<li>
+<a href='#api-unselect'>unselect</a>
+
+</li>
+
+<li>
+<a href='#api-selected'>selected</a>
+
+</li>
+
+<li>
+<a href='#api-transform'>transform</a>
+
+</li>
+
+<li>
+<a href='#api-groups'>groups</a>
+
+</li>
+
+<li>
+<a href='#api-xgrids'>xgrids</a>
+
+</li>
+
+<li>
+<a href='#api-xgrids-add'>xgrids.add</a>
+
+</li>
+
+<li>
+<a href='#api-xgrids-remove'>xgrids.remove</a>
+
+</li>
+
+<li>
+<a href='#api-ygrids'>ygrids</a>
+
+</li>
+
+<li>
+<a href='#api-ygrids-add'>ygrids.add</a>
+
+</li>
+
+<li>
+<a href='#api-ygrids-remove'>ygrids.remove</a>
+
+</li>
+
+<li>
+<a href='#api-regions'>regions</a>
+
+</li>
+
+<li>
+<a href='#api-regions-add'>regions.add</a>
+
+</li>
+
+<li>
+<a href='#api-regions-remove'>regions.remove</a>
+
+</li>
+
+<li>
+<a href='#api-data-get'>data.get</a>
+
+</li>
+
+<li>
+<a href='#api-data-getAsTarget'>data.getAsTarget</a>
+
+</li>
+
+<li>
+<a href='#api-data-names'>data.names</a>
+
+</li>
+
+<li>
+<a href='#api-data-colors'>data.colors</a>
+
+</li>
+
+<li>
+<a href='#api-data-targets'>data.targets</a>
+
+</li>
+
+<li>
+<a href='#api-x'>x</a>
+
+</li>
+
+<li>
+<a href='#api-xs'>xs</a>
+
+</li>
+
+<li>
+<a href='#api-color'>color</a>
+
+</li>
+
+<li>
+<a href='#api-axis-labels'>axis.labels</a>
+
+</li>
+
+<li>
+<a href='#api-axis-min'>axis.min</a>
+
+</li>
+
+<li>
+<a href='#api-axis-max'>axis.max</a>
+
+</li>
+
+<li>
+<a href='#api-axis-range'>axis.range</a>
+
+</li>
+
+<li>
+<a href='#api-legend-show'>legend.show</a>
+
+</li>
+
+<li>
+<a href='#api-legend-hide'>legend.hide</a>
+
+</li>
+
+<li>
+<a href='#api-unzoom'>unzoom</a>
+
+</li>
+
+<li>
+<a href='#api-resize'>resize</a>
+
+</li>
+
+<li>
+<a href='#api-flush'>flush</a>
+
+</li>
+
+<li>
+<a href='#api-destroy'>destroy</a>
+
+</li>
+
+<li class='margin-medium-top'>
+<strong>CLASS</strong>
+</li>
+<li>
+<a href='#class-c3-chart'>c3-chart</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-line'>c3-chart-line</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-lines'>c3-chart-lines</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-bar'>c3-chart-bar</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-bars'>c3-chart-bars</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-text'>c3-chart-text</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-texts'>c3-chart-texts</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-arc'>c3-chart-arc</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-arcs'>c3-chart-arcs</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-arcs-title'>c3-chart-arcs-title</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-arcs-background'>c3-chart-arcs-background</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-arcs-gauge-unit'>c3-chart-arcs-gauge-unit</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-arcs-gauge-max'>c3-chart-arcs-gauge-max</a>
+
+</li>
+
+<li>
+<a href='#class-c3-chart-arcs-gauge-min'>c3-chart-arcs-gauge-min</a>
+
+</li>
+
+<li>
+<a href='#class-c3-selected-circle'>c3-selected-circle</a>
+
+</li>
+
+<li>
+<a href='#class-c3-selected-circles'>c3-selected-circles</a>
+
+</li>
+
+<li>
+<a href='#class-c3-event-rect'>c3-event-rect</a>
+
+</li>
+
+<li>
+<a href='#class-c3-event-rects'>c3-event-rects</a>
+
+</li>
+
+<li>
+<a href='#class-c3-event-rects-single'>c3-event-rects-single</a>
+
+</li>
+
+<li>
+<a href='#class-c3-event-rects-multiple'>c3-event-rects-multiple</a>
+
+</li>
+
+<li>
+<a href='#class-c3-zoom-rect'>c3-zoom-rect</a>
+
+</li>
+
+<li>
+<a href='#class-c3-brush'>c3-brush</a>
+
+</li>
+
+<li>
+<a href='#class-c3-focused'>c3-focused</a>
+
+</li>
+
+<li>
+<a href='#class-c3-region'>c3-region</a>
+
+</li>
+
+<li>
+<a href='#class-c3-regions'>c3-regions</a>
+
+</li>
+
+<li>
+<a href='#class-c3-tooltip'>c3-tooltip</a>
+
+</li>
+
+<li>
+<a href='#class-c3-tooltip-name'>c3-tooltip-name</a>
+
+</li>
+
+<li>
+<a href='#class-c3-shape'>c3-shape</a>
+
+</li>
+
+<li>
+<a href='#class-c3-shapes'>c3-shapes</a>
+
+</li>
+
+<li>
+<a href='#class-c3-line'>c3-line</a>
+
+</li>
+
+<li>
+<a href='#class-c3-lines'>c3-lines</a>
+
+</li>
+
+<li>
+<a href='#class-c3-bar'>c3-bar</a>
+
+</li>
+
+<li>
+<a href='#class-c3-bars'>c3-bars</a>
+
+</li>
+
+<li>
+<a href='#class-c3-circle'>c3-circle</a>
+
+</li>
+
+<li>
+<a href='#class-c3-circles'>c3-circles</a>
+
+</li>
+
+<li>
+<a href='#class-c3-arc'>c3-arc</a>
+
+</li>
+
+<li>
+<a href='#class-c3-arcs'>c3-arcs</a>
+
+</li>
+
+<li>
+<a href='#class-c3-area'>c3-area</a>
+
+</li>
+
+<li>
+<a href='#class-c3-areas'>c3-areas</a>
+
+</li>
+
+<li>
+<a href='#class-c3-empty'>c3-empty</a>
+
+</li>
+
+<li>
+<a href='#class-c3-text'>c3-text</a>
+
+</li>
+
+<li>
+<a href='#class-c3-texts'>c3-texts</a>
+
+</li>
+
+<li>
+<a href='#class-c3-gauge-value'>c3-gauge-value</a>
+
+</li>
+
+<li>
+<a href='#class-c3-grid'>c3-grid</a>
+
+</li>
+
+<li>
+<a href='#class-c3-xgrid'>c3-xgrid</a>
+
+</li>
+
+<li>
+<a href='#class-c3-xgrids'>c3-xgrids</a>
+
+</li>
+
+<li>
+<a href='#class-c3-xgrid-line'>c3-xgrid-line</a>
+
+</li>
+
+<li>
+<a href='#class-c3-xgrid-lines'>c3-xgrid-lines</a>
+
+</li>
+
+<li>
+<a href='#class-c3-xgrid-focus'>c3-xgrid-focus</a>
+
+</li>
+
+<li>
+<a href='#class-c3-ygrid'>c3-ygrid</a>
+
+</li>
+
+<li>
+<a href='#class-c3-ygrids'>c3-ygrids</a>
+
+</li>
+
+<li>
+<a href='#class-c3-ygrid-line'>c3-ygrid-line</a>
+
+</li>
+
+<li>
+<a href='#class-c3-ygrid-lines'>c3-ygrid-lines</a>
+
+</li>
+
+<li>
+<a href='#class-c3-axis'>c3-axis</a>
+
+</li>
+
+<li>
+<a href='#class-c3-axis-x'>c3-axis-x</a>
+
+</li>
+
+<li>
+<a href='#class-c3-axis-x-label'>c3-axis-x-label</a>
+
+</li>
+
+<li>
+<a href='#class-c3-axis-y'>c3-axis-y</a>
+
+</li>
+
+<li>
+<a href='#class-c3-axis-y-label'>c3-axis-y-label</a>
+
+</li>
+
+<li>
+<a href='#class-c3-axis-y2'>c3-axis-y2</a>
+
+</li>
+
+<li>
+<a href='#class-c3-axis-y2-label'>c3-axis-y2-label</a>
+
+</li>
+
+<li>
+<a href='#class-c3-legend-item'>c3-legend-item</a>
+
+</li>
+
+<li>
+<a href='#class-c3-legend-item-event'>c3-legend-item-event</a>
+
+</li>
+
+<li>
+<a href='#class-c3-legend-item-tile'>c3-legend-item-tile</a>
+
+</li>
+
+<li>
+<a href='#class-c3-legend-item-hidden'>c3-legend-item-hidden</a>
+
+</li>
+
+<li>
+<a href='#class-c3-legend-item-focused'>c3-legend-item-focused</a>
+
+</li>
+
 </ul>
 </div>
 </div>
 <div class='large-9 medium-8 columns column-content'>
 <section>
-<h2>Reference</h2>
+<h2>Options</h2>
 </section>
 <hr>
 <section>
@@ -1616,6 +2128,864 @@
 <section>
 <h3>
 <a href='#donut-onmouseout'>donut.onmouseout</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<br>
+<section>
+<h2>API</h2>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-focus'>focus</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-defocus'>defocus</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-revert'>revert</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-show'>show</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-hide'>hide</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-toggle'>toggle</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-load'>load</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-unload'>unload</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-flow'>flow</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-select'>select</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-unselect'>unselect</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-selected'>selected</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-transform'>transform</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-groups'>groups</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-xgrids'>xgrids</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-xgrids-add'>xgrids.add</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-xgrids-remove'>xgrids.remove</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-ygrids'>ygrids</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-ygrids-add'>ygrids.add</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-ygrids-remove'>ygrids.remove</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-regions'>regions</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-regions-add'>regions.add</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-regions-remove'>regions.remove</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-data-get'>data.get</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-data-getAsTarget'>data.getAsTarget</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-data-names'>data.names</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-data-colors'>data.colors</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-data-targets'>data.targets</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-x'>x</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-xs'>xs</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-color'>color</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-axis-labels'>axis.labels</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-axis-min'>axis.min</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-axis-max'>axis.max</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-axis-range'>axis.range</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-legend-show'>legend.show</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-legend-hide'>legend.hide</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-unzoom'>unzoom</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-resize'>resize</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-flush'>flush</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#api-destroy'>destroy</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<br>
+<section>
+<h2>CLASS</h2>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart'>c3-chart</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-line'>c3-chart-line</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-lines'>c3-chart-lines</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-bar'>c3-chart-bar</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-bars'>c3-chart-bars</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-text'>c3-chart-text</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-texts'>c3-chart-texts</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-arc'>c3-chart-arc</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-arcs'>c3-chart-arcs</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-arcs-title'>c3-chart-arcs-title</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-arcs-background'>c3-chart-arcs-background</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-arcs-gauge-unit'>c3-chart-arcs-gauge-unit</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-arcs-gauge-max'>c3-chart-arcs-gauge-max</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-chart-arcs-gauge-min'>c3-chart-arcs-gauge-min</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-selected-circle'>c3-selected-circle</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-selected-circles'>c3-selected-circles</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-event-rect'>c3-event-rect</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-event-rects'>c3-event-rects</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-event-rects-single'>c3-event-rects-single</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-event-rects-multiple'>c3-event-rects-multiple</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-zoom-rect'>c3-zoom-rect</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-brush'>c3-brush</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-focused'>c3-focused</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-region'>c3-region</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-regions'>c3-regions</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-tooltip'>c3-tooltip</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-tooltip-name'>c3-tooltip-name</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-shape'>c3-shape</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-shapes'>c3-shapes</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-line'>c3-line</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-lines'>c3-lines</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-bar'>c3-bar</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-bars'>c3-bars</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-circle'>c3-circle</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-circles'>c3-circles</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-arc'>c3-arc</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-arcs'>c3-arcs</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-area'>c3-area</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-areas'>c3-areas</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-empty'>c3-empty</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-text'>c3-text</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-texts'>c3-texts</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-gauge-value'>c3-gauge-value</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-grid'>c3-grid</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-xgrid'>c3-xgrid</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-xgrids'>c3-xgrids</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-xgrid-line'>c3-xgrid-line</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-xgrid-lines'>c3-xgrid-lines</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-xgrid-focus'>c3-xgrid-focus</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-ygrid'>c3-ygrid</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-ygrids'>c3-ygrids</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-ygrid-line'>c3-ygrid-line</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-ygrid-lines'>c3-ygrid-lines</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-axis'>c3-axis</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-axis-x'>c3-axis-x</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-axis-x-label'>c3-axis-x-label</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-axis-y'>c3-axis-y</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-axis-y-label'>c3-axis-y-label</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-axis-y2'>c3-axis-y2</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-axis-y2-label'>c3-axis-y2-label</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-legend-item'>c3-legend-item</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-legend-item-event'>c3-legend-item-event</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-legend-item-tile'>c3-legend-item-tile</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-legend-item-hidden'>c3-legend-item-hidden</a>
+
+</h3>
+<p>...</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#class-c3-legend-item-focused'>c3-legend-item-focused</a>
 
 </h3>
 <p>...</p>
