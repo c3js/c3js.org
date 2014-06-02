@@ -73,26 +73,6 @@
   %hr.medium
 
   .section
-    = partial :index_item_title, locals: { id: 'legend', name: 'Legend' }
-    %div
-      .row
-        = partial :index_item, locals: { id: 'options_legend' }
-        = partial :index_item, locals: { id: 'legend_position' }
-        .large-4.columns
-
-  %hr.medium
-
-  .section
-    = partial :index_item_title, locals: { id: 'tooltip', name: 'Tooltip' }
-    %div
-      .row
-        = partial :index_item, locals: { id: 'tooltip_show' }
-        = partial :index_item, locals: { id: 'tooltip_format' }
-        .large-4.columns
-
-  %hr.medium
-
-  .section
     = partial :index_item_title, locals: { id: 'grid', name: 'Grid' }
     %div
       .row
@@ -118,6 +98,26 @@
       .row
         = partial :index_item, locals: { id: 'options_subchart' }
         = partial :index_item, locals: { id: 'interaction_zoom' }
+        .large-4.columns
+
+  %hr.medium
+
+  .section
+    = partial :index_item_title, locals: { id: 'legend', name: 'Legend' }
+    %div
+      .row
+        = partial :index_item, locals: { id: 'options_legend' }
+        = partial :index_item, locals: { id: 'legend_position' }
+        .large-4.columns
+
+  %hr.medium
+
+  .section
+    = partial :index_item_title, locals: { id: 'tooltip', name: 'Tooltip' }
+    %div
+      .row
+        = partial :index_item, locals: { id: 'tooltip_show' }
+        = partial :index_item, locals: { id: 'tooltip_format' }
         .large-4.columns
 
   %hr.medium
