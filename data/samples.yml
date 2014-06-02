@@ -26,10 +26,6 @@ chart_bar:
   title: Bar Chart
   desc: Display as Bar Chart.
 
-chart_bar_negative:
-  title: Bar Chart with Negative Values
-  desc: Bar chart can accept negative values.
-
 chart_bar_stacked:
   title: Stacked Bar Chart
   desc: Display as Stacked Bar Chart.

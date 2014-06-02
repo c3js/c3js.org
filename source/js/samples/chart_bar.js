@@ -14,3 +14,11 @@ var chart = c3.generate({
         //width: 100 // this makes bar width 100px
     }
 });
+
+setTimeout(function () {
+    chart.load({
+        columns: [
+            ['data3', 130, -150, 200, 300, -200, 100]
+        ]
+    });
+}, 1000);
