@@ -202,6 +202,7 @@
           = partial :reference_menu_item, locals: { id: 'api.legend.show' }
           = partial :reference_menu_item, locals: { id: 'api.legend.hide' }
           = partial :reference_menu_item, locals: { id: 'api.unzoom' }
+          = partial :reference_menu_item, locals: { id: 'api.zoom.enable' }
           = partial :reference_menu_item, locals: { id: 'api.resize' }
           = partial :reference_menu_item, locals: { id: 'api.flush' }
           = partial :reference_menu_item, locals: { id: 'api.destroy' }
@@ -1068,6 +1069,11 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.unzoom' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.zoom.enable' }
         %p ...
       %hr
       %section
