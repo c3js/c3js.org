@@ -112,6 +112,7 @@
 
           %li Tooltip
           = partial :reference_menu_item, locals: { id: 'tooltip.show' }
+          = partial :reference_menu_item, locals: { id: 'tooltip.grouped' }
           = partial :reference_menu_item, locals: { id: 'tooltip.format.title' }
           = partial :reference_menu_item, locals: { id: 'tooltip.format.name' }
           = partial :reference_menu_item, locals: { id: 'tooltip.format.value' }
@@ -726,6 +727,11 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.grouped' }
         %p ...
       %hr
       %section
