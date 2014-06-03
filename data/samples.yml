@@ -218,6 +218,10 @@ transition_duration:
   title: Duration of Transition
   desc: Set duration of transition for chart animation.
 
+api_flow:
+  title: Flow
+  desc: Load/Unload data as flowing
+
 api_resize:
   title: Resize
   desc: Resize chart.
