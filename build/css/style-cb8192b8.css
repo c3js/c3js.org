@@ -141,6 +141,9 @@ h1, h2, h3, h4, h5 {
   margin-left: 12px;
   margin-right: 12px;
 }
+.margin-small-bottom {
+  margin-bottom: 12px !important;
+}
 
 .sourcecode {
   margin-bottom: 1.25rem;
@@ -176,7 +179,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .section .row {
-  margin-bottom: 12px;
+  margin-bottom: 32px;
 }
 .section > a > h2 {
   line-height: 1.2em;
