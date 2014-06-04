@@ -174,6 +174,10 @@ tooltip_show:
   title: Hide Tootip
   desc: Set visibility of tooltip.
 
+tooltip_grouped:
+  title: Tootip Grouping
+  desc: Show tooltips as grouped or not.
+
 tooltip_format:
   title: Tootip Format
   desc: Set format for title and value on tooltip.
