@@ -27,7 +27,7 @@ setTimeout(function () {
             ['data3', 200, 120],
         ],
         duration: 1500,
-        onend: function () {
+        done: function () {
             chart.flow({
                 columns: [
                     ['x', '2013-02-11', '2013-02-12', '2013-02-13', '2013-02-14'],
@@ -37,7 +37,7 @@ setTimeout(function () {
                 ],
                 length: 0,
                 duration: 1500,
-                onend: function () {
+                done: function () {
                     chart.flow({
                         columns: [
                             ['x', '2013-03-01', '2013-03-02'],
@@ -47,7 +47,7 @@ setTimeout(function () {
                         ],
                         length: 2,
                         duration: 1500,
-                        onend: function () {
+                        done: function () {
                             chart.flow({
                                 columns: [
                                     ['x', '2013-03-21', '2013-04-01'],
