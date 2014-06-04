@@ -17,8 +17,8 @@
           = partial :reference_menu_item, locals: { id: 'color.pattern' }
           = partial :reference_menu_item, locals: { id: 'interaction.enabled' }
           = partial :reference_menu_item, locals: { id: 'transition.duration' }
-          = partial :reference_menu_item, locals: { id: 'onenter' }
-          = partial :reference_menu_item, locals: { id: 'onleave' }
+          = partial :reference_menu_item, locals: { id: 'onmouseover' }
+          = partial :reference_menu_item, locals: { id: 'onmouseout' }
           = partial :reference_menu_item, locals: { id: 'onresize' }
           = partial :reference_menu_item, locals: { id: 'onresized' }
 
@@ -45,8 +45,8 @@
           = partial :reference_menu_item, locals: { id: 'data.selection.multiple' }
           = partial :reference_menu_item, locals: { id: 'data.selection.isselectable' }
           = partial :reference_menu_item, locals: { id: 'data.onclick' }
-          = partial :reference_menu_item, locals: { id: 'data.onenter' }
-          = partial :reference_menu_item, locals: { id: 'data.onleave' }
+          = partial :reference_menu_item, locals: { id: 'data.onmouseover' }
+          = partial :reference_menu_item, locals: { id: 'data.onmouseout' }
           = partial :reference_menu_item, locals: { id: 'data.onselected' }
           = partial :reference_menu_item, locals: { id: 'data.onunselected' }
           = partial :reference_menu_item, locals: { id: 'data.ondragstart' }
@@ -335,12 +335,12 @@
       %hr
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'onenter' }
+          = partial :reference_item_link, locals: { id: 'onmouseover' }
         %p ...
       %hr
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'onleave' }
+          = partial :reference_item_link, locals: { id: 'onmouseout' }
         %p ...
       %hr
       %section
@@ -456,12 +456,12 @@
       %hr
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'data.onenter' }
+          = partial :reference_item_link, locals: { id: 'data.onmouseover' }
         %p ...
       %hr
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'data.onleave' }
+          = partial :reference_item_link, locals: { id: 'data.onmouseout' }
         %p ...
       %hr
       %section
