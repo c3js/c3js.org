@@ -117,8 +117,12 @@ var defaultMessage = $('#message').html(), currentIndex = 0, timer, duration = 1
             columns: [
                 ['data1', 390, 400, 200, 500]
             ],
+            duration: 1000,
         });
         setMessage('Flow 4 data');
+    },
+    function () {
+        // wait for end of transition for flow
     },
     function () {
         chart.flow({
@@ -127,6 +131,9 @@ var defaultMessage = $('#message').html(), currentIndex = 0, timer, duration = 1
             ],
         });
         setMessage('Flow 2 data');
+    },
+    function () {
+        // wait for end of transition for flow
     },
     function () {
         chart.transform('line', ['data1', 'data2', 'data3']);
