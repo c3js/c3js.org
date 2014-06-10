@@ -4,8 +4,10 @@ c3js.org
 This is the source of c3js.org that is constructed by middleman.
 
 How to contribute
+--
 - Fork this repository
 - Run and develop by middleman
+  - you can run middleman server as `$ bundle exec middleman server`
 - Commit the change in `source` directory
 - Send me a PR
 
