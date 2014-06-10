@@ -7,7 +7,7 @@ How to contribute
 --
 - Fork this repository
 - Run and develop by middleman
-  - you can run middleman server as `$ bundle exec middleman server`
+  - Install `gem` and then you can run middleman server as `$ bundle exec middleman server`
 - Commit the change in `source` directory
 - Send me a PR
 
