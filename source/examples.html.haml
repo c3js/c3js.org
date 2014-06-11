@@ -142,6 +142,16 @@
   %hr.medium
 
   .section
+    = partial :index_item_title, locals: { id: 'line_chart_options', name: 'Line Chart Options' }
+    %div
+      .row
+        = partial :index_item, locals: { id: 'point_show' }
+        .large-4.columns
+        .large-4.columns
+
+  %hr.medium
+
+  .section
     = partial :index_item_title, locals: { id: 'api', name: 'API' }
     %div
       .row
