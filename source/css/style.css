@@ -193,6 +193,7 @@ span.code {
   padding-left: 4px;
   padding-right: 4px;
   font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+  font-size: 0.9em;
 }
 
 h3 + ul, p + ul {
