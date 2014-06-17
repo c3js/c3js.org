@@ -285,3 +285,7 @@ transform_donut:
 style_region:
   title: Style for Region
   desc: Set style for regions.
+
+style_grid:
+  title: Style for Grid
+  desc: Set style for grids.
