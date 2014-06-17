@@ -286,37 +286,44 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'bindto' }
-        %p ...
+        %p The element, by CSS selector, which the chart will append to.
+        %pre { bindto: '#myContainer' }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'size.width' }
-        %p ...
+        %p The desired width of the chart element.
+        %pre { size: { width: 100 } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'size.height' }
-        %p ...
+        %p The desired height of the chart element.
+        %pre { size: { height: 320 } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'padding.top' }
-        %p ...
+        %p The padding on the top of the chart.
+        %pre { padding: { top: 0 }}
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'padding.right' }
-        %p ...
+        %p The padding on the right of the chart.
+        %pre { padding: { right: 0 }}
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'padding.bottom' }
-        %p ...
+        %p The padding on the bottom of the chart.
+        %pre { padding: { bottom: 0 }}
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'padding.left' }
-        %p ...
+        %p The padding on the left of the chart.
+        %pre { padding: { left: 0 }}
       %hr
       %section
         %h3
