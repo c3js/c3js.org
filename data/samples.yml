@@ -170,6 +170,10 @@ legend_position:
   title: Legend Position
   desc: Show legend on bottom or right side.
 
+legend_custom:
+  title: Custom Legend
+  desc: Build custom legend
+
 tooltip_show:
   title: Hide Tootip
   desc: Set visibility of tooltip.
