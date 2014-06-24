@@ -254,6 +254,10 @@ api_axis_range:
   title: Axis Range
   desc: Update axis range.
 
+api_grid_x:
+  title: X Grid
+  desc: Update custom x grids.
+
 transform_line:
   title: To Line Chart
   desc: Transform to line chart.
