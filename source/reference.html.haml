@@ -133,7 +133,6 @@
           %li Point
           = partial :reference_menu_item, locals: { id: 'point.show' }
           = partial :reference_menu_item, locals: { id: 'point.r' }
-          = partial :reference_menu_item, locals: { id: 'point.focus.line.enabled' }
           = partial :reference_menu_item, locals: { id: 'point.focus.expand.enabled' }
           = partial :reference_menu_item, locals: { id: 'point.focus.expand.r' }
           = partial :reference_menu_item, locals: { id: 'point.select.r' }
@@ -777,32 +776,32 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.show' }
-        %p ...
+        %p Whether to show each point in line. Default is <code>true</code>
+        %pre { point: { show: false } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.r' }
-        %p ...
-      %hr
-      %section
-        %h3
-          = partial :reference_item_link, locals: { id: 'point.focus.line.enabled' }
-        %p ...
+        %p The radius size of each point. Default is <code>2.5</code>
+        %pre { point: { r: 5 } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.focus.expand.enabled' }
-        %p ...
+        %p Whether to expand each point on focus. Default is <code>true</code>
+        %pre { point: { focus: { expand: { enabled: true } } } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.focus.expand.r' }
-        %p ...
+        %p The radius size of each point on focus.
+        %pre { point: { focus: { expand: { r: 1 } } } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.select.r' }
-        %p ...
+        %p The radius size of each point on selected.
+        %pre { point: { select: { r: 3 } } }
       %hr
 
       %section
@@ -1439,4 +1438,3 @@
   = partial :footer
 
 = partial :script
-
