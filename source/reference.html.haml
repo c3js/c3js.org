@@ -327,37 +327,44 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'color.pattern' }
-        %p ...
+        %p Set custom color pattern.
+        %pre  color: { pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a' ] }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'interaction.enabled' }
-        %p ...
+        %p Indicate if the chart should have interactions.
+        %pre  interaction: { enabled: true || false }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'transition.duration' }
-        %p ...
+        %p Set duration of transition (in milliseconds) for chart animation.
+        %pre  transition: { duration: 100 }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onmouseover' }
-        %p ...
+        %p Set a callback to execute when mouse enters on chart.
+        %pre  onmouseover: function() { ... }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onmouseout' }
-        %p ...
+        %p Set a callback to execute when mouse leaves chart.
+        %pre  onmouseout: function() { ... }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onresize' }
-        %p ...
+        %p Set a callback to execute when user resizes the screen.
+        %pre  onresize: function() { ... }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onresized' }
-        %p ...
+        %p Set a callback to execute when user resizes the screen.
+        %pre  onresized: function() { ... }
       %hr
 
       %section
