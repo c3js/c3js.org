@@ -285,7 +285,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'bindto' }
-        %p The element, by CSS selector, which the chart will append to.
+        %p The element, by CSS selector, which the chart will append to. Default is <code>'#chart'</code>.
         %pre { bindto: '#myContainer' }
       %hr
       %section
@@ -333,13 +333,13 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'interaction.enabled' }
-        %p Indicate if the chart should have interactions.
+        %p Indicate if the chart should have interactions. Default is <code>true</code>.
         %pre  interaction: { enabled: true || false }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'transition.duration' }
-        %p Set duration of transition (in milliseconds) for chart animation.
+        %p Set duration of transition (in milliseconds) for chart animation. Default is <code>350</code>ms.
         %pre  transition: { duration: 100 }
       %hr
       %section
@@ -363,7 +363,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onresized' }
-        %p Set a callback to execute when user resizes the screen.
+        %p Set a callback to execute when screen resize finish.
         %pre  onresized: function() { ... }
       %hr
 
