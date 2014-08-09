@@ -1212,7 +1212,7 @@
 <a href='#bindto'>bindto</a>
 
 </h3>
-<p>The element, by CSS selector, which the chart will append to.</p>
+<p>The element, by CSS selector, which the chart will append to. Default is <code>'#chart'</code>.</p>
 <pre>{ bindto: '#myContainer' }</pre>
 </section>
 <hr>
@@ -1275,7 +1275,8 @@
 <a href='#color-pattern'>color.pattern</a>
 
 </h3>
-<p>...</p>
+<p>Set custom color pattern.</p>
+<pre>color: { pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a' ] }</pre>
 </section>
 <hr>
 <section>
@@ -1283,7 +1284,8 @@
 <a href='#interaction-enabled'>interaction.enabled</a>
 
 </h3>
-<p>...</p>
+<p>Indicate if the chart should have interactions. Default is <code>true</code>.</p>
+<pre>interaction: { enabled: true || false }</pre>
 </section>
 <hr>
 <section>
@@ -1291,7 +1293,8 @@
 <a href='#transition-duration'>transition.duration</a>
 
 </h3>
-<p>...</p>
+<p>Set duration of transition (in milliseconds) for chart animation. Default is <code>350</code>ms.</p>
+<pre>transition: { duration: 100 }</pre>
 </section>
 <hr>
 <section>
@@ -1299,7 +1302,8 @@
 <a href='#onmouseover'>onmouseover</a>
 
 </h3>
-<p>...</p>
+<p>Set a callback to execute when mouse enters on chart.</p>
+<pre>onmouseover: function() { ... }</pre>
 </section>
 <hr>
 <section>
@@ -1307,7 +1311,8 @@
 <a href='#onmouseout'>onmouseout</a>
 
 </h3>
-<p>...</p>
+<p>Set a callback to execute when mouse leaves chart.</p>
+<pre>onmouseout: function() { ... }</pre>
 </section>
 <hr>
 <section>
@@ -1315,7 +1320,8 @@
 <a href='#onresize'>onresize</a>
 
 </h3>
-<p>...</p>
+<p>Set a callback to execute when user resizes the screen.</p>
+<pre>onresize: function() { ... }</pre>
 </section>
 <hr>
 <section>
@@ -1323,7 +1329,8 @@
 <a href='#onresized'>onresized</a>
 
 </h3>
-<p>...</p>
+<p>Set a callback to execute when screen resize finish.</p>
+<pre>onresized: function() { ... }</pre>
 </section>
 <hr>
 <section>
