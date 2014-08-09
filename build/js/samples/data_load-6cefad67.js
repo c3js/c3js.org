@@ -46,7 +46,9 @@ setTimeout(function () {
 }, 4000);
 
 setTimeout(function () {
-    chart.unload('data4');
+    chart.unload({
+        ids: 'data4'
+    });
 }, 5000);
 
 setTimeout(function () {
@@ -92,5 +94,7 @@ setTimeout(function () {
 }, 9000);
 
 setTimeout(function () {
-    chart.unload(['data2', 'data3']);
+    chart.unload({
+        ids: ['data2', 'data3']
+    });
 }, 10000);

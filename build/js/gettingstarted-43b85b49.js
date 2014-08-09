@@ -151,7 +151,9 @@ var chart4_2 = c3.generate({
 });
 
 function example4_2() {
-    chart4_2.unload(['data2', 'data3']);
+    chart4_2.unload({
+        ids: ['data2', 'data3']
+    });
 }
 
 var chart4_3 = c3.generate({

@@ -39,7 +39,9 @@ setTimeout(function () {
 }, 1000);
 
 setTimeout(function () {
-    chart.unload('setosa');
+    chart.unload({
+        ids: 'setosa'
+    });
 }, 2000);
 
 setTimeout(function () {

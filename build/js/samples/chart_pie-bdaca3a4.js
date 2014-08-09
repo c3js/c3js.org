@@ -1,16 +1,14 @@
 var chart = c3.generate({
     data: {
+        // iris data from R
         columns: [
             ['data1', 30],
             ['data2', 120],
         ],
-        type : 'donut'
-    },
-    donut: {
-        title: "Iris Petal Width",
-        onclick: function (d, i) { console.log(d, i); },
-        onmouseover: function (d, i) { console.log(d, i); },
-        onmouseout: function (d, i) { console.log(d, i); }
+        type : 'pie',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     }
 });
 
@@ -25,6 +23,10 @@ setTimeout(function () {
 }, 1500);
 
 setTimeout(function () {
-    chart.unload('data1');
-    chart.unload('data2');
+    chart.unload({
+        ids: 'data1'
+    });
+    chart.unload({
+        ids: 'data2'
+    });
 }, 2500);

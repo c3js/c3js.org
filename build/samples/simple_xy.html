@@ -93,8 +93,11 @@ setTimeout(function () {
 }, 1500);
 
 setTimeout(function () {
-    chart.unload('data2');
-}, 2000);</code></pre>
+    chart.unload({
+        ids: 'data2'
+    });
+}, 2000);
+</code></pre>
 </div>
 <footer>
 <hr>
@@ -106,7 +109,7 @@ setTimeout(function () {
 <script src="/js/foundation.min-1dfe8110.js" type="text/javascript"></script>
 <script src="/js/highlight.pack-4af5004d.js" type="text/javascript"></script>
 <script src="/js/d3.min-3bff8220.js" type="text/javascript"></script>
-<script src="/js/c3.min-c3e0adc3.js" type="text/javascript"></script>
+<script src="/js/c3.min-05d32fdf.js" type="text/javascript"></script>
 <script>
   hljs.initHighlightingOnLoad();
   $(document).foundation();
@@ -124,7 +127,7 @@ setTimeout(function () {
   });
 </script>
 
-<script src="/js/samples/simple_xy-24e8b50e.js" type="text/javascript"></script>
+<script src="/js/samples/simple_xy-6a8b97b4.js" type="text/javascript"></script>
 
 
 </body>

@@ -70,7 +70,10 @@
         columns: [
             ['data', 91.4]
         ],
-        type: 'gauge'
+        type: 'gauge',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     gauge: {
 //        label: {
@@ -135,7 +138,7 @@ setTimeout(function () {
 <script src="/js/foundation.min-1dfe8110.js" type="text/javascript"></script>
 <script src="/js/highlight.pack-4af5004d.js" type="text/javascript"></script>
 <script src="/js/d3.min-3bff8220.js" type="text/javascript"></script>
-<script src="/js/c3.min-c3e0adc3.js" type="text/javascript"></script>
+<script src="/js/c3.min-05d32fdf.js" type="text/javascript"></script>
 <script>
   hljs.initHighlightingOnLoad();
   $(document).foundation();
@@ -153,7 +156,7 @@ setTimeout(function () {
   });
 </script>
 
-<script src="/js/samples/chart_gauge-bcb26116.js" type="text/javascript"></script>
+<script src="/js/samples/chart_gauge-113278ab.js" type="text/javascript"></script>
 
 
 </body>
