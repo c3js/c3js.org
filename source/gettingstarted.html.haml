@@ -313,7 +313,9 @@
               :preserve
                 // var chart = c3.generate({ ... });
 
-                chart.unload(['data2', 'data3']);
+                chart.unload({
+                    ids: ['data2', 'data3']
+                });
 
         %p If you push the button "Unload" below, this code will run and the chart will be updated.
 

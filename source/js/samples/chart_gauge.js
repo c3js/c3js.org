@@ -3,7 +3,10 @@ var chart = c3.generate({
         columns: [
             ['data', 91.4]
         ],
-        type: 'gauge'
+        type: 'gauge',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     },
     gauge: {
 //        label: {

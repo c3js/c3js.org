@@ -105,11 +105,15 @@ var defaultMessage = $('#message').html(), currentIndex = 0, timer, duration = 1
         setMessage('Show data1 as line');
     },
     function () {
-        chart.unload('data3');
+        chart.unload({
+            ids: 'data3'
+        });
         setMessage('Unload data3');
     },
     function () {
-        chart.unload('data2');
+        chart.unload({
+            ids: 'data2'
+        });
         setMessage('Unload data2');
     },
     function () {
