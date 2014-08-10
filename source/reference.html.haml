@@ -148,18 +148,12 @@
           = partial :reference_menu_item, locals: { id: 'pie.label.show' }
           = partial :reference_menu_item, locals: { id: 'pie.label.format' }
           = partial :reference_menu_item, locals: { id: 'pie.expand' }
-          = partial :reference_menu_item, locals: { id: 'pie.onclick' }
-          = partial :reference_menu_item, locals: { id: 'pie.onmouseover' }
-          = partial :reference_menu_item, locals: { id: 'pie.onmouseout' }
 
           %li Donut
           = partial :reference_menu_item, locals: { id: 'donut.label.show' }
           = partial :reference_menu_item, locals: { id: 'donut.label.format' }
           = partial :reference_menu_item, locals: { id: 'donut.expand' }
           = partial :reference_menu_item, locals: { id: 'donut.title' }
-          = partial :reference_menu_item, locals: { id: 'donut.onclick' }
-          = partial :reference_menu_item, locals: { id: 'donut.onmouseover' }
-          = partial :reference_menu_item, locals: { id: 'donut.onmouseout' }
 
           %li.margin-medium-top
             %strong API
@@ -843,21 +837,6 @@
           = partial :reference_item_link, locals: { id: 'pie.expand' }
         %p ...
       %hr
-      %section
-        %h3
-          = partial :reference_item_link, locals: { id: 'pie.onclick' }
-        %p ...
-      %hr
-      %section
-        %h3
-          = partial :reference_item_link, locals: { id: 'pie.onmouseover' }
-        %p ...
-      %hr
-      %section
-        %h3
-          = partial :reference_item_link, locals: { id: 'pie.onmouseout' }
-        %p ...
-      %hr
 
       %section
         %h3
@@ -877,21 +856,6 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.title' }
-        %p ...
-      %hr
-      %section
-        %h3
-          = partial :reference_item_link, locals: { id: 'donut.onclick' }
-        %p ...
-      %hr
-      %section
-        %h3
-          = partial :reference_item_link, locals: { id: 'donut.onmouseover' }
-        %p ...
-      %hr
-      %section
-        %h3
-          = partial :reference_item_link, locals: { id: 'donut.onmouseout' }
         %p ...
       %hr
 
