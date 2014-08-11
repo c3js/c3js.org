@@ -175,15 +175,15 @@ legend_custom:
   desc: Build custom legend
 
 tooltip_show:
-  title: Hide Tootip
+  title: Hide Tooltip
   desc: Set visibility of tooltip.
 
 tooltip_grouped:
-  title: Tootip Grouping
+  title: Tooltip Grouping
   desc: Show tooltips as grouped or not.
 
 tooltip_format:
-  title: Tootip Format
+  title: Tooltip Format
   desc: Set format for title and value on tooltip.
 
 options_gridline:
