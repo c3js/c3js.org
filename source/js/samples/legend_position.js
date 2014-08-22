@@ -25,9 +25,9 @@ setTimeout(function () {
 }, 2000);
 
 setTimeout(function () {
-    chart.toPie();
+    chart.transform('pie');
 }, 3000);
 
 setTimeout(function () {
-    chart.toLine();
+    chart.transform('line');
 }, 4000);
