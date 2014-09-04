@@ -496,22 +496,26 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.rotated' }
-        %p ...
+        %p Switch x and y axis position. Default is <code>false</code>.
+        %pre  axis: { rotated: true }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.show' }
-        %p ...
+        %p Show or hides x axis. Default is <code>true</code>.
+        %pre  axis: { x: { show: true } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.localtime' }
-        %p ...
+        %p If true, treat x value as localtime. If false, convert to UTC internally. Default is <code>true</code>.
+        %pre  axis: { x: { localtime: true } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.categories' }
-        %p ...
+        %p Show ticks as categorized by each data.
+        %pre axis: { x: { categories: ['a', 'b', 'c', 'd'] } }
       %hr
       %section
         %h3
@@ -521,27 +525,31 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.format' }
-        %p ...
+        %p A function to format tick value. Format string is also available for timeseries data.
+        %pre axis: { x: { tick: { format: function (x) { return x.getFullYear(); } } } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.culling' }
-        %p ...
+        %p An object to configure culling ticks.
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.culling.max' }
-        %p ...
+        %p The number of tick texts will be adjusted to less than this value.
+        %pre axis: { x: { tick: { culling: { max: 5 } } } } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.count' }
-        %p ...
+        %p The number of x axis ticks to show.
+        %pre axis: { x: { tick: { count: 5 } } } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.fit' }
-        %p ...
+        %p Fit x axis tick. Default is <code>true</code>.
+        %pre axis: { x: { tick: { fit: true } } } }
       %hr
       %section
         %h3
@@ -551,22 +559,26 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.rotate' }
-        %p ...
+        %p Rotate x axis tick text. Default is <code>false</code>.
+        %pre axis: { x: { tick: { rotate: true } } } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.max' }
-        %p ...
+        %p Set a max range for x axis. Range includes padding, set 0 if no padding needed.
+        %pre axis: { x: { max: 200 } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.min' }
-        %p ...
+        %p Set a min range for x axis. Range includes padding, set 0 if no padding needed.
+        %pre axis: { x: { min: -200 } }
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.padding' }
-        %p ...
+        %p Set padding for x axis.
+        %pre axis: { x: { padding: { top: 200, bottom: 0 } } }
       %hr
       %section
         %h3
@@ -581,12 +593,13 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.label' }
-        %p ...
+        %p Set label for axis.
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.show' }
-        %p ...
+        %p Show or hides y axis. Default is <code>true</code>.
+        %pre  axis: { y: { show: true } }
       %hr
       %section
         %h3
