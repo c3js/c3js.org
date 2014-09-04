@@ -25,8 +25,8 @@
           %li Data
           = partial :reference_menu_item, locals: { id: 'data.x' }
           = partial :reference_menu_item, locals: { id: 'data.xs' }
-          = partial :reference_menu_item, locals: { id: 'data.x_format' }
-          -#= partial :reference_menu_item, locals: { id: 'data.id_converter' }
+          = partial :reference_menu_item, locals: { id: 'data.xFormat' }
+          -#= partial :reference_menu_item, locals: { id: 'data.idConverter' }
           = partial :reference_menu_item, locals: { id: 'data.names' }
           = partial :reference_menu_item, locals: { id: 'data.classes' }
           = partial :reference_menu_item, locals: { id: 'data.groups' }
@@ -373,8 +373,9 @@
       %hr
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'data.x_format' }
-        %p ...
+          = partial :reference_item_link, locals: { id: 'data.xFormat' }
+        %p Set a format to parse string specifed as x. Default is <code>%Y-%m-%d</code>.
+        %pre  data: { xFormat: '%Y-%m-%d %H:%M:%S' }
       %hr
       %section
         %h3
