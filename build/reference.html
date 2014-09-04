@@ -1517,7 +1517,8 @@
 <a href='#axis-rotated'>axis.rotated</a>
 
 </h3>
-<p>...</p>
+<p>Switch x and y axis position. Default is <code>false</code>.</p>
+<pre>axis: { rotated: true }</pre>
 </section>
 <hr>
 <section>
@@ -1525,7 +1526,8 @@
 <a href='#axis-x-show'>axis.x.show</a>
 
 </h3>
-<p>...</p>
+<p>Show or hides x axis. Default is <code>true</code>.</p>
+<pre>axis: { x: { show: true } }</pre>
 </section>
 <hr>
 <section>
@@ -1533,7 +1535,8 @@
 <a href='#axis-x-localtime'>axis.x.localtime</a>
 
 </h3>
-<p>...</p>
+<p>If true, treat x value as localtime. If false, convert to UTC internally. Default is <code>true</code>.</p>
+<pre>axis: { x: { localtime: true } }</pre>
 </section>
 <hr>
 <section>
@@ -1541,7 +1544,8 @@
 <a href='#axis-x-categories'>axis.x.categories</a>
 
 </h3>
-<p>...</p>
+<p>Show ticks as categorized by each data.</p>
+<pre>axis: { x: { categories: ['a', 'b', 'c', 'd'] } }</pre>
 </section>
 <hr>
 <section>
@@ -1557,7 +1561,8 @@
 <a href='#axis-x-tick-format'>axis.x.tick.format</a>
 
 </h3>
-<p>...</p>
+<p>A function to format tick value. Format string is also available for timeseries data.</p>
+<pre>axis: { x: { tick: { format: function (x) { return x.getFullYear(); } } } }</pre>
 </section>
 <hr>
 <section>
@@ -1565,7 +1570,7 @@
 <a href='#axis-x-tick-culling'>axis.x.tick.culling</a>
 
 </h3>
-<p>...</p>
+<p>An object to configure culling ticks.</p>
 </section>
 <hr>
 <section>
@@ -1573,7 +1578,8 @@
 <a href='#axis-x-tick-culling-max'>axis.x.tick.culling.max</a>
 
 </h3>
-<p>...</p>
+<p>The number of tick texts will be adjusted to less than this value.</p>
+<pre>axis: { x: { tick: { culling: { max: 5 } } } } }</pre>
 </section>
 <hr>
 <section>
@@ -1581,7 +1587,8 @@
 <a href='#axis-x-tick-count'>axis.x.tick.count</a>
 
 </h3>
-<p>...</p>
+<p>The number of x axis ticks to show.</p>
+<pre>axis: { x: { tick: { count: 5 } } } }</pre>
 </section>
 <hr>
 <section>
@@ -1589,7 +1596,8 @@
 <a href='#axis-x-tick-fit'>axis.x.tick.fit</a>
 
 </h3>
-<p>...</p>
+<p>Fit x axis tick. Default is <code>true</code>.</p>
+<pre>axis: { x: { tick: { fit: true } } } }</pre>
 </section>
 <hr>
 <section>
@@ -1605,7 +1613,8 @@
 <a href='#axis-x-tick-rotate'>axis.x.tick.rotate</a>
 
 </h3>
-<p>...</p>
+<p>Rotate x axis tick text. Default is <code>false</code>.</p>
+<pre>axis: { x: { tick: { rotate: true } } } }</pre>
 </section>
 <hr>
 <section>
@@ -1613,7 +1622,8 @@
 <a href='#axis-x-max'>axis.x.max</a>
 
 </h3>
-<p>...</p>
+<p>Set a max range for x axis. Range includes padding, set 0 if no padding needed.</p>
+<pre>axis: { x: { max: 200 } }</pre>
 </section>
 <hr>
 <section>
@@ -1621,7 +1631,8 @@
 <a href='#axis-x-min'>axis.x.min</a>
 
 </h3>
-<p>...</p>
+<p>Set a min range for x axis. Range includes padding, set 0 if no padding needed.</p>
+<pre>axis: { x: { min: -200 } }</pre>
 </section>
 <hr>
 <section>
@@ -1629,7 +1640,8 @@
 <a href='#axis-x-padding'>axis.x.padding</a>
 
 </h3>
-<p>...</p>
+<p>Set padding for x axis.</p>
+<pre>axis: { x: { padding: { top: 200, bottom: 0 } } }</pre>
 </section>
 <hr>
 <section>
@@ -1653,7 +1665,7 @@
 <a href='#axis-x-label'>axis.x.label</a>
 
 </h3>
-<p>...</p>
+<p>Set label for axis.</p>
 </section>
 <hr>
 <section>
@@ -1661,7 +1673,8 @@
 <a href='#axis-y-show'>axis.y.show</a>
 
 </h3>
-<p>...</p>
+<p>Show or hides y axis. Default is <code>true</code>.</p>
+<pre>axis: { y: { show: true } }</pre>
 </section>
 <hr>
 <section>
