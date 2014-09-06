@@ -70,7 +70,7 @@
           = partial :reference_menu_item, locals: { id: 'axis.x.min' }
           = partial :reference_menu_item, locals: { id: 'axis.x.padding' }
           = partial :reference_menu_item, locals: { id: 'axis.x.height' }
-          = partial :reference_menu_item, locals: { id: 'axis.x.default' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.extent' }
           = partial :reference_menu_item, locals: { id: 'axis.x.label' }
           = partial :reference_menu_item, locals: { id: 'axis.y.show' }
           = partial :reference_menu_item, locals: { id: 'axis.y.max' }
@@ -587,7 +587,7 @@
       %hr
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'axis.x.default' }
+          = partial :reference_item_link, locals: { id: 'axis.x.extent' }
         %p Set default extent for subchart and zoom. This can be an array or function that returns an array.
         %pre axis: { x: { default: [5, 10]; } }
       %hr
