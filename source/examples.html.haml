@@ -153,6 +153,16 @@
   %hr.medium
 
   .section
+    = partial :index_item_title, locals: { id: 'pie_chart_options', name: 'Pie Chart Options' }
+    %div
+      .row
+        = partial :index_item, locals: { id: 'pie_label_format' }
+        .large-4.columns
+        .large-4.columns
+
+  %hr.medium
+
+  .section
     = partial :index_item_title, locals: { id: 'api', name: 'API' }
     %div
       .row

@@ -230,6 +230,10 @@ point_show:
   title: Hide points
   desc: Hide points on line chart
 
+pie_label_format:
+  title: Pie Label Format
+  desc: Change label format on Pie chart
+
 transition_duration:
   title: Duration of Transition
   desc: Set duration of transition for chart animation.
