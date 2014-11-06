@@ -94,6 +94,10 @@ axes_x_tick_culling:
   title: X Axis Tick Culling
   desc: Set cull ticks or not on X Axis.
 
+axes_x_tick_values:
+  title: X Axis Tick Values
+  desc: Set tick texts on X Axis.
+
 axes_x_tick_count:
   title: X Axis Tick Count
   desc: Set the number of ticks on X Axis.
