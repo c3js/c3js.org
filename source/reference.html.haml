@@ -559,8 +559,8 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.rotate' }
-        %p Rotate x axis tick text. Default is <code>false</code>.
-        %pre axis: { x: { tick: { rotate: true } } } }
+        %p Rotate x axis tick text. Default is <code>0</code>. If you set negative value, it will rotate to opposite direction.
+        %pre axis: { x: { tick: { rotate: 30 } } } }
       %hr
       %section
         %h3
