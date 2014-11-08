@@ -10,11 +10,11 @@ var chart = c3.generate({
         ],
         type: 'bar',
         labels: {
-//            format: function (v, id) { return "Default Format on " + id; },
+//            format: function (v, id, i) { return "Default Format"; },
             format: {
                 y: d3.format('$'),
-//                y: function (v, id) { return "Y Format on " + id; },
-//                y2: function (v, id) { return "Y2 Format on " + id; }
+//                y: function (v, id, i) { return "Y Format"; },
+//                y2: function (v, id, i) { return "Y2 Format"; }
             }
         }
     },
