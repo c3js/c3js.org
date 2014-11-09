@@ -214,6 +214,10 @@ region:
   title: Region
   desc: Show rects on chart.
 
+region_timeseries:
+  title: Region with Timeseries
+  desc: Show rects on timeseries chart.
+
 options_size:
   title: Chart Size
   desc: Set chart size in px.
