@@ -27,6 +27,9 @@ var chart = c3.generate({
 //            max: 200, // 100 is default
             values: [30, 60, 90, 100]
         }
+    },
+    size: {
+        height: 180
     }
 });
 

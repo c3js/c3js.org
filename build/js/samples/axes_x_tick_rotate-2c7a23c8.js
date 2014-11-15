@@ -11,7 +11,8 @@ var chart = c3.generate({
         x: {
             type: 'category',
             tick: {
-                rotate: 75
+                rotate: 75,
+                multiline: false
             },
             height: 130
         }
