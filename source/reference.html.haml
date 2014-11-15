@@ -15,17 +15,27 @@
           = partial :reference_menu_item, locals: { id: 'padding.bottom' }
           = partial :reference_menu_item, locals: { id: 'padding.left' }
           = partial :reference_menu_item, locals: { id: 'color.pattern' }
+          = partial :reference_menu_item, locals: { id: 'color.threshold' }
           = partial :reference_menu_item, locals: { id: 'interaction.enabled' }
           = partial :reference_menu_item, locals: { id: 'transition.duration' }
+          = partial :reference_menu_item, locals: { id: 'oninit' }
           = partial :reference_menu_item, locals: { id: 'onmouseover' }
           = partial :reference_menu_item, locals: { id: 'onmouseout' }
           = partial :reference_menu_item, locals: { id: 'onresize' }
           = partial :reference_menu_item, locals: { id: 'onresized' }
 
           %li Data
+          = partial :reference_menu_item, locals: { id: 'data.url' }
+          = partial :reference_menu_item, locals: { id: 'data.json' }
+          = partial :reference_menu_item, locals: { id: 'data.rows' }
+          = partial :reference_menu_item, locals: { id: 'data.columns' }
+          = partial :reference_menu_item, locals: { id: 'data.mimeType' }
+          = partial :reference_menu_item, locals: { id: 'data.keys' }
           = partial :reference_menu_item, locals: { id: 'data.x' }
           = partial :reference_menu_item, locals: { id: 'data.xs' }
           = partial :reference_menu_item, locals: { id: 'data.xFormat' }
+          = partial :reference_menu_item, locals: { id: 'data.xLocaltime' }
+          = partial :reference_menu_item, locals: { id: 'data.xSort' }
           -#= partial :reference_menu_item, locals: { id: 'data.idConverter' }
           = partial :reference_menu_item, locals: { id: 'data.names' }
           = partial :reference_menu_item, locals: { id: 'data.classes' }
@@ -55,7 +65,7 @@
           %li Axis
           = partial :reference_menu_item, locals: { id: 'axis.rotated' }
           = partial :reference_menu_item, locals: { id: 'axis.x.show' }
-          -#= partial :reference_menu_item, locals: { id: 'axis.x.type' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.type' }
           = partial :reference_menu_item, locals: { id: 'axis.x.localtime' }
           = partial :reference_menu_item, locals: { id: 'axis.x.categories' }
           = partial :reference_menu_item, locals: { id: 'axis.x.tick.centered' }
@@ -66,6 +76,9 @@
           = partial :reference_menu_item, locals: { id: 'axis.x.tick.fit' }
           = partial :reference_menu_item, locals: { id: 'axis.x.tick.values' }
           = partial :reference_menu_item, locals: { id: 'axis.x.tick.rotate' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.outer' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.multiline' }
+          = partial :reference_menu_item, locals: { id: 'axis.x.tick.width' }
           = partial :reference_menu_item, locals: { id: 'axis.x.max' }
           = partial :reference_menu_item, locals: { id: 'axis.x.min' }
           = partial :reference_menu_item, locals: { id: 'axis.x.padding' }
@@ -73,23 +86,30 @@
           = partial :reference_menu_item, locals: { id: 'axis.x.extent' }
           = partial :reference_menu_item, locals: { id: 'axis.x.label' }
           = partial :reference_menu_item, locals: { id: 'axis.y.show' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.type' }
           = partial :reference_menu_item, locals: { id: 'axis.y.max' }
           = partial :reference_menu_item, locals: { id: 'axis.y.min' }
           = partial :reference_menu_item, locals: { id: 'axis.y.center' }
           = partial :reference_menu_item, locals: { id: 'axis.y.label' }
-          -#= partial :reference_menu_item, locals: { id: 'axis.y.inner', experimental: true }
           = partial :reference_menu_item, locals: { id: 'axis.y.tick.format' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.tick.outer' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.tick.values' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.tick.count' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.tick.time.value' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.tick.time.interval' }
           = partial :reference_menu_item, locals: { id: 'axis.y.padding' }
-          = partial :reference_menu_item, locals: { id: 'axis.y.ticks' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.default' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.show' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.max' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.min' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.center' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.label' }
-          -#= partial :reference_menu_item, locals: { id: 'axis.y2.inner', experimental: true }
           = partial :reference_menu_item, locals: { id: 'axis.y2.tick.format' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.tick.outer' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.tick.values' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.tick.count' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.padding' }
-          = partial :reference_menu_item, locals: { id: 'axis.y2.ticks' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.default' }
 
           %li Grid
           = partial :reference_menu_item, locals: { id: 'grid.x.show' }
@@ -98,6 +118,8 @@
           = partial :reference_menu_item, locals: { id: 'grid.y.show' }
           = partial :reference_menu_item, locals: { id: 'grid.y.lines' }
           = partial :reference_menu_item, locals: { id: 'grid.y.ticks' }
+          = partial :reference_menu_item, locals: { id: 'grid.focus.show' }
+          = partial :reference_menu_item, locals: { id: 'grid.lines.front' }
 
           %li Region
           = partial :reference_menu_item, locals: { id: 'regions' }
@@ -105,6 +127,10 @@
           %li Legend
           = partial :reference_menu_item, locals: { id: 'legend.show' }
           = partial :reference_menu_item, locals: { id: 'legend.position' }
+          = partial :reference_menu_item, locals: { id: 'legend.inset.anchor' }
+          = partial :reference_menu_item, locals: { id: 'legend.inset.x' }
+          = partial :reference_menu_item, locals: { id: 'legend.inset.y' }
+          = partial :reference_menu_item, locals: { id: 'legend.inset.step' }
           = partial :reference_menu_item, locals: { id: 'legend.item.onclick' }
           = partial :reference_menu_item, locals: { id: 'legend.item.onmouseover' }
           = partial :reference_menu_item, locals: { id: 'legend.item.onmouseout' }
@@ -124,9 +150,14 @@
           %li Subchart
           = partial :reference_menu_item, locals: { id: 'subchart.show', experimental: true }
           = partial :reference_menu_item, locals: { id: 'subchart.size.height', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'subchart.onbrush', experimental: true }
 
           %li Zoom
           = partial :reference_menu_item, locals: { id: 'zoom.enabled', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'zoom.rescale', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'zoom.onzoom', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'zoom.onzoomstart', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'zoom.onzoomend', experimental: true }
           -#= partial :reference_menu_item, locals: { id: 'zoom.extent', experimental: true }
           -#= partial :reference_menu_item, locals: { id: 'zoom.privileged', experimental: true }
 
@@ -138,22 +169,40 @@
           = partial :reference_menu_item, locals: { id: 'point.select.r' }
 
           %li Line
-          = partial :reference_menu_item, locals: { id: 'line.connect_null' }
+          = partial :reference_menu_item, locals: { id: 'line.connectNull' }
+          = partial :reference_menu_item, locals: { id: 'line.step_type' }
+
+          %li Area
+          = partial :reference_menu_item, locals: { id: 'area.zerobased' }
 
           %li Bar
           = partial :reference_menu_item, locals: { id: 'bar.width' }
           = partial :reference_menu_item, locals: { id: 'bar.width.ratio' }
+          = partial :reference_menu_item, locals: { id: 'bar.width.max' }
+          = partial :reference_menu_item, locals: { id: 'bar.zerobased' }
 
           %li Pie
           = partial :reference_menu_item, locals: { id: 'pie.label.show' }
           = partial :reference_menu_item, locals: { id: 'pie.label.format' }
+          = partial :reference_menu_item, locals: { id: 'pie.label.threshold' }
           = partial :reference_menu_item, locals: { id: 'pie.expand' }
 
           %li Donut
           = partial :reference_menu_item, locals: { id: 'donut.label.show' }
           = partial :reference_menu_item, locals: { id: 'donut.label.format' }
+          = partial :reference_menu_item, locals: { id: 'donut.label.threshold' }
+          = partial :reference_menu_item, locals: { id: 'donut.width' }
           = partial :reference_menu_item, locals: { id: 'donut.expand' }
           = partial :reference_menu_item, locals: { id: 'donut.title' }
+
+          %li Gauge
+          = partial :reference_menu_item, locals: { id: 'gauge.label.show' }
+          = partial :reference_menu_item, locals: { id: 'gauge.label.format' }
+          = partial :reference_menu_item, locals: { id: 'gauge.expand' }
+          = partial :reference_menu_item, locals: { id: 'gauge.min' }
+          = partial :reference_menu_item, locals: { id: 'gauge.max' }
+          = partial :reference_menu_item, locals: { id: 'gauge.units' }
+          = partial :reference_menu_item, locals: { id: 'gauge.width' }
 
           %li.margin-medium-top
             %strong API
@@ -181,11 +230,14 @@
           = partial :reference_menu_item, locals: { id: 'api.regions' }
           = partial :reference_menu_item, locals: { id: 'api.regions.add' }
           = partial :reference_menu_item, locals: { id: 'api.regions.remove' }
-          = partial :reference_menu_item, locals: { id: 'api.data.get' }
-          = partial :reference_menu_item, locals: { id: 'api.data.getAsTarget' }
+          = partial :reference_menu_item, locals: { id: 'api.data' }
+          = partial :reference_menu_item, locals: { id: 'api.data.shown' }
+          = partial :reference_menu_item, locals: { id: 'api.data.values' }
           = partial :reference_menu_item, locals: { id: 'api.data.names' }
           = partial :reference_menu_item, locals: { id: 'api.data.colors' }
-          = partial :reference_menu_item, locals: { id: 'api.data.targets' }
+          = partial :reference_menu_item, locals: { id: 'api.data.axes' }
+          = partial :reference_menu_item, locals: { id: 'api.category' }
+          = partial :reference_menu_item, locals: { id: 'api.categories' }
           = partial :reference_menu_item, locals: { id: 'api.x' }
           = partial :reference_menu_item, locals: { id: 'api.xs' }
           = partial :reference_menu_item, locals: { id: 'api.color' }
@@ -195,8 +247,11 @@
           = partial :reference_menu_item, locals: { id: 'api.axis.range' }
           = partial :reference_menu_item, locals: { id: 'api.legend.show' }
           = partial :reference_menu_item, locals: { id: 'api.legend.hide' }
-          = partial :reference_menu_item, locals: { id: 'api.unzoom' }
+          = partial :reference_menu_item, locals: { id: 'api.tooltip.show' }
+          = partial :reference_menu_item, locals: { id: 'api.tooltip.hide' }
+          = partial :reference_menu_item, locals: { id: 'api.zoom' }
           = partial :reference_menu_item, locals: { id: 'api.zoom.enable' }
+          = partial :reference_menu_item, locals: { id: 'api.unzoom' }
           = partial :reference_menu_item, locals: { id: 'api.resize' }
           = partial :reference_menu_item, locals: { id: 'api.flush' }
           = partial :reference_menu_item, locals: { id: 'api.destroy' }
