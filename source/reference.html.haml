@@ -87,6 +87,7 @@
           = partial :reference_menu_item, locals: { id: 'axis.x.label' }
           = partial :reference_menu_item, locals: { id: 'axis.y.show' }
           = partial :reference_menu_item, locals: { id: 'axis.y.type' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.inner' }
           = partial :reference_menu_item, locals: { id: 'axis.y.max' }
           = partial :reference_menu_item, locals: { id: 'axis.y.min' }
           = partial :reference_menu_item, locals: { id: 'axis.y.center' }
@@ -100,6 +101,7 @@
           = partial :reference_menu_item, locals: { id: 'axis.y.padding' }
           = partial :reference_menu_item, locals: { id: 'axis.y.default' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.show' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.inner' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.max' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.min' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.center' }
@@ -659,6 +661,16 @@
       %hr
       %section
         %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.inner' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.type' }
+        %p ...
+      %hr
+      %section
+        %h3
           = partial :reference_item_link, locals: { id: 'axis.y.max' }
         %p ...
       %hr
@@ -695,6 +707,11 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.inner' }
         %p ...
       %hr
       %section
@@ -773,6 +790,11 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.show' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'legend.hide' }
         %p ...
       %hr
       %section
@@ -1051,12 +1073,17 @@
       %hr
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'api.data.get' }
+          = partial :reference_item_link, locals: { id: 'api.data' }
         %p ...
       %hr
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'api.data.getAsTarget' }
+          = partial :reference_item_link, locals: { id: 'api.data.shown' }
+        %p ...
+      %hr
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.data.values' }
         %p ...
       %hr
       %section
