@@ -5,11 +5,12 @@
   .chart
     #chart
 
+  #ace-error
+
   .sourcecode.margin-medium-v.margin-small-h
     %h3 # #{id}.js
-    %pre
-      %code.html.javascript
-        = js_as_plain id
+    #javascript-editor.c3-editor
+      = js_as_plain id
 
   - if defined? other_css
     .sourcecode
@@ -29,4 +30,5 @@
   = partial :footer
 
 = partial :script
+= partial :sample_editor, locals: { type: 'javascript' }
 = javascript_include_tag "samples/#{id}.js"
