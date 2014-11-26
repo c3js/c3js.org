@@ -63,7 +63,7 @@ chart_combination:
   desc: Display all kinda charts up in here.
 
 categorized:
-  title: Categorized Axis
+  title: Category Axis
   desc: Show ticks as categorized by each data.
 
 axes_y2:

@@ -329,319 +329,1225 @@
 
 
     .large-9.medium-8.columns.column-content
-      %section
-        %h2 Options
+      %h2 Options
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'bindto' }
-        %p The element, by CSS selector, which the chart will append to. Default is <code>'#chart'</code>.
-        %pre { bindto: '#myContainer' }
+        %p The CSS selector or the element which the chart will append to. D3 selection object can be specified.
+        %br
+        %p If this option is not specified, the chart will be generated but not be appended. Instaed, we can access the element by <span class="code">chart.element</span> and append it by ourselves.
+        %h5 Default:
+        <code>#chart</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              bindto: '#myContainer'
+              \// or element
+              bindto: document.getElementById('myContainer')
+              \// or D3 selection object
+              bindto: d3.select('#myContainer')
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'size.width' }
         %p The desired width of the chart element.
-        %pre { size: { width: 100 } }
+        %br
+        %p If this option is not specified, the width of the chart will be calculated by the size of the parent element it's appended to.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              size: {
+              &nbsp;&nbsp;width: 640
+              }
+        %h5 Note:
+        %p This option should be specified if possible because it can improve its performance because some size calculations will be skipped by an explicit value.
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'size.height' }
         %p The desired height of the chart element.
-        %pre { size: { height: 320 } }
+        %br
+        %p If this option is not specified, the height of the chart will be calculated by the size of the parent element it's appended to.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              size: {
+              &nbsp;&nbsp;height: 480
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'padding.top' }
         %p The padding on the top of the chart.
-        %pre { padding: { top: 0 }}
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              padding: {
+              &nbsp;&nbsp;top: 20
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/options_padding.html" ) Padding for the chart
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'padding.right' }
         %p The padding on the right of the chart.
-        %pre { padding: { right: 0 }}
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              padding: {
+              &nbsp;&nbsp;right: 20
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/options_padding.html" ) Padding for the chart
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'padding.bottom' }
         %p The padding on the bottom of the chart.
-        %pre { padding: { bottom: 0 }}
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              padding: {
+              &nbsp;&nbsp;bottom: 20
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/options_padding.html" ) Padding for the chart
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'padding.left' }
         %p The padding on the left of the chart.
-        %pre { padding: { left: 0 }}
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              padding: {
+              &nbsp;&nbsp;left: 20
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/options_padding.html" ) Padding for the chart
+        %h5 Note:
+        %p This option should be specified if possible because it can improve its performance because some size calculations will be skipped by an explicit value.
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'color.pattern' }
         %p Set custom color pattern.
-        %pre  color: { pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a' ] }
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              color: {
+              &nbsp;&nbsp;pattern: ['#1f77b4', '#aec7e8', ...]
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/options_color.html" ) Custom color pattern
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'color.threshold' }
+        %p not yet
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'interaction.enabled' }
-        %p Indicate if the chart should have interactions. Default is <code>true</code>.
-        %pre  interaction: { enabled: true || false }
+        %p Indicate if the chart should have interactions.
+        %br
+        %p If <code>false</code> is set, all of interactions (showing/hiding tooltip, selection, mouse events, etc) will be disabled.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              interaction: {
+              &nbsp;&nbsp;enabled: false
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'transition.duration' }
-        %p Set duration of transition (in milliseconds) for chart animation. Default is <code>350</code>ms.
-        %pre  transition: { duration: 100 }
+        %p Set duration of transition (in milliseconds) for chart animation.
+        %h5 Default:
+        <code>350</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              transition: {
+              &nbsp;&nbsp;duration: 500
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/transition_duration.html" ) Change the duration of transition
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'oninit' }
+        %p not yet
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onmouseover' }
-        %p Set a callback to execute when mouse enters on chart.
-        %pre  onmouseover: function() { ... }
+        %p Set a callback to execute when mouse enters the chart.
+        %h5 Default:
+        <code>function () {}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              onmouseover: function () { ... }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onmouseout' }
-        %p Set a callback to execute when mouse leaves chart.
-        %pre  onmouseout: function() { ... }
+        %p Set a callback to execute when mouse leaves the chart.
+        %h5 Default:
+        <code>function () {}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              onmouseout: function () { ... }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onresize' }
         %p Set a callback to execute when user resizes the screen.
-        %pre  onresize: function() { ... }
+        %h5 Default:
+        <code>function () {}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              onresize: function () { ... }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onresized' }
-        %p Set a callback to execute when screen resize finish.
-        %pre  onresized: function() { ... }
+        %p Set a callback to execute when screen resize finished.
+        %h5 Default:
+        <code>function () {}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              onresized: function () { ... }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.url' }
+        %p not yet
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.json' }
+        %p not yet
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.rows' }
+        %p not yet
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.columns' }
+        %p not yet
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.mimeType' }
+        %p not yet
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.keys' }
+        %p not yet
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.x' }
-        %p ...
+        %p Specify the key of x values in the data.
+        %br
+        %p We can show the data with non-index x values by this option. This option is required when the type of x axis is timeseries. If this option is set on category axis, the values of the data on the key will be used for category names.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;x: 'date'
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/simple_xy.html") XY Chart
+          %li
+            %a( href="/samples/timeseries.html" ) Timeseries Chart
+          %li
+            %a( href="/samples/data_stringx.html" ) Category Names
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.xs' }
-        %p ...
+        %p Specify the keys of the x values for each data.
+        %br
+        %p This option can be used if we want to show the data that has different x values.
+        %h5 Default:
+        <code>{}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;xs: {
+              &nbsp;&nbsp;&nbsp;&nbsp;data1: 'x1',
+              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'x2',
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/simple_xy_multiple.html" ) Multiple XY Chart
+        %h5 Note:
+        %p <a href="#data-x">data.x</a> should be used if the all of data have same x values.
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.xFormat' }
-        %p Set a format to parse string specifed as x. Default is <code>%Y-%m-%d</code>.
-        %pre  data: { xFormat: '%Y-%m-%d %H:%M:%S' }
+        %p Set a format to parse string specifed as x.
+        %h5 Default:
+        <code>%Y-%m-%d</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;xFormat: '%Y-%m-%d %H:%M:%S'
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/timeseries.html" ) Timeseries Chart
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.xLocaltime' }
+        %p not yet
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.xSort' }
+        %p not yet
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.names' }
-        %p ...
+        %p Set custom data name.
+        %h5 Default:
+        <code>{}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;names: {
+              &nbsp;&nbsp;&nbsp;&nbsp;data1: 'Data Name 1',
+              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'Data Name 2',
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/data_name.html" ) Data Name
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.classes' }
-        %p ...
+        %p Set custom data class.
+        %br
+        %p If this option is specified, the element <span class="code">g</span> for the data has an additional class that has the prefix <span class="code">c3-target-</span> (e.g. <span class="code">c3-target-additional-data1-class</span>).
+        %h5 Default:
+        <code>{}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;classes: {
+              &nbsp;&nbsp;&nbsp;&nbsp;data1: 'additional-data1-class',
+              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'additional-data2-class',
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.groups' }
-        %p ...
+        %p Set groups for the data for statcking.
+        %h5 Default:
+        <code>[]</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;groups: [
+              &nbsp;&nbsp;&nbsp;&nbsp;['data1', 'data2'],
+              &nbsp;&nbsp;&nbsp;&nbsp;['data3'],
+              &nbsp;&nbsp;]
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/chart_bar_stacked.html" ) Stacked Bar Chart
+          %li
+            %a( href="/samples/chart_area_stacked.html" ) Stacked Area Chart
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.axes' }
-        %p ...
+        %p Set y axis the data related to. <span class="code">y</span> and <span class="code">y2</span> can be used.
+        %h5 Default:
+        <code>{}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;axes: {
+              &nbsp;&nbsp;&nbsp;&nbsp;data1: 'y',
+              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'y2'
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_y2.html" ) Additional Y Axis
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.type' }
-        %p ...
+        %p Set chart type at once.
+        %br
+        %p If this option is specified, the type will be applied to every data. This setting can be overwritten by <a href="#data-types">data.types</a>.
+        %h5 Available Values:
+        %ul
+          %li line
+          %li spline
+          %li step
+          %li area
+          %li area-spline
+          %li area-step
+          %li bar
+          %li scatter
+          %li pie
+          %li donut
+          %li gauge
+        %h5 Default:
+        <code>line</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;type: 'bar'
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/chart_spline.html" ) Spline Chart
+          %li
+            %a( href="/samples/chart_step.html" ) Step Chart
+          %li
+            %a( href="/samples/chart_area.html" ) Area Chart
+          %li
+            %a( href="/samples/chart_bar.html" ) Bar Chart
+          %li
+            %a( href="/samples/chart_scatter.html" ) Scatter Chart
+          %li
+            %a( href="/samples/chart_pie.html" ) Pie Chart
+          %li
+            %a( href="/samples/chart_donut.html" ) Donut Chart
+          %li
+            %a( href="/samples/chart_gauge.html" ) Gauge Chart
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.types' }
-        %p ...
+        %p Set chart type for each data.
+        %br
+        %p This setting overwrites <a href="#data-type">data.type</a> setting.
+        %h5 Default:
+        <code>{}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;types: {
+              &nbsp;&nbsp;&nbsp;&nbsp;data1: 'bar'
+              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'spline'
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/chart_combination.html" ) Combination Chart
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.labels' }
-        %p ...
+        %p Show labels on each data points.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;labels: true
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/data_label.html" ) Data Label
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.labels.format' }
+        %p Set formatter function for data labels.
+        %br
+        %p The formatter function receives 4 arguments such as <span class="code">v</span>, <span class="code">id</span>, <span class="code">i</span>, <span class="code">j</span> and it must return a string that will be shown as the label. The arguments are:
+        %br
+        %ul
+          %li <span class="code">v</span> is the value of the data point where the label is shown.
+          %li <span class="code">id</span> is the id of the data where the label is shown.
+          %li <span class="code">i</span> is the index of the data point where the label is shown.
+          %li <span class="code">j</span> is the sub index of the data point where the label is shown.
+        %p Formatter function can be defined for each data by specifying as an object and D3 formatter function can be set (e.g. <span class="code">d3.format('$')</span>)
+        %h5 Default:
+        <code>{}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;labels: {
+              &nbsp;&nbsp;&nbsp;&nbsp;format: function (v, id, i, j) { ... }
+              &nbsp;&nbsp;&nbsp;&nbsp;// it's possible to set for each data
+              &nbsp;&nbsp;&nbsp;&nbsp;//format: {
+              &nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;data1: function (v, id, i, j) { ... },
+              &nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;...
+              &nbsp;&nbsp;&nbsp;&nbsp;//}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/data_label_format.html" ) Data Label Format
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.order' }
-        %p ...
+        %p Define the order of the data.
+        %br
+        %p This option changes the order of stacking the data and pieces of pie/donut. If null specified, it will be the order the data loaded. If function specified, it will be used to sort the data and it will recieve the data as argument.
+        %h5 Available Values:
+        %ul
+          %li desc
+          %li asc
+          %li <span class="code">function (data1, data2) { ... }</span>
+        %h5 Default:
+        <code>desc</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;order: 'asc'
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/data_order.html" ) Data Order
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.regions' }
-        %p ...
+        %p Define regions for each data.
+        %br
+        %p The values must be an array for each data and it should include an object that has <span class="code">start</span>, <span class="code">end</span>, <span class="code">style</span>. If <span class="code">start</span> is not set, the start will be the first data point. If <span class="code">end</span> is not set, the end will be the last data point.
+        %br
+        %p Currently this option supports only line chart and dashed style. If this option specified, the line will be dashed only in the regions.
+        %h5 Default:
+        <code>{}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;regions: {
+              &nbsp;&nbsp;&nbsp;&nbsp;data1: [{'start':1, 'end':2, 'style':'dashed'},{'start':3}],
+              &nbsp;&nbsp;&nbsp;&nbsp;...
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/simple_regions.html" ) Line Chart with Region
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.color' }
-        %p ...
+        %p Set color converter function.
+        %br
+        %p This option should a function and the specified function receives <span class="code">color</span> (e.g. '#ff0000') and <span class="code">d</span> that has data parameters like id, value, index, etc. And it must return a string that represents color (e.g. '#00ff00').
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;color: function (color, d) { ... }
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/data_color.html" ) Data Color
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.colors' }
-        %p ...
+        %p Set color for each data.
+        %h5 Default:
+        <code>{}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;colors: {
+              &nbsp;&nbsp;&nbsp;&nbsp;data1: '#ff0000',
+              &nbsp;&nbsp;&nbsp;&nbsp;...
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/data_color.html" ) Data Color
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.hide' }
-        %p ...
+        %p Hide each data when the chart appears.
+        %br
+        %p If <code>true</code> specified, all of data will be hidden. If multiple ids specified as an array, those will be hidden.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;// all of data will be hidden
+              &nbsp;&nbsp;hide: true
+              &nbsp;&nbsp;// specified data will be hidden
+              &nbsp;&nbsp;hide: ['data1', ...]
+              }
+        %h5 Note:
+        %p This option does not hide legends, so we need to use <a href="#legend-hide">legend.hide</a> option together if we want to hide legend too.
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.selection.enabled' }
-        %p ...
+        %p Set data selection enabled.
+        %br
+        %p If this option is set <code>true</code>, we can select the data points and get/set its state of selection by API (e.g. <a href="#api-select">select</a>, <a href="#api-unselect">unselect</a>, <a href="#api-selected">selected</a>).
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;selection: {
+              &nbsp;&nbsp;&nbsp;&nbsp;enabled: true
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.selection.grouped' }
-        %p ...
+        %p Set grouped selection enabled.
+        %br
+        %p If this option set <code>true</code>, multiple data points that have same x value will be selected by one selection.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;selection: {
+              &nbsp;&nbsp;&nbsp;&nbsp;grouped: true
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.selection.multiple' }
-        %p ...
+        %p Set multiple data points selection enabled.
+        %br
+        %p If this option set <code>true</code>, multile data points can have the selected state at the same time. If <code>false</code> set, only one data point can have the selected state and the others will be unselected when the new data point is selected.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;selection: {
+              &nbsp;&nbsp;&nbsp;&nbsp;multiple: true
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.selection.isselectable' }
-        %p ...
+        %p Set a callback for each data point to determine if it's selectable or not.
+        %br
+        %p The callback will receive <span class="code">d</span> as an argument and it has some parameters like <span class="code">id</span>, <span class="code">value</span>, <span class="code">index</span>. This callback should return <span class="code">boolean</span>.
+        %h5 Default:
+        <code>function () { return true; }</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;selection: {
+              &nbsp;&nbsp;&nbsp;&nbsp;isselectable: function (d) { ... }
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.onclick' }
-        %p ...
+        %p Set a callback for click event on each data point.
+        %br
+        %p This callback will be called when each data point clicked and will receive <span class="code">d</span> and <span class="code">element</span> as the arguments. <span class="code">d</span> is the data clicked and <span class="code">element</span> is the element clicked. In this callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.
+        %h5 Default:
+        <code>function () {}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;onclick: function (d, element) { ... }
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.onmouseover' }
-        %p ...
+        %p Set a callback for mouseover event on each data point.
+        %br
+        %p This callback will be called when mouse cursor moves onto each data point and will receive <span class="code">d</span> as the argument. <span class="code">d</span> is the data where mouse cursor moves onto. In this callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.
+        %h5 Default:
+        <code>function () {}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;onmouseover: function (d) { ... }
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.onmouseout' }
-        %p ...
+        %p Set a callback for mouseout event on each data point.
+        %br
+        %p This callback will be called when mouse cursor moves out each data point and will receive <span class="code">d</span> as the argument. <span class="code">d</span> is the data where mouse cursor moves out. In this callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.
+        %h5 Default:
+        <code>function () {}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;onmouseout: function (d) { ... }
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.onselected' }
-        %p ...
+        %p not yet
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.onunselected' }
-        %p ...
+        %p not yet
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.ondragstart' }
-        %p ...
+        %p not yet
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.ondragend' }
-        %p ...
+        %p not yet
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.rotated' }
-        %p Switch x and y axis position. Default is <code>false</code>.
-        %pre  axis: { rotated: true }
+        %p Switch x and y axis position.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;rotated: true
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_rotated.html" ) Rotated Axis
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.show' }
-        %p Show or hides x axis. Default is <code>true</code>.
-        %pre  axis: { x: { show: true } }
+        %p Show or hide x axis.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;show: true
+              &nbsp;&nbsp;}
+              }
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.type' }
+        %p Set type of x axis.
+        %h5 Available Values
+        %ul
+          %li timeseries
+          %li category
+          %li indexed
+        %h5 Default:
+        <code>indexed</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;type: 'timeseries'
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/timeseries.html" ) Timeseries Chart
+          %li
+            %a( href="/samples/categorized.html" ) Category Axis
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.localtime' }
-        %p If true, treat x value as localtime. If false, convert to UTC internally. Default is <code>true</code>.
-        %pre  axis: { x: { localtime: true } }
+        %p Set how to treat the timezone of x values.
+        %br
+        %p If true, treat x value as localtime. If false, convert to UTC internally.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;localtime: true
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_x_localtime.html" ) X Axis Timezone
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.categories' }
-        %p Show ticks as categorized by each data.
-        %pre axis: { x: { categories: ['a', 'b', 'c', 'd'] } }
+        %p Set category names on category axis.
+        %br
+        %p This must be an array that includes category names in string. If category names are included in the date by <span class="code">data.x</span> option, this is not required.
+        %h5 Default:
+        <code>[]</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;categories: ['Category 1', 'Category 2', ...]
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/categorized.html" ) Category Axis
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.centered' }
-        %p ...
+        %p Centerise ticks on category axis.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;centered: true
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.format' }
         %p A function to format tick value. Format string is also available for timeseries data.
-        %pre axis: { x: { tick: { format: function (x) { return x.getFullYear(); } } } }
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formart: function (x) { return x.getFullYear(); }
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.culling' }
-        %p An object to configure culling ticks.
+        %p Setting for culling ticks.
+        %br
+        %p If <code>true</code> is set, the ticks will be culled, then only limitted tick text will be shown. This option does not hide the tick lines. If <code>false</code> is set, all of ticks will be shown.
+        %br
+        %p We can change the number of ticks to be shown by <a href="#axis-x-tick-culling-max">axis.x.tick.culling.max</a>.
+        %h5 Default:
+        %ul
+          %li <code>true</code> for indexed axis and timeseries axis
+          %li <code>false</code> for category axis
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;culling: false
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_x_tick_culling.html" ) X Axis Tick Culling
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.culling.max' }
         %p The number of tick texts will be adjusted to less than this value.
-        %pre axis: { x: { tick: { culling: { max: 5 } } } } }
+        %h5 Default:
+        <code>10</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;culling: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max: 5
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_x_tick_culling.html" ) X Axis Tick Culling
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.count' }
         %p The number of x axis ticks to show.
-        %pre axis: { x: { tick: { count: 5 } } } }
+        %br
+        %p This option hides tick lines together with tick text. If this option is used on timeseries axis, the ticks position will be determined precisely and not nicely positioned (e.g. it will have rough second value).
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count: 5
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_x_tick_count.html" ) X Axis Tick Count
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.fit' }
-        %p Fit x axis tick. Default is <code>true</code>.
-        %pre axis: { x: { tick: { fit: true } } } }
+        %p Fit x axis ticks.
+        %br
+        %p If <code>true</code> set, the ticks will be positioned nicely. If <code>false</code> set, the ticks will be positioned according to x value of the data points.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fit: true
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_x_tick_fit.html" ) X Axis Tick Fit
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.values' }
-        %p ...
+        %p Set the x values of ticks manually.
+        %br
+        %p If this option is provided, the position of the ticks will be determined based on those values. This option works with timeseries data and the x values will be parsed accoding to the type of the value and <a href="#data-xFormat">data.xFormat</a> option.
+        %h5 Default:
+        <code>null</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values: [1, 2, 4, 8, 16, 32, ...]
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_x_tick_values.html" ) X Axis Tick Values
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.rotate' }
-        %p Rotate x axis tick text. Default is <code>0</code>. If you set negative value, it will rotate to opposite direction.
-        %pre axis: { x: { tick: { rotate: 30 } } } }
+        %p Rotate x axis tick text.
+        %br
+        %p If you set negative value, it will rotate to opposite direction.
+        %h5 Default:
+        <code>0</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rotate: 60
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_x_tick_rotate.html" ) Rotate X Axis Tick Text
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.max' }
-        %p Set a max range for x axis. Range includes padding, set 0 if no padding needed.
-        %pre axis: { x: { max: 200 } }
+        %p Set max value of x axis range.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;max: 100
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.min' }
-        %p Set a min range for x axis. Range includes padding, set 0 if no padding needed.
-        %pre axis: { x: { min: -200 } }
+        %p Set min value of x axis range.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;min: -100
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.padding' }
         %p Set padding for x axis.
-        %pre axis: { x: { padding: { top: 200, bottom: 0 } } }
+        %br
+        %p If this option is set, the range of x axis will increase/decrease according to the values. If no padding is needed in the ragen of x axis, <code>0</code> should be set. On category axis, this option will be ignored.
+        %h5 Default:
+        <code>{}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;padding: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left: 0,
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right: 0,
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.height' }
         %p ...
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.extent' }

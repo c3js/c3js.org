@@ -12,7 +12,7 @@
 <link href="/css/tomorrow-d7cf0921.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/c3-0a1ea9c6.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/style-725352cb.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="/css/reference-da39a3ee.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/reference-c207fa40.css" media="screen" rel="stylesheet" type="text/css" />
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -1470,17 +1470,26 @@
 </div>
 </div>
 <div class='large-9 medium-8 columns column-content'>
-<section>
 <h2>Options</h2>
-</section>
 <hr>
 <section>
 <h3>
 <a href='#bindto'>bindto</a>
 
 </h3>
-<p>The element, by CSS selector, which the chart will append to. Default is <code>'#chart'</code>.</p>
-<pre>{ bindto: '#myContainer' }</pre>
+<p>The CSS selector or the element which the chart will append to. D3 selection object can be specified.</p>
+<br>
+<p>If this option is not specified, the chart will be generated but not be appended. Instaed, we can access the element by <span class="code">chart.element</span> and append it by ourselves.</p>
+<h5>Default:</h5>
+<code>#chart</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>bindto: '#myContainer'
+// or element
+bindto: document.getElementById('myContainer')
+// or D3 selection object
+bindto: d3.select('#myContainer')</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1489,7 +1498,18 @@
 
 </h3>
 <p>The desired width of the chart element.</p>
-<pre>{ size: { width: 100 } }</pre>
+<br>
+<p>If this option is not specified, the width of the chart will be calculated by the size of the parent element it's appended to.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>size: {
+&nbsp;&nbsp;width: 640
+}</code></pre>
+</div>
+<h5>Note:</h5>
+<p>This option should be specified if possible because it can improve its performance because some size calculations will be skipped by an explicit value.</p>
 </section>
 <hr>
 <section>
@@ -1498,7 +1518,16 @@
 
 </h3>
 <p>The desired height of the chart element.</p>
-<pre>{ size: { height: 320 } }</pre>
+<br>
+<p>If this option is not specified, the height of the chart will be calculated by the size of the parent element it's appended to.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>size: {
+&nbsp;&nbsp;height: 480
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1507,7 +1536,20 @@
 
 </h3>
 <p>The padding on the top of the chart.</p>
-<pre>{ padding: { top: 0 }}</pre>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>padding: {
+&nbsp;&nbsp;top: 20
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/options_padding.html'>Padding for the chart</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1516,7 +1558,20 @@
 
 </h3>
 <p>The padding on the right of the chart.</p>
-<pre>{ padding: { right: 0 }}</pre>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>padding: {
+&nbsp;&nbsp;right: 20
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/options_padding.html'>Padding for the chart</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1525,7 +1580,20 @@
 
 </h3>
 <p>The padding on the bottom of the chart.</p>
-<pre>{ padding: { bottom: 0 }}</pre>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>padding: {
+&nbsp;&nbsp;bottom: 20
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/options_padding.html'>Padding for the chart</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1534,7 +1602,22 @@
 
 </h3>
 <p>The padding on the left of the chart.</p>
-<pre>{ padding: { left: 0 }}</pre>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>padding: {
+&nbsp;&nbsp;left: 20
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/options_padding.html'>Padding for the chart</a>
+</li>
+</ul>
+<h5>Note:</h5>
+<p>This option should be specified if possible because it can improve its performance because some size calculations will be skipped by an explicit value.</p>
 </section>
 <hr>
 <section>
@@ -1543,7 +1626,28 @@
 
 </h3>
 <p>Set custom color pattern.</p>
-<pre>color: { pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a' ] }</pre>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>color: {
+&nbsp;&nbsp;pattern: ['#1f77b4', '#aec7e8', ...]
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/options_color.html'>Custom color pattern</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#color-threshold'>color.threshold</a>
+
+</h3>
+<p>not yet</p>
 </section>
 <hr>
 <section>
@@ -1551,8 +1655,17 @@
 <a href='#interaction-enabled'>interaction.enabled</a>
 
 </h3>
-<p>Indicate if the chart should have interactions. Default is <code>true</code>.</p>
-<pre>interaction: { enabled: true || false }</pre>
+<p>Indicate if the chart should have interactions.</p>
+<br>
+<p>If <code>false</code> is set, all of interactions (showing/hiding tooltip, selection, mouse events, etc) will be disabled.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>interaction: {
+&nbsp;&nbsp;enabled: false
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1560,8 +1673,29 @@
 <a href='#transition-duration'>transition.duration</a>
 
 </h3>
-<p>Set duration of transition (in milliseconds) for chart animation. Default is <code>350</code>ms.</p>
-<pre>transition: { duration: 100 }</pre>
+<p>Set duration of transition (in milliseconds) for chart animation.</p>
+<h5>Default:</h5>
+<code>350</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>transition: {
+&nbsp;&nbsp;duration: 500
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/transition_duration.html'>Change the duration of transition</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#oninit'>oninit</a>
+
+</h3>
+<p>not yet</p>
 </section>
 <hr>
 <section>
@@ -1569,8 +1703,13 @@
 <a href='#onmouseover'>onmouseover</a>
 
 </h3>
-<p>Set a callback to execute when mouse enters on chart.</p>
-<pre>onmouseover: function() { ... }</pre>
+<p>Set a callback to execute when mouse enters the chart.</p>
+<h5>Default:</h5>
+<code>function () {}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>onmouseover: function () { ... }</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1578,8 +1717,13 @@
 <a href='#onmouseout'>onmouseout</a>
 
 </h3>
-<p>Set a callback to execute when mouse leaves chart.</p>
-<pre>onmouseout: function() { ... }</pre>
+<p>Set a callback to execute when mouse leaves the chart.</p>
+<h5>Default:</h5>
+<code>function () {}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>onmouseout: function () { ... }</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1588,7 +1732,12 @@
 
 </h3>
 <p>Set a callback to execute when user resizes the screen.</p>
-<pre>onresize: function() { ... }</pre>
+<h5>Default:</h5>
+<code>function () {}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>onresize: function () { ... }</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1596,8 +1745,61 @@
 <a href='#onresized'>onresized</a>
 
 </h3>
-<p>Set a callback to execute when screen resize finish.</p>
-<pre>onresized: function() { ... }</pre>
+<p>Set a callback to execute when screen resize finished.</p>
+<h5>Default:</h5>
+<code>function () {}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>onresized: function () { ... }</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#data-url'>data.url</a>
+
+</h3>
+<p>not yet</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#data-json'>data.json</a>
+
+</h3>
+<p>not yet</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#data-rows'>data.rows</a>
+
+</h3>
+<p>not yet</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#data-columns'>data.columns</a>
+
+</h3>
+<p>not yet</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#data-mimeType'>data.mimeType</a>
+
+</h3>
+<p>not yet</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#data-keys'>data.keys</a>
+
+</h3>
+<p>not yet</p>
 </section>
 <hr>
 <section>
@@ -1605,7 +1807,29 @@
 <a href='#data-x'>data.x</a>
 
 </h3>
-<p>...</p>
+<p>Specify the key of x values in the data.</p>
+<br>
+<p>We can show the data with non-index x values by this option. This option is required when the type of x axis is timeseries. If this option is set on category axis, the values of the data on the key will be used for category names.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;x: 'date'
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/simple_xy.html'>XY Chart</a>
+</li>
+<li>
+<a href='/samples/timeseries.html'>Timeseries Chart</a>
+</li>
+<li>
+<a href='/samples/data_stringx.html'>Category Names</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1613,7 +1837,28 @@
 <a href='#data-xs'>data.xs</a>
 
 </h3>
-<p>...</p>
+<p>Specify the keys of the x values for each data.</p>
+<br>
+<p>This option can be used if we want to show the data that has different x values.</p>
+<h5>Default:</h5>
+<code>{}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;xs: {
+&nbsp;&nbsp;&nbsp;&nbsp;data1: 'x1',
+&nbsp;&nbsp;&nbsp;&nbsp;data2: 'x2',
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/simple_xy_multiple.html'>Multiple XY Chart</a>
+</li>
+</ul>
+<h5>Note:</h5>
+<p><a href="#data-x">data.x</a> should be used if the all of data have same x values.</p>
 </section>
 <hr>
 <section>
@@ -1621,8 +1866,37 @@
 <a href='#data-xFormat'>data.xFormat</a>
 
 </h3>
-<p>Set a format to parse string specifed as x. Default is <code>%Y-%m-%d</code>.</p>
-<pre>data: { xFormat: '%Y-%m-%d %H:%M:%S' }</pre>
+<p>Set a format to parse string specifed as x.</p>
+<h5>Default:</h5>
+<code>%Y-%m-%d</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;xFormat: '%Y-%m-%d %H:%M:%S'
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/timeseries.html'>Timeseries Chart</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#data-xLocaltime'>data.xLocaltime</a>
+
+</h3>
+<p>not yet</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#data-xSort'>data.xSort</a>
+
+</h3>
+<p>not yet</p>
 </section>
 <hr>
 <section>
@@ -1630,7 +1904,24 @@
 <a href='#data-names'>data.names</a>
 
 </h3>
-<p>...</p>
+<p>Set custom data name.</p>
+<h5>Default:</h5>
+<code>{}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;names: {
+&nbsp;&nbsp;&nbsp;&nbsp;data1: 'Data Name 1',
+&nbsp;&nbsp;&nbsp;&nbsp;data2: 'Data Name 2',
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/data_name.html'>Data Name</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1638,7 +1929,20 @@
 <a href='#data-classes'>data.classes</a>
 
 </h3>
-<p>...</p>
+<p>Set custom data class.</p>
+<br>
+<p>If this option is specified, the element <span class="code">g</span> for the data has an additional class that has the prefix <span class="code">c3-target-</span> (e.g. <span class="code">c3-target-additional-data1-class</span>).</p>
+<h5>Default:</h5>
+<code>{}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;classes: {
+&nbsp;&nbsp;&nbsp;&nbsp;data1: 'additional-data1-class',
+&nbsp;&nbsp;&nbsp;&nbsp;data2: 'additional-data2-class',
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1646,7 +1950,27 @@
 <a href='#data-groups'>data.groups</a>
 
 </h3>
-<p>...</p>
+<p>Set groups for the data for statcking.</p>
+<h5>Default:</h5>
+<code>[]</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;groups: [
+&nbsp;&nbsp;&nbsp;&nbsp;['data1', 'data2'],
+&nbsp;&nbsp;&nbsp;&nbsp;['data3'],
+&nbsp;&nbsp;]
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/chart_bar_stacked.html'>Stacked Bar Chart</a>
+</li>
+<li>
+<a href='/samples/chart_area_stacked.html'>Stacked Area Chart</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1654,7 +1978,24 @@
 <a href='#data-axes'>data.axes</a>
 
 </h3>
-<p>...</p>
+<p>Set y axis the data related to. <span class="code">y</span> and <span class="code">y2</span> can be used.</p>
+<h5>Default:</h5>
+<code>{}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;axes: {
+&nbsp;&nbsp;&nbsp;&nbsp;data1: 'y',
+&nbsp;&nbsp;&nbsp;&nbsp;data2: 'y2'
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_y2.html'>Additional Y Axis</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1662,7 +2003,58 @@
 <a href='#data-type'>data.type</a>
 
 </h3>
-<p>...</p>
+<p>Set chart type at once.</p>
+<br>
+<p>If this option is specified, the type will be applied to every data. This setting can be overwritten by <a href="#data-types">data.types</a>.</p>
+<h5>Available Values:</h5>
+<ul>
+<li>line</li>
+<li>spline</li>
+<li>step</li>
+<li>area</li>
+<li>area-spline</li>
+<li>area-step</li>
+<li>bar</li>
+<li>scatter</li>
+<li>pie</li>
+<li>donut</li>
+<li>gauge</li>
+</ul>
+<h5>Default:</h5>
+<code>line</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;type: 'bar'
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/chart_spline.html'>Spline Chart</a>
+</li>
+<li>
+<a href='/samples/chart_step.html'>Step Chart</a>
+</li>
+<li>
+<a href='/samples/chart_area.html'>Area Chart</a>
+</li>
+<li>
+<a href='/samples/chart_bar.html'>Bar Chart</a>
+</li>
+<li>
+<a href='/samples/chart_scatter.html'>Scatter Chart</a>
+</li>
+<li>
+<a href='/samples/chart_pie.html'>Pie Chart</a>
+</li>
+<li>
+<a href='/samples/chart_donut.html'>Donut Chart</a>
+</li>
+<li>
+<a href='/samples/chart_gauge.html'>Gauge Chart</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1670,7 +2062,26 @@
 <a href='#data-types'>data.types</a>
 
 </h3>
-<p>...</p>
+<p>Set chart type for each data.</p>
+<br>
+<p>This setting overwrites <a href="#data-type">data.type</a> setting.</p>
+<h5>Default:</h5>
+<code>{}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;types: {
+&nbsp;&nbsp;&nbsp;&nbsp;data1: 'bar'
+&nbsp;&nbsp;&nbsp;&nbsp;data2: 'spline'
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/chart_combination.html'>Combination Chart</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1678,7 +2089,60 @@
 <a href='#data-labels'>data.labels</a>
 
 </h3>
-<p>...</p>
+<p>Show labels on each data points.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;labels: true
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/data_label.html'>Data Label</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#data-labels-format'>data.labels.format</a>
+
+</h3>
+<p>Set formatter function for data labels.</p>
+<br>
+<p>The formatter function receives 4 arguments such as <span class="code">v</span>, <span class="code">id</span>, <span class="code">i</span>, <span class="code">j</span> and it must return a string that will be shown as the label. The arguments are:</p>
+<br>
+<ul>
+<li><span class="code">v</span> is the value of the data point where the label is shown.</li>
+<li><span class="code">id</span> is the id of the data where the label is shown.</li>
+<li><span class="code">i</span> is the index of the data point where the label is shown.</li>
+<li><span class="code">j</span> is the sub index of the data point where the label is shown.</li>
+</ul>
+<p>Formatter function can be defined for each data by specifying as an object and D3 formatter function can be set (e.g. <span class="code">d3.format('$')</span>)</p>
+<h5>Default:</h5>
+<code>{}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;labels: {
+&nbsp;&nbsp;&nbsp;&nbsp;format: function (v, id, i, j) { ... }
+&nbsp;&nbsp;&nbsp;&nbsp;// it's possible to set for each data
+&nbsp;&nbsp;&nbsp;&nbsp;//format: {
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;data1: function (v, id, i, j) { ... },
+&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;&nbsp;&nbsp;//}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/data_label_format.html'>Data Label Format</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1686,7 +2150,29 @@
 <a href='#data-order'>data.order</a>
 
 </h3>
-<p>...</p>
+<p>Define the order of the data.</p>
+<br>
+<p>This option changes the order of stacking the data and pieces of pie/donut. If null specified, it will be the order the data loaded. If function specified, it will be used to sort the data and it will recieve the data as argument.</p>
+<h5>Available Values:</h5>
+<ul>
+<li>desc</li>
+<li>asc</li>
+<li><span class="code">function (data1, data2) { ... }</span></li>
+</ul>
+<h5>Default:</h5>
+<code>desc</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;order: 'asc'
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/data_order.html'>Data Order</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1694,7 +2180,28 @@
 <a href='#data-regions'>data.regions</a>
 
 </h3>
-<p>...</p>
+<p>Define regions for each data.</p>
+<br>
+<p>The values must be an array for each data and it should include an object that has <span class="code">start</span>, <span class="code">end</span>, <span class="code">style</span>. If <span class="code">start</span> is not set, the start will be the first data point. If <span class="code">end</span> is not set, the end will be the last data point.</p>
+<br>
+<p>Currently this option supports only line chart and dashed style. If this option specified, the line will be dashed only in the regions.</p>
+<h5>Default:</h5>
+<code>{}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;regions: {
+&nbsp;&nbsp;&nbsp;&nbsp;data1: [{'start':1, 'end':2, 'style':'dashed'},{'start':3}],
+&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/simple_regions.html'>Line Chart with Region</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1702,7 +2209,23 @@
 <a href='#data-color'>data.color</a>
 
 </h3>
-<p>...</p>
+<p>Set color converter function.</p>
+<br>
+<p>This option should a function and the specified function receives <span class="code">color</span> (e.g. '#ff0000') and <span class="code">d</span> that has data parameters like id, value, index, etc. And it must return a string that represents color (e.g. '#00ff00').</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;color: function (color, d) { ... }
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/data_color.html'>Data Color</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1710,7 +2233,24 @@
 <a href='#data-colors'>data.colors</a>
 
 </h3>
-<p>...</p>
+<p>Set color for each data.</p>
+<h5>Default:</h5>
+<code>{}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;colors: {
+&nbsp;&nbsp;&nbsp;&nbsp;data1: '#ff0000',
+&nbsp;&nbsp;&nbsp;&nbsp;...
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/data_color.html'>Data Color</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1718,7 +2258,22 @@
 <a href='#data-hide'>data.hide</a>
 
 </h3>
-<p>...</p>
+<p>Hide each data when the chart appears.</p>
+<br>
+<p>If <code>true</code> specified, all of data will be hidden. If multiple ids specified as an array, those will be hidden.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;// all of data will be hidden
+&nbsp;&nbsp;hide: true
+&nbsp;&nbsp;// specified data will be hidden
+&nbsp;&nbsp;hide: ['data1', ...]
+}</code></pre>
+</div>
+<h5>Note:</h5>
+<p>This option does not hide legends, so we need to use <a href="#legend-hide">legend.hide</a> option together if we want to hide legend too.</p>
 </section>
 <hr>
 <section>
@@ -1726,7 +2281,19 @@
 <a href='#data-selection-enabled'>data.selection.enabled</a>
 
 </h3>
-<p>...</p>
+<p>Set data selection enabled.</p>
+<br>
+<p>If this option is set <code>true</code>, we can select the data points and get/set its state of selection by API (e.g. <a href="#api-select">select</a>, <a href="#api-unselect">unselect</a>, <a href="#api-selected">selected</a>).</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;selection: {
+&nbsp;&nbsp;&nbsp;&nbsp;enabled: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1734,7 +2301,19 @@
 <a href='#data-selection-grouped'>data.selection.grouped</a>
 
 </h3>
-<p>...</p>
+<p>Set grouped selection enabled.</p>
+<br>
+<p>If this option set <code>true</code>, multiple data points that have same x value will be selected by one selection.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;selection: {
+&nbsp;&nbsp;&nbsp;&nbsp;grouped: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1742,7 +2321,19 @@
 <a href='#data-selection-multiple'>data.selection.multiple</a>
 
 </h3>
-<p>...</p>
+<p>Set multiple data points selection enabled.</p>
+<br>
+<p>If this option set <code>true</code>, multile data points can have the selected state at the same time. If <code>false</code> set, only one data point can have the selected state and the others will be unselected when the new data point is selected.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;selection: {
+&nbsp;&nbsp;&nbsp;&nbsp;multiple: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1750,7 +2341,19 @@
 <a href='#data-selection-isselectable'>data.selection.isselectable</a>
 
 </h3>
-<p>...</p>
+<p>Set a callback for each data point to determine if it's selectable or not.</p>
+<br>
+<p>The callback will receive <span class="code">d</span> as an argument and it has some parameters like <span class="code">id</span>, <span class="code">value</span>, <span class="code">index</span>. This callback should return <span class="code">boolean</span>.</p>
+<h5>Default:</h5>
+<code>function () { return true; }</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;selection: {
+&nbsp;&nbsp;&nbsp;&nbsp;isselectable: function (d) { ... }
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1758,7 +2361,17 @@
 <a href='#data-onclick'>data.onclick</a>
 
 </h3>
-<p>...</p>
+<p>Set a callback for click event on each data point.</p>
+<br>
+<p>This callback will be called when each data point clicked and will receive <span class="code">d</span> and <span class="code">element</span> as the arguments. <span class="code">d</span> is the data clicked and <span class="code">element</span> is the element clicked. In this callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.</p>
+<h5>Default:</h5>
+<code>function () {}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;onclick: function (d, element) { ... }
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1766,7 +2379,17 @@
 <a href='#data-onmouseover'>data.onmouseover</a>
 
 </h3>
-<p>...</p>
+<p>Set a callback for mouseover event on each data point.</p>
+<br>
+<p>This callback will be called when mouse cursor moves onto each data point and will receive <span class="code">d</span> as the argument. <span class="code">d</span> is the data where mouse cursor moves onto. In this callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.</p>
+<h5>Default:</h5>
+<code>function () {}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;onmouseover: function (d) { ... }
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1774,7 +2397,17 @@
 <a href='#data-onmouseout'>data.onmouseout</a>
 
 </h3>
-<p>...</p>
+<p>Set a callback for mouseout event on each data point.</p>
+<br>
+<p>This callback will be called when mouse cursor moves out each data point and will receive <span class="code">d</span> as the argument. <span class="code">d</span> is the data where mouse cursor moves out. In this callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.</p>
+<h5>Default:</h5>
+<code>function () {}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;onmouseout: function (d) { ... }
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1782,7 +2415,7 @@
 <a href='#data-onselected'>data.onselected</a>
 
 </h3>
-<p>...</p>
+<p>not yet</p>
 </section>
 <hr>
 <section>
@@ -1790,7 +2423,7 @@
 <a href='#data-onunselected'>data.onunselected</a>
 
 </h3>
-<p>...</p>
+<p>not yet</p>
 </section>
 <hr>
 <section>
@@ -1798,7 +2431,7 @@
 <a href='#data-ondragstart'>data.ondragstart</a>
 
 </h3>
-<p>...</p>
+<p>not yet</p>
 </section>
 <hr>
 <section>
@@ -1806,7 +2439,7 @@
 <a href='#data-ondragend'>data.ondragend</a>
 
 </h3>
-<p>...</p>
+<p>not yet</p>
 </section>
 <hr>
 <section>
@@ -1814,8 +2447,21 @@
 <a href='#axis-rotated'>axis.rotated</a>
 
 </h3>
-<p>Switch x and y axis position. Default is <code>false</code>.</p>
-<pre>axis: { rotated: true }</pre>
+<p>Switch x and y axis position.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;rotated: true
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_rotated.html'>Rotated Axis</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1823,8 +2469,50 @@
 <a href='#axis-x-show'>axis.x.show</a>
 
 </h3>
-<p>Show or hides x axis. Default is <code>true</code>.</p>
-<pre>axis: { x: { show: true } }</pre>
+<p>Show or hide x axis.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;show: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-x-type'>axis.x.type</a>
+
+</h3>
+<p>Set type of x axis.</p>
+<h5>Available Values</h5>
+<ul>
+<li>timeseries</li>
+<li>category</li>
+<li>indexed</li>
+</ul>
+<h5>Default:</h5>
+<code>indexed</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;type: 'timeseries'
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/timeseries.html'>Timeseries Chart</a>
+</li>
+<li>
+<a href='/samples/categorized.html'>Category Axis</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1832,8 +2520,25 @@
 <a href='#axis-x-localtime'>axis.x.localtime</a>
 
 </h3>
-<p>If true, treat x value as localtime. If false, convert to UTC internally. Default is <code>true</code>.</p>
-<pre>axis: { x: { localtime: true } }</pre>
+<p>Set how to treat the timezone of x values.</p>
+<br>
+<p>If true, treat x value as localtime. If false, convert to UTC internally.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;localtime: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_x_localtime.html'>X Axis Timezone</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1841,8 +2546,25 @@
 <a href='#axis-x-categories'>axis.x.categories</a>
 
 </h3>
-<p>Show ticks as categorized by each data.</p>
-<pre>axis: { x: { categories: ['a', 'b', 'c', 'd'] } }</pre>
+<p>Set category names on category axis.</p>
+<br>
+<p>This must be an array that includes category names in string. If category names are included in the date by <span class="code">data.x</span> option, this is not required.</p>
+<h5>Default:</h5>
+<code>[]</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;categories: ['Category 1', 'Category 2', ...]
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/categorized.html'>Category Axis</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1850,7 +2572,19 @@
 <a href='#axis-x-tick-centered'>axis.x.tick.centered</a>
 
 </h3>
-<p>...</p>
+<p>Centerise ticks on category axis.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;centered: true
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1859,7 +2593,18 @@
 
 </h3>
 <p>A function to format tick value. Format string is also available for timeseries data.</p>
-<pre>axis: { x: { tick: { format: function (x) { return x.getFullYear(); } } } }</pre>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formart: function (x) { return x.getFullYear(); }
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1867,7 +2612,32 @@
 <a href='#axis-x-tick-culling'>axis.x.tick.culling</a>
 
 </h3>
-<p>An object to configure culling ticks.</p>
+<p>Setting for culling ticks.</p>
+<br>
+<p>If <code>true</code> is set, the ticks will be culled, then only limitted tick text will be shown. This option does not hide the tick lines. If <code>false</code> is set, all of ticks will be shown.</p>
+<br>
+<p>We can change the number of ticks to be shown by <a href="#axis-x-tick-culling-max">axis.x.tick.culling.max</a>.</p>
+<h5>Default:</h5>
+<ul>
+<li><code>true</code> for indexed axis and timeseries axis</li>
+<li><code>false</code> for category axis</li>
+</ul>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;culling: false
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_x_tick_culling.html'>X Axis Tick Culling</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1876,7 +2646,26 @@
 
 </h3>
 <p>The number of tick texts will be adjusted to less than this value.</p>
-<pre>axis: { x: { tick: { culling: { max: 5 } } } } }</pre>
+<h5>Default:</h5>
+<code>10</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;culling: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max: 5
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_x_tick_culling.html'>X Axis Tick Culling</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1885,7 +2674,26 @@
 
 </h3>
 <p>The number of x axis ticks to show.</p>
-<pre>axis: { x: { tick: { count: 5 } } } }</pre>
+<br>
+<p>This option hides tick lines together with tick text. If this option is used on timeseries axis, the ticks position will be determined precisely and not nicely positioned (e.g. it will have rough second value).</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count: 5
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_x_tick_count.html'>X Axis Tick Count</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1893,8 +2701,27 @@
 <a href='#axis-x-tick-fit'>axis.x.tick.fit</a>
 
 </h3>
-<p>Fit x axis tick. Default is <code>true</code>.</p>
-<pre>axis: { x: { tick: { fit: true } } } }</pre>
+<p>Fit x axis ticks.</p>
+<br>
+<p>If <code>true</code> set, the ticks will be positioned nicely. If <code>false</code> set, the ticks will be positioned according to x value of the data points.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fit: true
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_x_tick_fit.html'>X Axis Tick Fit</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1902,7 +2729,27 @@
 <a href='#axis-x-tick-values'>axis.x.tick.values</a>
 
 </h3>
-<p>...</p>
+<p>Set the x values of ticks manually.</p>
+<br>
+<p>If this option is provided, the position of the ticks will be determined based on those values. This option works with timeseries data and the x values will be parsed accoding to the type of the value and <a href="#data-xFormat">data.xFormat</a> option.</p>
+<h5>Default:</h5>
+<code>null</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values: [1, 2, 4, 8, 16, 32, ...]
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_x_tick_values.html'>X Axis Tick Values</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1910,8 +2757,27 @@
 <a href='#axis-x-tick-rotate'>axis.x.tick.rotate</a>
 
 </h3>
-<p>Rotate x axis tick text. Default is <code>0</code>. If you set negative value, it will rotate to opposite direction.</p>
-<pre>axis: { x: { tick: { rotate: 30 } } } }</pre>
+<p>Rotate x axis tick text.</p>
+<br>
+<p>If you set negative value, it will rotate to opposite direction.</p>
+<h5>Default:</h5>
+<code>0</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rotate: 60
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_x_tick_rotate.html'>Rotate X Axis Tick Text</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -1919,8 +2785,17 @@
 <a href='#axis-x-max'>axis.x.max</a>
 
 </h3>
-<p>Set a max range for x axis. Range includes padding, set 0 if no padding needed.</p>
-<pre>axis: { x: { max: 200 } }</pre>
+<p>Set max value of x axis range.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;max: 100
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1928,8 +2803,17 @@
 <a href='#axis-x-min'>axis.x.min</a>
 
 </h3>
-<p>Set a min range for x axis. Range includes padding, set 0 if no padding needed.</p>
-<pre>axis: { x: { min: -200 } }</pre>
+<p>Set min value of x axis range.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;min: -100
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1938,7 +2822,21 @@
 
 </h3>
 <p>Set padding for x axis.</p>
-<pre>axis: { x: { padding: { top: 200, bottom: 0 } } }</pre>
+<br>
+<p>If this option is set, the range of x axis will increase/decrease according to the values. If no padding is needed in the ragen of x axis, <code>0</code> should be set. On category axis, this option will be ignored.</p>
+<h5>Default:</h5>
+<code>{}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;padding: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left: 0,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right: 0,
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
