@@ -1759,7 +1759,15 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#data-url'>data.url</a>
 
 </h3>
-<p>not yet</p>
+<p>Load a CSV or JSON file from a URL. Note that this will not work if loading via the "file://" protocol as most browsers with block XMLHTTPRequests.</p>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>var chart = c3.generate({
+&nbsp;&nbsp;data: {
+&nbsp;&nbsp;&nbsp;&nbsp;url: '/data/c3_test.csv'
+&nbsp;&nbsp;}
+});</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1767,7 +1775,29 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#data-json'>data.json</a>
 
 </h3>
-<p>not yet</p>
+<p>Parse a JSON object for data. See also data.keys.</p>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>var chart = c3.generate({
+&nbsp;&nbsp;data: {
+&nbsp;&nbsp;&nbsp;&nbsp;json: [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site1.com', upload: 200, download: 200, total: 400},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site2.com', upload: 100, download: 300, total: 400},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site3.com', upload: 300, download: 200, total: 500},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site4.com', upload: 400, download: 100, total: 500},
+&nbsp;&nbsp;&nbsp;&nbsp;],
+&nbsp;&nbsp;&nbsp;&nbsp;keys: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// x: 'name', // it's possible to specify 'x' when category axis
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: ['upload', 'download'],
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;},
+&nbsp;&nbsp;axis: {
+&nbsp;&nbsp;&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// type: 'category'
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+});</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1775,7 +1805,19 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#data-rows'>data.rows</a>
 
 </h3>
-<p>not yet</p>
+<p>Load data from a multidimensional array, with the first element containing the data names, the following containing related data in that order.</p>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>rows: [
+&nbsp;&nbsp;['data1', 'data2', 'data3'],
+&nbsp;&nbsp;[90, 120, 300],
+&nbsp;&nbsp;[40, 160, 240],
+&nbsp;&nbsp;[50, 200, 290],
+&nbsp;&nbsp;[120, 160, 230],
+&nbsp;&nbsp;[80, 130, 300],
+&nbsp;&nbsp;[90, 220, 320],
+]</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1783,7 +1825,15 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#data-columns'>data.columns</a>
 
 </h3>
-<p>not yet</p>
+<p>Load data from a multidimensional array, with each element containing an array consisting of a datum name and associated data values.</p>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>columns: [
+&nbsp;&nbsp;['data1', 30, 20, 50, 40, 60, 50],
+&nbsp;&nbsp;['data2', 200, 130, 90, 240, 130, 220],
+&nbsp;&nbsp;['data3', 300, 200, 160, 400, 250, 250]
+]</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -1791,7 +1841,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#data-mimeType'>data.mimeType</a>
 
 </h3>
-<p>not yet</p>
+<p>Used if loading JSON via data.url.</p>
 </section>
 <hr>
 <section>
@@ -1799,7 +1849,29 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#data-keys'>data.keys</a>
 
 </h3>
-<p>not yet</p>
+<p>Choose which JSON object keys correspond to desired data.</p>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>var chart = c3.generate({
+&nbsp;&nbsp;data: {
+&nbsp;&nbsp;&nbsp;&nbsp;json: [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site1.com', upload: 200, download: 200, total: 400},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site2.com', upload: 100, download: 300, total: 400},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site3.com', upload: 300, download: 200, total: 500},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site4.com', upload: 400, download: 100, total: 500},
+&nbsp;&nbsp;&nbsp;&nbsp;],
+&nbsp;&nbsp;&nbsp;&nbsp;keys: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// x: 'name', // it's possible to specify 'x' when category axis
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: ['upload', 'download'],
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;},
+&nbsp;&nbsp;axis: {
+&nbsp;&nbsp;&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// type: 'category'
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+});</code></pre>
+</div>
 </section>
 <hr>
 <section>
