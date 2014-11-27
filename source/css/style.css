@@ -145,6 +145,9 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 12px !important;
 }
 
+.c3-editor {
+  font-size: 1.1em !important;
+}
 .sourcecode {
   margin-bottom: 1.25rem;
 }
