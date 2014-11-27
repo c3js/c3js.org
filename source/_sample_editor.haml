@@ -1,0 +1,21 @@
+= javascript_include_tag "ace/ace.js"
+:javascript
+  var editor = ace.edit('#{type}-editor'),
+      error  = document.getElementById('ace-error');
+
+  editor.on('change', function(e) {
+    try {
+      eval(editor.getValue());
+      error.innerHTML = '';
+    }
+    catch(e) {
+      error.innerHTML = e;
+    }
+  });
+
+  editor.setOption("maxLines", 100);
+  editor.setOption("showLineNumbers", false);
+  editor.setOption("showGutter", false);
+
+  editor.setTheme("ace/theme/tomorrow");
+  editor.getSession().setMode("ace/mode/#{type}");
