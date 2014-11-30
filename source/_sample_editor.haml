@@ -1,4 +1,6 @@
 = javascript_include_tag "ace/ace.js"
+= javascript_include_tag "ace/mode-javascript.js"
+= javascript_include_tag "ace/theme-tomorrow.js"
 :javascript
   var editor = ace.edit('#{type}-editor'),
       error  = document.getElementById('ace-error');
