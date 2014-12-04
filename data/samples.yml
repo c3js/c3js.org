@@ -104,7 +104,7 @@ axes_x_tick_count:
 
 axes_x_tick_fit:
   title: X Axis Tick Fitting
-  desc: Set ticks potision to x of data.
+  desc: Set ticks position to x of data.
 
 axes_label:
   title: Axis Label
