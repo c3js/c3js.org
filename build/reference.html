@@ -618,27 +618,17 @@
 </li>
 
 <li>
+<a href='#legend-hide'>legend.hide</a>
+
+</li>
+
+<li>
 <a href='#legend-position'>legend.position</a>
 
 </li>
 
 <li>
-<a href='#legend-inset-anchor'>legend.inset.anchor</a>
-
-</li>
-
-<li>
-<a href='#legend-inset-x'>legend.inset.x</a>
-
-</li>
-
-<li>
-<a href='#legend-inset-y'>legend.inset.y</a>
-
-</li>
-
-<li>
-<a href='#legend-inset-step'>legend.inset.step</a>
+<a href='#legend-inset'>legend.inset</a>
 
 </li>
 
@@ -654,11 +644,6 @@
 
 <li>
 <a href='#legend-item-onmouseout'>legend.item.onmouseout</a>
-
-</li>
-
-<li>
-<a href='#legend-equally'>legend.equally</a>
 
 </li>
 
@@ -3733,7 +3718,24 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#regions'>regions</a>
 
 </h3>
-<p>...</p>
+<p>Show rectangles inside the chart.</p>
+<br>
+<p>This option accepts <code>array</code> including <code>object</code> that has <span class="code">axis</span>, <span class="code">start</span>, <span class="code">end</span> and <span class="code">class</span>. The keys <span class="code">start</span>, <span class="code">end</span> and <span class="code">class</span> are optional.</p>
+<p><span class="code">axis</span> must be <span class="code">x</span>, <span class="code">y</span> or <span class="code">y2</span>. <span class="code">start</span> and <span class="code">end</span> should be the value where regions start and end. If not specified, the edge values will be used. If timeseries x axis, date string, Date object and unixtime integer can be used. If <span class="code">class</span> is set, the region element will have it as class.</p>
+<h5>Default:</h5>
+<code>[]</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>regions: [
+&nbsp;&nbsp;{axis: 'x', start: 1, end: 4, class: 'region-1-4'},
+]</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/region.html'>Regions</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3741,7 +3743,21 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#legend-show'>legend.show</a>
 
 </h3>
-<p>...</p>
+<p>Show or hide legend.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>legend: {
+&nbsp;&nbsp;show: true
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/options_legend.html'>Hide Legend</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3749,7 +3765,19 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#legend-hide'>legend.hide</a>
 
 </h3>
-<p>...</p>
+<p>Hide legend</p>
+<br>
+<p>If <code>true</code> given, all legend will be hidden. If <code>string</code> or <code>array</code> given, only the legend that has the id will be hidden.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>legend: {
+&nbsp;&nbsp;hide: true
+&nbsp;&nbsp;//or hide: 'data1'
+&nbsp;&nbsp;//or hide: ['data1', 'data2']
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -3757,7 +3785,62 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#legend-position'>legend.position</a>
 
 </h3>
-<p>...</p>
+<p>Change the position of legend.</p>
+<br>
+<p>Currently <span class="code">bottom</span>, <span class="code">right</span> and <span class="code">inset</span> are supported.</p>
+<h5>Default:</h5>
+<code>bottom</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>legend: {
+&nbsp;&nbsp;position: 'bottom'
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/legend_position.html'>Legend Position</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#legend-inset'>legend.inset</a>
+
+</h3>
+<p>Change inset legend attributes.</p>
+<br>
+<p>This option accepts <code>object</code> that has the keys <span class="code">anchor</span>, <span class="code">x</span>, <span class="code">y</span> and <span class="code">step</span>.</p>
+<p><span class="code">anchor</span> decides the position of the legend. These anchors are available:</p>
+<ul>
+<li>top-left</li>
+<li>top-right</li>
+<li>bottom-left</li>
+<li>bottom-right</li>
+</ul>
+<p><span class="code">x</span> and <span class="code">y</span> set the position of the legend based on the anchor.</p>
+<p><span class="code">step</span> defines the max step the lagend has (e.g. If 2 set and legend has 3 legend item, the legend 2 columns).</p>
+<h5>Default:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>{
+&nbsp;&nbsp;anchor: 'top-left',
+&nbsp;&nbsp;x: 10,
+&nbsp;&nbsp;y: 0,
+&nbsp;&nbsp;step: undefined
+}</code></pre>
+</div>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>legend: {
+&nbsp;&nbsp;inset: {
+&nbsp;&nbsp;&nbsp;&nbsp;anchor: 'top-right'
+&nbsp;&nbsp;&nbsp;&nbsp;x: 20,
+&nbsp;&nbsp;&nbsp;&nbsp;y: 10,
+&nbsp;&nbsp;&nbsp;&nbsp;step: 2
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -3765,7 +3848,23 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#legend-item-onclick'>legend.item.onclick</a>
 
 </h3>
-<p>...</p>
+<p>Set click event handler to the legend item.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>legend: {
+&nbsp;&nbsp;item: {
+&nbsp;&nbsp;&nbsp;&nbsp;onclick: function (id) { ... }
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/legend_custom.html'>Custom Legend</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3773,7 +3872,23 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#legend-item-onmouseover'>legend.item.onmouseover</a>
 
 </h3>
-<p>...</p>
+<p>Set mouseover event handler to the legend item.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>legend: {
+&nbsp;&nbsp;item: {
+&nbsp;&nbsp;&nbsp;&nbsp;onmouseover: function (id) { ... }
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/legend_custom.html'>Custom Legend</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3781,15 +3896,23 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#legend-item-onmouseout'>legend.item.onmouseout</a>
 
 </h3>
-<p>...</p>
-</section>
-<hr>
-<section>
-<h3>
-<a href='#legend-equally'>legend.equally</a>
-
-</h3>
-<p>...</p>
+<p>Set mouseout event handler to the legend item.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>legend: {
+&nbsp;&nbsp;item: {
+&nbsp;&nbsp;&nbsp;&nbsp;onmouseout: function (id) { ... }
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/legend_custom.html'>Custom Legend</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>

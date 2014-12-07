@@ -128,15 +128,12 @@
 
           %li Legend
           = partial :reference_menu_item, locals: { id: 'legend.show' }
+          = partial :reference_menu_item, locals: { id: 'legend.hide' }
           = partial :reference_menu_item, locals: { id: 'legend.position' }
-          = partial :reference_menu_item, locals: { id: 'legend.inset.anchor' }
-          = partial :reference_menu_item, locals: { id: 'legend.inset.x' }
-          = partial :reference_menu_item, locals: { id: 'legend.inset.y' }
-          = partial :reference_menu_item, locals: { id: 'legend.inset.step' }
+          = partial :reference_menu_item, locals: { id: 'legend.inset' }
           = partial :reference_menu_item, locals: { id: 'legend.item.onclick' }
           = partial :reference_menu_item, locals: { id: 'legend.item.onmouseover' }
           = partial :reference_menu_item, locals: { id: 'legend.item.onmouseout' }
-          = partial :reference_menu_item, locals: { id: 'legend.equally' }
 
           %li Tooltip
           = partial :reference_menu_item, locals: { id: 'tooltip.show' }
@@ -2371,43 +2368,183 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'regions' }
-        %p ...
+        %p Show rectangles inside the chart.
+        %br
+        %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">axis</span>, <span class="code">start</span>, <span class="code">end</span> and <span class="code">class</span>. The keys <span class="code">start</span>, <span class="code">end</span> and <span class="code">class</span> are optional.
+        %p <span class="code">axis</span> must be <span class="code">x</span>, <span class="code">y</span> or <span class="code">y2</span>. <span class="code">start</span> and <span class="code">end</span> should be the value where regions start and end. If not specified, the edge values will be used. If timeseries x axis, date string, Date object and unixtime integer can be used. If <span class="code">class</span> is set, the region element will have it as class.
+        %h5 Default:
+        <code>[]</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              regions: [
+              &nbsp;&nbsp;{axis: 'x', start: 1, end: 4, class: 'region-1-4'},
+              ]
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/region.html" ) Regions
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.show' }
-        %p ...
+        %p Show or hide legend.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              legend: {
+              &nbsp;&nbsp;show: true
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/options_legend.html" ) Hide Legend
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.hide' }
-        %p ...
+        %p Hide legend
+        %br
+        %p If <code>true</code> given, all legend will be hidden. If <code>string</code> or <code>array</code> given, only the legend that has the id will be hidden.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              legend: {
+              &nbsp;&nbsp;hide: true
+              &nbsp;&nbsp;//or hide: 'data1'
+              &nbsp;&nbsp;//or hide: ['data1', 'data2']
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.position' }
-        %p ...
+        %p Change the position of legend.
+        %br
+        %p Currently <span class="code">bottom</span>, <span class="code">right</span> and <span class="code">inset</span> are supported.
+        %h5 Default:
+        <code>bottom</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              legend: {
+              &nbsp;&nbsp;position: 'bottom'
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/legend_position.html" ) Legend Position
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'legend.inset' }
+        %p Change inset legend attributes.
+        %br
+        %p This option accepts <code>object</code> that has the keys <span class="code">anchor</span>, <span class="code">x</span>, <span class="code">y</span> and <span class="code">step</span>.
+        %p <span class="code">anchor</span> decides the position of the legend. These anchors are available:
+        %ul
+          %li top-left
+          %li top-right
+          %li bottom-left
+          %li bottom-right
+        %p <span class="code">x</span> and <span class="code">y</span> set the position of the legend based on the anchor.
+        %p <span class="code">step</span> defines the max step the lagend has (e.g. If 2 set and legend has 3 legend item, the legend 2 columns).
+        %h5 Default:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              {
+              &nbsp;&nbsp;anchor: 'top-left',
+              &nbsp;&nbsp;x: 10,
+              &nbsp;&nbsp;y: 0,
+              &nbsp;&nbsp;step: undefined
+              }
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              legend: {
+              &nbsp;&nbsp;inset: {
+              &nbsp;&nbsp;&nbsp;&nbsp;anchor: 'top-right'
+              &nbsp;&nbsp;&nbsp;&nbsp;x: 20,
+              &nbsp;&nbsp;&nbsp;&nbsp;y: 10,
+              &nbsp;&nbsp;&nbsp;&nbsp;step: 2
+              &nbsp;&nbsp;}
+              }
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.item.onclick' }
-        %p ...
+        %p Set click event handler to the legend item.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              legend: {
+              &nbsp;&nbsp;item: {
+              &nbsp;&nbsp;&nbsp;&nbsp;onclick: function (id) { ... }
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/legend_custom.html" ) Custom Legend
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.item.onmouseover' }
-        %p ...
+        %p Set mouseover event handler to the legend item.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              legend: {
+              &nbsp;&nbsp;item: {
+              &nbsp;&nbsp;&nbsp;&nbsp;onmouseover: function (id) { ... }
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/legend_custom.html" ) Custom Legend
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.item.onmouseout' }
-        %p ...
-      %hr
-      %section
-        %h3
-          = partial :reference_item_link, locals: { id: 'legend.equally' }
-        %p ...
+        %p Set mouseout event handler to the legend item.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              legend: {
+              &nbsp;&nbsp;item: {
+              &nbsp;&nbsp;&nbsp;&nbsp;onmouseout: function (id) { ... }
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/legend_custom.html" ) Custom Legend
       %hr
 
       %section
