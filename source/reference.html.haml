@@ -2268,32 +2268,104 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'grid.x.show' }
-        %p ...
+        %p Show grids along x axis.
+        %br
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              grid: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;show: true
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/options_gridline.html" ) Grid Lines
       %hr
-      %section
-        %h3
-          = partial :reference_item_link, locals: { id: 'grid.x.type' }
-        %p ...
-      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'grid.x.lines' }
-        %p ...
+        %p Show additional grid lines along x axis.
+        %br
+        %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span> and <span class="code">class</span>. <span class="code">text</span> and <span class="code">class</span> are optional.
+        %p If x axis is category axis, <span class="code">value</span> can be category name. If x axis is timeseries axis, <span class="code">value</span> can be date string, Date object and unixtime integer.
+        %h5 Default:
+        <code>[]</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              grid: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;lines: [
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 2, text: 'Label on 2'},
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 5, text: 'Label on 5', class: 'label-5'}
+              &nbsp;&nbsp;&nbsp;&nbsp;]
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/grid_x_lines.html" ) Additional X Grid Lines
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'grid.y.show' }
-        %p ...
+        %p Show grids along y axis.
+        %br
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              grid: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;show: true
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/options_gridline.html" ) Grid Lines
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'grid.y.lines' }
-        %p ...
+        %p Show additional grid lines along y axis.
+        %br
+        %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span> and <span class="code">class</span>.
+        %h5 Default:
+        <code>[]</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              grid: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;lines: [
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 100, text: 'Label on 100'},
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 200, text: 'Label on 200', class: 'label-200'}
+              &nbsp;&nbsp;&nbsp;&nbsp;]
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/grid_y_lines.html" ) Additional Y Grid Lines
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'grid.y.ticks' }
-        %p ...
+        %p not yet
       %hr
 
       %section

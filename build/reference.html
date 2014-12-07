@@ -3616,15 +3616,24 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#grid-x-show'>grid.x.show</a>
 
 </h3>
-<p>...</p>
-</section>
-<hr>
-<section>
-<h3>
-<a href='#grid-x-type'>grid.x.type</a>
-
-</h3>
-<p>...</p>
+<p>Show grids along x axis.</p>
+<br>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>grid: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;show: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/options_gridline.html'>Grid Lines</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3632,7 +3641,29 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#grid-x-lines'>grid.x.lines</a>
 
 </h3>
-<p>...</p>
+<p>Show additional grid lines along x axis.</p>
+<br>
+<p>This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span> and <span class="code">class</span>. <span class="code">text</span> and <span class="code">class</span> are optional.</p>
+<p>If x axis is category axis, <span class="code">value</span> can be category name. If x axis is timeseries axis, <span class="code">value</span> can be date string, Date object and unixtime integer.</p>
+<h5>Default:</h5>
+<code>[]</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>grid: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;lines: [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 2, text: 'Label on 2'},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 5, text: 'Label on 5', class: 'label-5'}
+&nbsp;&nbsp;&nbsp;&nbsp;]
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/grid_x_lines.html'>Additional X Grid Lines</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3640,7 +3671,24 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#grid-y-show'>grid.y.show</a>
 
 </h3>
-<p>...</p>
+<p>Show grids along y axis.</p>
+<br>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>grid: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;show: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/options_gridline.html'>Grid Lines</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3648,7 +3696,28 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#grid-y-lines'>grid.y.lines</a>
 
 </h3>
-<p>...</p>
+<p>Show additional grid lines along y axis.</p>
+<br>
+<p>This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span> and <span class="code">class</span>.</p>
+<h5>Default:</h5>
+<code>[]</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>grid: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;lines: [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 100, text: 'Label on 100'},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 200, text: 'Label on 200', class: 'label-200'}
+&nbsp;&nbsp;&nbsp;&nbsp;]
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/grid_y_lines.html'>Additional Y Grid Lines</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3656,7 +3725,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#grid-y-ticks'>grid.y.ticks</a>
 
 </h3>
-<p>...</p>
+<p>not yet</p>
 </section>
 <hr>
 <section>
