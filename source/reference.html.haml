@@ -1565,6 +1565,37 @@
 
       %section
         %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.outer' }
+        %p Show x axis outer tick.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outer: false
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.multiline' }
+        %p not yet
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.x.tick.width' }
+        %p not yet
+      %hr
+
+      %section
+        %h3
           = partial :reference_item_link, locals: { id: 'axis.x.max' }
         %p Set max value of x axis range.
         %h5 Default:
@@ -1622,115 +1653,616 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.height' }
-        %p ...
+        %p Set height of x axis.
+        %br
+        %p The height of x axis can be set manually by this option. If you need more space for x axis, please use this option for that. The unit is <code>pixel</code>.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;height: 20
+              &nbsp;&nbsp;}
+              }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.extent' }
+        %p Set height of x axis.
+        %br
         %p Set default extent for subchart and zoom. This can be an array or function that returns an array.
-        %pre axis: { x: { default: [5, 10]; } }
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;extent: [5, 10]
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.label' }
-        %p Set label for axis.
+        %p Set label on x axis.
+        %br
+        %p You can set x axis label and change its position by this option. <code>string</code> and <code>object</code> can be passed and we can change the poisiton by passing <code>object</code> that has <span class="code">position</span> key. Available position differs according to the axis direction (vertical or horizontal). If <code>string</code> set, the position will be the default.
+        %br
+        %p If it's horizontal axis:
+        %ul
+          %li inner-right <code>[default]</code>
+          %li inner-center
+          %li inner-left
+          %li outer-right
+          %li outer-center
+          %li outer-left
+        %p If it's vertical axis:
+        %ul
+          %li inner-top <code>[default]</code>
+          %li inner-middle
+          %li inner-bottom
+          %li outer-top
+          %li outer-middle
+          %li outer-bottom
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;label: 'Your X Axis'
+              &nbsp;&nbsp;}
+              }
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;x: {
+              &nbsp;&nbsp;&nbsp;&nbsp;label: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your X Axis',
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-center',
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_label" ) Axis Label
+          %li
+            %a( href="/samples/axes_label_position.html" ) Axis Label Position
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.show' }
-        %p Show or hides y axis. Default is <code>true</code>.
-        %pre  axis: { y: { show: true } }
+        %p Show or hide y axis.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;show: false
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.inner' }
-        %p ...
+        %p Show y axis inside of the chart.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;inner: true
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.type' }
-        %p ...
+        %p not yet
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.max' }
-        %p ...
+        %p Set max value of y axis.
+        %h5 Note:
+        %p Padding will be added based on this value, so if you don't need the padding, please set <span class="code">axis.y.padding</span> to disable it (e.g. <span class="code">axis.y.padding = 0</span>).
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;max: 1000
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_y_range.html" ) Y Axis Range
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.min' }
-        %p ...
+        %p Set min value of y axis.
+        %h5 Note:
+        %p Padding will be added based on this value, so if you don't need the padding, please set <span class="code">axis.y.padding</span> to disable it (e.g. <span class="code">axis.y.padding = 0</span>).
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;min: 1000
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_y_range.html" ) Y Axis Range
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.center' }
-        %p ...
+        %p Set center value of y axis.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;center: 0
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.label' }
-        %p ...
+        %p Set label on y axis.
+        %br
+        %p You can set y axis label and change its position by this option. This option works in the same way as <a href="#axis-x-label">axis.x.label</a>.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;label: 'Your Y Axis'
+              &nbsp;&nbsp;}
+              }
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;label: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your Y Axis',
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-middle',
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_label" ) Axis Label
+          %li
+            %a( href="/samples/axes_label_position.html" ) Axis Label Position
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.tick.format' }
-        %p ...
+        %p Set formatter for y axis tick text.
+        %br
+        %p This option accepts <span class="code">d3.format</span> object as well as a function you define.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;format: d3.format('$,')
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//or format: function (d) { return '$' + d; }
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_y_tick_format.html" ) Y Axis Tick Format
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.tick.outer' }
+        %p Show or hide outer tick.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outer: false
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.tick.values' }
+        %p Set y axis tick values manually.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values: [100, 1000, 10000]
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.tick.count' }
+        %p Set the number of y axis ticks.
+        %h5 Note:
+        %p The position of the ticks will be calculated precisely, so the values on the ticks will not be rounded nicely. In the case, <span class="code">axis.y.tick.format</span> or <span class="code">axis.y.tick.values</span> will be helpful.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count: 5
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.tick.time.value' }
+        %p not yet
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.tick.time.interval' }
+        %p not yet
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.padding' }
-        %p ...
+        %p Set padding for y axis.
+        %br
+        %p You can set padding for y axis to create more space on the edge of the axis. This option accepts <code>object</code> and it can include <span class="code">top</span> and <span class="code">bottom</span>. <span class="code">top</span>, <span class="code">bottom</span> will be treated as pixels.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;padding: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top: 100,
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bottom: 100
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_y_padding.html" ) Y Axis Tick Padding
       %hr
+
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'axis.y.ticks' }
-        %p ...
+          = partial :reference_item_link, locals: { id: 'axis.y.default' }
+        %p Set default range of y axis.
+        %br
+        %p This option set the default value for y axis when there is no data on init.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;default: [0, 1000]
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.show' }
-        %p ...
+        %p Show or hide y2 axis.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;show: true
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.inner' }
-        %p ...
+        %p Show y2 axis inside of the chart.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;inner: true
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.max' }
-        %p ...
+        %p Set max value of y2 axis.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;max: 1000
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.min' }
-        %p ...
+        %p Set min value of y2 axis.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;min: -1000
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.center' }
-        %p ...
+        %p Set center value of y2 axis.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;center: 0
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.label' }
-        %p ...
+        %p Set label on y2 axis.
+        %br
+        %p You can set y2 axis label and change its position by this option. This option works in the same way as <a href="#axis-x-label">axis.x.label</a>.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;label: 'Your Y2 Axis'
+              &nbsp;&nbsp;}
+              }
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;label: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your Y2 Axis',
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-middle',
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/axes_label" ) Axis Label
+          %li
+            %a( href="/samples/axes_label_position.html" ) Axis Label Position
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.tick.format' }
-        %p ...
+        %p Set formatter for y axis tick text.
+        %br
+        %p This option works in the same way as <a href="#axis-y-format">axis.y.format</a>.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;format: d3.format('$,')
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//or format: function (d) { return '$' + d; }
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.tick.outer' }
+        %p Show or hide y2 axis outer tick.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outer: false
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.tick.values' }
+        %p Set y2 axis tick values manually.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values: [100, 1000, 10000]
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.tick.count' }
+        %p Set the number of y2 axis ticks.
+        %h5 Note:
+        %p This works in the same way as <a href="#axis-y-tick-count">axis.y.tick.count</a>.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;tick: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count: 5
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.padding' }
-        %p ...
+        %p Set padding for y2 axis.
+        %br
+        %p This works in the same way as <a href="#axis-y-padding">axis.y.padding</a>.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;padding: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top: 100,
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bottom: 100
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'axis.y2.ticks' }
-        %p ...
+          = partial :reference_item_link, locals: { id: 'axis.y2.default' }
+        %p Set default range of y2 axis.
+        %br
+        %p This option set the default value for y2 axis when there is no data on init.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;default: [0, 1000]
+              &nbsp;&nbsp;}
+              }
       %hr
 
       %section

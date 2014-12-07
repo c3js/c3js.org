@@ -2022,7 +2022,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#data-groups'>data.groups</a>
 
 </h3>
-<p>Set groups for the data for statcking.</p>
+<p>Set groups for the data for stacking.</p>
 <h5>Default:</h5>
 <code>[]</code>
 <h5>Format:</h5>
@@ -2854,6 +2854,42 @@ bindto: d3.select('#myContainer')</code></pre>
 <hr>
 <section>
 <h3>
+<a href='#axis-x-tick-outer'>axis.x.tick.outer</a>
+
+</h3>
+<p>Show x axis outer tick.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outer: false
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-x-tick-multiline'>axis.x.tick.multiline</a>
+
+</h3>
+<p>not yet</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-x-tick-width'>axis.x.tick.width</a>
+
+</h3>
+<p>not yet</p>
+</section>
+<hr>
+<section>
+<h3>
 <a href='#axis-x-max'>axis.x.max</a>
 
 </h3>
@@ -2916,7 +2952,19 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-x-height'>axis.x.height</a>
 
 </h3>
-<p>...</p>
+<p>Set height of x axis.</p>
+<br>
+<p>The height of x axis can be set manually by this option. If you need more space for x axis, please use this option for that. The unit is <code>pixel</code>.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;height: 20
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -2924,8 +2972,19 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-x-extent'>axis.x.extent</a>
 
 </h3>
+<p>Set height of x axis.</p>
+<br>
 <p>Set default extent for subchart and zoom. This can be an array or function that returns an array.</p>
-<pre>axis: { x: { default: [5, 10]; } }</pre>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;extent: [5, 10]
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -2933,7 +2992,57 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-x-label'>axis.x.label</a>
 
 </h3>
-<p>Set label for axis.</p>
+<p>Set label on x axis.</p>
+<br>
+<p>You can set x axis label and change its position by this option. <code>string</code> and <code>object</code> can be passed and we can change the poisiton by passing <code>object</code> that has <span class="code">position</span> key. Available position differs according to the axis direction (vertical or horizontal). If <code>string</code> set, the position will be the default.</p>
+<br>
+<p>If it's horizontal axis:</p>
+<ul>
+<li>inner-right <code>[default]</code></li>
+<li>inner-center</li>
+<li>inner-left</li>
+<li>outer-right</li>
+<li>outer-center</li>
+<li>outer-left</li>
+</ul>
+<p>If it's vertical axis:</p>
+<ul>
+<li>inner-top <code>[default]</code></li>
+<li>inner-middle</li>
+<li>inner-bottom</li>
+<li>outer-top</li>
+<li>outer-middle</li>
+<li>outer-bottom</li>
+</ul>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;label: 'Your X Axis'
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;x: {
+&nbsp;&nbsp;&nbsp;&nbsp;label: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your X Axis',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-center',
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_label'>Axis Label</a>
+</li>
+<li>
+<a href='/samples/axes_label_position.html'>Axis Label Position</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -2941,8 +3050,17 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y-show'>axis.y.show</a>
 
 </h3>
-<p>Show or hides y axis. Default is <code>true</code>.</p>
-<pre>axis: { y: { show: true } }</pre>
+<p>Show or hide y axis.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;show: false
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -2950,7 +3068,17 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y-inner'>axis.y.inner</a>
 
 </h3>
-<p>...</p>
+<p>Show y axis inside of the chart.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;inner: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -2958,7 +3086,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y-type'>axis.y.type</a>
 
 </h3>
-<p>...</p>
+<p>not yet</p>
 </section>
 <hr>
 <section>
@@ -2966,7 +3094,25 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y-max'>axis.y.max</a>
 
 </h3>
-<p>...</p>
+<p>Set max value of y axis.</p>
+<h5>Note:</h5>
+<p>Padding will be added based on this value, so if you don't need the padding, please set <span class="code">axis.y.padding</span> to disable it (e.g. <span class="code">axis.y.padding = 0</span>).</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;max: 1000
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_y_range.html'>Y Axis Range</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -2974,7 +3120,25 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y-min'>axis.y.min</a>
 
 </h3>
-<p>...</p>
+<p>Set min value of y axis.</p>
+<h5>Note:</h5>
+<p>Padding will be added based on this value, so if you don't need the padding, please set <span class="code">axis.y.padding</span> to disable it (e.g. <span class="code">axis.y.padding = 0</span>).</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;min: 1000
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_y_range.html'>Y Axis Range</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -2982,7 +3146,17 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y-center'>axis.y.center</a>
 
 </h3>
-<p>...</p>
+<p>Set center value of y axis.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;center: 0
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -2990,7 +3164,38 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y-label'>axis.y.label</a>
 
 </h3>
-<p>...</p>
+<p>Set label on y axis.</p>
+<br>
+<p>You can set y axis label and change its position by this option. This option works in the same way as <a href="#axis-x-label">axis.x.label</a>.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;label: 'Your Y Axis'
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;label: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your Y Axis',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-middle',
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_label'>Axis Label</a>
+</li>
+<li>
+<a href='/samples/axes_label_position.html'>Axis Label Position</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -2998,7 +3203,106 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y-tick-format'>axis.y.tick.format</a>
 
 </h3>
-<p>...</p>
+<p>Set formatter for y axis tick text.</p>
+<br>
+<p>This option accepts <span class="code">d3.format</span> object as well as a function you define.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;format: d3.format('$,')
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//or format: function (d) { return '$' + d; }
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_y_tick_format.html'>Y Axis Tick Format</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-y-tick-outer'>axis.y.tick.outer</a>
+
+</h3>
+<p>Show or hide outer tick.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outer: false
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-y-tick-values'>axis.y.tick.values</a>
+
+</h3>
+<p>Set y axis tick values manually.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values: [100, 1000, 10000]
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-y-tick-count'>axis.y.tick.count</a>
+
+</h3>
+<p>Set the number of y axis ticks.</p>
+<h5>Note:</h5>
+<p>The position of the ticks will be calculated precisely, so the values on the ticks will not be rounded nicely. In the case, <span class="code">axis.y.tick.format</span> or <span class="code">axis.y.tick.values</span> will be helpful.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count: 5
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-y-tick-time-value'>axis.y.tick.time.value</a>
+
+</h3>
+<p>not yet</p>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-y-tick-time-interval'>axis.y.tick.time.interval</a>
+
+</h3>
+<p>not yet</p>
 </section>
 <hr>
 <section>
@@ -3006,15 +3310,48 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y-padding'>axis.y.padding</a>
 
 </h3>
-<p>...</p>
+<p>Set padding for y axis.</p>
+<br>
+<p>You can set padding for y axis to create more space on the edge of the axis. This option accepts <code>object</code> and it can include <span class="code">top</span> and <span class="code">bottom</span>. <span class="code">top</span>, <span class="code">bottom</span> will be treated as pixels.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;padding: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top: 100,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bottom: 100
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_y_padding.html'>Y Axis Tick Padding</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
 <h3>
-<a href='#axis-y-ticks'>axis.y.ticks</a>
+<a href='#axis-y-default'>axis.y.default</a>
 
 </h3>
-<p>...</p>
+<p>Set default range of y axis.</p>
+<br>
+<p>This option set the default value for y axis when there is no data on init.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;default: [0, 1000]
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -3022,7 +3359,17 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y2-show'>axis.y2.show</a>
 
 </h3>
-<p>...</p>
+<p>Show or hide y2 axis.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;show: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -3030,7 +3377,17 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y2-inner'>axis.y2.inner</a>
 
 </h3>
-<p>...</p>
+<p>Show y2 axis inside of the chart.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;inner: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -3038,7 +3395,17 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y2-max'>axis.y2.max</a>
 
 </h3>
-<p>...</p>
+<p>Set max value of y2 axis.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;max: 1000
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -3046,7 +3413,17 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y2-min'>axis.y2.min</a>
 
 </h3>
-<p>...</p>
+<p>Set min value of y2 axis.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;min: -1000
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -3054,7 +3431,17 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y2-center'>axis.y2.center</a>
 
 </h3>
-<p>...</p>
+<p>Set center value of y2 axis.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;center: 0
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -3062,7 +3449,38 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y2-label'>axis.y2.label</a>
 
 </h3>
-<p>...</p>
+<p>Set label on y2 axis.</p>
+<br>
+<p>You can set y2 axis label and change its position by this option. This option works in the same way as <a href="#axis-x-label">axis.x.label</a>.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;label: 'Your Y2 Axis'
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;label: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your Y2 Axis',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-middle',
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/axes_label'>Axis Label</a>
+</li>
+<li>
+<a href='/samples/axes_label_position.html'>Axis Label Position</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3070,7 +3488,84 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y2-tick-format'>axis.y2.tick.format</a>
 
 </h3>
-<p>...</p>
+<p>Set formatter for y axis tick text.</p>
+<br>
+<p>This option works in the same way as <a href="#axis-y-format">axis.y.format</a>.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;format: d3.format('$,')
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//or format: function (d) { return '$' + d; }
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-y2-tick-outer'>axis.y2.tick.outer</a>
+
+</h3>
+<p>Show or hide y2 axis outer tick.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;outer: false
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-y2-tick-values'>axis.y2.tick.values</a>
+
+</h3>
+<p>Set y2 axis tick values manually.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values: [100, 1000, 10000]
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-y2-tick-count'>axis.y2.tick.count</a>
+
+</h3>
+<p>Set the number of y2 axis ticks.</p>
+<h5>Note:</h5>
+<p>This works in the same way as <a href="#axis-y-tick-count">axis.y.tick.count</a>.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;tick: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count: 5
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -3078,15 +3573,42 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#axis-y2-padding'>axis.y2.padding</a>
 
 </h3>
-<p>...</p>
+<p>Set padding for y2 axis.</p>
+<br>
+<p>This works in the same way as <a href="#axis-y-padding">axis.y.padding</a>.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;padding: {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;top: 100,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bottom: 100
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
 <h3>
-<a href='#axis-y2-ticks'>axis.y2.ticks</a>
+<a href='#axis-y2-default'>axis.y2.default</a>
 
 </h3>
-<p>...</p>
+<p>Set default range of y2 axis.</p>
+<br>
+<p>This option set the default value for y2 axis when there is no data on init.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;default: [0, 1000]
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
