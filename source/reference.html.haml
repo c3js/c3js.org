@@ -2550,27 +2550,127 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.show' }
-        %p ...
+        %p Show or hide tooltip.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              tooltip: {
+              &nbsp;&nbsp;show: false
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/tooltip_show.html" ) Hide Tooltip
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.grouped' }
-        %p ...
+        %p Set if tooltip is grouped or not for the data points.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              tooltip: {
+              &nbsp;&nbsp;grouped: false
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/tooltip_grouped.html" ) Tooltip Grouping
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.format.title' }
-        %p ...
+        %p Set format for the title of tooltip.
+        %br
+        %p Specified function receives <span class="code">x</span> of the data point to show.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              tooltip: {
+              &nbsp;&nbsp;: format: {
+              &nbsp;&nbsp;&nbsp;&nbsp;title: function (x) { return 'Data ' + x; }
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/tooltip_format.html" ) Tooltip Format
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.format.name' }
+        %p Set format for the name of each data in tooltip.
+        %br
+        %p Specified function receives <span class="code">name</span>, <span class="code">ratio</span>, <span class="code">id</span> and <span class="code">index</span> of the data point to show. <span class="code">ratio</span> will be <code>undefined</code> if the chart is not donut/pie/gauge.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              tooltip: {
+              &nbsp;&nbsp;: format: {
+              &nbsp;&nbsp;&nbsp;&nbsp;name: function (name, ratio, id, index) { return name; }
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/tooltip_format.html" ) Tooltip Format
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.format.value' }
-        %p ...
+        %p Set format for the value of each data in tooltip.
+        %br
+        %p Specified function receives <span class="code">name</span>, <span class="code">ratio</span>, <span class="code">id</span> and <span class="code">index</span> of the data point to show. <span class="code">ratio</span> will be <code>undefined</code> if the chart is not donut/pie/gauge.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              tooltip: {
+              &nbsp;&nbsp;: format: {
+              &nbsp;&nbsp;&nbsp;&nbsp;value: function (value, ratio, id, index) { return ratio; }
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/tooltip_format.html" ) Tooltip Format
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.contents' }
-        %p ...
+        %p Set custom HTML for the tooltip.
+        %br
+        %p Specified function receives <span class="code">data</span>, <span class="code">defaultTitleFormat</span>, <span class="code">defaultValueFormat</span> and <span class="code">color</span> of the data point to show. If <span class="code">tooltip.grouped</span> is <code>true</code>, <span class="code">data</span> includes multiple data points.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              tooltip: {
+              &nbsp;&nbsp;: contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+              &nbsp;&nbsp;&nbsp;&nbsp;return ... // formatted html as you want
+              &nbsp;&nbsp;}
+              }
       %hr
 
       %section

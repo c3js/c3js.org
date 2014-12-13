@@ -3920,7 +3920,21 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#tooltip-show'>tooltip.show</a>
 
 </h3>
-<p>...</p>
+<p>Show or hide tooltip.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>tooltip: {
+&nbsp;&nbsp;show: false
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/tooltip_show.html'>Hide Tooltip</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3928,7 +3942,21 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#tooltip-grouped'>tooltip.grouped</a>
 
 </h3>
-<p>...</p>
+<p>Set if tooltip is grouped or not for the data points.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>tooltip: {
+&nbsp;&nbsp;grouped: false
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/tooltip_grouped.html'>Tooltip Grouping</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3936,7 +3964,51 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#tooltip-format-title'>tooltip.format.title</a>
 
 </h3>
-<p>...</p>
+<p>Set format for the title of tooltip.</p>
+<br>
+<p>Specified function receives <span class="code">x</span> of the data point to show.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>tooltip: {
+&nbsp;&nbsp;: format: {
+&nbsp;&nbsp;&nbsp;&nbsp;title: function (x) { return 'Data ' + x; }
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/tooltip_format.html'>Tooltip Format</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#tooltip-format-name'>tooltip.format.name</a>
+
+</h3>
+<p>Set format for the name of each data in tooltip.</p>
+<br>
+<p>Specified function receives <span class="code">name</span>, <span class="code">ratio</span>, <span class="code">id</span> and <span class="code">index</span> of the data point to show. <span class="code">ratio</span> will be <code>undefined</code> if the chart is not donut/pie/gauge.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>tooltip: {
+&nbsp;&nbsp;: format: {
+&nbsp;&nbsp;&nbsp;&nbsp;name: function (name, ratio, id, index) { return name; }
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/tooltip_format.html'>Tooltip Format</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3944,7 +4016,25 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#tooltip-format-value'>tooltip.format.value</a>
 
 </h3>
-<p>...</p>
+<p>Set format for the value of each data in tooltip.</p>
+<br>
+<p>Specified function receives <span class="code">name</span>, <span class="code">ratio</span>, <span class="code">id</span> and <span class="code">index</span> of the data point to show. <span class="code">ratio</span> will be <code>undefined</code> if the chart is not donut/pie/gauge.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>tooltip: {
+&nbsp;&nbsp;: format: {
+&nbsp;&nbsp;&nbsp;&nbsp;value: function (value, ratio, id, index) { return ratio; }
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/tooltip_format.html'>Tooltip Format</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -3952,7 +4042,19 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#tooltip-contents'>tooltip.contents</a>
 
 </h3>
-<p>...</p>
+<p>Set custom HTML for the tooltip.</p>
+<br>
+<p>Specified function receives <span class="code">data</span>, <span class="code">defaultTitleFormat</span>, <span class="code">defaultValueFormat</span> and <span class="code">color</span> of the data point to show. If <span class="code">tooltip.grouped</span> is <code>true</code>, <span class="code">data</span> includes multiple data points.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>tooltip: {
+&nbsp;&nbsp;: contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+&nbsp;&nbsp;&nbsp;&nbsp;return ... // formatted html as you want
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
