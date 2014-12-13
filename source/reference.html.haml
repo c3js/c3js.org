@@ -2676,12 +2676,54 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'subchart.show', experimental: true }
-        %p ...
+        %p Show sub chart on the bottom of the chart.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              subchart: {
+              &nbsp;&nbsp;: show: true
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/options_subchart.html" ) Subchart
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'subchart.size.height', experimental: true }
-        %p ...
+        %p Change the height of the subchart.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              subchart: {
+              &nbsp;&nbsp;: size: {
+              &nbsp;&nbsp;&nbsp;&nbsp;height: 20
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'subchart.onbrush', experimental: true }
+        %p Set callback for brush event.
+        %br
+        %p Specified function receives the current zoomed x domain.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              subchart: {
+              &nbsp;&nbsp;: onbrush: function (domain) { ... }
+              }
       %hr
 
       %section

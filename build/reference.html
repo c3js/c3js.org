@@ -4063,7 +4063,21 @@ bindto: d3.select('#myContainer')</code></pre>
 <span class="secondary label">Experimental</span>
 
 </h3>
-<p>...</p>
+<p>Show sub chart on the bottom of the chart.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>subchart: {
+&nbsp;&nbsp;: show: true
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/options_subchart.html'>Subchart</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -4072,7 +4086,36 @@ bindto: d3.select('#myContainer')</code></pre>
 <span class="secondary label">Experimental</span>
 
 </h3>
-<p>...</p>
+<p>Change the height of the subchart.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>subchart: {
+&nbsp;&nbsp;: size: {
+&nbsp;&nbsp;&nbsp;&nbsp;height: 20
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#subchart-onbrush'>subchart.onbrush</a>
+<span class="secondary label">Experimental</span>
+
+</h3>
+<p>Set callback for brush event.</p>
+<br>
+<p>Specified function receives the current zoomed x domain.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>subchart: {
+&nbsp;&nbsp;: onbrush: function (domain) { ... }
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
