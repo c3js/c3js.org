@@ -831,12 +831,12 @@
 </li>
 
 <li>
-<a href='#donut-width'>donut.width</a>
+<a href='#donut-expand'>donut.expand</a>
 
 </li>
 
 <li>
-<a href='#donut-expand'>donut.expand</a>
+<a href='#donut-width'>donut.width</a>
 
 </li>
 
@@ -4446,7 +4446,17 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#pie-label-show'>pie.label.show</a>
 
 </h3>
-<p>...</p>
+<p>Show or hide label on each pie piece.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>pie: {
+&nbsp;&nbsp;label {
+&nbsp;&nbsp;&nbsp;&nbsp;show: false
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4454,7 +4464,43 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#pie-label-format'>pie.label.format</a>
 
 </h3>
-<p>...</p>
+<p>Set formatter for the label on each pie piece.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>pie: {
+&nbsp;&nbsp;label {
+&nbsp;&nbsp;&nbsp;&nbsp;format: function (value, ratio, id) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return d3.format('$')(value);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/pie_label_format.html'>Pie Label Format</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#pie-label-threshold'>pie.label.threshold</a>
+
+</h3>
+<p>Set threshold to show/hide labels.</p>
+<h5>Default:</h5>
+<code>0.05</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>pie: {
+&nbsp;&nbsp;label {
+&nbsp;&nbsp;&nbsp;&nbsp;threshold: 0.1
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4462,7 +4508,15 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#pie-expand'>pie.expand</a>
 
 </h3>
-<p>...</p>
+<p>Enable or disable expanding pie pieces.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>pie: {
+&nbsp;&nbsp;expand: false
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4470,7 +4524,17 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#donut-label-show'>donut.label.show</a>
 
 </h3>
-<p>...</p>
+<p>Show or hide label on each donut piece.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>donut: {
+&nbsp;&nbsp;label {
+&nbsp;&nbsp;&nbsp;&nbsp;show: false
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4478,7 +4542,37 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#donut-label-format'>donut.label.format</a>
 
 </h3>
-<p>...</p>
+<p>Set formatter for the label on each donut piece.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>donut: {
+&nbsp;&nbsp;label {
+&nbsp;&nbsp;&nbsp;&nbsp;format: function (value, ratio, id) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return d3.format('$')(value);
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#donut-label-threshold'>donut.label.threshold</a>
+
+</h3>
+<p>Set threshold to show/hide labels.</p>
+<h5>Default:</h5>
+<code>0.05</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>donut: {
+&nbsp;&nbsp;label {
+&nbsp;&nbsp;&nbsp;&nbsp;threshold: 0.1
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4486,7 +4580,31 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#donut-expand'>donut.expand</a>
 
 </h3>
-<p>...</p>
+<p>Enable or disable expanding donut pieces.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>donut: {
+&nbsp;&nbsp;expand: false
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#donut-width'>donut.width</a>
+
+</h3>
+<p>Set width of donut chart.</p>
+<h5>Default:</h5>
+<code>auto</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>donut: {
+&nbsp;&nbsp;width: 10
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4494,7 +4612,139 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#donut-title'>donut.title</a>
 
 </h3>
-<p>...</p>
+<p>Set title of donut chart.</p>
+<h5>Default:</h5>
+<code>''</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>donut: {
+&nbsp;&nbsp;title: 'Title'
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#gauge-label-show'>gauge.label.show</a>
+
+</h3>
+<p>Show or hide label on gauge.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>gauge: {
+&nbsp;&nbsp;label {
+&nbsp;&nbsp;&nbsp;&nbsp;show: false
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#gauge-label-format'>gauge.label.format</a>
+
+</h3>
+<p>Set formatter for the label on gauge.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>gauge: {
+&nbsp;&nbsp;label {
+&nbsp;&nbsp;&nbsp;&nbsp;format: function (value, ratio) {
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return value;
+&nbsp;&nbsp;&nbsp;&nbsp;}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/chart_gauge.html'>Gauge Chart</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#gauge-expand'>gauge.expand</a>
+
+</h3>
+<p>Enable or disable expanding gauge.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>gauge: {
+&nbsp;&nbsp;expand: false
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#gauge-min'>gauge.min</a>
+
+</h3>
+<p>Set min value of the gauge.</p>
+<h5>Default:</h5>
+<code>0</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>gauge: {
+&nbsp;&nbsp;min: -100
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#gauge-max'>gauge.max</a>
+
+</h3>
+<p>Set max value of the gauge.</p>
+<h5>Default:</h5>
+<code>100</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>gauge: {
+&nbsp;&nbsp;max: 200
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#gauge-units'>gauge.units</a>
+
+</h3>
+<p>Set units of the gauge.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>gauge: {
+&nbsp;&nbsp;units: ' %'
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#gauge-width'>gauge.width</a>
+
+</h3>
+<p>Set width of gauge chart.</p>
+<h5>Default:</h5>
+<code>auto</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>gauge: {
+&nbsp;&nbsp;width: 10
+}</code></pre>
+</div>
 </section>
 <hr>
 <br>

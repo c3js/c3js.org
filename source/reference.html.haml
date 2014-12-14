@@ -190,8 +190,8 @@
           = partial :reference_menu_item, locals: { id: 'donut.label.show' }
           = partial :reference_menu_item, locals: { id: 'donut.label.format' }
           = partial :reference_menu_item, locals: { id: 'donut.label.threshold' }
-          = partial :reference_menu_item, locals: { id: 'donut.width' }
           = partial :reference_menu_item, locals: { id: 'donut.expand' }
+          = partial :reference_menu_item, locals: { id: 'donut.width' }
           = partial :reference_menu_item, locals: { id: 'donut.title' }
 
           %li Gauge
@@ -3022,38 +3022,286 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'pie.label.show' }
-        %p ...
+        %p Show or hide label on each pie piece.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              pie: {
+              &nbsp;&nbsp;label {
+              &nbsp;&nbsp;&nbsp;&nbsp;show: false
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'pie.label.format' }
-        %p ...
+        %p Set formatter for the label on each pie piece.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              pie: {
+              &nbsp;&nbsp;label {
+              &nbsp;&nbsp;&nbsp;&nbsp;format: function (value, ratio, id) {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return d3.format('$')(value);
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/pie_label_format.html" ) Pie Label Format
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'pie.label.threshold' }
+        %p Set threshold to show/hide labels.
+        %h5 Default:
+        <code>0.05</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              pie: {
+              &nbsp;&nbsp;label {
+              &nbsp;&nbsp;&nbsp;&nbsp;threshold: 0.1
+              &nbsp;&nbsp;}
+              }
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'pie.expand' }
-        %p ...
+        %p Enable or disable expanding pie pieces.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              pie: {
+              &nbsp;&nbsp;expand: false
+              }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.label.show' }
-        %p ...
+        %p Show or hide label on each donut piece.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              donut: {
+              &nbsp;&nbsp;label {
+              &nbsp;&nbsp;&nbsp;&nbsp;show: false
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.label.format' }
-        %p ...
+        %p Set formatter for the label on each donut piece.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              donut: {
+              &nbsp;&nbsp;label {
+              &nbsp;&nbsp;&nbsp;&nbsp;format: function (value, ratio, id) {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return d3.format('$')(value);
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'donut.label.threshold' }
+        %p Set threshold to show/hide labels.
+        %h5 Default:
+        <code>0.05</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              donut: {
+              &nbsp;&nbsp;label {
+              &nbsp;&nbsp;&nbsp;&nbsp;threshold: 0.1
+              &nbsp;&nbsp;}
+              }
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.expand' }
-        %p ...
+        %p Enable or disable expanding donut pieces.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              donut: {
+              &nbsp;&nbsp;expand: false
+              }
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'donut.width' }
+        %p Set width of donut chart.
+        %h5 Default:
+        <code>auto</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              donut: {
+              &nbsp;&nbsp;width: 10
+              }
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.title' }
-        %p ...
+        %p Set title of donut chart.
+        %h5 Default:
+        <code>''</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              donut: {
+              &nbsp;&nbsp;title: 'Title'
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'gauge.label.show' }
+        %p Show or hide label on gauge.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              gauge: {
+              &nbsp;&nbsp;label {
+              &nbsp;&nbsp;&nbsp;&nbsp;show: false
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'gauge.label.format' }
+        %p Set formatter for the label on gauge.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              gauge: {
+              &nbsp;&nbsp;label {
+              &nbsp;&nbsp;&nbsp;&nbsp;format: function (value, ratio) {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return value;
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/chart_gauge.html" ) Gauge Chart
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'gauge.expand' }
+        %p Enable or disable expanding gauge.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              gauge: {
+              &nbsp;&nbsp;expand: false
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'gauge.min' }
+        %p Set min value of the gauge.
+        %h5 Default:
+        <code>0</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              gauge: {
+              &nbsp;&nbsp;min: -100
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'gauge.max' }
+        %p Set max value of the gauge.
+        %h5 Default:
+        <code>100</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              gauge: {
+              &nbsp;&nbsp;max: 200
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'gauge.units' }
+        %p Set units of the gauge.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              gauge: {
+              &nbsp;&nbsp;units: ' %'
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'gauge.width' }
+        %p Set width of gauge chart.
+        %h5 Default:
+        <code>auto</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              gauge: {
+              &nbsp;&nbsp;width: 10
+              }
       %hr
 
       %br
