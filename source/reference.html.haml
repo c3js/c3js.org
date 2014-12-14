@@ -154,10 +154,10 @@
           %li Zoom
           = partial :reference_menu_item, locals: { id: 'zoom.enabled', experimental: true }
           = partial :reference_menu_item, locals: { id: 'zoom.rescale', experimental: true }
+          = partial :reference_menu_item, locals: { id: 'zoom.extent', experimental: true }
           = partial :reference_menu_item, locals: { id: 'zoom.onzoom', experimental: true }
           = partial :reference_menu_item, locals: { id: 'zoom.onzoomstart', experimental: true }
           = partial :reference_menu_item, locals: { id: 'zoom.onzoomend', experimental: true }
-          -#= partial :reference_menu_item, locals: { id: 'zoom.extent', experimental: true }
           -#= partial :reference_menu_item, locals: { id: 'zoom.privileged', experimental: true }
 
           %li Point
@@ -2598,7 +2598,7 @@
           %pre
             %code.html.javascript
               tooltip: {
-              &nbsp;&nbsp;: format: {
+              &nbsp;&nbsp;format: {
               &nbsp;&nbsp;&nbsp;&nbsp;title: function (x) { return 'Data ' + x; }
               &nbsp;&nbsp;}
               }
@@ -2621,7 +2621,7 @@
           %pre
             %code.html.javascript
               tooltip: {
-              &nbsp;&nbsp;: format: {
+              &nbsp;&nbsp;format: {
               &nbsp;&nbsp;&nbsp;&nbsp;name: function (name, ratio, id, index) { return name; }
               &nbsp;&nbsp;}
               }
@@ -2644,7 +2644,7 @@
           %pre
             %code.html.javascript
               tooltip: {
-              &nbsp;&nbsp;: format: {
+              &nbsp;&nbsp;format: {
               &nbsp;&nbsp;&nbsp;&nbsp;value: function (value, ratio, id, index) { return ratio; }
               &nbsp;&nbsp;}
               }
@@ -2667,7 +2667,7 @@
           %pre
             %code.html.javascript
               tooltip: {
-              &nbsp;&nbsp;: contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+              &nbsp;&nbsp;contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
               &nbsp;&nbsp;&nbsp;&nbsp;return ... // formatted html as you want
               &nbsp;&nbsp;}
               }
@@ -2684,7 +2684,7 @@
           %pre
             %code.html.javascript
               subchart: {
-              &nbsp;&nbsp;: show: true
+              &nbsp;&nbsp;show: true
               }
         %h5 Example:
         %ul
@@ -2703,7 +2703,7 @@
           %pre
             %code.html.javascript
               subchart: {
-              &nbsp;&nbsp;: size: {
+              &nbsp;&nbsp;size: {
               &nbsp;&nbsp;&nbsp;&nbsp;height: 20
               &nbsp;&nbsp;}
               }
@@ -2722,14 +2722,110 @@
           %pre
             %code.html.javascript
               subchart: {
-              &nbsp;&nbsp;: onbrush: function (domain) { ... }
+              &nbsp;&nbsp;onbrush: function (domain) { ... }
               }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'zoom.enabled', experimental: true }
-        %p ...
+        %p Enable zooming.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              zoom: {
+              &nbsp;&nbsp;enabled: false
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/interaction_zoom.html" ) Zoom
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'zoom.rescale', experimental: true }
+        %p Enable to rescale after zooming.
+        %br
+        %p If <code>true</code> set, y domain will be updated according to the zoomed region.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              zoom: {
+              &nbsp;&nbsp;rescale: true
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'zoom.extent', experimental: true }
+        %p Change zoom extent.
+        %h5 Default:
+        <code>[1, 10]</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              zoom: {
+              &nbsp;&nbsp;extent: [1, 100] // enable more zooming
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'zoom.onzoom', experimental: true }
+        %p Set callback that is called when the chart is zooming.
+        %br
+        %p Specified function receives the zoomed domain.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              zoom: {
+              &nbsp;&nbsp;onzoom: function (domain) { ... }
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'zoom.onzoomstart', experimental: true }
+        %p Set callback that is called when zooming starts.
+        %br
+        %p Specified function receives the zoom event.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              zoom: {
+              &nbsp;&nbsp;onzoomstart: function (event) { ... }
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'zoom.onzoomend', experimental: true }
+        %p Set callback that is called when zooming ends.
+        %br
+        %p Specified function receives the zoomed domain.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              zoom: {
+              &nbsp;&nbsp;onzoomend: function (domain) { ... }
+              }
       %hr
 
       %section
@@ -2738,6 +2834,7 @@
         %p Whether to show each point in line. Default is <code>true</code>
         %pre { point: { show: false } }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.r' }

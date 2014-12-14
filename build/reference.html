@@ -711,6 +711,12 @@
 </li>
 
 <li>
+<a href='#zoom-extent'>zoom.extent</a>
+<span class="secondary label">Experimental</span>
+
+</li>
+
+<li>
 <a href='#zoom-onzoom'>zoom.onzoom</a>
 <span class="secondary label">Experimental</span>
 
@@ -3972,7 +3978,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>tooltip: {
-&nbsp;&nbsp;: format: {
+&nbsp;&nbsp;format: {
 &nbsp;&nbsp;&nbsp;&nbsp;title: function (x) { return 'Data ' + x; }
 &nbsp;&nbsp;}
 }</code></pre>
@@ -3998,7 +4004,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>tooltip: {
-&nbsp;&nbsp;: format: {
+&nbsp;&nbsp;format: {
 &nbsp;&nbsp;&nbsp;&nbsp;name: function (name, ratio, id, index) { return name; }
 &nbsp;&nbsp;}
 }</code></pre>
@@ -4024,7 +4030,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>tooltip: {
-&nbsp;&nbsp;: format: {
+&nbsp;&nbsp;format: {
 &nbsp;&nbsp;&nbsp;&nbsp;value: function (value, ratio, id, index) { return ratio; }
 &nbsp;&nbsp;}
 }</code></pre>
@@ -4050,7 +4056,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>tooltip: {
-&nbsp;&nbsp;: contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+&nbsp;&nbsp;contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
 &nbsp;&nbsp;&nbsp;&nbsp;return ... // formatted html as you want
 &nbsp;&nbsp;}
 }</code></pre>
@@ -4069,7 +4075,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>subchart: {
-&nbsp;&nbsp;: show: true
+&nbsp;&nbsp;show: true
 }</code></pre>
 </div>
 <h5>Example:</h5>
@@ -4092,7 +4098,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>subchart: {
-&nbsp;&nbsp;: size: {
+&nbsp;&nbsp;size: {
 &nbsp;&nbsp;&nbsp;&nbsp;height: 20
 &nbsp;&nbsp;}
 }</code></pre>
@@ -4113,7 +4119,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>subchart: {
-&nbsp;&nbsp;: onbrush: function (domain) { ... }
+&nbsp;&nbsp;onbrush: function (domain) { ... }
 }</code></pre>
 </div>
 </section>
@@ -4124,7 +4130,114 @@ bindto: d3.select('#myContainer')</code></pre>
 <span class="secondary label">Experimental</span>
 
 </h3>
-<p>...</p>
+<p>Enable zooming.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>zoom: {
+&nbsp;&nbsp;enabled: false
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/interaction_zoom.html'>Zoom</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#zoom-rescale'>zoom.rescale</a>
+<span class="secondary label">Experimental</span>
+
+</h3>
+<p>Enable to rescale after zooming.</p>
+<br>
+<p>If <code>true</code> set, y domain will be updated according to the zoomed region.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>zoom: {
+&nbsp;&nbsp;rescale: true
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#zoom-extent'>zoom.extent</a>
+<span class="secondary label">Experimental</span>
+
+</h3>
+<p>Change zoom extent.</p>
+<h5>Default:</h5>
+<code>[1, 10]</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>zoom: {
+&nbsp;&nbsp;extent: [1, 100] // enable more zooming
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#zoom-onzoom'>zoom.onzoom</a>
+<span class="secondary label">Experimental</span>
+
+</h3>
+<p>Set callback that is called when the chart is zooming.</p>
+<br>
+<p>Specified function receives the zoomed domain.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>zoom: {
+&nbsp;&nbsp;onzoom: function (domain) { ... }
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#zoom-onzoomstart'>zoom.onzoomstart</a>
+<span class="secondary label">Experimental</span>
+
+</h3>
+<p>Set callback that is called when zooming starts.</p>
+<br>
+<p>Specified function receives the zoom event.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>zoom: {
+&nbsp;&nbsp;onzoomstart: function (event) { ... }
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#zoom-onzoomend'>zoom.onzoomend</a>
+<span class="secondary label">Experimental</span>
+
+</h3>
+<p>Set callback that is called when zooming ends.</p>
+<br>
+<p>Specified function receives the zoomed domain.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>zoom: {
+&nbsp;&nbsp;onzoomend: function (domain) { ... }
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
