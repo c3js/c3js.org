@@ -2831,33 +2831,86 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.show' }
-        %p Whether to show each point in line. Default is <code>true</code>
-        %pre { point: { show: false } }
+        %p Whether to show each point in line.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              point: {
+              &nbsp;&nbsp;show: false
+              }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.r' }
-        %p The radius size of each point. Default is <code>2.5</code>
-        %pre { point: { r: 5 } }
+        %p The radius size of each point.
+        %h5 Default:
+        <code>2.5</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              point: {
+              &nbsp;&nbsp;r: 5
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.focus.expand.enabled' }
-        %p Whether to expand each point on focus. Default is <code>true</code>
-        %pre { point: { focus: { expand: { enabled: true } } } }
+        %p Whether to expand each point on focus. 
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              point: {
+              &nbsp;&nbsp;focus: {
+              &nbsp;&nbsp;&nbsp;&nbsp;expand: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;enabled: true
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.focus.expand.r' }
         %p The radius size of each point on focus.
-        %pre { point: { focus: { expand: { r: 1 } } } }
+        %h5 Default:
+        <code>point.r * 1.75</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              point: {
+              &nbsp;&nbsp;focus: {
+              &nbsp;&nbsp;&nbsp;&nbsp;expand: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r: 1
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.select.r' }
         %p The radius size of each point on selected.
-        %pre { point: { select: { r: 3 } } }
+        %h5 Default:
+        <code>point.r * 4</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              point: {
+              &nbsp;&nbsp;select: {
+              &nbsp;&nbsp;&nbsp;&nbsp;r: 3
+              &nbsp;&nbsp;}
+              }
       %hr
 
       %section
