@@ -789,11 +789,6 @@
 </li>
 
 <li>
-<a href='#bar-width-max'>bar.width.max</a>
-
-</li>
-
-<li>
 <a href='#bar-zerobased'>bar.zerobased</a>
 
 </li>
@@ -4332,10 +4327,56 @@ bindto: d3.select('#myContainer')</code></pre>
 <hr>
 <section>
 <h3>
-<a href='#line-connect_null'>line.connect_null</a>
+<a href='#line-connectNull'>line.connectNull</a>
 
 </h3>
-<p>...</p>
+<p>Set if null data point will be connected or not.</p>
+<br>
+<p>If <code>true</code> set, the region of null data will be connected without any data point. If <code>false</code> set, the region of null data will not be connected and get empty.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>line: {
+&nbsp;&nbsp;connectNull: true
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#line-step_type'>line.step_type</a>
+
+</h3>
+<p>Change step type for step chart.</p>
+<br>
+<p><span class="code">step</span>, <span class="code">step-before</span> and <span class="code">step-after</span> can be used.</p>
+<h5>Default:</h5>
+<code>step</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>line: {
+&nbsp;&nbsp;step: {
+&nbsp;&nbsp;&nbsp;&nbsp;type: 'step-after'
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#area-zerobased'>area.zerobased</a>
+
+</h3>
+<p>Set if min or max value will be 0 on area chart.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>area: {
+&nbsp;&nbsp;zerobased: false
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4343,7 +4384,21 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#bar-width'>bar.width</a>
 
 </h3>
-<p>...</p>
+<p>Change the width of bar chart.</p>
+<h5>Default:</h5>
+<code>auto</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>bar: {
+&nbsp;&nbsp;width: 10
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/chart_bar.html'>Bar Chart</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -4351,7 +4406,39 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#bar-width-ratio'>bar.width.ratio</a>
 
 </h3>
-<p>...</p>
+<p>Change the width of bar chart by ratio.</p>
+<h5>Default:</h5>
+<code>0.6</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>bar: {
+&nbsp;&nbsp;width: {
+&nbsp;&nbsp;&nbsp;&nbsp;ratio: 0.2
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Example:</h5>
+<ul>
+<li>
+<a href='/samples/chart_bar.html'>Bar Chart</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#bar-zerobased'>bar.zerobased</a>
+
+</h3>
+<p>Set if min or max value will be 0 on bar chart.</p>
+<h5>Default:</h5>
+<code>true</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>bar: {
+&nbsp;&nbsp;zerobased: false
+}</code></pre>
+</div>
 </section>
 <hr>
 <section>

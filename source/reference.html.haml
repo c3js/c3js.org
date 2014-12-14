@@ -177,7 +177,7 @@
           %li Bar
           = partial :reference_menu_item, locals: { id: 'bar.width' }
           = partial :reference_menu_item, locals: { id: 'bar.width.ratio' }
-          = partial :reference_menu_item, locals: { id: 'bar.width.max' }
+          -#= partial :reference_menu_item, locals: { id: 'bar.width.max' }
           = partial :reference_menu_item, locals: { id: 'bar.zerobased' }
 
           %li Pie
@@ -2915,19 +2915,108 @@
 
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'line.connect_null' }
-        %p ...
+          = partial :reference_item_link, locals: { id: 'line.connectNull' }
+        %p Set if null data point will be connected or not.
+        %br
+        %p If <code>true</code> set, the region of null data will be connected without any data point. If <code>false</code> set, the region of null data will not be connected and get empty.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              line: {
+              &nbsp;&nbsp;connectNull: true
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'line.step_type' }
+        %p Change step type for step chart.
+        %br
+        %p <span class="code">step</span>, <span class="code">step-before</span> and <span class="code">step-after</span> can be used.
+        %h5 Default:
+        <code>step</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              line: {
+              &nbsp;&nbsp;step: {
+              &nbsp;&nbsp;&nbsp;&nbsp;type: 'step-after'
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'area.zerobased' }
+        %p Set if min or max value will be 0 on area chart.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              area: {
+              &nbsp;&nbsp;zerobased: false
+              }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'bar.width' }
-        %p ...
+        %p Change the width of bar chart.
+        %h5 Default:
+        <code>auto</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              bar: {
+              &nbsp;&nbsp;width: 10
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/chart_bar.html" ) Bar Chart
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'bar.width.ratio' }
-        %p ...
+        %p Change the width of bar chart by ratio.
+        %h5 Default:
+        <code>0.6</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              bar: {
+              &nbsp;&nbsp;width: {
+              &nbsp;&nbsp;&nbsp;&nbsp;ratio: 0.2
+              &nbsp;&nbsp;}
+              }
+        %h5 Example:
+        %ul
+          %li
+            %a( href="/samples/chart_bar.html" ) Bar Chart
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'bar.zerobased' }
+        %p Set if min or max value will be 0 on bar chart.
+        %h5 Default:
+        <code>true</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              bar: {
+              &nbsp;&nbsp;zerobased: false
+              }
       %hr
 
       %section
