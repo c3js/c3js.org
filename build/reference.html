@@ -11,7 +11,7 @@
 <link href="/css/foundation.min-978d4ce8.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/tomorrow-d7cf0921.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/c3-b03125fa.css" media="screen" rel="stylesheet" type="text/css" />
-<link href="/css/style-8a5c3f7e.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/css/style-2a05a595.css" media="screen" rel="stylesheet" type="text/css" />
 <link href="/css/reference-c1e7962f.css" media="screen" rel="stylesheet" type="text/css" />
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -4757,7 +4757,23 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#api-focus'>focus</a>
 
 </h3>
-<p>...</p>
+<p>This API highlights specified targets and fade out the others.</p>
+<br>
+<p>You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be highlighted.</p>
+<h5>Arguments:</h5>
+<p><span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code></p>
+<p>Target ids to be highlight.</p>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// data1 will be highlighted and the others will be fade out
+chart.focus('data1');
+
+// data1 and data2 will be highlighted and the others will be fade out
+chart.focus(['data1', 'data2']);
+
+// all targets will be highlighted
+chart.focus();</code></pre>
+</div>
 </section>
 <hr>
 <section>

@@ -213,3 +213,8 @@ li .label {
   font-size: 0.61rem;
   margin: 0 8px;
 }
+
+div.sub-section {
+  padding-top: 4px;
+  padding-left: 10px;
+}

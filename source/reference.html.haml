@@ -3312,8 +3312,27 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.focus' }
-        %p ...
+        %p This API highlights specified targets and fade out the others.
+        %br
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be highlighted.
+        %h5 Arguments:
+        %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
+        %p Target ids to be highlight.
+
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// data1 will be highlighted and the others will be fade out
+              chart.focus('data1');
+              \
+              \// data1 and data2 will be highlighted and the others will be fade out
+              chart.focus(['data1', 'data2']);
+              \
+              \// all targets will be highlighted
+              chart.focus();
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.defocus' }
