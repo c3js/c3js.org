@@ -527,7 +527,14 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'oninit' }
-        %p not yet
+        %p Set a callback to execute when the chart is initialized.
+        %h5 Default:
+        <code>function () {}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              oninit: function () { ... }
       %hr
 
       %section
