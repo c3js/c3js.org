@@ -49,6 +49,7 @@
           = partial :reference_menu_item, locals: { id: 'data.color' }
           = partial :reference_menu_item, locals: { id: 'data.colors' }
           = partial :reference_menu_item, locals: { id: 'data.hide' }
+          = partial :reference_menu_item, locals: { id: 'data.empty.label.text' }
           -#= partial :reference_menu_item, locals: { id: 'data.filter' }
           = partial :reference_menu_item, locals: { id: 'data.selection.enabled' }
           = partial :reference_menu_item, locals: { id: 'data.selection.grouped' }
@@ -1105,6 +1106,25 @@
               }
         %h5 Note:
         %p This option does not hide legends, so we need to use <a href="#legend-hide">legend.hide</a> option together if we want to hide legend too.
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.empty.label.text' }
+        %p Set text displayed when empty data.
+        %h5 Default:
+        <code>""</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;empty: {
+              &nbsp;&nbsp;&nbsp;&nbsp;label: {
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text: "No Data"
+              &nbsp;&nbsp;&nbsp;&nbsp;}
+              &nbsp;&nbsp;}
+              }
       %hr
 
       %section
