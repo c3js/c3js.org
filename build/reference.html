@@ -4815,7 +4815,26 @@ chart.focus();</code></pre>
 <a href='#api-defocus'>defocus</a>
 
 </h3>
-<p>...</p>
+<p>This API fades out specified targets and reverts the others.</p>
+<br>
+<p>You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be faded out.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.defocus(targetIds)</code></pre>
+</div>
+<p><span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code></p>
+<p>Target ids to be faded out.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// data1 will be faded out and the others will be reverted.
+chart.defocus('data1');
+
+// data1 and data2 will be faded out and the others will be reverted.
+chart.defocus(['data1', 'data2']);
+
+// all targets will be faded out.
+chart.defocus();</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4823,7 +4842,26 @@ chart.focus();</code></pre>
 <a href='#api-revert'>revert</a>
 
 </h3>
-<p>...</p>
+<p>This API reverts specified targets.</p>
+<br>
+<p>You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be reverted.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.revert(targetIds)</code></pre>
+</div>
+<p><span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code></p>
+<p>Target ids to be reverted.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// data1 will be reverted.
+chart.revert('data1');
+
+// data1 and data2 will be reverted.
+chart.revert(['data1', 'data2']);
+
+// all targets will be reverted.
+chart.revert();</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4831,7 +4869,32 @@ chart.focus();</code></pre>
 <a href='#api-show'>show</a>
 
 </h3>
-<p>...</p>
+<p>This API shows specified targets.</p>
+<br>
+<p>You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be shown.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.show(targetIds, options)</code></pre>
+</div>
+<p><span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code></p>
+<p>Target ids to be shown.</p>
+<br>
+<p><span class="code">options</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>If <span class="code">withLegend</span> is set <code>true</code>, legend will be shown together with the specified data.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// data1 will be shown.
+chart.show('data1');
+
+// data1 and data2 will be shown.
+chart.show(['data1', 'data2']);
+
+// all targets will be shown.
+chart.show();
+
+// data1 will be shown together with its legend.
+chart.show('data1', {withLegend: true});</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4839,7 +4902,32 @@ chart.focus();</code></pre>
 <a href='#api-hide'>hide</a>
 
 </h3>
-<p>...</p>
+<p>This API hides specified targets.</p>
+<br>
+<p>You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be hidden.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.hide(targetIds, options)</code></pre>
+</div>
+<p><span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code></p>
+<p>Target ids to be hidden.</p>
+<br>
+<p><span class="code">options</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>If <span class="code">withLegend</span> is set <code>true</code>, legend will be hidden together with the specified data.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// data1 will be hidden.
+chart.hide('data1');
+
+// data1 and data2 will be hidden.
+chart.hide(['data1', 'data2']);
+
+// all targets will be hidden.
+chart.hide();
+
+// data1 will be hidden together with its legend.
+chart.hide('data1', {withLegend: true});</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -4847,7 +4935,32 @@ chart.focus();</code></pre>
 <a href='#api-toggle'>toggle</a>
 
 </h3>
-<p>...</p>
+<p>This API toggles (shows or hides) specified targets.</p>
+<br>
+<p>You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be toggles.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.toggle(targetIds, options)</code></pre>
+</div>
+<p><span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code></p>
+<p>Target ids to be toggled.</p>
+<br>
+<p><span class="code">options</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>If <span class="code">withLegend</span> is set <code>true</code>, legend will be toggled together with the specified data.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// data1 will be toggled.
+chart.toggle('data1');
+
+// data1 and data2 will be toggled.
+chart.toggle(['data1', 'data2']);
+
+// all targets will be toggled.
+chart.toggle();
+
+// data1 will be toggled together with its legend.
+chart.toggle('data1', {withLegend: true});</code></pre>
+</div>
 </section>
 <hr>
 <section>
