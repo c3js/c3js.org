@@ -3525,13 +3525,75 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.load' }
-        %p ...
+        %p Load data to the chart.
+        %br
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be toggles.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.load(args)
+        %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
+        %p If <span class="code">url</span>, <span class="code">json</span>, <span class="code">rows</span> and <span class="code">columns</span> given, the data will be loaded. If data that has the same target id is given, the chart will be updated. Otherwise, new target will be added.
+        %br
+        %p If <span class="code">classes</span> given, the classes specifed by <span class="code">data.classes</span> will be updated. <span class="code">classes</span> must be <code>Object</code> that has target id as keys.
+        %br
+        %p If <span class="code">categories</span> given, the categories specifed by <span class="code">axis.x.categories</span> or <span class="code">data.x</span> will be updated. <span class="code">categories</span> must be <code>Array</code>.
+        %br
+        %p If <span class="code">axes</span> given, the axes specifed by <span class="code">data.axes</span> will be updated. <span class="code">axes</span> must be <code>Object</code> that has target id as keys.
+        %br
+        %p If <span class="code">type</span> or <span class="code">types</span> given, the type of targets will be updated. <span class="code">type</span> must be <code>String</code> and <span class="code">types</span> must be <code>Object</code>.
+        %br
+        %p If <span class="code">unload</span> given, data will be unloaded before loading new data. If <code>true</code> given, all of data will be unloaded. If target ids given as <code>String</code> or <code>Array</code>, specified targets will be unloaded.
+        %br
+        %p If <span class="code">done</span> given, the specified function will be called after data loded.
+
+        %h5 Note:
+        %p <span class="code">unload</span> should be used if some data needs to be unloaded simultaneously. If you call <span class="code">unload</span> API soon after/before <span class="code">load</span> instead of <span class="code">unload</span> param, chart will not be rendered properly because of cancel of animation.
+        %br
+        %p <span class="code">done</span> will be called after data loaded, but it's not after rendering. It's because rendering will finish after some transition and there is some time lag between loading and rendering.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Load data1 and unload data2 and data3
+              chart.load({
+              &nbsp;&nbsp;columns: [
+              &nbsp;&nbsp;&nbsp;&nbsp;['data1, 100, 200, 150, ...],
+              &nbsp;&nbsp;&nbsp;&nbsp;...
+              &nbsp;&nbsp;],
+              &nbsp;&nbsp;unload: ['data2', 'data3']
+              });
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.unload' }
-        %p ...
+        %p Load data to the chart.
+        %br
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be toggles.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.unload(args)
+        %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
+        %p If <span class="code">ids</span> given, the data that has specified target id will be unloaded. <span class="code">ids</span> should be <code>String</code> or <code>Array</code>. If <span class="code">ids</span> is not specified, all data will be unloaded.
+
+        %h5 Note:
+        %p If you call <span class="code">load</span> API soon after/before <span class="code">unload</span>, <span class="code">unload</span> param of <span class="code">load</span> should be used. Otherwise chart will not be rendered properly because of cancel of animation.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Unload data2 and data3
+              chart.unload({
+              &nbsp;&nbsp;ids: ['data2', 'data3']
+              });
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.flow' }
