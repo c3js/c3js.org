@@ -3565,6 +3565,11 @@
               &nbsp;&nbsp;],
               &nbsp;&nbsp;unload: ['data2', 'data3']
               });
+        %ul
+          %li
+            %a( href="/samples/data_load.html" ) Load Data
+          %li
+            %a( href="/samples/data_stringx.html" ) Load Category Data
       %hr
 
       %section
@@ -3580,9 +3585,13 @@
               \.unload(args)
         %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
         %p If <span class="code">ids</span> given, the data that has specified target id will be unloaded. <span class="code">ids</span> should be <code>String</code> or <code>Array</code>. If <span class="code">ids</span> is not specified, all data will be unloaded.
+        %br
+        %p If <span class="code">done</span> given, the specified function will be called after data loded.
 
         %h5 Note:
         %p If you call <span class="code">load</span> API soon after/before <span class="code">unload</span>, <span class="code">unload</span> param of <span class="code">load</span> should be used. Otherwise chart will not be rendered properly because of cancel of animation.
+        %br
+        %p <span class="code">done</span> will be called after data loaded, but it's not after rendering. It's because rendering will finish after some transition and there is some time lag between loading and rendering.
 
         %h5 Example:
         %div.sourcecode
@@ -3599,6 +3608,7 @@
           = partial :reference_item_link, locals: { id: 'api.flow' }
         %p ...
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.select' }

@@ -5004,6 +5004,14 @@ chart.load({
 &nbsp;&nbsp;unload: ['data2', 'data3']
 });</code></pre>
 </div>
+<ul>
+<li>
+<a href='/samples/data_load.html'>Load Data</a>
+</li>
+<li>
+<a href='/samples/data_stringx.html'>Load Category Data</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -5020,8 +5028,12 @@ chart.load({
 </div>
 <p><span class="code">args</span>&nbsp;&nbsp;<code>Object</code></p>
 <p>If <span class="code">ids</span> given, the data that has specified target id will be unloaded. <span class="code">ids</span> should be <code>String</code> or <code>Array</code>. If <span class="code">ids</span> is not specified, all data will be unloaded.</p>
+<br>
+<p>If <span class="code">done</span> given, the specified function will be called after data loded.</p>
 <h5>Note:</h5>
 <p>If you call <span class="code">load</span> API soon after/before <span class="code">unload</span>, <span class="code">unload</span> param of <span class="code">load</span> should be used. Otherwise chart will not be rendered properly because of cancel of animation.</p>
+<br>
+<p><span class="code">done</span> will be called after data loaded, but it's not after rendering. It's because rendering will finish after some transition and there is some time lag between loading and rendering.</p>
 <h5>Example:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>// Unload data2 and data3
