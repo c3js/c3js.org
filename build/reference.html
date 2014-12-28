@@ -5048,7 +5048,53 @@ chart.unload({
 <a href='#api-flow'>flow</a>
 
 </h3>
-<p>...</p>
+<p>Flow data to the chart.</p>
+<br>
+<p>By this API, you can append new data points to the chart.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.load(args)</code></pre>
+</div>
+<p><span class="code">args</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>If <span class="code">json</span>, <span class="code">rows</span> and <span class="code">columns</span> given, the data will be loaded. If data that has the same target id is given, the chart will be appended. Otherwise, new target will be added. One of these is required when calling. If <span class="code">json</span> specified, <span class="code">keys</span> is required as well as <a href="#data-json">data.json</a></p>
+<br>
+<p>If <span class="code">to</span> is given, the lower x edge will move to that point. If not given, the lower x edge will move by the number of given data points.</p>
+<br>
+<p>If <span class="code">length</span> is given, the lower x edge will move by the number of this argument.</p>
+<br>
+<p>If <span class="code">duration</span> is given, the duration of the transition will be specified value. If not given, <a href="#transition-duration">transition.duration</a> will be used as default.</p>
+<br>
+<p>If <span class="code">done</span> is given, the specified function will be called when flow ends.</p>
+<h5>Note:</h5>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// 2 data points will be apprended to the tail and popped from the head.
+// After that, 4 data points will be appended and no data points will be poppoed.
+chart.flow({
+&nbsp;&nbsp;columns: [
+&nbsp;&nbsp;&nbsp;&nbsp;['x', '2013-01-11', '2013-01-21'],
+&nbsp;&nbsp;&nbsp;&nbsp;['data1', 500, 200],
+&nbsp;&nbsp;&nbsp;&nbsp;['data2', 100, 300],
+&nbsp;&nbsp;&nbsp;&nbsp;['data3', 200, 120],
+&nbsp;&nbsp;],
+&nbsp;&nbsp;done: function () {
+&nbsp;&nbsp;&nbsp;&nbsp;chart.flow({
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;columns: [
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['x', '2013-02-11', '2013-02-12', '2013-02-13', '2013-02-14'],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['data1', 200, 300, 100, 250],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['data2', 100, 90, 40, 120],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['data3', 100, 100, 300, 500]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length: 0,
+&nbsp;&nbsp;&nbsp;&nbsp;});
+&nbsp;&nbsp;}
+});</code></pre>
+</div>
+<ul>
+<li>
+<a href='/samples/api_flow.html'>Flow</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
