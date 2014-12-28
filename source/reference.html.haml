@@ -1139,7 +1139,7 @@
           = partial :reference_item_link, locals: { id: 'data.selection.enabled' }
         %p Set data selection enabled.
         %br
-        %p If this option is set <code>true</code>, we can select the data points and get/set its state of selection by API (e.g. <a href="#api-select">select</a>, <a href="#api-unselect">unselect</a>, <a href="#api-selected">selected</a>).
+        %p If this option is set <code>true</code>, we can select the data points and get/set its state of selection by API (e.g. <a>select</a>, <a>unselect</a>, <a>selected</a>).
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -3613,7 +3613,7 @@
         %div.sourcecode
           %pre
             %code.html.javascript
-              \.load(args)
+              \.flow(args)
         %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
         %p If <span class="code">json</span>, <span class="code">rows</span> and <span class="code">columns</span> given, the data will be loaded. If data that has the same target id is given, the chart will be appended. Otherwise, new target will be added. One of these is required when calling. If <span class="code">json</span> specified, <span class="code">keys</span> is required as well as <a href="#data-json">data.json</a>
         %br
@@ -3624,8 +3624,6 @@
         %p If <span class="code">duration</span> is given, the duration of the transition will be specified value. If not given, <a href="#transition-duration">transition.duration</a> will be used as default.
         %br
         %p If <span class="code">done</span> is given, the specified function will be called when flow ends.
-
-        %h5 Note:
 
         %h5 Example:
         %div.sourcecode
@@ -3660,28 +3658,144 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.select' }
-        %p ...
+        %p Change data point state to selected.
+        %br
+        %p By this API, you can select data points. To use this API, <a href="#data-selection-enabled">data.selection.enabled</a> needs to be set <code>true</code>.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.select(ids, indices, resetOthers)
+        %p <span class="code">ids</span>&nbsp;&nbsp;<code>Array</code>
+        %p Specify target ids to be selected. If this argument is not given, all targets will be the candidate.
+        %br
+        %p <span class="code">indices</span>&nbsp;&nbsp;<code>Array</code>
+        %p Specify indices to be selected. If this argument is not given, all data points will be the candidate.
+        %br
+        %p <span class="code">resetOthers</span>&nbsp;&nbsp;<code>boolean</code>
+        %p If this argument is set <code>true</code>, the data points that are not specified by <span class="code">ids</span>, <span class="code">indices</span> will be unselected.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// all data points of data1 will be selected.
+              chart.select(['data1']);
+              \
+              \// 3 data points on index 1, 3, 5 of data1 will be selected.
+              chart.select(['data1'], [1,3,5]);
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.unselect' }
-        %p ...
+        %p Change data point state to unselected.
+        %br
+        %p By this API, you can unselect data points. To use this API, <a href="#data-selection-enabled">data.selection.enabled</a> needs to be set <code>true</code>.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.unselect(ids, indices)
+        %p <span class="code">ids</span>&nbsp;&nbsp;<code>Array</code>
+        %p Specify target ids to be unselected. If this argument is not given, all targets will be the candidate.
+        %br
+        %p <span class="code">indices</span>&nbsp;&nbsp;<code>Array</code>
+        %p Specify indices to be unselected. If this argument is not given, all data points will be the candidate.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// all data points of data1 will be unselected.
+              chart.unselect(['data1']);
+              \
+              \// 3 data points on index 1, 3, 5 of data1 will be unselected.
+              chart.unselect(['data1'], [1,3,5]);
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.selected' }
-        %p ...
+        %p Get selected data points.
+        %br
+        %p By this API, you can get selected data points information. To use this API, <a href="#data-selection-enabled">data.selection.enabled</a> needs to be set <code>true</code>.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.selected(targetId)
+        %p <span class="code">targetId</span>&nbsp;&nbsp;<code>String</code>
+        %p You can filter the result by giving target id that you want to get. If not given, all of data points will be returned.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// all selected data points will be returned.
+              chart.selected();
+              \
+              \// all selected data points of data1 will be returned.
+              chart.selected('data1');
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.transform' }
-        %p ...
+        %p Change the type of the chart.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.transform(type, targetIds)
+        %p <span class="code">type</span>&nbsp;&nbsp;<code>String</code>
+        %p Specify the type to be transformed. The types listed in <a href="#data-type">data.type</a> can be used.
+        %br
+        %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
+        %p Specify targets to be transformed. If not given, all targets will be the candidate.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// all targets will be bar chart.
+              chart.transform('bar');
+              \
+              \// only data1 will be bar chart.
+              chart.transform('bar', 'data1');
+              \
+              \// only data1 and data2 will be bar chart.
+              chart.transform('bar', ['data1', 'data2']);
+        %ul
+          %li
+            %a( href="/samples/transform_line.html" ) Transform to Line Chart
+            %a( href="/samples/transform_bar.html" ) Transform to Bar Chart
+            %a( href="/samples/transform_pie.html" ) Transform to Pie Chart
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.groups' }
-        %p ...
+        %p Update groups for the targets.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.groups(groups)
+        %p <span class="code">groups</span>&nbsp;&nbsp;<code>Array</code>
+        %p This argument needs to be an <code>Array</code> that includes one or more <code>Array</code> that includes target ids to be grouped.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// data1 and data2 will be a new group.
+              chart.groups([['data1', 'data2']]);
+        %ul
+          %li
+            %a( href="/samples/chart_bar_stacked.html" ) Stacked Bar Chart
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.xgrids' }
