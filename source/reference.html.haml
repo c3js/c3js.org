@@ -3970,18 +3970,81 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.regions' }
-        %p ...
+        %p Update regions.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.regions(regions)
+        %p <span class="code">regions</span>&nbsp;&nbsp;<code>Array</code>
+        %p Regions will be replaced with this argument. The format of this argument is the same as <a href="#regions">regions</a>.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Show 2 regions
+              chart.regions([
+              &nbsp;&nbsp;{axis: 'x', start: 5, class: 'regionX'},
+              &nbsp;&nbsp;{axis: 'y', end: 50, class: 'regionY'}
+              ]);
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.regions.add' }
-        %p ...
+        %p Add new region.
+        %br
+        %p This API adds new region instead of replacing like <a href="#api-regions">regions</a>.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.regions.add(regions)
+        %p <span class="code">regions</span>&nbsp;&nbsp;<code>Array</code> or <code>Object</code>
+        %p New region will be added. The format of this argument is the same as <a href="#regions">regions</a> and it's possible to give an <code>Object</code> if only one region will be added.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Add a new region
+              chart.regions.add(
+              &nbsp;&nbsp;{axis: 'x', start: 5, class: 'regionX'}
+              );
+              \
+              \// Add new regions
+              chart.regions.add([
+              &nbsp;&nbsp;{axis: 'x', start: 5, class: 'regionX'},
+              &nbsp;&nbsp;{axis: 'y', end: 50, class: 'regionY'}
+              ]);
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.regions.remove' }
-        %p ...
+        %p Remove regions.
+        %br
+        %p This API removes regions.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.regions.remove(args)
+        %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
+        %p This argument should include <span class="code">classes</span>. If <span class="code">classes</span> is given, the regions that have one of the specified classes will be removed. If <span class="code">args</span> is not given, all of regions will be removed.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// regions that have 'region-A' or 'region-B' will be removed.
+              chart.regions.remove({classes: ['region-A', 'region-B']});
+              \
+              \// all of regions will be removed.
+              chart.regions.remove();
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data' }

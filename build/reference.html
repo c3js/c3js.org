@@ -5412,7 +5412,21 @@ chart.ygrids.remove();</code></pre>
 <a href='#api-regions'>regions</a>
 
 </h3>
-<p>...</p>
+<p>Update regions.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.regions(regions)</code></pre>
+</div>
+<p><span class="code">regions</span>&nbsp;&nbsp;<code>Array</code></p>
+<p>Regions will be replaced with this argument. The format of this argument is the same as <a href="#regions">regions</a>.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Show 2 regions
+chart.regions([
+&nbsp;&nbsp;{axis: 'x', start: 5, class: 'regionX'},
+&nbsp;&nbsp;{axis: 'y', end: 50, class: 'regionY'}
+]);</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -5420,7 +5434,28 @@ chart.ygrids.remove();</code></pre>
 <a href='#api-regions-add'>regions.add</a>
 
 </h3>
-<p>...</p>
+<p>Add new region.</p>
+<br>
+<p>This API adds new region instead of replacing like <a href="#api-regions">regions</a>.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.regions.add(regions)</code></pre>
+</div>
+<p><span class="code">regions</span>&nbsp;&nbsp;<code>Array</code> or <code>Object</code></p>
+<p>New region will be added. The format of this argument is the same as <a href="#regions">regions</a> and it's possible to give an <code>Object</code> if only one region will be added.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Add a new region
+chart.regions.add(
+&nbsp;&nbsp;{axis: 'x', start: 5, class: 'regionX'}
+);
+
+// Add new regions
+chart.regions.add([
+&nbsp;&nbsp;{axis: 'x', start: 5, class: 'regionX'},
+&nbsp;&nbsp;{axis: 'y', end: 50, class: 'regionY'}
+]);</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -5428,7 +5463,23 @@ chart.ygrids.remove();</code></pre>
 <a href='#api-regions-remove'>regions.remove</a>
 
 </h3>
-<p>...</p>
+<p>Remove regions.</p>
+<br>
+<p>This API removes regions.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.regions.remove(args)</code></pre>
+</div>
+<p><span class="code">args</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>This argument should include <span class="code">classes</span>. If <span class="code">classes</span> is given, the regions that have one of the specified classes will be removed. If <span class="code">args</span> is not given, all of regions will be removed.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// regions that have 'region-A' or 'region-B' will be removed.
+chart.regions.remove({classes: ['region-A', 'region-B']});
+
+// all of regions will be removed.
+chart.regions.remove();</code></pre>
+</div>
 </section>
 <hr>
 <section>
