@@ -5241,7 +5241,26 @@ chart.groups([['data1', 'data2']]);</code></pre>
 <a href='#api-xgrids'>xgrids</a>
 
 </h3>
-<p>...</p>
+<p>Update x grid lines.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.xgrids(grids)</code></pre>
+</div>
+<p><span class="code">grids</span>&nbsp;&nbsp;<code>Array</code></p>
+<p>X grid lines will be replaced with this argument. The format of this argument is the same as <a href="#grid-x-lines">grid.x.lines</a>.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Show 2 x grid lines
+chart.xgrids([
+&nbsp;&nbsp;{value: 1, text:'Label 1'},
+&nbsp;&nbsp;{value: 4, text: 'Label 4'}
+]);</code></pre>
+</div>
+<ul>
+<li>
+<a href='/samples/api_grid_x.html'>X Grids</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -5249,7 +5268,33 @@ chart.groups([['data1', 'data2']]);</code></pre>
 <a href='#api-xgrids-add'>xgrids.add</a>
 
 </h3>
-<p>...</p>
+<p>Add x grid lines.</p>
+<br>
+<p>This API adds new x grid lines instead of replacing like <a href="#api-xgrids">xgrids</a>.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.xgrids.add(grids)</code></pre>
+</div>
+<p><span class="code">grids</span>&nbsp;&nbsp;<code>Array</code> or <code>Object</code></p>
+<p>New x grid lines will be added. The format of this argument is the same as <a href="#grid-x-lines">grid.x.lines</a> and it's possible to give an <code>Object</code> if only one line will be added.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Add a new x grid line
+chart.xgrids.add(
+&nbsp;&nbsp;{value: 4, text: 'Label 4'}
+);
+
+// Add new x grid lines
+chart.xgrids.add([
+&nbsp;&nbsp;{value: 2, text: 'Label 2'},
+&nbsp;&nbsp;{value: 4, text: 'Label 4'}
+]);</code></pre>
+</div>
+<ul>
+<li>
+<a href='/samples/api_grid_x.html'>X Grids</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -5257,7 +5302,31 @@ chart.groups([['data1', 'data2']]);</code></pre>
 <a href='#api-xgrids-remove'>xgrids.remove</a>
 
 </h3>
-<p>...</p>
+<p>Remove x grid lines.</p>
+<br>
+<p>This API removes x grid lines.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.xgrids.remove(args)</code></pre>
+</div>
+<p><span class="code">args</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>This argument should include <span class="code">value</span> or <span class="code">class</span>. If <span class="code">value</span> is given, the x grid lines that have specified x value will be removed. If <span class="code">class</span> is given, the x grid lines that have specified class will be removed. If <span class="code">args</span> is not given, all of x grid lines will be removed.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// x grid line on x = 2 will be removed
+chart.xgrids.remove({value: 2});
+
+// x grid lines that have 'grid-A' will be removed
+chart.xgrids.remove({class: 'grid-A'});
+
+// all of x grid lines will be removed
+chart.xgrids.remove();</code></pre>
+</div>
+<ul>
+<li>
+<a href='/samples/api_grid_x.html'>X Grids</a>
+</li>
+</ul>
 </section>
 <hr>
 <section>
@@ -5265,7 +5334,21 @@ chart.groups([['data1', 'data2']]);</code></pre>
 <a href='#api-ygrids'>ygrids</a>
 
 </h3>
-<p>...</p>
+<p>Update y grid lines.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.ygrids(grids)</code></pre>
+</div>
+<p><span class="code">grids</span>&nbsp;&nbsp;<code>Array</code></p>
+<p>X grid lines will be replaced with this argument. The format of this argument is the same as <a href="#grid-y-lines">grid.y.lines</a>.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Show 2 y grid lines
+chart.ygrids([
+&nbsp;&nbsp;{value: 100, text:'Label 1'},
+&nbsp;&nbsp;{value: 400, text: 'Label 4'}
+]);</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -5273,7 +5356,28 @@ chart.groups([['data1', 'data2']]);</code></pre>
 <a href='#api-ygrids-add'>ygrids.add</a>
 
 </h3>
-<p>...</p>
+<p>Add y grid lines.</p>
+<br>
+<p>This API adds new y grid lines instead of replacing like <a href="#api-ygrids">ygrids</a>.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.ygrids.add(grids)</code></pre>
+</div>
+<p><span class="code">grids</span>&nbsp;&nbsp;<code>Array</code> or <code>Object</code></p>
+<p>New y grid lines will be added. The format of this argument is the same as <a href="#grid-y-lines">grid.y.lines</a> and it's possible to give an <code>Object</code> if only one line will be added.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Add a new y grid line
+chart.ygrids.add(
+&nbsp;&nbsp;{value: 400, text: 'Label 4'}
+);
+
+// Add new y grid lines
+chart.ygrids.add([
+&nbsp;&nbsp;{value: 200, text: 'Label 2'},
+&nbsp;&nbsp;{value: 400, text: 'Label 4'}
+]);</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -5281,7 +5385,26 @@ chart.groups([['data1', 'data2']]);</code></pre>
 <a href='#api-ygrids-remove'>ygrids.remove</a>
 
 </h3>
-<p>...</p>
+<p>Remove y grid lines.</p>
+<br>
+<p>This API removes y grid lines.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.ygrids.remove(args)</code></pre>
+</div>
+<p><span class="code">args</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>This argument should include <span class="code">value</span> or <span class="code">class</span>. If <span class="code">value</span> is given, the y grid lines that have specified y value will be removed. If <span class="code">class</span> is given, the y grid lines that have specified class will be removed. If <span class="code">args</span> is not given, all of y grid lines will be removed.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// y grid line on y = 200 will be removed
+chart.ygrids.remove({value: 200});
+
+// y grid lines that have 'grid-A' will be removed
+chart.ygrids.remove({class: 'grid-A'});
+
+// all of y grid lines will be removed
+chart.ygrids.remove();</code></pre>
+</div>
 </section>
 <hr>
 <section>

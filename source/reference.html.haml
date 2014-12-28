@@ -3799,33 +3799,174 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.xgrids' }
-        %p ...
+        %p Update x grid lines.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.xgrids(grids)
+        %p <span class="code">grids</span>&nbsp;&nbsp;<code>Array</code>
+        %p X grid lines will be replaced with this argument. The format of this argument is the same as <a href="#grid-x-lines">grid.x.lines</a>.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Show 2 x grid lines
+              chart.xgrids([
+              &nbsp;&nbsp;{value: 1, text:'Label 1'},
+              &nbsp;&nbsp;{value: 4, text: 'Label 4'}
+              ]);
+        %ul
+          %li
+            %a( href="/samples/api_grid_x.html" ) X Grids
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.xgrids.add' }
-        %p ...
+        %p Add x grid lines.
+        %br
+        %p This API adds new x grid lines instead of replacing like <a href="#api-xgrids">xgrids</a>.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.xgrids.add(grids)
+        %p <span class="code">grids</span>&nbsp;&nbsp;<code>Array</code> or <code>Object</code>
+        %p New x grid lines will be added. The format of this argument is the same as <a href="#grid-x-lines">grid.x.lines</a> and it's possible to give an <code>Object</code> if only one line will be added.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Add a new x grid line
+              chart.xgrids.add(
+              &nbsp;&nbsp;{value: 4, text: 'Label 4'}
+              );
+              \
+              \// Add new x grid lines
+              chart.xgrids.add([
+              &nbsp;&nbsp;{value: 2, text: 'Label 2'},
+              &nbsp;&nbsp;{value: 4, text: 'Label 4'}
+              ]);
+        %ul
+          %li
+            %a( href="/samples/api_grid_x.html" ) X Grids
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.xgrids.remove' }
-        %p ...
+        %p Remove x grid lines.
+        %br
+        %p This API removes x grid lines.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.xgrids.remove(args)
+        %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
+        %p This argument should include <span class="code">value</span> or <span class="code">class</span>. If <span class="code">value</span> is given, the x grid lines that have specified x value will be removed. If <span class="code">class</span> is given, the x grid lines that have specified class will be removed. If <span class="code">args</span> is not given, all of x grid lines will be removed.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// x grid line on x = 2 will be removed
+              chart.xgrids.remove({value: 2});
+              \
+              \// x grid lines that have 'grid-A' will be removed
+              chart.xgrids.remove({class: 'grid-A'});
+              \
+              \// all of x grid lines will be removed
+              chart.xgrids.remove();
+        %ul
+          %li
+            %a( href="/samples/api_grid_x.html" ) X Grids
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.ygrids' }
-        %p ...
+        %p Update y grid lines.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.ygrids(grids)
+        %p <span class="code">grids</span>&nbsp;&nbsp;<code>Array</code>
+        %p X grid lines will be replaced with this argument. The format of this argument is the same as <a href="#grid-y-lines">grid.y.lines</a>.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Show 2 y grid lines
+              chart.ygrids([
+              &nbsp;&nbsp;{value: 100, text:'Label 1'},
+              &nbsp;&nbsp;{value: 400, text: 'Label 4'}
+              ]);
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.ygrids.add' }
-        %p ...
+        %p Add y grid lines.
+        %br
+        %p This API adds new y grid lines instead of replacing like <a href="#api-ygrids">ygrids</a>.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.ygrids.add(grids)
+        %p <span class="code">grids</span>&nbsp;&nbsp;<code>Array</code> or <code>Object</code>
+        %p New y grid lines will be added. The format of this argument is the same as <a href="#grid-y-lines">grid.y.lines</a> and it's possible to give an <code>Object</code> if only one line will be added.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Add a new y grid line
+              chart.ygrids.add(
+              &nbsp;&nbsp;{value: 400, text: 'Label 4'}
+              );
+              \
+              \// Add new y grid lines
+              chart.ygrids.add([
+              &nbsp;&nbsp;{value: 200, text: 'Label 2'},
+              &nbsp;&nbsp;{value: 400, text: 'Label 4'}
+              ]);
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.ygrids.remove' }
-        %p ...
+        %p Remove y grid lines.
+        %br
+        %p This API removes y grid lines.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.ygrids.remove(args)
+        %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
+        %p This argument should include <span class="code">value</span> or <span class="code">class</span>. If <span class="code">value</span> is given, the y grid lines that have specified y value will be removed. If <span class="code">class</span> is given, the y grid lines that have specified class will be removed. If <span class="code">args</span> is not given, all of y grid lines will be removed.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// y grid line on y = 200 will be removed
+              chart.ygrids.remove({value: 200});
+              \
+              \// y grid lines that have 'grid-A' will be removed
+              chart.ygrids.remove({class: 'grid-A'});
+              \
+              \// all of y grid lines will be removed
+              chart.ygrids.remove();
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.regions' }
