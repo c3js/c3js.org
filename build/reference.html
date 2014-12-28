@@ -5487,7 +5487,24 @@ chart.regions.remove();</code></pre>
 <a href='#api-data'>data</a>
 
 </h3>
-<p>...</p>
+<p>Get data loaded in the chart.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.data(targetIds)</code></pre>
+</div>
+<p><span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code></p>
+<p>If this argument is given, this API returns the specified target data. If this argument is not given, all of data will be returned.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Get only data1 data
+chart.data('data1');
+
+// Get data1 and data2 data
+chart.data(['data1', 'data2']);
+
+// Get all data
+chart.data();</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -5495,7 +5512,24 @@ chart.regions.remove();</code></pre>
 <a href='#api-data-shown'>data.shown</a>
 
 </h3>
-<p>...</p>
+<p>Get data shown in the chart.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.data.shown(targetIds)</code></pre>
+</div>
+<p><span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code></p>
+<p>If this argument is given, this API filters the data with specified target ids. If this argument is not given, all shown data will be returned.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Get shown data by filtering to include only data1 data
+chart.data.shown('data1');
+
+// Get shown data by filtering to include data1 and data2 data
+chart.data.shown(['data1', 'data2']);
+
+// Get all shown data
+chart.data.shown();</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -5503,7 +5537,18 @@ chart.regions.remove();</code></pre>
 <a href='#api-data-values'>data.values</a>
 
 </h3>
-<p>...</p>
+<p>Get values of the data loaded in the chart.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.data.values(targetId)</code></pre>
+</div>
+<p><span class="code">targetId</span>&nbsp;&nbsp;<code>String</code></p>
+<p>This API returns the values of specified target. If this argument is not given, <code>null</code> will be retruned.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Get data1 values
+chart.data.values('data1');</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -5511,7 +5556,24 @@ chart.regions.remove();</code></pre>
 <a href='#api-data-names'>data.names</a>
 
 </h3>
-<p>...</p>
+<p>Get and set names of the data loaded in the chart.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.data.names(names)</code></pre>
+</div>
+<p><span class="code">names</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>If this argument is given, the names of data will be updated. If not given, the current names will be returned. The format of this argument is the same as <a href="#data-names">data.names</a>.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Get current names
+chart.data.names();
+
+// Update names
+chart.data.names({
+&nbsp;&nbsp;data1: 'New Name 1',
+&nbsp;&nbsp;data2: 'New Name 2'
+});</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -5519,15 +5581,49 @@ chart.regions.remove();</code></pre>
 <a href='#api-data-colors'>data.colors</a>
 
 </h3>
-<p>...</p>
+<p>Get and set colors of the data loaded in the chart.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.data.colors(colors)</code></pre>
+</div>
+<p><span class="code">colors</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>If this argument is given, the colors of data will be updated. If not given, the current colors will be returned. The format of this argument is the same as <a href="#data-colors">data.colors</a>.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Get current colors
+chart.data.colors();
+
+// Update colors
+chart.data.colors({
+&nbsp;&nbsp;data1: '#FFFFFF',
+&nbsp;&nbsp;data2: '#000000'
+});</code></pre>
+</div>
 </section>
 <hr>
 <section>
 <h3>
-<a href='#api-data-targets'>data.targets</a>
+<a href='#api-data-axes'>data.axes</a>
 
 </h3>
-<p>...</p>
+<p>Get and set axes of the data loaded in the chart.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.data.axes(axes)</code></pre>
+</div>
+<p><span class="code">axes</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>If this argument is given, the axes of data will be updated. If not given, the current axes will be returned. The format of this argument is the same as <a href="#data-axes">data.axes</a>.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Get current axes
+chart.data.axes();
+
+// Update axes
+chart.data.axes({
+&nbsp;&nbsp;data1: 'y',
+&nbsp;&nbsp;data2: 'y2'
+});</code></pre>
+</div>
 </section>
 <hr>
 <section>

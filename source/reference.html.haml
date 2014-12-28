@@ -4048,33 +4048,153 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data' }
-        %p ...
+        %p Get data loaded in the chart.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.data(targetIds)
+        %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
+        %p If this argument is given, this API returns the specified target data. If this argument is not given, all of data will be returned.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Get only data1 data
+              chart.data('data1');
+              \
+              \// Get data1 and data2 data
+              chart.data(['data1', 'data2']);
+              \
+              \// Get all data
+              chart.data();
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data.shown' }
-        %p ...
+        %p Get data shown in the chart.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.data.shown(targetIds)
+        %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
+        %p If this argument is given, this API filters the data with specified target ids. If this argument is not given, all shown data will be returned.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Get shown data by filtering to include only data1 data
+              chart.data.shown('data1');
+              \
+              \// Get shown data by filtering to include data1 and data2 data
+              chart.data.shown(['data1', 'data2']);
+              \
+              \// Get all shown data
+              chart.data.shown();
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data.values' }
-        %p ...
+        %p Get values of the data loaded in the chart.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.data.values(targetId)
+        %p <span class="code">targetId</span>&nbsp;&nbsp;<code>String</code>
+        %p This API returns the values of specified target. If this argument is not given, <code>null</code> will be retruned.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Get data1 values
+              chart.data.values('data1');
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data.names' }
-        %p ...
+        %p Get and set names of the data loaded in the chart.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.data.names(names)
+        %p <span class="code">names</span>&nbsp;&nbsp;<code>Object</code>
+        %p If this argument is given, the names of data will be updated. If not given, the current names will be returned. The format of this argument is the same as <a href="#data-names">data.names</a>.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Get current names
+              chart.data.names();
+              \
+              \// Update names
+              chart.data.names({
+              &nbsp;&nbsp;data1: 'New Name 1',
+              &nbsp;&nbsp;data2: 'New Name 2'
+              });
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data.colors' }
-        %p ...
+        %p Get and set colors of the data loaded in the chart.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.data.colors(colors)
+        %p <span class="code">colors</span>&nbsp;&nbsp;<code>Object</code>
+        %p If this argument is given, the colors of data will be updated. If not given, the current colors will be returned. The format of this argument is the same as <a href="#data-colors">data.colors</a>.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Get current colors
+              chart.data.colors();
+              \
+              \// Update colors
+              chart.data.colors({
+              &nbsp;&nbsp;data1: '#FFFFFF',
+              &nbsp;&nbsp;data2: '#000000'
+              });
       %hr
+
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'api.data.targets' }
-        %p ...
+          = partial :reference_item_link, locals: { id: 'api.data.axes' }
+        %p Get and set axes of the data loaded in the chart.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.data.axes(axes)
+        %p <span class="code">axes</span>&nbsp;&nbsp;<code>Object</code>
+        %p If this argument is given, the axes of data will be updated. If not given, the current axes will be returned. The format of this argument is the same as <a href="#data-axes">data.axes</a>.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Get current axes
+              chart.data.axes();
+              \
+              \// Update axes
+              chart.data.axes({
+              &nbsp;&nbsp;data1: 'y',
+              &nbsp;&nbsp;data2: 'y2'
+              });
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.x' }
