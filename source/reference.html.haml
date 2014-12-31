@@ -4474,17 +4474,60 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.resize' }
-        %p ...
+        %p Resize the chart.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.resize(size)
+        %p <span class="code">size</span>&nbsp;&nbsp;<code>Object</code>
+        %p This argument should include <span class="code">width</span> and <span class="code">height</span> in pixels.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Resize to 640x480
+              chart.resize({
+              &nbsp;&nbsp;height: 640,
+              &nbsp;&nbsp;width: 480
+              });
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.flush' }
-        %p ...
+        %p Force to redraw.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.flush()
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Force to redraw
+              chart.flush();
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.destroy' }
-        %p ...
+        %p Reset the chart object and remove element and events completely.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.destroy()
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Destroy the chart
+              chart.destroy.
       %hr
 
       %br
