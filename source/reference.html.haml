@@ -250,8 +250,8 @@
           = partial :reference_menu_item, locals: { id: 'api.tooltip.show' }
           = partial :reference_menu_item, locals: { id: 'api.tooltip.hide' }
           = partial :reference_menu_item, locals: { id: 'api.zoom' }
-          = partial :reference_menu_item, locals: { id: 'api.zoom.enable' }
           = partial :reference_menu_item, locals: { id: 'api.unzoom' }
+          = partial :reference_menu_item, locals: { id: 'api.zoom.enable' }
           = partial :reference_menu_item, locals: { id: 'api.resize' }
           = partial :reference_menu_item, locals: { id: 'api.flush' }
           = partial :reference_menu_item, locals: { id: 'api.destroy' }
@@ -4412,14 +4412,65 @@
 
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'api.unzoom' }
-        %p ...
+          = partial :reference_item_link, locals: { id: 'api.zoom' }
+        %p Zoom by giving x domain.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.zoom(domain)
+        %p <span class="code">domain</span>&nbsp;&nbsp;<code>Array</code>
+        %p If <span class="code">domain</span> is given, the chart will be zoomed to the given domain. If no argument is given, the current zoomed domain will be returned.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Zoom to specified domain
+              chart.zoom([10, 20]);
+              \
+              \// Get the current zoomed domain
+              chart.zoom();
       %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'api.unzoom' }
+        %p Unzoom to the original domain.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.unzoom()
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Unzoom to the original domain
+              chart.unzoom();
+      %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.zoom.enable' }
-        %p ...
+        %p Enable and disable zooming.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.zoom.enable(enabled)
+        %p <span class="code">enabled</span>&nbsp;&nbsp;<code>Boolean</code>
+        %p If <span class="code">enabled</span> is <code>true</code>, the feature of zooming will be enabled. If <code>false</code> is given, it will be disabled.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Enable zooming
+              chart.zoom.enable(true);
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.resize' }

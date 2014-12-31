@@ -1100,12 +1100,12 @@
 </li>
 
 <li>
-<a href='#api-zoom-enable'>zoom.enable</a>
+<a href='#api-unzoom'>unzoom</a>
 
 </li>
 
 <li>
-<a href='#api-unzoom'>unzoom</a>
+<a href='#api-zoom-enable'>zoom.enable</a>
 
 </li>
 
@@ -5838,10 +5838,41 @@ chart.legend.hide();</code></pre>
 <hr>
 <section>
 <h3>
+<a href='#api-zoom'>zoom</a>
+
+</h3>
+<p>Zoom by giving x domain.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.zoom(domain)</code></pre>
+</div>
+<p><span class="code">domain</span>&nbsp;&nbsp;<code>Array</code></p>
+<p>If <span class="code">domain</span> is given, the chart will be zoomed to the given domain. If no argument is given, the current zoomed domain will be returned.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Zoom to specified domain
+chart.zoom([10, 20]);
+
+// Get the current zoomed domain
+chart.zoom();</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
 <a href='#api-unzoom'>unzoom</a>
 
 </h3>
-<p>...</p>
+<p>Unzoom to the original domain.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.unzoom()</code></pre>
+</div>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Unzoom to the original domain
+chart.unzoom();</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -5849,7 +5880,18 @@ chart.legend.hide();</code></pre>
 <a href='#api-zoom-enable'>zoom.enable</a>
 
 </h3>
-<p>...</p>
+<p>Enable and disable zooming.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.zoom.enable(enabled)</code></pre>
+</div>
+<p><span class="code">enabled</span>&nbsp;&nbsp;<code>Boolean</code></p>
+<p>If <span class="code">enabled</span> is <code>true</code>, the feature of zooming will be enabled. If <code>false</code> is given, it will be disabled.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Enable zooming
+chart.zoom.enable(true);</code></pre>
+</div>
 </section>
 <hr>
 <section>
