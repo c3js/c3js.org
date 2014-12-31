@@ -5631,7 +5631,21 @@ chart.data.axes({
 <a href='#api-x'>x</a>
 
 </h3>
-<p>...</p>
+<p>Get and set x values for the chart.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.x(x)</code></pre>
+</div>
+<p><span class="code">x</span>&nbsp;&nbsp;<code>Array</code></p>
+<p>If <span class="code">x</span> is given, x values of every target will be updated. If no argument is given, current x values will be returned as an <code>Object</code> whose keys are the target ids.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Get current x values
+chart.x();
+
+// Update x values for all targets
+chart.x([100, 200, 300, 400, ...]);</code></pre>
+</div>
 </section>
 <hr>
 <section>
@@ -5639,7 +5653,24 @@ chart.data.axes({
 <a href='#api-xs'>xs</a>
 
 </h3>
-<p>...</p>
+<p>Get and set x values for the chart.</p>
+<h5>Arguments:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>.xs(xs)</code></pre>
+</div>
+<p><span class="code">xs</span>&nbsp;&nbsp;<code>Object</code></p>
+<p>If <span class="code">xs</span> is given, specified target's x values will be updated. If no argument is given, current x values will be returned as an <code>Object</code> whose keys are the target ids.</p>
+<h5>Example:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>// Get current x values
+chart.xs();
+
+// Update x values for all targets
+chart.xs({
+&nbsp;data1: [10, 20, 30, 40, ...],
+&nbsp;data2: [100, 200, 300, 400, ...]
+});</code></pre>
+</div>
 </section>
 <hr>
 <section>

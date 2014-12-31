@@ -4198,18 +4198,58 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.x' }
-        %p ...
+        %p Get and set x values for the chart.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.x(x)
+        %p <span class="code">x</span>&nbsp;&nbsp;<code>Array</code>
+        %p If <span class="code">x</span> is given, x values of every target will be updated. If no argument is given, current x values will be returned as an <code>Object</code> whose keys are the target ids.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Get current x values
+              chart.x();
+              \
+              \// Update x values for all targets
+              chart.x([100, 200, 300, 400, ...]);
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.xs' }
-        %p ...
+        %p Get and set x values for the chart.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.xs(xs)
+        %p <span class="code">xs</span>&nbsp;&nbsp;<code>Object</code>
+        %p If <span class="code">xs</span> is given, specified target's x values will be updated. If no argument is given, current x values will be returned as an <code>Object</code> whose keys are the target ids.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Get current x values
+              chart.xs();
+              \
+              \// Update x values for all targets
+              chart.xs({
+              &nbsp;data1: [10, 20, 30, 40, ...],
+              &nbsp;data2: [100, 200, 300, 400, ...]
+              });
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.color' }
         %p ...
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.axis.labels' }
