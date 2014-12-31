@@ -240,7 +240,7 @@
           = partial :reference_menu_item, locals: { id: 'api.categories' }
           = partial :reference_menu_item, locals: { id: 'api.x' }
           = partial :reference_menu_item, locals: { id: 'api.xs' }
-          = partial :reference_menu_item, locals: { id: 'api.color' }
+          -#= partial :reference_menu_item, locals: { id: 'api.color' }
           = partial :reference_menu_item, locals: { id: 'api.axis.labels' }
           = partial :reference_menu_item, locals: { id: 'api.axis.min' }
           = partial :reference_menu_item, locals: { id: 'api.axis.max' }
@@ -4239,42 +4239,130 @@
               \
               \// Update x values for all targets
               chart.xs({
-              &nbsp;data1: [10, 20, 30, 40, ...],
-              &nbsp;data2: [100, 200, 300, 400, ...]
+              &nbsp;&nbsp;data1: [10, 20, 30, 40, ...],
+              &nbsp;&nbsp;data2: [100, 200, 300, 400, ...]
               });
       %hr
 
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'api.color' }
-        %p ...
+          = partial :reference_item_link, locals: { id: 'api.axis.labels' }
+        %p Get and set axis labels.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.axis.labels(labels)
+        %p <span class="code">labels</span>&nbsp;&nbsp;<code>Object</code>
+        %p If <span class="code">labels</span> is given, specified axis' label will be updated.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Update axis' label
+              chart.axis.labels({
+              &nbsp;&nbsp;x: 'New X Axis Label',
+              &nbsp;&nbsp;y: 'New Y Axis Label'
+              });
+        %ul
+          %li
+            %a( href="/samples/api_axis_label.html" ) Update Axis Label
       %hr
 
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'api.axis.labels' }
-        %p ...
-      %hr
-      %section
-        %h3
           = partial :reference_item_link, locals: { id: 'api.axis.min' }
-        %p ...
+        %p Get and set axis min value.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.axis.min(min)
+        %p <span class="code">min</span>&nbsp;&nbsp;<code>Object</code>
+        %p If <span class="code">min</span> is given, specified axis' min value will be updated. If no argument is given, the current min values for each axis will be returned.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Update axis' min
+              chart.axis.min({
+              &nbsp;&nbsp;x: -10,
+              &nbsp;&nbsp;y: 1000,
+              &nbsp;&nbsp;y2: 100
+              });
+        %ul
+          %li
+            %a( href="/samples/api_axis_range.html" ) Update Axis Range
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.axis.max' }
-        %p ...
+        %p Get and set axis max value.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.axis.max(max)
+        %p <span class="code">max</span>&nbsp;&nbsp;<code>Object</code>
+        %p If <span class="code">max</span> is given, specified axis' max value will be updated. If no argument is given, the current max values for each axis will be returned.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Update axis' max
+              chart.axis.max({
+              &nbsp;&nbsp;x: 100,
+              &nbsp;&nbsp;y: 1000,
+              &nbsp;&nbsp;y2: 10000
+              });
+        %ul
+          %li
+            %a( href="/samples/api_axis_range.html" ) Update Axis Range
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.axis.range' }
-        %p ...
+        %p Get and set axis min and max value.
+        %h5 Arguments:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \.axis.range(range)
+        %p <span class="code">range</span>&nbsp;&nbsp;<code>Object</code>
+        %p If <span class="code">range</span> is given, specified axis' min and max value will be updated. If no argument is given, the current min and max values for each axis will be returned.
+
+        %h5 Example:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              \// Update axis' min and max values
+              chart.axis.range({
+              &nbsp;&nbsp;min: {
+              &nbsp;&nbsp;&nbsp;&nbsp;x: -10,
+              &nbsp;&nbsp;&nbsp;&nbsp;y: -1000,
+              &nbsp;&nbsp;&nbsp;&nbsp;y2: -10000
+              &nbsp;&nbsp;},
+              &nbsp;&nbsp;max: {
+              &nbsp;&nbsp;&nbsp;&nbsp;x: 100,
+              &nbsp;&nbsp;&nbsp;&nbsp;y: 1000,
+              &nbsp;&nbsp;&nbsp;&nbsp;y2: 10000
+              &nbsp;&nbsp;},
+              });
+        %ul
+          %li
+            %a( href="/samples/api_axis_range.html" ) Update Axis Range
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.legend.show' }
-        %p ...
       %hr
+
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.legend.hide' }
