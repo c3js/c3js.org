@@ -49,9 +49,6 @@ footer p {
   z-index: 100;
   background-color: #fdfdfd;
 }
-.container.sidemenu .column-menu {
-  min-width: 270px;
-}
 @media only screen and (min-width: 40.063em) {
 .container.sidemenu .column-menu {
   position: fixed;
@@ -59,11 +56,14 @@ footer p {
   top: 60px;
   bottom: 0;
   padding-bottom: 60px;
+  width: 280px;
 }
 .container.sidemenu .column-content {
-  padding-left: 40px;
+  padding-left: 10px;
   padding-top: 20px;
   padding-bottom: 60px;
+  margin-left: 280px;
+  float: none;
 }
 }
 .container.sidemenu .column-menu .side-bar {
