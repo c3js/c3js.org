@@ -19,6 +19,7 @@
           = partial :reference_menu_item, locals: { id: 'interaction.enabled' }
           = partial :reference_menu_item, locals: { id: 'transition.duration' }
           = partial :reference_menu_item, locals: { id: 'oninit' }
+          = partial :reference_menu_item, locals: { id: 'onrendered' }
           = partial :reference_menu_item, locals: { id: 'onmouseover' }
           = partial :reference_menu_item, locals: { id: 'onmouseout' }
           = partial :reference_menu_item, locals: { id: 'onresize' }
@@ -54,14 +55,13 @@
           = partial :reference_menu_item, locals: { id: 'data.selection.enabled' }
           = partial :reference_menu_item, locals: { id: 'data.selection.grouped' }
           = partial :reference_menu_item, locals: { id: 'data.selection.multiple' }
+          = partial :reference_menu_item, locals: { id: 'data.selection.draggable' }
           = partial :reference_menu_item, locals: { id: 'data.selection.isselectable' }
           = partial :reference_menu_item, locals: { id: 'data.onclick' }
           = partial :reference_menu_item, locals: { id: 'data.onmouseover' }
           = partial :reference_menu_item, locals: { id: 'data.onmouseout' }
           = partial :reference_menu_item, locals: { id: 'data.onselected' }
           = partial :reference_menu_item, locals: { id: 'data.onunselected' }
-          = partial :reference_menu_item, locals: { id: 'data.ondragstart' }
-          = partial :reference_menu_item, locals: { id: 'data.ondragend' }
 
           %li Axis
           = partial :reference_menu_item, locals: { id: 'axis.rotated' }
@@ -142,6 +142,7 @@
           = partial :reference_menu_item, locals: { id: 'tooltip.format.title' }
           = partial :reference_menu_item, locals: { id: 'tooltip.format.name' }
           = partial :reference_menu_item, locals: { id: 'tooltip.format.value' }
+          = partial :reference_menu_item, locals: { id: 'tooltip.position' }
           = partial :reference_menu_item, locals: { id: 'tooltip.contents' }
           -#= partial :reference_menu_item, locals: { id: 'tooltip.init.show' }
           -#= partial :reference_menu_item, locals: { id: 'tooltip.init.x' }
@@ -535,6 +536,19 @@
           %pre
             %code.html.javascript
               oninit: function () { ... }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'onrendered' }
+        %p Set a callback which is executed when the chart is rendered. Basically, this callback will be called in each time when the chart is redrawed.
+        %h5 Default:
+        <code>function () {}</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              onrendered: function () { ... }
       %hr
 
       %section
@@ -1188,6 +1202,27 @@
               data: {
               &nbsp;&nbsp;selection: {
               &nbsp;&nbsp;&nbsp;&nbsp;multiple: true
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'data.selection.draggable' }
+        %p Enable to select data points by dragging.
+        %br
+        %p If this option set <code>true</code>, data points can be selected by dragging.
+        %h5 Note:
+        %p If this option set <code>true</code>, scrolling on the chart will be disabled because dragging event will handle the event.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              data: {
+              &nbsp;&nbsp;selection: {
+              &nbsp;&nbsp;&nbsp;&nbsp;draggable: true
               &nbsp;&nbsp;}
               }
       %hr
@@ -2663,6 +2698,7 @@
         %p Set format for the value of each data in tooltip.
         %br
         %p Specified function receives <span class="code">name</span>, <span class="code">ratio</span>, <span class="code">id</span> and <span class="code">index</span> of the data point to show. <span class="code">ratio</span> will be <code>undefined</code> if the chart is not donut/pie/gauge.
+        %p If <code>undefined</code> returned, the row of that value will be skipped.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2678,6 +2714,29 @@
         %ul
           %li
             %a( href="/samples/tooltip_format.html" ) Tooltip Format
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'tooltip.position' }
+        %p Set custom position for the tooltip.
+        %br
+        %p This option can be used to modify the tooltip position by returning <code>object</code> that has <span class="code">top</span> and <span class="code">left</span>.
+        %h5 Default:
+        <code>undefined</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              tooltip: {
+              &nbsp;&nbsp;position: function (data, width, height, element) {
+              &nbsp;&nbsp;&nbsp;&nbsp;return {top: 0, left: 0}
+              &nbsp;&nbsp;}
+              }
+        %h5 Reference:
+        %ul
+          %li
+            %a( href="https://github.com/masayuki0812/c3/pull/833" ) Introduce tooltip.position callback function #833
       %hr
 
       %section
@@ -4520,13 +4579,15 @@
           %pre
             %code.html.javascript
               \.destroy()
-
         %h5 Example:
         %div.sourcecode
           %pre
             %code.html.javascript
               \// Destroy the chart
-              chart.destroy.
+              chart.destroy();
+              \
+              \// If you have a reference to the chart make sure to call destroy in the following manner
+              chart = chart.destroy();
       %hr
 
       %br

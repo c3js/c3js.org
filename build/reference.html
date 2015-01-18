@@ -133,6 +133,11 @@
 </li>
 
 <li>
+<a href='#onrendered'>onrendered</a>
+
+</li>
+
+<li>
 <a href='#onmouseover'>onmouseover</a>
 
 </li>
@@ -289,6 +294,11 @@
 </li>
 
 <li>
+<a href='#data-selection-draggable'>data.selection.draggable</a>
+
+</li>
+
+<li>
 <a href='#data-selection-isselectable'>data.selection.isselectable</a>
 
 </li>
@@ -315,16 +325,6 @@
 
 <li>
 <a href='#data-onunselected'>data.onunselected</a>
-
-</li>
-
-<li>
-<a href='#data-ondragstart'>data.ondragstart</a>
-
-</li>
-
-<li>
-<a href='#data-ondragend'>data.ondragend</a>
 
 </li>
 
@@ -675,6 +675,11 @@
 
 <li>
 <a href='#tooltip-format-value'>tooltip.format.value</a>
+
+</li>
+
+<li>
+<a href='#tooltip-position'>tooltip.position</a>
 
 </li>
 
@@ -1692,6 +1697,20 @@ bindto: d3.select('#myContainer')</code></pre>
 <hr>
 <section>
 <h3>
+<a href='#onrendered'>onrendered</a>
+
+</h3>
+<p>Set a callback which is executed when the chart is rendered. Basically, this callback will be called in each time when the chart is redrawed.</p>
+<h5>Default:</h5>
+<code>function () {}</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>onrendered: function () { ... }</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
 <a href='#onmouseover'>onmouseover</a>
 
 </h3>
@@ -2416,6 +2435,28 @@ bindto: d3.select('#myContainer')</code></pre>
 <pre><code class='html javascript'>data: {
 &nbsp;&nbsp;selection: {
 &nbsp;&nbsp;&nbsp;&nbsp;multiple: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#data-selection-draggable'>data.selection.draggable</a>
+
+</h3>
+<p>Enable to select data points by dragging.</p>
+<br>
+<p>If this option set <code>true</code>, data points can be selected by dragging.</p>
+<h5>Note:</h5>
+<p>If this option set <code>true</code>, scrolling on the chart will be disabled because dragging event will handle the event.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>data: {
+&nbsp;&nbsp;selection: {
+&nbsp;&nbsp;&nbsp;&nbsp;draggable: true
 &nbsp;&nbsp;}
 }</code></pre>
 </div>
@@ -4045,6 +4086,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <p>Set format for the value of each data in tooltip.</p>
 <br>
 <p>Specified function receives <span class="code">name</span>, <span class="code">ratio</span>, <span class="code">id</span> and <span class="code">index</span> of the data point to show. <span class="code">ratio</span> will be <code>undefined</code> if the chart is not donut/pie/gauge.</p>
+<p>If <code>undefined</code> returned, the row of that value will be skipped.</p>
 <h5>Default:</h5>
 <code>undefined</code>
 <h5>Format:</h5>
@@ -4059,6 +4101,32 @@ bindto: d3.select('#myContainer')</code></pre>
 <ul>
 <li>
 <a href='/samples/tooltip_format.html'>Tooltip Format</a>
+</li>
+</ul>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#tooltip-position'>tooltip.position</a>
+
+</h3>
+<p>Set custom position for the tooltip.</p>
+<br>
+<p>This option can be used to modify the tooltip position by returning <code>object</code> that has <span class="code">top</span> and <span class="code">left</span>.</p>
+<h5>Default:</h5>
+<code>undefined</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>tooltip: {
+&nbsp;&nbsp;position: function (data, width, height, element) {
+&nbsp;&nbsp;&nbsp;&nbsp;return {top: 0, left: 0}
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+<h5>Reference:</h5>
+<ul>
+<li>
+<a href='https://github.com/masayuki0812/c3/pull/833'>Introduce tooltip.position callback function #833</a>
 </li>
 </ul>
 </section>
@@ -5945,7 +6013,10 @@ chart.flush();</code></pre>
 <h5>Example:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>// Destroy the chart
-chart.destroy.</code></pre>
+chart.destroy();
+
+// If you have a reference to the chart make sure to call destroy in the following manner
+chart = chart.destroy();</code></pre>
 </div>
 </section>
 <hr>
@@ -6486,7 +6557,7 @@ chart.destroy.</code></pre>
 <script src="/js/foundation.min-1dfe8110.js" type="text/javascript"></script>
 <script src="/js/highlight.pack-4af5004d.js" type="text/javascript"></script>
 <script src="/js/d3.min-3bff8220.js" type="text/javascript"></script>
-<script src="/js/c3.min-78d63552.js" type="text/javascript"></script>
+<script src="/js/c3.min-3c814909.js" type="text/javascript"></script>
 <script>
   hljs.initHighlightingOnLoad();
   $(document).foundation();
