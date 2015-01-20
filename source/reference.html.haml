@@ -91,6 +91,7 @@
           = partial :reference_menu_item, locals: { id: 'axis.y.inner' }
           = partial :reference_menu_item, locals: { id: 'axis.y.max' }
           = partial :reference_menu_item, locals: { id: 'axis.y.min' }
+          = partial :reference_menu_item, locals: { id: 'axis.y.inverted' }
           = partial :reference_menu_item, locals: { id: 'axis.y.center' }
           = partial :reference_menu_item, locals: { id: 'axis.y.label' }
           = partial :reference_menu_item, locals: { id: 'axis.y.tick.format' }
@@ -105,6 +106,7 @@
           = partial :reference_menu_item, locals: { id: 'axis.y2.inner' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.max' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.min' }
+          = partial :reference_menu_item, locals: { id: 'axis.y2.inverted' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.center' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.label' }
           = partial :reference_menu_item, locals: { id: 'axis.y2.tick.format' }
@@ -510,6 +512,8 @@
         %h3
           = partial :reference_item_link, locals: { id: 'transition.duration' }
         %p Set duration of transition (in milliseconds) for chart animation.
+        %h5 Note:
+        %p If <span class="code">0</span> or <span class="code">null</span> set, transition will be skipped. So, this makes initial rendering faster especially in case you have a lot of data.
         %h5 Default:
         <code>350</code>
         %h5 Format:
@@ -1887,6 +1891,25 @@
 
       %section
         %h3
+          = partial :reference_item_link, locals: { id: 'axis.y.inverted' }
+        %p Change the direction of y axis.
+        %br
+        %p If <code>true</code> set, the direction will be from the top to the bottom.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y: {
+              &nbsp;&nbsp;&nbsp;&nbsp;inverted: true
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
           = partial :reference_item_link, locals: { id: 'axis.y.center' }
         %p Set center value of y axis.
         %h5 Default:
@@ -2144,6 +2167,25 @@
               axis: {
               &nbsp;&nbsp;y2: {
               &nbsp;&nbsp;&nbsp;&nbsp;min: -1000
+              &nbsp;&nbsp;}
+              }
+      %hr
+
+      %section
+        %h3
+          = partial :reference_item_link, locals: { id: 'axis.y2.inverted' }
+        %p Change the direction of y2 axis.
+        %br
+        %p If <code>true</code> set, the direction will be from the top to the bottom.
+        %h5 Default:
+        <code>false</code>
+        %h5 Format:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              axis: {
+              &nbsp;&nbsp;y2: {
+              &nbsp;&nbsp;&nbsp;&nbsp;inverted: true
               &nbsp;&nbsp;}
               }
       %hr

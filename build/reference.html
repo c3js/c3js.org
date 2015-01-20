@@ -465,6 +465,11 @@
 </li>
 
 <li>
+<a href='#axis-y-inverted'>axis.y.inverted</a>
+
+</li>
+
+<li>
 <a href='#axis-y-center'>axis.y.center</a>
 
 </li>
@@ -531,6 +536,11 @@
 
 <li>
 <a href='#axis-y2-min'>axis.y2.min</a>
+
+</li>
+
+<li>
+<a href='#axis-y2-inverted'>axis.y2.inverted</a>
 
 </li>
 
@@ -1665,6 +1675,8 @@ bindto: d3.select('#myContainer')</code></pre>
 
 </h3>
 <p>Set duration of transition (in milliseconds) for chart animation.</p>
+<h5>Note:</h5>
+<p>If <span class="code">0</span> or <span class="code">null</span> set, transition will be skipped. So, this makes initial rendering faster especially in case you have a lot of data.</p>
 <h5>Default:</h5>
 <code>350</code>
 <h5>Format:</h5>
@@ -3195,6 +3207,26 @@ bindto: d3.select('#myContainer')</code></pre>
 <hr>
 <section>
 <h3>
+<a href='#axis-y-inverted'>axis.y.inverted</a>
+
+</h3>
+<p>Change the direction of y axis.</p>
+<br>
+<p>If <code>true</code> set, the direction will be from the top to the bottom.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y: {
+&nbsp;&nbsp;&nbsp;&nbsp;inverted: true
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
 <a href='#axis-y-center'>axis.y.center</a>
 
 </h3>
@@ -3473,6 +3505,26 @@ bindto: d3.select('#myContainer')</code></pre>
 <pre><code class='html javascript'>axis: {
 &nbsp;&nbsp;y2: {
 &nbsp;&nbsp;&nbsp;&nbsp;min: -1000
+&nbsp;&nbsp;}
+}</code></pre>
+</div>
+</section>
+<hr>
+<section>
+<h3>
+<a href='#axis-y2-inverted'>axis.y2.inverted</a>
+
+</h3>
+<p>Change the direction of y2 axis.</p>
+<br>
+<p>If <code>true</code> set, the direction will be from the top to the bottom.</p>
+<h5>Default:</h5>
+<code>false</code>
+<h5>Format:</h5>
+<div class='sourcecode'>
+<pre><code class='html javascript'>axis: {
+&nbsp;&nbsp;y2: {
+&nbsp;&nbsp;&nbsp;&nbsp;inverted: true
 &nbsp;&nbsp;}
 }</code></pre>
 </div>
