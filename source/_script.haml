@@ -10,12 +10,25 @@
 
 :javascript
   $(function(){
-    $('a[href^=#]').click(function(){
-      var href= $(this).attr("href"),
-          target = $('.column-content a[href^=' + href + ']'), position;
-      if (!target) { return false; }
+    var scrollTarget = function(href){
+      var target = $('.column-content a[href^=' + href + ']'),
+        position;
+
+      if (!target || !target.length){
+        return;
+      }
+
       position = target.offset().top - 60;
-      $("html, body").animate({scrollTop:position}, 350, "swing");
-      return false;
+      $('body').animate({
+        scrollTop: position
+      }, 350, 'swing');
+    }
+
+    $('a[href^=#]').click(function(){
+      scrollTarget($(this).attr('href'));
     });
+
+    $(window).on('hashchange', function(){
+      scrollTarget(window.location.hash);
+    }).trigger('hashchange');
   });
