@@ -339,6 +339,8 @@
         %p The CSS selector or the element which the chart will be set to. D3 selection object can be specified. If other chart is set already, it will be replaced with the new one (only one chart can be set in one element).
         %br
         %p If this option is not specified, the chart will be generated but not be set. Instead, we can access the element by <span class="code">chart.element</span> and set it by ourselves.
+        %h5 Note:
+        %p When chart is not binded, c3 starts observing if <span class="code">chart.element</span> is binded by <span class="code">MutationObserver</span>. In this case, polyfill is required in IE9 and IE10 becuase they do not support <span class="code">MutationObserver</span>. On the other hand, if chart always will be binded, polyfill will not be required because <span class="code">MutationObserver</span> will never be called.
         %h5 Default:
         <code>#chart</code>
         %h5 Format:
