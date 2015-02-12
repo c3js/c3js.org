@@ -98,7 +98,7 @@
 <hr>
 <section>
 <h3>
-<a href='#setup' name='setup'>1. Setup</a>
+<a href='#setup'>1. Setup</a>
 </h3>
 <p>Download the latest version here:</p>
 <ul>
@@ -114,7 +114,7 @@
 <hr>
 <section>
 <h3>
-<a href='#generate' name='generate'>2. Generate Chart</a>
+<a href='#generate'>2. Generate Chart</a>
 </h3>
 <p>C3 generates a chart by calling <span class="code">generate()</span> with the argument object, and an element including the chart will insert into the element specified as a selector in that argument as <span class="code">bindto</span>.</p>
 <p>Prepare the element to bind the chart:</p>
@@ -141,7 +141,7 @@
 <hr>
 <section>
 <h3>
-<a href='#customize' name='customize'>3. Customize Chart</a>
+<a href='#customize'>3. Customize Chart</a>
 </h3>
 <p>The chart can be customize by giving some options when generating. We will introduce some of them here.</p>
 <h4>1. Additional Axis</h4>
@@ -181,7 +181,7 @@
 <hr>
 <section>
 <h3>
-<a href='#api' name='api'>4. Use APIs</a>
+<a href='#api'>4. Use APIs</a>
 </h3>
 <p>By using APIs, you can update the chart after it's been rendered. We will introduce some of APIs here. APIs can be called through the object returned from <span class="code">generate()</span>.</p>
 <h4>1. Load Data</h4>
@@ -218,7 +218,7 @@
 <hr>
 <section>
 <h3>
-<a href='#style' name='style'>5. Customize Style</a>
+<a href='#style'>5. Customize Style</a>
 </h3>
 <p>C3 give some classes for each element when generating. So, you can change the style of the elements by using those classes.</p>
 <h4>1. Line style</h4>
@@ -233,7 +233,7 @@
 <hr>
 <section>
 <h3>
-<a href='#more' name='more'>6. And More..</a>
+<a href='#more'>6. And More..</a>
 </h3>
 <p>Please check the <a href="/examples.html">examples</a> and the <a href="https://github.com/masayuki0812/c3/issues?state=open">issues</a> on github for more information. Sorry for the poor documentation. We're working on now and please give me some time. Thank you.</p>
 </section>
@@ -254,26 +254,28 @@
   hljs.initHighlightingOnLoad();
   $(document).foundation();
 </script>
+
 <script>
   $(function(){
     function scrollToHash() {
       var hash = document.location.hash,
-          target = $('.column-content a[href^=' + hash + ']'), position;
+          target = $('.column-content a[href^=' + hash + ']'),
+          position;
       if (target.length) {
         position = target.offset().top - 60;
         $("html, body").animate({scrollTop:position}, 250, "swing");
       }
-      return false;
     }
+    $(window).on('hashchange', scrollToHash);
   
     // When clicked
     $('a[href^=#]').click(function(){
       document.location.hash = $(this).attr("href");
-      return scrollToHash();
+      return false;
     });
   
     // When loaded
-    scrollToHash();
+    $(window).trigger('hashchange');
   });
 </script>
 

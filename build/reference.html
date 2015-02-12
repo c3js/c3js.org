@@ -6616,26 +6616,28 @@ chart = chart.destroy();</code></pre>
   hljs.initHighlightingOnLoad();
   $(document).foundation();
 </script>
+
 <script>
   $(function(){
     function scrollToHash() {
       var hash = document.location.hash,
-          target = $('.column-content a[href^=' + hash + ']'), position;
+          target = $('.column-content a[href^=' + hash + ']'),
+          position;
       if (target.length) {
         position = target.offset().top - 60;
         $("html, body").animate({scrollTop:position}, 250, "swing");
       }
-      return false;
     }
+    $(window).on('hashchange', scrollToHash);
   
     // When clicked
     $('a[href^=#]').click(function(){
       document.location.hash = $(this).attr("href");
-      return scrollToHash();
+      return false;
     });
   
     // When loaded
-    scrollToHash();
+    $(window).trigger('hashchange');
   });
 </script>
 

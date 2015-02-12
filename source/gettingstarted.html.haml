@@ -26,7 +26,7 @@
 
       %section
         %h3
-          %a( href="#setup" name="setup" ) 1. Setup
+          %a( href="#setup" ) 1. Setup
         %p Download the latest version here:
         %ul
           %li <a href="https://github.com/masayuki0812/c3/releases/latest" target="_blank">https://github.com/masayuki0812/c3/releases/latest</a>
@@ -51,7 +51,7 @@
 
       %section
         %h3
-          %a( href="#generate" name="generate" ) 2. Generate Chart
+          %a( href="#generate" ) 2. Generate Chart
         %p C3 generates a chart by calling <span class="code">generate()</span> with the argument object, and an element including the chart will insert into the element specified as a selector in that argument as <span class="code">bindto</span>.
 
         %p Prepare the element to bind the chart:
@@ -110,7 +110,7 @@
 
       %section
         %h3
-          %a( href="#customize" name="customize" ) 3. Customize Chart
+          %a( href="#customize" ) 3. Customize Chart
         %p The chart can be customize by giving some options when generating. We will introduce some of them here.
 
         %h4 1. Additional Axis
@@ -278,7 +278,7 @@
 
       %section
         %h3
-          %a( href="#api" name="api" ) 4. Use APIs
+          %a( href="#api" ) 4. Use APIs
         %p By using APIs, you can update the chart after it's been rendered. We will introduce some of APIs here. APIs can be called through the object returned from <span class="code">generate()</span>.
 
         %h4 1. Load Data
@@ -352,7 +352,7 @@
 
       %section
         %h3
-          %a( href="#style" name="style" ) 5. Customize Style
+          %a( href="#style" ) 5. Customize Style
         %p C3 give some classes for each element when generating. So, you can change the style of the elements by using those classes.
         %h4 1. Line style
         %p The lines have <span class="code">c3-line-[id]</span> class, so this class can be used to define the style in css as follows:
@@ -374,10 +374,11 @@
 
       %section
         %h3
-          %a( href="#more" name="more" ) 6. And More..
+          %a( href="#more" ) 6. And More..
         %p Please check the <a href="/examples.html">examples</a> and the <a href="https://github.com/masayuki0812/c3/issues?state=open">issues</a> on github for more information. Sorry for the poor documentation. We're working on now and please give me some time. Thank you.
 
   = partial :footer
 
 = partial :script
+= partial :script_scroll
 = javascript_include_tag 'gettingstarted.js'
