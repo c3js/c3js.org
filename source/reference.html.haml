@@ -2394,7 +2394,7 @@
           = partial :reference_item_link, locals: { id: 'grid.x.lines' }
         %p Show additional grid lines along x axis.
         %br
-        %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span> and <span class="code">class</span>. <span class="code">text</span> and <span class="code">class</span> are optional.
+        %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span>, <span class="code">position</span> and <span class="code">class</span>. <span class="code">text</span>, <span class="code">position</span> and <span class="code">class</span> are optional. For <span class="code">position</span>, <span class="code">start</span>, <span class="code">middle</span> and <span class="code">end</span> (default) are available.
         %p If x axis is category axis, <span class="code">value</span> can be category name. If x axis is timeseries axis, <span class="code">value</span> can be date string, Date object and unixtime integer.
         %h5 Default:
         <code>[]</code>
@@ -2407,6 +2407,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;lines: [
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 2, text: 'Label on 2'},
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 5, text: 'Label on 5', class: 'label-5'}
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 6, text: 'Label on 6', position: 'start'}
               &nbsp;&nbsp;&nbsp;&nbsp;]
               &nbsp;&nbsp;}
               }
@@ -2443,7 +2444,7 @@
           = partial :reference_item_link, locals: { id: 'grid.y.lines' }
         %p Show additional grid lines along y axis.
         %br
-        %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span> and <span class="code">class</span>.
+        %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span>, <span class="code">position</span> and <span class="code">class</span>.
         %h5 Default:
         <code>[]</code>
         %h5 Format:
@@ -2455,6 +2456,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;lines: [
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 100, text: 'Label on 100'},
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 200, text: 'Label on 200', class: 'label-200'}
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 300, text: 'Label on 300', position: 'middle'}
               &nbsp;&nbsp;&nbsp;&nbsp;]
               &nbsp;&nbsp;}
               }
