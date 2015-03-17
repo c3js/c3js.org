@@ -13,7 +13,7 @@ var chart = c3.generate({
     },
     regions: [
         {start: '2014-01-05', end: '2014-01-10'},
-        {start: new Date('2014-01-15 00:00:00'), end: new Date('2014-01-20 00:00:00')},
+        {start: new Date('2014/01/15'), end: new Date('20 Jan 2014')},
         {start: 1390575600000, end: 1391007600000} // start => 2014-01-25 00:00:00, end => 2014-01-30 00:00:00
     ]
 });

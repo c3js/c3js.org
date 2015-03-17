@@ -89,7 +89,11 @@ var chart = c3.generate({
     },
     grid: {
         y: {
-            lines: [{value: 50, text: 'Lable 50'}, {value: 1300, text: 'Lable 1300', axis: 'y2'}]
+            lines: [
+                {value: 50, text: 'Lable 50 for y'},
+                {value: 1300, text: 'Lable 1300 for y2', axis: 'y2', position: 'start'},
+                {value: 350, text: 'Lable 350 for y', position: 'middle'}
+            ]
         }
     }
 });
@@ -106,7 +110,7 @@ var chart = c3.generate({
 <script src="/js/foundation.min-1dfe8110.js" type="text/javascript"></script>
 <script src="/js/highlight.pack-4af5004d.js" type="text/javascript"></script>
 <script src="/js/d3-3.5.0.min-3b564392.js" type="text/javascript"></script>
-<script src="/js/c3.min-3c814909.js" type="text/javascript"></script>
+<script src="/js/c3.min-12912fb6.js" type="text/javascript"></script>
 <script>
   hljs.initHighlightingOnLoad();
   $(document).foundation();
@@ -137,7 +141,7 @@ var chart = c3.generate({
   editor.getSession().setMode("ace/mode/javascript");
 </script>
 
-<script src="/js/samples/grid_y_lines-8fc2942e.js" type="text/javascript"></script>
+<script src="/js/samples/grid_y_lines-18e3686d.js" type="text/javascript"></script>
 
 
 </body>

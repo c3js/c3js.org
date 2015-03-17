@@ -12,9 +12,8 @@ var chart = c3.generate({
         labels: {
 //            format: function (v, id, i, j) { return "Default Format"; },
             format: {
-                y: d3.format('$'),
-//                y: function (v, id, i, j) { return "Y Format"; },
-//                y2: function (v, id, i, j) { return "Y2 Format"; }
+                data1: d3.format('$'),
+//                data1: function (v, id, i, j) { return "Format for data1"; },
             }
         }
     },
