@@ -690,7 +690,11 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.mimeType' }
-        %p Used if loading JSON via data.url.
+        %p Used if loading JSON via data.url:
+        %div.sourcecode
+          %pre
+            %code.html.javascript
+              {data: {mimeType: 'json'}}
       %hr
 
       %section
