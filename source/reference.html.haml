@@ -359,7 +359,7 @@
           = partial :reference_item_link, locals: { id: 'size.width' }
         %p The desired width of the chart element.
         %br
-        %p If this option is not specified, the width of the chart will be calculated by the size of the parent element it's appended to.
+        %p If this option is not specified, the width of the chart will be calculated by the size of the parent element it is appended to.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -370,7 +370,7 @@
               &nbsp;&nbsp;width: 640
               }
         %h5 Note:
-        %p This option should be specified if possible because it can improve its performance because some size calculations will be skipped by an explicit value.
+        %p This option should be specified if possible. Specifying this option can improve performance due to some size calculations being skipped because of the explicit value.
       %hr
 
       %section
@@ -378,7 +378,7 @@
           = partial :reference_item_link, locals: { id: 'size.height' }
         %p The desired height of the chart element.
         %br
-        %p If this option is not specified, the height of the chart will be calculated by the size of the parent element it's appended to.
+        %p If this option is not specified, the height of the chart will be calculated by the size of the parent element it is appended to.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -465,13 +465,13 @@
           %li
             %a( href="/samples/options_padding.html" ) Padding for the chart
         %h5 Note:
-        %p This option should be specified if possible because it can improve its performance because some size calculations will be skipped by an explicit value.
+        %p This option should be specified if possible. Specifying this option can improve performance due to some size calculations being skipped because of the explicit value.
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'color.pattern' }
-        %p Set custom color pattern.
+        %p Set a custom color pattern.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -479,7 +479,7 @@
           %pre
             %code.html.javascript
               color: {
-              &nbsp;&nbsp;pattern: ['#1f77b4', '#aec7e8', ...]
+              &nbsp;&nbsp;pattern: ['#1f77b4', '#aec7e8', TODO]
               }
         %h5 Example:
         %ul
@@ -490,13 +490,13 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'color.threshold' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'interaction.enabled' }
-        %p Indicate if the chart should have interactions.
+        %p Indicates whether the chart should have interactions.
         %br
         %p If <code>false</code> is set, all of interactions (showing/hiding tooltip, selection, mouse events, etc) will be disabled.
         %h5 Default:
@@ -515,7 +515,7 @@
           = partial :reference_item_link, locals: { id: 'transition.duration' }
         %p Set duration of transition (in milliseconds) for chart animation.
         %h5 Note:
-        %p If <span class="code">0</span> or <span class="code">null</span> set, transition will be skipped. So, this makes initial rendering faster especially in case you have a lot of data.
+        %p If <span class="code">0</span> or <span class="code">null</span> set, transition will be skipped. This makes initial rendering faster especially if your chart has a large amount of data.
         %h5 Default:
         <code>350</code>
         %h5 Format:
@@ -541,78 +541,80 @@
         %div.sourcecode
           %pre
             %code.html.javascript
-              oninit: function () { ... }
+              oninit: function () { TODO }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onrendered' }
-        %p Set a callback which is executed when the chart is rendered. Basically, this callback will be called in each time when the chart is redrawed.
+        %p Set a callback which is executed when the chart is rendered. Basically, this callback will be called each time that the chart is redrawn.
         %h5 Default:
         <code>function () {}</code>
         %h5 Format:
         %div.sourcecode
           %pre
             %code.html.javascript
-              onrendered: function () { ... }
+              onrendered: function () { TODO }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onmouseover' }
-        %p Set a callback to execute when mouse enters the chart.
+        %p Set a callback to execute when the mouse enters the chart.
         %h5 Default:
         <code>function () {}</code>
         %h5 Format:
         %div.sourcecode
           %pre
             %code.html.javascript
-              onmouseover: function () { ... }
+              onmouseover: function () { TODO }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onmouseout' }
-        %p Set a callback to execute when mouse leaves the chart.
+        %p Set a callback to execute when the mouse leaves the chart.
         %h5 Default:
         <code>function () {}</code>
         %h5 Format:
         %div.sourcecode
           %pre
             %code.html.javascript
-              onmouseout: function () { ... }
+              onmouseout: function () { TODO }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onresize' }
-        %p Set a callback to execute when user resizes the screen.
+        %p Set a callback to execute when the user resizes the screen.
         %h5 Default:
         <code>function () {}</code>
         %h5 Format:
         %div.sourcecode
           %pre
             %code.html.javascript
-              onresize: function () { ... }
+              onresize: function () { TODO }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'onresized' }
-        %p Set a callback to execute when screen resize finished.
+        %p Set a callback to execute when the screen resize operation finished.
         %h5 Default:
         <code>function () {}</code>
         %h5 Format:
         %div.sourcecode
           %pre
             %code.html.javascript
-              onresized: function () { ... }
+              onresized: function () { TODO }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.url' }
-        %p Load a CSV or JSON file from a URL. Note that this will not work if loading via the "file://" protocol as most browsers with block XMLHTTPRequests.
+        %p Load a CSV or JSON file from a URL.
+        %h5 Note:
+        %p This will not work if loading via the "file://" protocol as most browsers with block XMLHTTPRequests.
         %h5 Format:
         %div.sourcecode
           %pre
@@ -627,7 +629,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.json' }
-        %p Parse a JSON object for data. See also data.keys.
+        %p Parse a JSON object for data. Also see <a href="#data-keys">data.keys</a>.
         %h5 Format:
         %div.sourcecode
           %pre
@@ -656,7 +658,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.rows' }
-        %p Load data from a multidimensional array, with the first element containing the data names, the following containing related data in that order.
+        %p Load data from a multidimensional array with the first element containing the data names and the following elements containing the related data.
         %h5 Format:
         %div.sourcecode
           %pre
@@ -675,7 +677,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.columns' }
-        %p Load data from a multidimensional array, with each element containing an array consisting of a datum name and associated data values.
+        %p Load data from a multidimensional array with each element containing an array consisting of a data name and the related data values.
         %h5 Format:
         %div.sourcecode
           %pre
@@ -690,7 +692,8 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.mimeType' }
-        %p Used if loading JSON via data.url:
+        %p Used if loading JSON via data.url.
+        %h5 Format:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -700,7 +703,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.keys' }
-        %p Choose which JSON object keys correspond to desired data.
+        %p Choose which JSON object keys correspond to the desired data.
         %h5 Format:
         %div.sourcecode
           %pre
@@ -731,7 +734,7 @@
           = partial :reference_item_link, locals: { id: 'data.x' }
         %p Specify the key of x values in the data.
         %br
-        %p We can show the data with non-index x values by this option. This option is required when the type of x axis is timeseries. If this option is set on category axis, the values of the data on the key will be used for category names.
+        %p We can show the data with non-index x values by this option. This option is required when the x axis is of type timeseries. If this option is set on category axis, the values of the data on the key will be used for category names.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -741,7 +744,7 @@
               data: {
               &nbsp;&nbsp;x: 'date'
               }
-        %h5 Example:
+        %h5 Examples:
         %ul
           %li
             %a( href="/samples/simple_xy.html") XY Chart
@@ -757,6 +760,8 @@
         %p Specify the keys of the x values for each data.
         %br
         %p This option can be used if we want to show the data that has different x values.
+        %h5 Note:
+        %p <a href="#data-x">data.x</a> should be used if the all of data have same x values.
         %h5 Default:
         <code>{}</code>
         %h5 Format:
@@ -773,14 +778,12 @@
         %ul
           %li
             %a( href="/samples/simple_xy_multiple.html" ) Multiple XY Chart
-        %h5 Note:
-        %p <a href="#data-x">data.x</a> should be used if the all of data have same x values.
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.xFormat' }
-        %p Set a format to parse string specifed as x.
+        %p Set a format to parse the string specifed as x.
         %h5 Default:
         <code>%Y-%m-%d</code>
         %h5 Format:
@@ -799,19 +802,19 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.xLocaltime' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.xSort' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.names' }
-        %p Set custom data name.
+        %p Set a custom data name.
         %h5 Default:
         <code>{}</code>
         %h5 Format:
@@ -833,7 +836,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.classes' }
-        %p Set custom data class.
+        %p Set a custom data class.
         %br
         %p If this option is specified, the element <span class="code">g</span> for the data has an additional class that has the prefix <span class="code">c3-target-</span> (e.g. <span class="code">c3-target-additional-data1-class</span>).
         %h5 Default:
@@ -866,7 +869,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;['data3'],
               &nbsp;&nbsp;]
               }
-        %h5 Example:
+        %h5 Examples:
         %ul
           %li
             %a( href="/samples/chart_bar_stacked.html" ) Stacked Bar Chart
@@ -924,7 +927,7 @@
               data: {
               &nbsp;&nbsp;type: 'bar'
               }
-        %h5 Example:
+        %h5 Examples:
         %ul
           %li
             %a( href="/samples/chart_spline.html" ) Spline Chart
@@ -947,7 +950,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.types' }
-        %p Set chart type for each data.
+        %p Set the chart type for each data.
         %br
         %p This setting overwrites <a href="#data-type">data.type</a> setting.
         %h5 Default:
@@ -971,7 +974,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.labels' }
-        %p Show labels on each data points.
+        %p Show labels on each data point.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -1008,11 +1011,11 @@
             %code.html.javascript
               data: {
               &nbsp;&nbsp;labels: {
-              &nbsp;&nbsp;&nbsp;&nbsp;format: function (v, id, i, j) { ... }
+              &nbsp;&nbsp;&nbsp;&nbsp;format: function (v, id, i, j) { TODO }
               &nbsp;&nbsp;&nbsp;&nbsp;// it's possible to set for each data
               &nbsp;&nbsp;&nbsp;&nbsp;//format: {
-              &nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;data1: function (v, id, i, j) { ... },
-              &nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;...
+              &nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;data1: function (v, id, i, j) { TODO },
+              &nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&nbsp;&nbsp;&nbsp;TODO
               &nbsp;&nbsp;&nbsp;&nbsp;//}
               &nbsp;&nbsp;}
               }
@@ -1027,12 +1030,12 @@
           = partial :reference_item_link, locals: { id: 'data.order' }
         %p Define the order of the data.
         %br
-        %p This option changes the order of stacking the data and pieces of pie/donut. If <code>null</code> specified, it will be the order the data loaded. If function specified, it will be used to sort the data and it will recieve the data as argument.
+        %p This option changes the order of stacking the data and pieces of pie/donut. If <code>null</code> specified, it will be the order the data loaded. If a function is specified, it will be used to sort the data and it will recieve the data as argument.
         %h5 Available Values:
         %ul
           %li desc
           %li asc
-          %li <span class="code">function (data1, data2) { ... }</span>
+          %li <span class="code">function (data1, data2) { TODO }</span>
           %li <code>null</code>
         %h5 Default:
         <code>desc</code>
@@ -1056,7 +1059,7 @@
         %br
         %p The values must be an array for each data and it should include an object that has <span class="code">start</span>, <span class="code">end</span>, <span class="code">style</span>. If <span class="code">start</span> is not set, the start will be the first data point. If <span class="code">end</span> is not set, the end will be the last data point.
         %br
-        %p Currently this option supports only line chart and dashed style. If this option specified, the line will be dashed only in the regions.
+        %p Currently this option supports only line chart and dashed style. If this is option specified, the line will be dashed only in the regions.
         %h5 Default:
         <code>{}</code>
         %h5 Format:
@@ -1066,7 +1069,7 @@
               data: {
               &nbsp;&nbsp;regions: {
               &nbsp;&nbsp;&nbsp;&nbsp;data1: [{'start':1, 'end':2, 'style':'dashed'},{'start':3}],
-              &nbsp;&nbsp;&nbsp;&nbsp;...
+              &nbsp;&nbsp;&nbsp;&nbsp;TODO
               &nbsp;&nbsp;}
               }
         %h5 Example:
@@ -1080,7 +1083,7 @@
           = partial :reference_item_link, locals: { id: 'data.color' }
         %p Set color converter function.
         %br
-        %p This option should a function and the specified function receives <span class="code">color</span> (e.g. '#ff0000') and <span class="code">d</span> that has data parameters like id, value, index, etc. And it must return a string that represents color (e.g. '#00ff00').
+        %p This option should be a function. The specified function receives <span class="code">color</span> (e.g. '#ff0000') and <span class="code">d</span> that has data parameters like id, value, index, etc. The specified function must return a string that represents color (e.g. '#00ff00').
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -1088,7 +1091,7 @@
           %pre
             %code.html.javascript
               data: {
-              &nbsp;&nbsp;color: function (color, d) { ... }
+              &nbsp;&nbsp;color: function (color, d) { TODO }
               }
         %h5 Example:
         %ul
@@ -1099,7 +1102,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.colors' }
-        %p Set color for each data.
+        %p Set the color for each data.
         %h5 Default:
         <code>{}</code>
         %h5 Format:
@@ -1109,7 +1112,7 @@
               data: {
               &nbsp;&nbsp;colors: {
               &nbsp;&nbsp;&nbsp;&nbsp;data1: '#ff0000',
-              &nbsp;&nbsp;&nbsp;&nbsp;...
+              &nbsp;&nbsp;&nbsp;&nbsp;TODO
               &nbsp;&nbsp;}
               }
         %h5 Example:
@@ -1123,7 +1126,9 @@
           = partial :reference_item_link, locals: { id: 'data.hide' }
         %p Hide each data when the chart appears.
         %br
-        %p If <code>true</code> specified, all of data will be hidden. If multiple ids specified as an array, those will be hidden.
+        %p If <code>true</code> specified, all of the data will be hidden. If multiple ids are specified as an array, those will be hidden.
+        %h5 Note:
+        %p This option does not hide legends, so we need to use <a href="#legend-hide">legend.hide</a> option together if we want to hide legend too.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -1134,16 +1139,14 @@
               &nbsp;&nbsp;// all of data will be hidden
               &nbsp;&nbsp;hide: true
               &nbsp;&nbsp;// specified data will be hidden
-              &nbsp;&nbsp;hide: ['data1', ...]
+              &nbsp;&nbsp;hide: ['data1', TODO]
               }
-        %h5 Note:
-        %p This option does not hide legends, so we need to use <a href="#legend-hide">legend.hide</a> option together if we want to hide legend too.
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.empty.label.text' }
-        %p Set text displayed when empty data.
+        %p Set text displayed when there is no data.
         %h5 Default:
         <code>""</code>
         %h5 Format:
@@ -1219,7 +1222,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.selection.draggable' }
-        %p Enable to select data points by dragging.
+        %p Enable the selection of data points by dragging.
         %br
         %p If this option set <code>true</code>, data points can be selected by dragging.
         %h5 Note:
@@ -1240,7 +1243,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.selection.isselectable' }
-        %p Set a callback for each data point to determine if it's selectable or not.
+        %p Set a callback for each data point to determine if it is selectable or not.
         %br
         %p The callback will receive <span class="code">d</span> as an argument and it has some parameters like <span class="code">id</span>, <span class="code">value</span>, <span class="code">index</span>. This callback should return <span class="code">boolean</span>.
         %h5 Default:
@@ -1251,7 +1254,7 @@
             %code.html.javascript
               data: {
               &nbsp;&nbsp;selection: {
-              &nbsp;&nbsp;&nbsp;&nbsp;isselectable: function (d) { ... }
+              &nbsp;&nbsp;&nbsp;&nbsp;isselectable: function (d) { TODO }
               &nbsp;&nbsp;}
               }
       %hr
@@ -1261,7 +1264,7 @@
           = partial :reference_item_link, locals: { id: 'data.onclick' }
         %p Set a callback for click event on each data point.
         %br
-        %p This callback will be called when each data point clicked and will receive <span class="code">d</span> and <span class="code">element</span> as the arguments. <span class="code">d</span> is the data clicked and <span class="code">element</span> is the element clicked. In this callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.
+        %p This callback will be called when each data point clicked and will receive <span class="code">d</span> and <span class="code">element</span> as the arguments. <span class="code">d</span> is the data clicked and <span class="code">element</span> is the element clicked. In the callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.
         %h5 Default:
         <code>function () {}</code>
         %h5 Format:
@@ -1269,7 +1272,7 @@
           %pre
             %code.html.javascript
               data: {
-              &nbsp;&nbsp;onclick: function (d, element) { ... }
+              &nbsp;&nbsp;onclick: function (d, element) { TODO }
               }
       %hr
 
@@ -1278,7 +1281,7 @@
           = partial :reference_item_link, locals: { id: 'data.onmouseover' }
         %p Set a callback for mouseover event on each data point.
         %br
-        %p This callback will be called when mouse cursor moves onto each data point and will receive <span class="code">d</span> as the argument. <span class="code">d</span> is the data where mouse cursor moves onto. In this callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.
+        %p This callback will be called when mouse cursor moves onto each data point and will receive <span class="code">d</span> as the argument. <span class="code">d</span> is the data where mouse cursor moves onto. In the callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.
         %h5 Default:
         <code>function () {}</code>
         %h5 Format:
@@ -1286,7 +1289,7 @@
           %pre
             %code.html.javascript
               data: {
-              &nbsp;&nbsp;onmouseover: function (d) { ... }
+              &nbsp;&nbsp;onmouseover: function (d) { TODO }
               }
       %hr
 
@@ -1295,7 +1298,7 @@
           = partial :reference_item_link, locals: { id: 'data.onmouseout' }
         %p Set a callback for mouseout event on each data point.
         %br
-        %p This callback will be called when mouse cursor moves out each data point and will receive <span class="code">d</span> as the argument. <span class="code">d</span> is the data where mouse cursor moves out. In this callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.
+        %p This callback will be called when mouse cursor moves out each data point and will receive <span class="code">d</span> as the argument. <span class="code">d</span> is the data where mouse cursor moves out. In the callback, <span class="code">this</span> will be the <span class="code">Chart</span> object.
         %h5 Default:
         <code>function () {}</code>
         %h5 Format:
@@ -1303,38 +1306,38 @@
           %pre
             %code.html.javascript
               data: {
-              &nbsp;&nbsp;onmouseout: function (d) { ... }
+              &nbsp;&nbsp;onmouseout: function (d) { TODO }
               }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.onselected' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.onunselected' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.ondragstart' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'data.ondragend' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.rotated' }
-        %p Switch x and y axis position.
+        %p Swap the x and y axis position.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -1353,7 +1356,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.show' }
-        %p Show or hide x axis.
+        %p Show or hide the x axis.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -1370,7 +1373,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.type' }
-        %p Set type of x axis.
+        %p Set the type of x axis.
         %h5 Available Values
         %ul
           %li timeseries
@@ -1387,7 +1390,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;type: 'timeseries'
               &nbsp;&nbsp;}
               }
-        %h5 Example:
+        %h5 Examples:
         %ul
           %li
             %a( href="/samples/timeseries.html" ) Timeseries Chart
@@ -1421,7 +1424,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.categories' }
-        %p Set category names on category axis.
+        %p Set category names on the category axis.
         %br
         %p This must be an array that includes category names in string. If category names are included in the date by <span class="code">data.x</span> option, this is not required.
         %h5 Default:
@@ -1432,7 +1435,7 @@
             %code.html.javascript
               axis: {
               &nbsp;&nbsp;x: {
-              &nbsp;&nbsp;&nbsp;&nbsp;categories: ['Category 1', 'Category 2', ...]
+              &nbsp;&nbsp;&nbsp;&nbsp;categories: ['Category 1', 'Category 2', TODO]
               &nbsp;&nbsp;}
               }
         %h5 Example:
@@ -1586,9 +1589,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.values' }
-        %p Set the x values of ticks manually.
+        %p Set the x values of each tick manually.
         %br
-        %p If this option is provided, the position of the ticks will be determined based on those values. This option works with timeseries data and the x values will be parsed accoding to the type of the value and <a href="#data-xFormat">data.xFormat</a> option.
+        %p If this option is provided, the position of the ticks will be determined based on those values. This option works with timeseries data and the x values will be parsed according to the type of the value and the <a href="#data-xFormat">data.xFormat</a> option.
         %h5 Default:
         <code>null</code>
         %h5 Format:
@@ -1598,7 +1601,7 @@
               axis: {
               &nbsp;&nbsp;x: {
               &nbsp;&nbsp;&nbsp;&nbsp;tick: {
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values: [1, 2, 4, 8, 16, 32, ...]
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values: [1, 2, 4, 8, 16, 32, TODO]
               &nbsp;&nbsp;&nbsp;&nbsp;}
               &nbsp;&nbsp;}
               }
@@ -1613,7 +1616,7 @@
           = partial :reference_item_link, locals: { id: 'axis.x.tick.rotate' }
         %p Rotate x axis tick text.
         %br
-        %p If you set negative value, it will rotate to opposite direction.
+        %p If you set to a negative value, it will rotate in the opposite direction.
         %h5 Default:
         <code>0</code>
         %h5 Format:
@@ -1655,19 +1658,19 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.multiline' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.tick.width' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.max' }
-        %p Set max value of x axis range.
+        %p Set the max value of x axis range.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -1684,7 +1687,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.min' }
-        %p Set min value of x axis range.
+        %p Set the min value of x axis range.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -1701,9 +1704,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.padding' }
-        %p Set padding for x axis.
+        %p Set the padding for the x axis.
         %br
-        %p If this option is set, the range of x axis will increase/decrease according to the values. If no padding is needed in the ragen of x axis, <code>0</code> should be set. On category axis, this option will be ignored.
+        %p If this option is set, the range of x axis will increase/decrease according to the values. If no padding is needed in the region of x axis, <code>0</code> should be set. This option will be ignored on the category axis.
         %h5 Default:
         <code>{}</code>
         %h5 Format:
@@ -1723,9 +1726,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.height' }
-        %p Set height of x axis.
+        %p Set the height of the x axis.
         %br
-        %p The height of x axis can be set manually by this option. If you need more space for x axis, please use this option for that. The unit is <code>pixel</code>.
+        %p The height of x axis can be set manually by this option. If you need more space for x axis, use this option for that. The units are pixels.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -1742,7 +1745,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.extent' }
-        %p Set default extent for subchart and zoom. This can be an array or function that returns an array.
+        %p Set the default extent for subchart and zoom. This can be an array or a function that returns an array.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -1759,11 +1762,11 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.x.label' }
-        %p Set label on x axis.
+        %p Set the label on the x axis.
         %br
-        %p You can set x axis label and change its position by this option. <code>string</code> and <code>object</code> can be passed and we can change the poisiton by passing <code>object</code> that has <span class="code">position</span> key. Available position differs according to the axis direction (vertical or horizontal). If <code>string</code> set, the position will be the default.
+        %p You can set the x axis label and change its position with this option. <code>string</code> and <code>object</code> can be passed and we can change the poisiton by passing <code>object</code> that has <span class="code">position</span> key. Available position differs according to the axis direction (vertical or horizontal). If <code>string</code> set, the position will be the default.
         %br
-        %p If it's horizontal axis:
+        %p If it is a horizontal axis:
         %ul
           %li inner-right <code>[default]</code>
           %li inner-center
@@ -1771,7 +1774,7 @@
           %li outer-right
           %li outer-center
           %li outer-left
-        %p If it's vertical axis:
+        %p If it is a vertical axis:
         %ul
           %li inner-top <code>[default]</code>
           %li inner-middle
@@ -1801,7 +1804,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;}
               &nbsp;&nbsp;}
               }
-        %h5 Example:
+        %h5 Examples:
         %ul
           %li
             %a( href="/samples/axes_label.html" ) Axis Label
@@ -1812,7 +1815,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.show' }
-        %p Show or hide y axis.
+        %p Show or hide the y axis.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -1829,7 +1832,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.inner' }
-        %p Show y axis inside of the chart.
+        %p Show the y axis inside of the chart.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -1846,15 +1849,15 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.type' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.max' }
-        %p Set max value of y axis.
+        %p Set the max value of the y axis.
         %h5 Note:
-        %p Padding will be added based on this value, so if you don't need the padding, please set <span class="code">axis.y.padding</span> to disable it (e.g. <span class="code">axis.y.padding = 0</span>).
+        %p Padding will be added based on this value, so if you don't need the padding, modify <span class="code">axis.y.padding</span> to disable it. (e.g. <span class="code">axis.y.padding = 0</span>.)
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -1875,9 +1878,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.min' }
-        %p Set min value of y axis.
+        %p Set the min value of the y axis.
         %h5 Note:
-        %p Padding will be added based on this value, so if you don't need the padding, please set <span class="code">axis.y.padding</span> to disable it (e.g. <span class="code">axis.y.padding = 0</span>).
+        %p Padding will be added based on this value, so if you don't need the padding, set <span class="code">axis.y.padding</span> to disable it. (e.g. <span class="code">axis.y.padding = 0</span>.)
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -1898,9 +1901,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.inverted' }
-        %p Change the direction of y axis.
+        %p Change the direction of the y axis.
         %br
-        %p If <code>true</code> set, the direction will be from the top to the bottom.
+        %p If set to <code>true</code>, the direction will be inverted.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -1917,7 +1920,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.center' }
-        %p Set center value of y axis.
+        %p Set the center value of the y axis.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -1934,9 +1937,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.label' }
-        %p Set label on y axis.
+        %p Set the label on the y axis.
         %br
-        %p You can set y axis label and change its position by this option. This option works in the same way as <a href="#axis-x-label">axis.x.label</a>.
+        %p You can set the y axis label and change its position with this option. This option works the same way as <a href="#axis-x-label">axis.x.label</a>.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -1955,11 +1958,11 @@
               &nbsp;&nbsp;y: {
               &nbsp;&nbsp;&nbsp;&nbsp;label: {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your Y Axis',
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-middle',
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-middle'
               &nbsp;&nbsp;&nbsp;&nbsp;}
               &nbsp;&nbsp;}
               }
-        %h5 Example:
+        %h5 Examples:
         %ul
           %li
             %a( href="/samples/axes_label.html" ) Axis Label
@@ -1970,7 +1973,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.tick.format' }
-        %p Set formatter for y axis tick text.
+        %p Set the formatter for the y axis tick text.
         %br
         %p This option accepts <span class="code">d3.format</span> object as well as a function you define.
         %h5 Default:
@@ -1996,7 +1999,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.tick.outer' }
-        %p Show or hide outer tick.
+        %p Show or hide the outer tick.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2015,7 +2018,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.tick.values' }
-        %p Set y axis tick values manually.
+        %p Set the y axis tick values manually.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2036,7 +2039,7 @@
           = partial :reference_item_link, locals: { id: 'axis.y.tick.count' }
         %p Set the number of y axis ticks.
         %h5 Note:
-        %p The position of the ticks will be calculated precisely, so the values on the ticks will not be rounded nicely. In the case, <span class="code">axis.y.tick.format</span> or <span class="code">axis.y.tick.values</span> will be helpful.
+        %p The position of the ticks will be calculated precisely, so the values on the ticks will not be rounded nicely. In this case, <span class="code">axis.y.tick.format</span> or <span class="code">axis.y.tick.values</span> will be helpful.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2055,21 +2058,21 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.tick.time.value' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.tick.time.interval' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.padding' }
-        %p Set padding for y axis.
+        %p Set the padding for the y axis.
         %br
-        %p You can set padding for y axis to create more space on the edge of the axis. This option accepts <code>object</code> and it can include <span class="code">top</span> and <span class="code">bottom</span>. <span class="code">top</span>, <span class="code">bottom</span> will be treated as pixels.
+        %p You can set the padding for the y axis to create more space on the edge of the axis. This option accepts <code>object</code> and it can include <span class="code">top</span> and <span class="code">bottom</span>. <span class="code">top</span> and <span class="code">bottom</span> will be treated as pixels.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2093,9 +2096,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y.default' }
-        %p Set default range of y axis.
+        %p Set the default range of the y axis.
         %br
-        %p This option set the default value for y axis when there is no data on init.
+        %p This option sets the default value for the y axis when there is no data on it during init.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2112,7 +2115,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.show' }
-        %p Show or hide y2 axis.
+        %p Show or hide the y2 axis.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -2129,7 +2132,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.inner' }
-        %p Show y2 axis inside of the chart.
+        %p Show the y2 axis inside of the chart.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -2146,7 +2149,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.max' }
-        %p Set max value of y2 axis.
+        %p Set the max value of the y2 axis.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2163,7 +2166,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.min' }
-        %p Set min value of y2 axis.
+        %p Set the min value of the y2 axis.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2180,9 +2183,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.inverted' }
-        %p Change the direction of y2 axis.
+        %p Change the direction of the y2 axis.
         %br
-        %p If <code>true</code> set, the direction will be from the top to the bottom.
+        %p If set to <code>true</code>, the direction will be inverted.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -2199,7 +2202,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.center' }
-        %p Set center value of y2 axis.
+        %p Set the center value of the y2 axis.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2216,9 +2219,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.label' }
-        %p Set label on y2 axis.
+        %p Set the label on the y2 axis.
         %br
-        %p You can set y2 axis label and change its position by this option. This option works in the same way as <a href="#axis-x-label">axis.x.label</a>.
+        %p You can set y2 axis label and change its position with this option. This option works in the same way as <a href="#axis-x-label">axis.x.label</a>.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2241,7 +2244,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;}
               &nbsp;&nbsp;}
               }
-        %h5 Example:
+        %h5 Examples:
         %ul
           %li
             %a( href="/samples/axes_label.html" ) Axis Label
@@ -2252,7 +2255,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.tick.format' }
-        %p Set formatter for y axis tick text.
+        %p Set the formatter for the y axis tick text.
         %br
         %p This option works in the same way as <a href="#axis-y-format">axis.y.format</a>.
         %h5 Default:
@@ -2274,7 +2277,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.tick.outer' }
-        %p Show or hide y2 axis outer tick.
+        %p Show or hide the y2 axis outer tick.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2293,7 +2296,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.tick.values' }
-        %p Set y2 axis tick values manually.
+        %p Set the y2 axis tick values manually.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2313,8 +2316,7 @@
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.tick.count' }
         %p Set the number of y2 axis ticks.
-        %h5 Note:
-        %p This works in the same way as <a href="#axis-y-tick-count">axis.y.tick.count</a>.
+        %p This works the same way as <a href="#axis-y-tick-count">axis.y.tick.count</a>.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2333,9 +2335,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.padding' }
-        %p Set padding for y2 axis.
+        %p Set the padding for the y2 axis.
         %br
-        %p This works in the same way as <a href="#axis-y-padding">axis.y.padding</a>.
+        %p This works the same way as <a href="#axis-y-padding">axis.y.padding</a>.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2355,9 +2357,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'axis.y2.default' }
-        %p Set default range of y2 axis.
+        %p Set the default range of the y2 axis.
         %br
-        %p This option set the default value for y2 axis when there is no data on init.
+        %p This option sets the default value for y2 axis when there is no data on it during init.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2374,7 +2376,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'grid.x.show' }
-        %p Show grids along x axis.
+        %p Show the grids along the x axis.
         %br
         %h5 Default:
         <code>false</code>
@@ -2396,10 +2398,10 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'grid.x.lines' }
-        %p Show additional grid lines along x axis.
+        %p Show additional grid lines along the x axis.
         %br
-        %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span>, <span class="code">position</span> and <span class="code">class</span>. <span class="code">text</span>, <span class="code">position</span> and <span class="code">class</span> are optional. For <span class="code">position</span>, <span class="code">start</span>, <span class="code">middle</span> and <span class="code">end</span> (default) are available.
-        %p If x axis is category axis, <span class="code">value</span> can be category name. If x axis is timeseries axis, <span class="code">value</span> can be date string, Date object and unixtime integer.
+        %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span>, <span class="code">position</span> and <span class="code">class</span>. <span class="code">text</span>, <span class="code">position</span> and <span class="code">class</span> are optional. For <span class="code">position</span>, the options <span class="code">start</span>, <span class="code">middle</span> and <span class="code">end</span> (default) are available.
+        %p If the x axis is a category axis, <span class="code">value</span> can be the category name. If the x axis is a timeseries axis, <span class="code">value</span> can be date string, Date object or unixtime integer.
         %h5 Default:
         <code>[]</code>
         %h5 Format:
@@ -2424,7 +2426,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'grid.y.show' }
-        %p Show grids along y axis.
+        %p Show the grids along the y axis.
         %br
         %h5 Default:
         <code>false</code>
@@ -2446,7 +2448,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'grid.y.lines' }
-        %p Show additional grid lines along y axis.
+        %p Show additional grid lines along the y axis.
         %br
         %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">value</span>, <span class="code">text</span>, <span class="code">position</span> and <span class="code">class</span>.
         %h5 Default:
@@ -2473,7 +2475,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'grid.y.ticks' }
-        %p not yet
+        %p TODO
       %hr
 
       %section
@@ -2482,7 +2484,7 @@
         %p Show rectangles inside the chart.
         %br
         %p This option accepts <code>array</code> including <code>object</code> that has <span class="code">axis</span>, <span class="code">start</span>, <span class="code">end</span> and <span class="code">class</span>. The keys <span class="code">start</span>, <span class="code">end</span> and <span class="code">class</span> are optional.
-        %p <span class="code">axis</span> must be <span class="code">x</span>, <span class="code">y</span> or <span class="code">y2</span>. <span class="code">start</span> and <span class="code">end</span> should be the value where regions start and end. If not specified, the edge values will be used. If timeseries x axis, date string, Date object and unixtime integer can be used. If <span class="code">class</span> is set, the region element will have it as class.
+        %p <span class="code">axis</span> must be <span class="code">x</span>, <span class="code">y</span> or <span class="code">y2</span>. <span class="code">start</span> and <span class="code">end</span> should be the value where regions start and end. If not specified, the edge values will be used. If the x axis is timeseries, date string, Date object and unixtime integer can be used. If <span class="code">class</span> is set, the region element will have it as class.
         %h5 Default:
         <code>[]</code>
         %h5 Format:
@@ -2490,7 +2492,7 @@
           %pre
             %code.html.javascript
               regions: [
-              &nbsp;&nbsp;{axis: 'x', start: 1, end: 4, class: 'region-1-4'},
+              &nbsp;&nbsp;{axis: 'x', start: 1, end: 4, class: 'region-1-4'}
               ]
         %h5 Example:
         %ul
@@ -2501,7 +2503,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.show' }
-        %p Show or hide legend.
+        %p Show or hide the legend.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -2520,9 +2522,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.hide' }
-        %p Hide legend
+        %p Hide the legend
         %br
-        %p If <code>true</code> given, all legend will be hidden. If <code>string</code> or <code>array</code> given, only the legend that has the id will be hidden.
+        %p If <code>true</code> given, all legends will be hidden. If <code>string</code> or <code>array</code> given, only the legend with the specified id will be hidden.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -2539,9 +2541,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.position' }
-        %p Change the position of legend.
+        %p Change the position of the legend.
         %br
-        %p Currently <span class="code">bottom</span>, <span class="code">right</span> and <span class="code">inset</span> are supported.
+        %p <span class="code">bottom</span>, <span class="code">right</span> and <span class="code">inset</span> are supported.
         %h5 Default:
         <code>bottom</code>
         %h5 Format:
@@ -2560,7 +2562,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.inset' }
-        %p Change inset legend attributes.
+        %p Change the inset legend attributes.
         %br
         %p This option accepts <code>object</code> that has the keys <span class="code">anchor</span>, <span class="code">x</span>, <span class="code">y</span> and <span class="code">step</span>.
         %p <span class="code">anchor</span> decides the position of the legend. These anchors are available:
@@ -2570,7 +2572,7 @@
           %li bottom-left
           %li bottom-right
         %p <span class="code">x</span> and <span class="code">y</span> set the position of the legend based on the anchor.
-        %p <span class="code">step</span> defines the max step the lagend has (e.g. If 2 set and legend has 3 legend item, the legend 2 columns).
+        %p <span class="code">step</span> defines the max step the legend has (e.g. If 2 is set and legend has 3 items, the legend will have 2 columns).
         %h5 Default:
         %div.sourcecode
           %pre
@@ -2598,7 +2600,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.item.onclick' }
-        %p Set click event handler to the legend item.
+        %p Set a click event handler to the legend item.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2607,7 +2609,7 @@
             %code.html.javascript
               legend: {
               &nbsp;&nbsp;item: {
-              &nbsp;&nbsp;&nbsp;&nbsp;onclick: function (id) { ... }
+              &nbsp;&nbsp;&nbsp;&nbsp;onclick: function (id) { TODO }
               &nbsp;&nbsp;}
               }
         %h5 Example:
@@ -2619,7 +2621,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.item.onmouseover' }
-        %p Set mouseover event handler to the legend item.
+        %p Set a mouseover event handler to the legend item.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2628,7 +2630,7 @@
             %code.html.javascript
               legend: {
               &nbsp;&nbsp;item: {
-              &nbsp;&nbsp;&nbsp;&nbsp;onmouseover: function (id) { ... }
+              &nbsp;&nbsp;&nbsp;&nbsp;onmouseover: function (id) { TODO }
               &nbsp;&nbsp;}
               }
         %h5 Example:
@@ -2640,7 +2642,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'legend.item.onmouseout' }
-        %p Set mouseout event handler to the legend item.
+        %p Set a mouseout event handler to the legend item.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2649,7 +2651,7 @@
             %code.html.javascript
               legend: {
               &nbsp;&nbsp;item: {
-              &nbsp;&nbsp;&nbsp;&nbsp;onmouseout: function (id) { ... }
+              &nbsp;&nbsp;&nbsp;&nbsp;onmouseout: function (id) { TODO }
               &nbsp;&nbsp;}
               }
         %h5 Example:
@@ -2661,7 +2663,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.show' }
-        %p Show or hide tooltip.
+        %p Show or hide the tooltip.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -2680,7 +2682,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.grouped' }
-        %p Set if tooltip is grouped or not for the data points.
+        %p Set whether tooltip is grouped or not for the data points.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -2699,9 +2701,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.format.title' }
-        %p Set format for the title of tooltip.
+        %p Set the format for the title of the tooltip.
         %br
-        %p Specified function receives <span class="code">x</span> of the data point to show.
+        %p Specified function receives <span class="code">x</span>, the data point to show.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2722,9 +2724,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.format.name' }
-        %p Set format for the name of each data in tooltip.
+        %p Set the format for the name of each data in the tooltip.
         %br
-        %p Specified function receives <span class="code">name</span>, <span class="code">ratio</span>, <span class="code">id</span> and <span class="code">index</span> of the data point to show. <span class="code">ratio</span> will be <code>undefined</code> if the chart is not donut/pie/gauge.
+        %p Specified function receives <span class="code">name</span>, <span class="code">ratio</span>, <span class="code">id</span> and <span class="code">index</span> of the data point to show. <span class="code">ratio</span> will be <code>undefined</code> if the chart is not of type donut/pie/gauge.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2745,10 +2747,10 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.format.value' }
-        %p Set format for the value of each data in tooltip.
+        %p Set the format for the value of each data in the tooltip.
         %br
-        %p Specified function receives <span class="code">name</span>, <span class="code">ratio</span>, <span class="code">id</span> and <span class="code">index</span> of the data point to show. <span class="code">ratio</span> will be <code>undefined</code> if the chart is not donut/pie/gauge.
-        %p If <code>undefined</code> returned, the row of that value will be skipped.
+        %p Specified function receives <span class="code">name</span>, <span class="code">ratio</span>, <span class="code">id</span> and <span class="code">index</span> of the data point to show. <span class="code">ratio</span> will be <code>undefined</code> if the chart is not of type donut/pie/gauge.
+        %p If <code>undefined</code> is returned, the row of that value will be skipped.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2769,9 +2771,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'tooltip.position' }
-        %p Set custom position for the tooltip.
+        %p Set a custom position for the tooltip.
         %br
-        %p This option can be used to modify the tooltip position by returning <code>object</code> that has <span class="code">top</span> and <span class="code">left</span>.
+        %p This option can be used to modify the tooltip position by returning <code>object</code> that has <span class="code">top</span> and <span class="code">left</span> options.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2803,7 +2805,7 @@
             %code.html.javascript
               tooltip: {
               &nbsp;&nbsp;contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
-              &nbsp;&nbsp;&nbsp;&nbsp;return ... // formatted html as you want
+              &nbsp;&nbsp;&nbsp;&nbsp;return TODO // formatted html as you want
               &nbsp;&nbsp;}
               }
       %hr
@@ -2811,7 +2813,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'subchart.show', experimental: true }
-        %p Show sub chart on the bottom of the chart.
+        %p Show a sub chart on the bottom of the chart.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -2847,7 +2849,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'subchart.onbrush', experimental: true }
-        %p Set callback for brush event.
+        %p Set a callback for the brush event.
         %br
         %p Specified function receives the current zoomed x domain.
         %h5 Default:
@@ -2857,7 +2859,7 @@
           %pre
             %code.html.javascript
               subchart: {
-              &nbsp;&nbsp;onbrush: function (domain) { ... }
+              &nbsp;&nbsp;onbrush: function (domain) { TODO }
               }
       %hr
 
@@ -2883,9 +2885,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'zoom.rescale', experimental: true }
-        %p Enable to rescale after zooming.
+        %p Enable rescaling after zooming.
         %br
-        %p If <code>true</code> set, y domain will be updated according to the zoomed region.
+        %p If set to <code>true</code>, the y domain will be updated according to the zoomed region.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -2900,7 +2902,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'zoom.extent', experimental: true }
-        %p Change zoom extent.
+        %p Change the zoom extent.
         %h5 Default:
         <code>[1, 10]</code>
         %h5 Format:
@@ -2915,9 +2917,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'zoom.onzoom', experimental: true }
-        %p Set callback that is called when the chart is zooming.
+        %p Set a callback that is called when the chart is zooming.
         %br
-        %p Specified function receives the zoomed domain.
+        %p The specified function receives the zoomed domain.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2925,16 +2927,16 @@
           %pre
             %code.html.javascript
               zoom: {
-              &nbsp;&nbsp;onzoom: function (domain) { ... }
+              &nbsp;&nbsp;onzoom: function (domain) { TODO }
               }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'zoom.onzoomstart', experimental: true }
-        %p Set callback that is called when zooming starts.
+        %p Set a callback that is called when zooming starts.
         %br
-        %p Specified function receives the zoom event.
+        %p The specified function receives the zoom event.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2942,16 +2944,16 @@
           %pre
             %code.html.javascript
               zoom: {
-              &nbsp;&nbsp;onzoomstart: function (event) { ... }
+              &nbsp;&nbsp;onzoomstart: function (event) { TODO }
               }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'zoom.onzoomend', experimental: true }
-        %p Set callback that is called when zooming ends.
+        %p Set a callback that is called when zooming ends.
         %br
-        %p Specified function receives the zoomed domain.
+        %p The specified function receives the zoomed domain.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -2959,14 +2961,14 @@
           %pre
             %code.html.javascript
               zoom: {
-              &nbsp;&nbsp;onzoomend: function (domain) { ... }
+              &nbsp;&nbsp;onzoomend: function (domain) { TODO }
               }
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.show' }
-        %p Whether to show each point in line.
+        %p Whether to show each point in the line.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -2996,7 +2998,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.focus.expand.enabled' }
-        %p Whether to expand each point on focus. 
+        %p Whether to expand each point on focus.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -3015,7 +3017,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.focus.expand.r' }
-        %p The radius size of each point on focus.
+        %p The radius size of each point when focused.
         %h5 Default:
         <code>point.r * 1.75</code>
         %h5 Format:
@@ -3034,7 +3036,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'point.select.r' }
-        %p The radius size of each point on selected.
+        %p The radius size of each point when selected.
         %h5 Default:
         <code>point.r * 4</code>
         %h5 Format:
@@ -3051,9 +3053,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'line.connectNull' }
-        %p Set if null data point will be connected or not.
+        %p Whether null data points will be connected or not.
         %br
-        %p If <code>true</code> set, the region of null data will be connected without any data point. If <code>false</code> set, the region of null data will not be connected and get empty.
+        %p If set to <code>true</code>, the region of null data will be connected without any data points. If set to <code>false</code>, the region of null data will not be connected and will be empty.
         %h5 Default:
         <code>false</code>
         %h5 Format:
@@ -3068,9 +3070,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'line.step_type' }
-        %p Change step type for step chart.
+        %p Change the step type for a step chart.
         %br
-        %p <span class="code">step</span>, <span class="code">step-before</span> and <span class="code">step-after</span> can be used.
+        %p <span class="code">step</span>, <span class="code">step-before</span> and <span class="code">step-after</span> are valid options.
         %h5 Default:
         <code>step</code>
         %h5 Format:
@@ -3087,7 +3089,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'area.zerobased' }
-        %p Set if min or max value will be 0 on area chart.
+        %p Set whether the min or max value will be 0 on the area chart.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -3102,7 +3104,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'bar.width' }
-        %p Change the width of bar chart.
+        %p Change the width of the bar chart.
         %h5 Default:
         <code>auto</code>
         %h5 Format:
@@ -3121,7 +3123,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'bar.width.ratio' }
-        %p Change the width of bar chart by ratio.
+        %p Change the width of the bar chart by ratio.
         %h5 Default:
         <code>0.6</code>
         %h5 Format:
@@ -3142,7 +3144,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'bar.zerobased' }
-        %p Set if min or max value will be 0 on bar chart.
+        %p Set whether the min or max value will be 0 on the bar chart.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -3157,7 +3159,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'pie.label.show' }
-        %p Show or hide label on each pie piece.
+        %p Show or hide the label on each pie piece.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -3174,7 +3176,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'pie.label.format' }
-        %p Set formatter for the label on each pie piece.
+        %p Set the formatter for the label on each pie piece.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -3197,7 +3199,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'pie.label.threshold' }
-        %p Set threshold to show/hide labels.
+        %p Set the threshold to show or hide labels.
         %h5 Default:
         <code>0.05</code>
         %h5 Format:
@@ -3229,7 +3231,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.label.show' }
-        %p Show or hide label on each donut piece.
+        %p Show or hide the label on each donut piece.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -3246,7 +3248,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.label.format' }
-        %p Set formatter for the label on each donut piece.
+        %p Set the formatter for the label on each donut piece.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -3265,7 +3267,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.label.threshold' }
-        %p Set threshold to show/hide labels.
+        %p Set the threshold to show or hide labels.
         %h5 Default:
         <code>0.05</code>
         %h5 Format:
@@ -3297,7 +3299,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.width' }
-        %p Set width of donut chart.
+        %p Set the width of the donut chart.
         %h5 Default:
         <code>auto</code>
         %h5 Format:
@@ -3312,7 +3314,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'donut.title' }
-        %p Set title of donut chart.
+        %p Set the title of the donut chart.
         %h5 Default:
         <code>''</code>
         %h5 Format:
@@ -3327,7 +3329,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'gauge.label.show' }
-        %p Show or hide label on gauge.
+        %p Show or hide the label on the gauge.
         %h5 Default:
         <code>true</code>
         %h5 Format:
@@ -3344,7 +3346,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'gauge.label.format' }
-        %p Set formatter for the label on gauge.
+        %p Set the formatter for the label on the gauge.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -3382,7 +3384,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'gauge.min' }
-        %p Set min value of the gauge.
+        %p Set the min value of the gauge.
         %h5 Default:
         <code>0</code>
         %h5 Format:
@@ -3397,7 +3399,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'gauge.max' }
-        %p Set max value of the gauge.
+        %p Set the max value of the gauge.
         %h5 Default:
         <code>100</code>
         %h5 Format:
@@ -3412,7 +3414,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'gauge.units' }
-        %p Set units of the gauge.
+        %p Set the units of the gauge.
         %h5 Default:
         <code>undefined</code>
         %h5 Format:
@@ -3427,7 +3429,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'gauge.width' }
-        %p Set width of gauge chart.
+        %p Set the width of gauge chart.
         %h5 Default:
         <code>auto</code>
         %h5 Format:
@@ -3447,18 +3449,18 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.focus' }
-        %p This API highlights specified targets and fade out the others.
+        %p This API highlights specified targets and fades out the others.
         %br
-        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be highlighted.
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of the targets will be highlighted.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.focus(targetIds)
         %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
-        %p Target ids to be highlighted.
+        %p Targeted ids to be highlighted.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3477,16 +3479,16 @@
           = partial :reference_item_link, locals: { id: 'api.defocus' }
         %p This API fades out specified targets and reverts the others.
         %br
-        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be faded out.
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of the targets will be faded out.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.defocus(targetIds)
         %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
-        %p Target ids to be faded out.
+        %p Targeted ids to be faded out.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3505,16 +3507,16 @@
           = partial :reference_item_link, locals: { id: 'api.revert' }
         %p This API reverts specified targets.
         %br
-        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be reverted.
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of the targets will be reverted.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.revert(targetIds)
         %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
-        %p Target ids to be reverted.
+        %p Targeted ids to be reverted.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3531,21 +3533,21 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.show' }
-        %p This API shows specified targets.
+        %p This API shows the specified targets.
         %br
-        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be shown.
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of the targets will be shown.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.show(targetIds, options)
         %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
-        %p Target ids to be shown.
+        %p Targeted ids to be shown.
         %br
         %p <span class="code">options</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">withLegend</span> is set <code>true</code>, legend will be shown together with the specified data.
+        %p If <span class="code">withLegend</span> is set to <code>true</code>, the legend will be shown with the specified data.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3565,21 +3567,21 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.hide' }
-        %p This API hides specified targets.
+        %p This API hides the specified targets.
         %br
-        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be hidden.
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of the targets will be hidden.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.hide(targetIds, options)
         %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
-        %p Target ids to be hidden.
+        %p Targeted ids to be hidden.
         %br
         %p <span class="code">options</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">withLegend</span> is set <code>true</code>, legend will be hidden together with the specified data.
+        %p If <span class="code">withLegend</span> is set to <code>true</code>, the legend will be hidden together with the specified data.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3599,9 +3601,9 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.toggle' }
-        %p This API toggles (shows or hides) specified targets.
+        %p This API shows or hides the specified targets.
         %br
-        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be toggles.
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of the targets will be toggled.
         %h5 Arguments:
         %div.sourcecode
           %pre
@@ -3611,9 +3613,9 @@
         %p Target ids to be toggled.
         %br
         %p <span class="code">options</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">withLegend</span> is set <code>true</code>, legend will be toggled together with the specified data.
+        %p If <span class="code">withLegend</span> is set to <code>true</code>, the legend will be toggled with the specified data.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3635,43 +3637,43 @@
           = partial :reference_item_link, locals: { id: 'api.load' }
         %p Load data to the chart.
         %br
-        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be toggles.
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of the targets will be toggled.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.load(args)
         %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">url</span>, <span class="code">json</span>, <span class="code">rows</span> and <span class="code">columns</span> given, the data will be loaded. If data that has the same target id is given, the chart will be updated. Otherwise, new target will be added.
+        %p If <span class="code">url</span>, <span class="code">json</span>, <span class="code">rows</span> and <span class="code">columns</span> are given, the data will be loaded. If data that has the same target id is given, the chart will be updated. Otherwise, a new target will be added.
         %br
-        %p If <span class="code">classes</span> given, the classes specifed by <span class="code">data.classes</span> will be updated. <span class="code">classes</span> must be <code>Object</code> that has target id as keys.
+        %p If <span class="code">classes</span> is given, the classes specifed by <span class="code">data.classes</span> will be updated. <span class="code">classes</span> must be of type <code>Object</code> which has the target id as a key.
         %br
-        %p If <span class="code">categories</span> given, the categories specifed by <span class="code">axis.x.categories</span> or <span class="code">data.x</span> will be updated. <span class="code">categories</span> must be <code>Array</code>.
+        %p If <span class="code">categories</span> is given, the categories specifed by <span class="code">axis.x.categories</span> or <span class="code">data.x</span> will be updated. <span class="code">categories</span> must be of type <code>Array</code>.
         %br
-        %p If <span class="code">axes</span> given, the axes specifed by <span class="code">data.axes</span> will be updated. <span class="code">axes</span> must be <code>Object</code> that has target id as keys.
+        %p If <span class="code">axes</span> is given, the axes specifed by <span class="code">data.axes</span> will be updated. <span class="code">axes</span> must be <code>Object</code> which has the target id as a key.
         %br
-        %p If <span class="code">colors</span> given, the colors specifed by <span class="code">data.colors</span> will be updated. <span class="code">colors</span> must be <code>Object</code> that has target id as keys.
+        %p If <span class="code">colors</span> is given, the colors specifed by <span class="code">data.colors</span> will be updated. <span class="code">colors</span> must be <code>Object</code> which has the target id as a key.
         %br
-        %p If <span class="code">type</span> or <span class="code">types</span> given, the type of targets will be updated. <span class="code">type</span> must be <code>String</code> and <span class="code">types</span> must be <code>Object</code>.
+        %p If <span class="code">type</span> or <span class="code">types</span> is given, the type of the targets will be updated. <span class="code">type</span> must be <code>String</code> and <span class="code">types</span> must be <code>Object</code>.
         %br
-        %p If <span class="code">unload</span> given, data will be unloaded before loading new data. If <code>true</code> given, all of data will be unloaded. If target ids given as <code>String</code> or <code>Array</code>, specified targets will be unloaded.
+        %p If <span class="code">unload</span> is given, the data will be unloaded before loading new data. If <code>true</code> given, all of the data will be unloaded. If target ids are given as <code>String</code> or <code>Array</code>, the specified targets will be unloaded.
         %br
-        %p If <span class="code">done</span> given, the specified function will be called after data loded.
+        %p If <span class="code">done</span> is given, the specified function will be called after the data is loaded.
 
         %h5 Note:
-        %p <span class="code">unload</span> should be used if some data needs to be unloaded simultaneously. If you call <span class="code">unload</span> API soon after/before <span class="code">load</span> instead of <span class="code">unload</span> param, chart will not be rendered properly because of cancel of animation.
+        %p <span class="code">unload</span> should be used if some data needs to be unloaded simultaneously. If you call <span class="code">unload</span> API soon after/before <span class="code">load</span> instead of the <span class="code">unload</span> param, the chart will not be rendered properly because of the animation cancelling.
         %br
-        %p <span class="code">done</span> will be called after data loaded, but it's not after rendering. It's because rendering will finish after some transition and there is some time lag between loading and rendering.
+        %p <span class="code">done</span> will be called after the data is loaded, but not after rendering. This is because rendering will finish after a transition and there is time lag between loading and rendering.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
               \// Load data1 and unload data2 and data3
               chart.load({
               &nbsp;&nbsp;columns: [
-              &nbsp;&nbsp;&nbsp;&nbsp;['data1, 100, 200, 150, ...],
-              &nbsp;&nbsp;&nbsp;&nbsp;...
+              &nbsp;&nbsp;&nbsp;&nbsp;['data1, 100, 200, 150, TODO],
+              &nbsp;&nbsp;&nbsp;&nbsp;TODO
               &nbsp;&nbsp;],
               &nbsp;&nbsp;unload: ['data2', 'data3']
               });
@@ -3685,23 +3687,23 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.unload' }
-        %p Unload data to the chart.
+        %p Unload data from the chart.
         %br
-        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of targets will be toggles.
+        %p You can specify multiple targets by giving an array that includes <span class="code">id</span> as <code>String</code>. If no argument is given, all of the targets will be toggled.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.unload(args)
         %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">ids</span> given, the data that has specified target id will be unloaded. <span class="code">ids</span> should be <code>String</code> or <code>Array</code>. If <span class="code">ids</span> is not specified, all data will be unloaded.
+        %p If <span class="code">ids</span> is given, the data that has the specified target id will be unloaded. <span class="code">ids</span> should be <code>String</code> or <code>Array</code>. If <span class="code">ids</span> is not specified, all of the data will be unloaded.
         %br
-        %p If <span class="code">done</span> given, the specified function will be called after data loded.
+        %p If <span class="code">done</span> given, the specified function will be called after the data is loaded.
 
         %h5 Note:
-        %p If you call <span class="code">load</span> API soon after/before <span class="code">unload</span>, <span class="code">unload</span> param of <span class="code">load</span> should be used. Otherwise chart will not be rendered properly because of cancel of animation.
+        %p If you call <span class="code">load</span> API soon after/before <span class="code">unload</span>, the <span class="code">unload</span> param of <span class="code">load</span> should be used. Otherwise the chart will not be rendered properly because of the animation cancelling.
         %br
-        %p <span class="code">done</span> will be called after data loaded, but it's not after rendering. It's because rendering will finish after some transition and there is some time lag between loading and rendering.
+        %p <span class="code">done</span> will be called after the data is loaded, but not after rendering. This is because rendering will finish after a transition and there is time lag between loading and rendering.
 
         %h5 Example:
         %div.sourcecode
@@ -3718,24 +3720,24 @@
           = partial :reference_item_link, locals: { id: 'api.flow' }
         %p Flow data to the chart.
         %br
-        %p By this API, you can append new data points to the chart.
+        %p With this API you can append new data points to the chart.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.flow(args)
         %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">json</span>, <span class="code">rows</span> and <span class="code">columns</span> given, the data will be loaded. If data that has the same target id is given, the chart will be appended. Otherwise, new target will be added. One of these is required when calling. If <span class="code">json</span> specified, <span class="code">keys</span> is required as well as <a href="#data-json">data.json</a>
+        %p If <span class="code">json</span>, <span class="code">rows</span>, and <span class="code">columns</span> are given, the data will be loaded. If data that has the same target id is given, the chart will be appended. Otherwise, a new target will be added. One of these is required when calling. If <span class="code">json</span> is specified, <span class="code">keys</span> is required as well as <a href="#data-json">data.json</a>
         %br
         %p If <span class="code">to</span> is given, the lower x edge will move to that point. If not given, the lower x edge will move by the number of given data points.
         %br
-        %p If <span class="code">length</span> is given, the lower x edge will move by the number of this argument.
+        %p If <span class="code">length</span> is given, the lower x edge will move by the magnitude of this argument.
         %br
-        %p If <span class="code">duration</span> is given, the duration of the transition will be specified value. If not given, <a href="#transition-duration">transition.duration</a> will be used as default.
+        %p If <span class="code">duration</span> is given, the duration of the transition will be the specified value. If not given, <a href="#transition-duration">transition.duration</a> will be used as default.
         %br
-        %p If <span class="code">done</span> is given, the specified function will be called when flow ends.
+        %p If <span class="code">done</span> is given, the specified function will be called when the flow ends.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3768,24 +3770,24 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.select' }
-        %p Change data point state to selected.
+        %p Change the data point state to selected.
         %br
-        %p By this API, you can select data points. To use this API, <a href="#data-selection-enabled">data.selection.enabled</a> needs to be set <code>true</code>.
+        %p With this API you can select data points. To use this API, <a href="#data-selection-enabled">data.selection.enabled</a> needs to be set to <code>true</code>.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.select(ids, indices, resetOthers)
         %p <span class="code">ids</span>&nbsp;&nbsp;<code>Array</code>
-        %p Specify target ids to be selected. If this argument is not given, all targets will be the candidate.
+        %p Specify the target ids to be selected. If this argument is not given, all of the targets will be selected.
         %br
         %p <span class="code">indices</span>&nbsp;&nbsp;<code>Array</code>
-        %p Specify indices to be selected. If this argument is not given, all data points will be the candidate.
+        %p Specify the indices to be selected. If this argument is not given, all of the data points will be selected.
         %br
         %p <span class="code">resetOthers</span>&nbsp;&nbsp;<code>boolean</code>
-        %p If this argument is set <code>true</code>, the data points that are not specified by <span class="code">ids</span>, <span class="code">indices</span> will be unselected.
+        %p If this argument is set <code>true</code>, the data points that are not specified by <span class="code">ids</span> or <span class="code">indices</span> will be unselected.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3799,21 +3801,21 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.unselect' }
-        %p Change data point state to unselected.
+        %p Change the data point state to unselected.
         %br
-        %p By this API, you can unselect data points. To use this API, <a href="#data-selection-enabled">data.selection.enabled</a> needs to be set <code>true</code>.
+        %p With this API you can unselect data points. To use this API, <a href="#data-selection-enabled">data.selection.enabled</a> needs to be set to <code>true</code>.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.unselect(ids, indices)
         %p <span class="code">ids</span>&nbsp;&nbsp;<code>Array</code>
-        %p Specify target ids to be unselected. If this argument is not given, all targets will be the candidate.
+        %p Specify the target ids to be unselected. If this argument is not given, all of the targets will be unselected.
         %br
         %p <span class="code">indices</span>&nbsp;&nbsp;<code>Array</code>
-        %p Specify indices to be unselected. If this argument is not given, all data points will be the candidate.
+        %p Specify the indices to be unselected. If this argument is not given, all of the data points will be unselected.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3827,18 +3829,18 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.selected' }
-        %p Get selected data points.
+        %p Get the selected data points.
         %br
-        %p By this API, you can get selected data points information. To use this API, <a href="#data-selection-enabled">data.selection.enabled</a> needs to be set <code>true</code>.
+        %p With this API you can get selected data points information. To use this API, <a href="#data-selection-enabled">data.selection.enabled</a> needs to be set to <code>true</code>.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.selected(targetId)
         %p <span class="code">targetId</span>&nbsp;&nbsp;<code>String</code>
-        %p You can filter the result by giving target id that you want to get. If not given, all of data points will be returned.
+        %p You can filter the result by specifying the target id that you want to get. If not given, all of the data points will be returned.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3859,12 +3861,12 @@
             %code.html.javascript
               \.transform(type, targetIds)
         %p <span class="code">type</span>&nbsp;&nbsp;<code>String</code>
-        %p Specify the type to be transformed. The types listed in <a href="#data-type">data.type</a> can be used.
+        %p Specify the type to be transformed. Valid types are listed in <a href="#data-type">data.type</a>.
         %br
         %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
-        %p Specify targets to be transformed. If not given, all targets will be the candidate.
+        %p Specify the targets to be transformed. If not given, all of the targets will be transformed.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3886,16 +3888,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.groups' }
-        %p Update groups for the targets.
+        %p Update the groups for the targets.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.groups(groups)
         %p <span class="code">groups</span>&nbsp;&nbsp;<code>Array</code>
-        %p This argument needs to be an <code>Array</code> that includes one or more <code>Array</code> that includes target ids to be grouped.
+        %p This argument needs to be an <code>Array</code> that includes one or more <code>Array</code> objects that includes target ids to be grouped.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3909,7 +3911,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.xgrids' }
-        %p Update x grid lines.
+        %p Update the x grid lines.
         %h5 Arguments:
         %div.sourcecode
           %pre
@@ -3918,7 +3920,7 @@
         %p <span class="code">grids</span>&nbsp;&nbsp;<code>Array</code>
         %p X grid lines will be replaced with this argument. The format of this argument is the same as <a href="#grid-x-lines">grid.x.lines</a>.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3937,16 +3939,16 @@
           = partial :reference_item_link, locals: { id: 'api.xgrids.add' }
         %p Add x grid lines.
         %br
-        %p This API adds new x grid lines instead of replacing like <a href="#api-xgrids">xgrids</a>.
+        %p This API adds new x grid lines instead of replacing them (see <a href="#api-xgrids">xgrids</a>).
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.xgrids.add(grids)
         %p <span class="code">grids</span>&nbsp;&nbsp;<code>Array</code> or <code>Object</code>
-        %p New x grid lines will be added. The format of this argument is the same as <a href="#grid-x-lines">grid.x.lines</a> and it's possible to give an <code>Object</code> if only one line will be added.
+        %p New x grid lines to be added. The format of this argument is the same as <a href="#grid-x-lines">grid.x.lines</a>. It is possible to give an <code>Object</code> if only one line will be added.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3977,9 +3979,9 @@
             %code.html.javascript
               \.xgrids.remove(args)
         %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
-        %p This argument should include <span class="code">value</span> or <span class="code">class</span>. If <span class="code">value</span> is given, the x grid lines that have specified x value will be removed. If <span class="code">class</span> is given, the x grid lines that have specified class will be removed. If <span class="code">args</span> is not given, all of x grid lines will be removed.
+        %p This argument should include a <span class="code">value</span> or <span class="code">class</span>. If <span class="code">value</span> is given, the x grid lines that have specified x value will be removed. If <span class="code">class</span> is given, the x grid lines that have specified class will be removed. If <span class="code">args</span> is not given, all of the x grid lines will be removed.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -3999,14 +4001,14 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.ygrids' }
-        %p Update y grid lines.
+        %p Update the y grid lines.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.ygrids(grids)
         %p <span class="code">grids</span>&nbsp;&nbsp;<code>Array</code>
-        %p X grid lines will be replaced with this argument. The format of this argument is the same as <a href="#grid-y-lines">grid.y.lines</a>.
+        %p Y grid lines will be replaced with this argument. The format of this argument is the same as <a href="#grid-y-lines">grid.y.lines</a>.
 
         %h5 Example:
         %div.sourcecode
@@ -4024,16 +4026,16 @@
           = partial :reference_item_link, locals: { id: 'api.ygrids.add' }
         %p Add y grid lines.
         %br
-        %p This API adds new y grid lines instead of replacing like <a href="#api-ygrids">ygrids</a>.
+        %p This API adds new y grid lines instead of replacing them (see <a href="#api-ygrids">ygrids</a>).
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.ygrids.add(grids)
         %p <span class="code">grids</span>&nbsp;&nbsp;<code>Array</code> or <code>Object</code>
-        %p New y grid lines will be added. The format of this argument is the same as <a href="#grid-y-lines">grid.y.lines</a> and it's possible to give an <code>Object</code> if only one line will be added.
+        %p New y grid lines to be added. The format of this argument is the same as <a href="#grid-y-lines">grid.y.lines</a>. It is possible to give an <code>Object</code> if only one line will be added.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4042,7 +4044,7 @@
               &nbsp;&nbsp;{value: 400, text: 'Label 4'}
               );
               \
-              \// Add new y grid lines
+              \// Add multiple new y grid lines
               chart.ygrids.add([
               &nbsp;&nbsp;{value: 200, text: 'Label 2'},
               &nbsp;&nbsp;{value: 400, text: 'Label 4'}
@@ -4061,9 +4063,9 @@
             %code.html.javascript
               \.ygrids.remove(args)
         %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
-        %p This argument should include <span class="code">value</span> or <span class="code">class</span>. If <span class="code">value</span> is given, the y grid lines that have specified y value will be removed. If <span class="code">class</span> is given, the y grid lines that have specified class will be removed. If <span class="code">args</span> is not given, all of y grid lines will be removed.
+        %p This argument should include a <span class="code">value</span> or <span class="code">class</span>. If <span class="code">value</span> is given, the y grid lines that have specified y value will be removed. If <span class="code">class</span> is given, the y grid lines that have specified class will be removed. If <span class="code">args</span> is not given, all of the y grid lines will be removed.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4080,7 +4082,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.regions' }
-        %p Update regions.
+        %p Update the regions.
         %h5 Arguments:
         %div.sourcecode
           %pre
@@ -4103,18 +4105,18 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.regions.add' }
-        %p Add new region.
+        %p Add a new region.
         %br
-        %p This API adds new region instead of replacing like <a href="#api-regions">regions</a>.
+        %p This API adds a new region instead of replacing one (see <a href="#api-regions">regions</a>).
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.regions.add(regions)
         %p <span class="code">regions</span>&nbsp;&nbsp;<code>Array</code> or <code>Object</code>
-        %p New region will be added. The format of this argument is the same as <a href="#regions">regions</a> and it's possible to give an <code>Object</code> if only one region will be added.
+        %p New region to be added. The format of this argument is the same as <a href="#regions">regions</a>. It is possible to give an <code>Object</code> if only one region will be added.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4123,7 +4125,7 @@
               &nbsp;&nbsp;{axis: 'x', start: 5, class: 'regionX'}
               );
               \
-              \// Add new regions
+              \// Add multiple new regions
               chart.regions.add([
               &nbsp;&nbsp;{axis: 'x', start: 5, class: 'regionX'},
               &nbsp;&nbsp;{axis: 'y', end: 50, class: 'regionY'}
@@ -4142,9 +4144,9 @@
             %code.html.javascript
               \.regions.remove(args)
         %p <span class="code">args</span>&nbsp;&nbsp;<code>Object</code>
-        %p This argument should include <span class="code">classes</span>. If <span class="code">classes</span> is given, the regions that have one of the specified classes will be removed. If <span class="code">args</span> is not given, all of regions will be removed.
+        %p This argument should include <span class="code">classes</span>. If <span class="code">classes</span> are given, the regions that have at least one of the specified classes will be removed. If <span class="code">args</span> is not given, all of the regions will be removed.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4158,16 +4160,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data' }
-        %p Get data loaded in the chart.
+        %p Get the data loaded in the chart.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.data(targetIds)
         %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
-        %p If this argument is given, this API returns the specified target data. If this argument is not given, all of data will be returned.
+        %p If this argument is given, the API returns the specified target data. If this argument is not given, all of the data will be returned.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4184,16 +4186,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data.shown' }
-        %p Get data shown in the chart.
+        %p Get the data shown in the chart.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.data.shown(targetIds)
         %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>String</code> or <code>Array</code>
-        %p If this argument is given, this API filters the data with specified target ids. If this argument is not given, all shown data will be returned.
+        %p If this argument is given, the API filters the data with the specified target ids. If this argument is not given, all of the shown data will be returned.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4210,14 +4212,14 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data.values' }
-        %p Get values of the data loaded in the chart.
+        %p Get the values of the data loaded in the chart.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.data.values(targetId)
         %p <span class="code">targetId</span>&nbsp;&nbsp;<code>String</code>
-        %p This API returns the values of specified target. If this argument is not given, <code>null</code> will be retruned.
+        %p This API returns the values of the specified target. If this argument is not given, <code>null</code> will be returned.
 
         %h5 Example:
         %div.sourcecode
@@ -4230,16 +4232,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data.names' }
-        %p Get and set names of the data loaded in the chart.
+        %p Get and set the names of the data loaded in the chart.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.data.names(names)
         %p <span class="code">names</span>&nbsp;&nbsp;<code>Object</code>
-        %p If this argument is given, the names of data will be updated. If not given, the current names will be returned. The format of this argument is the same as <a href="#data-names">data.names</a>.
+        %p If this argument is given, the names of the data will be updated. If not given, the current names will be returned. The format of this argument is the same as <a href="#data-names">data.names</a>.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4256,16 +4258,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data.colors' }
-        %p Get and set colors of the data loaded in the chart.
+        %p Get and set the colors of the data loaded in the chart.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.data.colors(colors)
         %p <span class="code">colors</span>&nbsp;&nbsp;<code>Object</code>
-        %p If this argument is given, the colors of data will be updated. If not given, the current colors will be returned. The format of this argument is the same as <a href="#data-colors">data.colors</a>.
+        %p If this argument is given, the colors of the data will be updated. If not given, the current colors will be returned. The format of this argument is the same as <a href="#data-colors">data.colors</a>.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4282,7 +4284,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.data.axes' }
-        %p Get and set axes of the data loaded in the chart.
+        %p Get and set the axes of the data loaded in the chart.
         %h5 Arguments:
         %div.sourcecode
           %pre
@@ -4291,7 +4293,7 @@
         %p <span class="code">axes</span>&nbsp;&nbsp;<code>Object</code>
         %p If this argument is given, the axes of data will be updated. If not given, the current axes will be returned. The format of this argument is the same as <a href="#data-axes">data.axes</a>.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4308,16 +4310,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.x' }
-        %p Get and set x values for the chart.
+        %p Get and set the x values for the chart.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.x(x)
         %p <span class="code">x</span>&nbsp;&nbsp;<code>Array</code>
-        %p If <span class="code">x</span> is given, x values of every target will be updated. If no argument is given, current x values will be returned as an <code>Object</code> whose keys are the target ids.
+        %p If <span class="code">x</span> is given, the x values of every target will be updated. If no argument is given, the current x values will be returned as an <code>Object</code> whose keys are the target ids.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4325,22 +4327,22 @@
               chart.x();
               \
               \// Update x values for all targets
-              chart.x([100, 200, 300, 400, ...]);
+              chart.x([100, 200, 300, 400, TODO]);
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.xs' }
-        %p Get and set x values for the chart.
+        %p Get and set the x values for the chart.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.xs(xs)
         %p <span class="code">xs</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">xs</span> is given, specified target's x values will be updated. If no argument is given, current x values will be returned as an <code>Object</code> whose keys are the target ids.
+        %p If <span class="code">xs</span> is given, the specified target's x values will be updated. If no argument is given, the current x values will be returned as an <code>Object</code> whose keys are the target ids.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4349,24 +4351,24 @@
               \
               \// Update x values for all targets
               chart.xs({
-              &nbsp;&nbsp;data1: [10, 20, 30, 40, ...],
-              &nbsp;&nbsp;data2: [100, 200, 300, 400, ...]
+              &nbsp;&nbsp;data1: [10, 20, 30, 40, TODO],
+              &nbsp;&nbsp;data2: [100, 200, 300, 400, TODO]
               });
       %hr
 
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.axis.labels' }
-        %p Get and set axis labels.
+        %p Get and set the axis labels.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.axis.labels(labels)
         %p <span class="code">labels</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">labels</span> is given, specified axis' label will be updated.
+        %p If <span class="code">labels</span> is given, the specified axis' label will be updated.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4383,16 +4385,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.axis.min' }
-        %p Get and set axis min value.
+        %p Get and set the axis min value.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.axis.min(min)
         %p <span class="code">min</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">min</span> is given, specified axis' min value will be updated. If no argument is given, the current min values for each axis will be returned.
+        %p If <span class="code">min</span> is given, the specified axis' min value will be updated. If no argument is given, the current min values for each axis will be returned.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4410,16 +4412,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.axis.max' }
-        %p Get and set axis max value.
+        %p Get and set the axis max value.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.axis.max(max)
         %p <span class="code">max</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">max</span> is given, specified axis' max value will be updated. If no argument is given, the current max values for each axis will be returned.
+        %p If <span class="code">max</span> is given, the specified axis' max value will be updated. If no argument is given, the current max values for each axis will be returned.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4437,16 +4439,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.axis.range' }
-        %p Get and set axis min and max value.
+        %p Get and set the axis min and max value.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.axis.range(range)
         %p <span class="code">range</span>&nbsp;&nbsp;<code>Object</code>
-        %p If <span class="code">range</span> is given, specified axis' min and max value will be updated. If no argument is given, the current min and max values for each axis will be returned.
+        %p If <span class="code">range</span> is given, the specified axis' min and max value will be updated. If no argument is given, the current min and max values for each axis will be returned.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4471,16 +4473,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.legend.show' }
-        %p Show legend for each target.
+        %p Show the legend for each target.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.legend.show(targetIds)
         %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>Array</code> or <code>String</code>
-        %p If <span class="code">targetIds</span> is given, specified target's legend will be shown. If only one target is the candidate, <code>String</code> can be passed. If no argument is given, all of target's legend will be shown.
+        %p If <span class="code">targetIds</span> is given, the specified target's legend will be shown. If only one target is given, <code>String</code> can be passed. If no argument is given, all of the target's legends will be shown.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4497,16 +4499,16 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.legend.hide' }
-        %p Hide legend for each target.
+        %p Hide the legend for each target.
         %h5 Arguments:
         %div.sourcecode
           %pre
             %code.html.javascript
               \.legend.hide(targetIds)
         %p <span class="code">targetIds</span>&nbsp;&nbsp;<code>Array</code> or <code>String</code>
-        %p If <span class="code">targetIds</span> is given, specified target's legend will be hidden. If only one target is the candidate, <code>String</code> can be passed. If no argument is given, all of target's legend will be hidden.
+        %p If <span class="code">targetIds</span> is given, the specified target's legend will be hidden. If only one target is the candidate, <code>String</code> can be passed. If no argument is given, all of the target's legends will be hidden.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4523,7 +4525,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.zoom' }
-        %p Zoom by giving x domain.
+        %p Zoom by giving the x domain.
         %h5 Arguments:
         %div.sourcecode
           %pre
@@ -4532,7 +4534,7 @@
         %p <span class="code">domain</span>&nbsp;&nbsp;<code>Array</code>
         %p If <span class="code">domain</span> is given, the chart will be zoomed to the given domain. If no argument is given, the current zoomed domain will be returned.
 
-        %h5 Example:
+        %h5 Examples:
         %div.sourcecode
           %pre
             %code.html.javascript
@@ -4571,7 +4573,7 @@
             %code.html.javascript
               \.zoom.enable(enabled)
         %p <span class="code">enabled</span>&nbsp;&nbsp;<code>Boolean</code>
-        %p If <span class="code">enabled</span> is <code>true</code>, the feature of zooming will be enabled. If <code>false</code> is given, it will be disabled.
+        %p If <span class="code">enabled</span> is <code>true</code>, the zooming feature will be enabled. If <code>false</code> is given, it will be disabled.
 
         %h5 Example:
         %div.sourcecode
@@ -4591,7 +4593,7 @@
             %code.html.javascript
               \.resize(size)
         %p <span class="code">size</span>&nbsp;&nbsp;<code>Object</code>
-        %p This argument should include <span class="code">width</span> and <span class="code">height</span> in pixels.
+        %p This argument should include both <span class="code">width</span> and <span class="code">height</span>. The units are in pixels.
 
         %h5 Example:
         %div.sourcecode
@@ -4607,7 +4609,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.flush' }
-        %p Force to redraw.
+        %p Force the chart to redraw.
         %h5 Arguments:
         %div.sourcecode
           %pre
@@ -4625,7 +4627,7 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'api.destroy' }
-        %p Reset the chart object and remove element and events completely.
+        %p Reset the chart object and remove the element and events completely.
         %h5 Arguments:
         %div.sourcecode
           %pre
@@ -4650,327 +4652,327 @@
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-line' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-lines' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-bar' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-bars' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-text' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-texts' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-arc' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs-title' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs-background' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs-gauge-unit' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs-gauge-max' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-chart-arcs-gauge-min' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-selected-circle' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-selected-circles' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-event-rect' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-event-rects' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-event-rects-single' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-event-rects-multiple' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-zoom-rect' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-brush' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-focused' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-region' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-regions' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-tooltip' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-tooltip-name' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-shape' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-shapes' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-line' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-lines' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-bar' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-bars' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-circle' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-circles' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-arc' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-arcs' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-area' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-areas' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-empty' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-text' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-texts' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-gauge-value' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-grid' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-xgrid' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-xgrids' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-xgrid-line' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-xgrid-lines' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-xgrid-focus' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-ygrid' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-ygrids' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-ygrid-line' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-ygrid-lines' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-axis' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-axis-x' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-axis-x-label' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-axis-y' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-axis-y-label' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-axis-y2' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-axis-y2-label' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-legend-item' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-legend-item-event' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-legend-item-tile' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-legend-item-hidden' }
-        %p ...
+        %p TODO
       %hr
       %section
         %h3
           = partial :reference_item_link, locals: { id: 'class.c3-legend-item-focused' }
-        %p ...
+        %p TODO
       %hr
 
   = partial :footer
