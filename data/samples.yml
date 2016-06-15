@@ -8,55 +8,55 @@ timeseries:
 
 chart_spline:
   title: Spline Chart
-  desc: Display as Spline Chart.
+  desc: Display data as Spline Chart.
 
 simple_xy:
   title: Simple XY Line Chart
-  desc: Simple line chart with custom x.
+  desc: Simple line chart with custom x values.
 
 simple_xy_multiple:
   title: Multiple XY Line Chart
-  desc: Multiple line chart with multiple custom x.
+  desc: Multiple line chart with multiple custom x values.
 
 simple_regions:
   title: Line Chart with Regions
-  desc: Set regions for each data with style.
+  desc: Set regions for data using styles.
 
 chart_bar:
   title: Bar Chart
-  desc: Display as Bar Chart.
+  desc: Display data as Bar Chart.
 
 chart_bar_stacked:
   title: Stacked Bar Chart
-  desc: Display as Stacked Bar Chart.
+  desc: Display data as Stacked Bar Chart.
 
 chart_scatter:
   title: Scatter Plot
-  desc: Display as Scatter Plot.
+  desc: Display data as Scatter Plot.
 
 chart_pie:
   title: Pie Chart
-  desc: Display as Pie Chart.
+  desc: Display data as Pie Chart.
 
 chart_donut:
   title: Donut Chart
-  desc: Display as Donut Chart.
+  desc: Display data as Donut Chart.
 
 chart_gauge:
   title: Gauge Chart
-  desc: Display as Gauge Chart.
+  desc: Display data as Gauge Chart.
 
 chart_step:
   title: Step Chart
-  desc: Display as Step Chart.
+  desc: Display data as Step Chart.
 
 chart_area:
   title: Area Chart
-  desc: Display as Area Chart.
+  desc: Display data as Area Chart.
 
 chart_area_stacked:
   title: Stacked Area Chart
-  desc: Display as Stacked Area Chart.
+  desc: Display data as Stacked Area Chart.
 
 chart_combination:
   title: Combination Chart
@@ -72,7 +72,7 @@ axes_y2:
 
 axes_rotated:
   title: Rotated Axis
-  desc: Switch x and y axis position.
+  desc: Swap x and y axis position.
 
 axes_x_localtime:
   title: X Axis Timezone
@@ -104,7 +104,7 @@ axes_x_tick_count:
 
 axes_x_tick_fit:
   title: X Axis Tick Fitting
-  desc: Set ticks position to x of data.
+  desc: Set x axis tick position in relation to data.
 
 axes_label:
   title: Axis Label
@@ -152,19 +152,19 @@ data_stringx:
 
 data_order:
   title: Data Order
-  desc: Define data order. This will be used for stacked bar chart.
+  desc: Define data order. Used for Stacked Bar Chart.
 
 data_label:
   title: Data Label
-  desc: Show label of data.
+  desc: Show label for data.
 
 data_label_format:
   title: Data Label Format
-  desc: Format label of data.
+  desc: Format the label for data.
 
 data_color:
   title: Data Color
-  desc: Set color according to data.
+  desc: Set color for each data.
 
 options_legend:
   title: Hide Legend
@@ -224,11 +224,11 @@ options_size:
 
 options_color:
   title: Color Pattern
-  desc: Set custom color pattern.
+  desc: Set a custom color pattern.
 
 options_padding:
   title: Padding
-  desc: Change padding for the chart.
+  desc: Change the padding for the chart.
 
 point_show:
   title: Hide points
@@ -236,76 +236,76 @@ point_show:
 
 pie_label_format:
   title: Pie Label Format
-  desc: Change label format on Pie chart
+  desc: Change the label format on Pie chart
 
 transition_duration:
   title: Duration of Transition
-  desc: Set duration of transition for chart animation.
+  desc: Set the duration of transition for the chart animation.
 
 api_flow:
   title: Flow
-  desc: Load/Unload data as flowing
+  desc: Load or unload a flow of data to the chart.
 
 api_resize:
   title: Resize
-  desc: Resize chart.
+  desc: Resize the chart.
 
 api_data_name:
   title: Data Name
-  desc: Update data names.
+  desc: Update the data names.
 
 api_data_color:
   title: Data Color
-  desc: Update data colors.
+  desc: Update the data colors.
 
 api_axis_label:
   title: Axis Label
-  desc: Update axis labels.
+  desc: Update the axis labels.
 
 api_axis_range:
   title: Axis Range
-  desc: Update axis range.
+  desc: Update the axis range.
 
 api_grid_x:
   title: X Grid
-  desc: Update custom x grids.
+  desc: Update the custom x grids.
 
 transform_line:
   title: To Line Chart
-  desc: Transform to line chart.
+  desc: Transform to Line Chart.
 
 transform_spline:
   title: To Spline Chart
-  desc: Transform to spline chart.
+  desc: Transform to Spline Chart.
 
 transform_bar:
   title: To Bar Chart
-  desc: Transform to bar chart.
+  desc: Transform to Bar Chart.
 
 transform_area:
   title: To Area Chart
-  desc: Transform to area chart.
+  desc: Transform to Area Chart.
 
 transform_areaspline:
   title: To Area Spline Chart
-  desc: Transform to area spline chart.
+  desc: Transform to Area Spline Chart.
 
 transform_scatter:
   title: To Scatter Plot
-  desc: Transform to scatter plot.
+  desc: Transform to Scatter Plot.
 
 transform_pie:
   title: To Pie Chart
-  desc: Transform to pie chart.
+  desc: Transform to Pie Chart.
 
 transform_donut:
   title: To Donut Chart
-  desc: Transform to donut chart.
+  desc: Transform to Donut Chart.
 
 style_region:
   title: Style for Region
-  desc: Set style for regions.
+  desc: Set the style for regions.
 
 style_grid:
   title: Style for Grid
-  desc: Set style for grids.
+  desc: Set the style for grids.
