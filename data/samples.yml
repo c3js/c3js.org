@@ -162,6 +162,10 @@ data_label_format:
   title: Data Label Format
   desc: Format label of data.
 
+data_number_format_l10n:
+  title: Number Format Localization
+  desc: Number format localization using D3 locale settings.
+
 data_color:
   title: Data Color
   desc: Set color according to data.
