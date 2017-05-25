@@ -173,7 +173,7 @@
 
           %li Line
           = partial :reference_menu_item, locals: { id: 'line.connectNull' }
-          = partial :reference_menu_item, locals: { id: 'line.step_type' }
+          = partial :reference_menu_item, locals: { id: 'line.step.type' }
 
           %li Area
           = partial :reference_menu_item, locals: { id: 'area.zerobased' }
@@ -638,11 +638,11 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site1.com', upload: 200, download: 200, total: 400},
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site2.com', upload: 100, download: 300, total: 400},
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site3.com', upload: 300, download: 200, total: 500},
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site4.com', upload: 400, download: 100, total: 500},
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site4.com', upload: 400, download: 100, total: 500}
               &nbsp;&nbsp;&nbsp;&nbsp;],
               &nbsp;&nbsp;&nbsp;&nbsp;keys: {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// x: 'name', // it's possible to specify 'x' when category axis
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: ['upload', 'download'],
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: ['upload', 'download']
               &nbsp;&nbsp;&nbsp;&nbsp;}
               &nbsp;&nbsp;},
               &nbsp;&nbsp;axis: {
@@ -668,7 +668,7 @@
               &nbsp;&nbsp;[50, 200, 290],
               &nbsp;&nbsp;[120, 160, 230],
               &nbsp;&nbsp;[80, 130, 300],
-              &nbsp;&nbsp;[90, 220, 320],
+              &nbsp;&nbsp;[90, 220, 320]
               ]
       %hr
 
@@ -711,11 +711,11 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site1.com', upload: 200, download: 200, total: 400},
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site2.com', upload: 100, download: 300, total: 400},
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site3.com', upload: 300, download: 200, total: 500},
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site4.com', upload: 400, download: 100, total: 500},
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site4.com', upload: 400, download: 100, total: 500}
               &nbsp;&nbsp;&nbsp;&nbsp;],
               &nbsp;&nbsp;&nbsp;&nbsp;keys: {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// x: 'name', // it's possible to specify 'x' when category axis
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: ['upload', 'download'],
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: ['upload', 'download']
               &nbsp;&nbsp;&nbsp;&nbsp;}
               &nbsp;&nbsp;},
               &nbsp;&nbsp;axis: {
@@ -766,7 +766,7 @@
               data: {
               &nbsp;&nbsp;xs: {
               &nbsp;&nbsp;&nbsp;&nbsp;data1: 'x1',
-              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'x2',
+              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'x2'
               &nbsp;&nbsp;}
               }
         %h5 Example:
@@ -821,7 +821,7 @@
               data: {
               &nbsp;&nbsp;names: {
               &nbsp;&nbsp;&nbsp;&nbsp;data1: 'Data Name 1',
-              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'Data Name 2',
+              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'Data Name 2'
               &nbsp;&nbsp;}
               }
         %h5 Example:
@@ -845,7 +845,7 @@
               data: {
               &nbsp;&nbsp;classes: {
               &nbsp;&nbsp;&nbsp;&nbsp;data1: 'additional-data1-class',
-              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'additional-data2-class',
+              &nbsp;&nbsp;&nbsp;&nbsp;data2: 'additional-data2-class'
               &nbsp;&nbsp;}
               }
       %hr
@@ -863,7 +863,7 @@
               data: {
               &nbsp;&nbsp;groups: [
               &nbsp;&nbsp;&nbsp;&nbsp;['data1', 'data2'],
-              &nbsp;&nbsp;&nbsp;&nbsp;['data3'],
+              &nbsp;&nbsp;&nbsp;&nbsp;['data3']
               &nbsp;&nbsp;]
               }
         %h5 Example:
@@ -1202,9 +1202,9 @@
           = partial :reference_item_link, locals: { id: 'data.selection.multiple' }
         %p Set multiple data points selection enabled.
         %br
-        %p If this option set <code>true</code>, multile data points can have the selected state at the same time. If <code>false</code> set, only one data point can have the selected state and the others will be unselected when the new data point is selected.
+        %p If this option set <code>true</code>, multiple data points can have the selected state at the same time. If <code>false</code> set, only one data point can have the selected state and the others will be unselected when the new data point is selected.
         %h5 Default:
-        <code>false</code>
+        <code>true</code>
         %h5 Format:
         %div.sourcecode
           %pre
@@ -1714,7 +1714,7 @@
               &nbsp;&nbsp;x: {
               &nbsp;&nbsp;&nbsp;&nbsp;padding: {
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left: 0,
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right: 0,
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right: 0
               &nbsp;&nbsp;&nbsp;&nbsp;}
               &nbsp;&nbsp;}
               }
@@ -1796,8 +1796,8 @@
               axis: {
               &nbsp;&nbsp;x: {
               &nbsp;&nbsp;&nbsp;&nbsp;label: {
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your X Axis',
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-center',
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text: 'Your X Axis',
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: 'outer-center'
               &nbsp;&nbsp;&nbsp;&nbsp;}
               &nbsp;&nbsp;}
               }
@@ -1954,8 +1954,8 @@
               axis: {
               &nbsp;&nbsp;y: {
               &nbsp;&nbsp;&nbsp;&nbsp;label: {
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your Y Axis',
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-middle',
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text: 'Your Y Axis',
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: 'outer-middle'
               &nbsp;&nbsp;&nbsp;&nbsp;}
               &nbsp;&nbsp;}
               }
@@ -2236,8 +2236,8 @@
               axis: {
               &nbsp;&nbsp;y2: {
               &nbsp;&nbsp;&nbsp;&nbsp;label: {
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your Y2 Axis',
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-middle',
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text: 'Your Y2 Axis',
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: 'outer-middle'
               &nbsp;&nbsp;&nbsp;&nbsp;}
               &nbsp;&nbsp;}
               }
@@ -2410,7 +2410,7 @@
               &nbsp;&nbsp;x: {
               &nbsp;&nbsp;&nbsp;&nbsp;lines: [
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 2, text: 'Label on 2'},
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 5, text: 'Label on 5', class: 'label-5'}
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 5, text: 'Label on 5', class: 'label-5'},
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 6, text: 'Label on 6', position: 'start'}
               &nbsp;&nbsp;&nbsp;&nbsp;]
               &nbsp;&nbsp;}
@@ -2459,7 +2459,7 @@
               &nbsp;&nbsp;y: {
               &nbsp;&nbsp;&nbsp;&nbsp;lines: [
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 100, text: 'Label on 100'},
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 200, text: 'Label on 200', class: 'label-200'}
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 200, text: 'Label on 200', class: 'label-200'},
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 300, text: 'Label on 300', position: 'middle'}
               &nbsp;&nbsp;&nbsp;&nbsp;]
               &nbsp;&nbsp;}
@@ -2490,7 +2490,7 @@
           %pre
             %code.html.javascript
               regions: [
-              &nbsp;&nbsp;{axis: 'x', start: 1, end: 4, class: 'region-1-4'},
+              &nbsp;&nbsp;{axis: 'x', start: 1, end: 4, class: 'region-1-4'}
               ]
         %h5 Example:
         %ul
@@ -2587,7 +2587,7 @@
             %code.html.javascript
               legend: {
               &nbsp;&nbsp;inset: {
-              &nbsp;&nbsp;&nbsp;&nbsp;anchor: 'top-right'
+              &nbsp;&nbsp;&nbsp;&nbsp;anchor: 'top-right',
               &nbsp;&nbsp;&nbsp;&nbsp;x: 20,
               &nbsp;&nbsp;&nbsp;&nbsp;y: 10,
               &nbsp;&nbsp;&nbsp;&nbsp;step: 2
@@ -2780,7 +2780,7 @@
             %code.html.javascript
               tooltip: {
               &nbsp;&nbsp;position: function (data, width, height, element) {
-              &nbsp;&nbsp;&nbsp;&nbsp;return {top: 0, left: 0}
+              &nbsp;&nbsp;&nbsp;&nbsp;return {top: 0, left: 0};
               &nbsp;&nbsp;}
               }
         %h5 Reference:
@@ -3067,12 +3067,12 @@
 
       %section
         %h3
-          = partial :reference_item_link, locals: { id: 'line.step_type' }
+          = partial :reference_item_link, locals: { id: 'line.step.type' }
         %p Change step type for step chart.
         %br
         %p <span class="code">step</span>, <span class="code">step-before</span> and <span class="code">step-after</span> can be used.
         %h5 Default:
-        <code>step</code>
+        <code>'step'</code>
         %h5 Format:
         %div.sourcecode
           %pre
@@ -3746,7 +3746,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;['x', '2013-01-11', '2013-01-21'],
               &nbsp;&nbsp;&nbsp;&nbsp;['data1', 500, 200],
               &nbsp;&nbsp;&nbsp;&nbsp;['data2', 100, 300],
-              &nbsp;&nbsp;&nbsp;&nbsp;['data3', 200, 120],
+              &nbsp;&nbsp;&nbsp;&nbsp;['data3', 200, 120]
               &nbsp;&nbsp;],
               &nbsp;&nbsp;done: function () {
               &nbsp;&nbsp;&nbsp;&nbsp;chart.flow({
@@ -3756,7 +3756,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['data2', 100, 90, 40, 120],
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['data3', 100, 100, 300, 500]
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length: 0,
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length: 0
               &nbsp;&nbsp;&nbsp;&nbsp;});
               &nbsp;&nbsp;}
               });
@@ -4461,7 +4461,7 @@
               &nbsp;&nbsp;&nbsp;&nbsp;x: 100,
               &nbsp;&nbsp;&nbsp;&nbsp;y: 1000,
               &nbsp;&nbsp;&nbsp;&nbsp;y2: 10000
-              &nbsp;&nbsp;},
+              &nbsp;&nbsp;}
               });
         %ul
           %li
