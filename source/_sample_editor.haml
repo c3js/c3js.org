@@ -21,3 +21,4 @@
 
   editor.setTheme("ace/theme/tomorrow");
   editor.getSession().setMode("ace/mode/#{type}");
+  editor.commands.removeCommand('gotoline') // Disables the override of Command-L
