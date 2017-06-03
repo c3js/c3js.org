@@ -787,7 +787,7 @@
 </li>
 
 <li>
-<a href='#line-step_type'>line.step_type</a>
+<a href='#line-step-type'>line.step.type</a>
 
 </li>
 
@@ -1482,7 +1482,7 @@
 <br>
 <p>If this option is not specified, the chart will be generated but not be set. Instead, we can access the element by <span class="code">chart.element</span> and set it by ourselves.</p>
 <h5>Note:</h5>
-<p>When chart is not binded, c3 starts observing if <span class="code">chart.element</span> is binded by <span class="code">MutationObserver</span>. In this case, polyfill is required in IE9 and IE10 becuase they do not support <span class="code">MutationObserver</span>. On the other hand, if chart always will be binded, polyfill will not be required because <span class="code">MutationObserver</span> will never be called.</p>
+<p>When chart is not binded, c3 starts observing if <span class="code">chart.element</span> is binded by <span class="code">MutationObserver</span>. In this case, polyfill is required in IE9 and IE10 because they do not support <span class="code">MutationObserver</span>. On the other hand, if chart always will be binded, polyfill will not be required because <span class="code">MutationObserver</span> will never be called.</p>
 <h5>Default:</h5>
 <code>#chart</code>
 <h5>Format:</h5>
@@ -1784,7 +1784,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <a href='#data-url'>data.url</a>
 
 </h3>
-<p>Load a CSV or JSON file from a URL. Note that this will not work if loading via the "file://" protocol as most browsers with block XMLHTTPRequests.</p>
+<p>Load a CSV or JSON file from a URL. Note that this will not work if loading via the "file://" protocol as the most browsers will block XMLHTTPRequests.</p>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>var chart = c3.generate({
@@ -1809,11 +1809,11 @@ bindto: d3.select('#myContainer')</code></pre>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site1.com', upload: 200, download: 200, total: 400},
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site2.com', upload: 100, download: 300, total: 400},
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site3.com', upload: 300, download: 200, total: 500},
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site4.com', upload: 400, download: 100, total: 500},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site4.com', upload: 400, download: 100, total: 500}
 &nbsp;&nbsp;&nbsp;&nbsp;],
 &nbsp;&nbsp;&nbsp;&nbsp;keys: {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// x: 'name', // it's possible to specify 'x' when category axis
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: ['upload', 'download'],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: ['upload', 'download']
 &nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;},
 &nbsp;&nbsp;axis: {
@@ -1840,7 +1840,7 @@ bindto: d3.select('#myContainer')</code></pre>
 &nbsp;&nbsp;[50, 200, 290],
 &nbsp;&nbsp;[120, 160, 230],
 &nbsp;&nbsp;[80, 130, 300],
-&nbsp;&nbsp;[90, 220, 320],
+&nbsp;&nbsp;[90, 220, 320]
 ]</code></pre>
 </div>
 </section>
@@ -1886,11 +1886,11 @@ bindto: d3.select('#myContainer')</code></pre>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site1.com', upload: 200, download: 200, total: 400},
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site2.com', upload: 100, download: 300, total: 400},
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site3.com', upload: 300, download: 200, total: 500},
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site4.com', upload: 400, download: 100, total: 500},
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{name: 'www.site4.com', upload: 400, download: 100, total: 500}
 &nbsp;&nbsp;&nbsp;&nbsp;],
 &nbsp;&nbsp;&nbsp;&nbsp;keys: {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// x: 'name', // it's possible to specify 'x' when category axis
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: ['upload', 'download'],
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value: ['upload', 'download']
 &nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;},
 &nbsp;&nbsp;axis: {
@@ -1947,7 +1947,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <pre><code class='html javascript'>data: {
 &nbsp;&nbsp;xs: {
 &nbsp;&nbsp;&nbsp;&nbsp;data1: 'x1',
-&nbsp;&nbsp;&nbsp;&nbsp;data2: 'x2',
+&nbsp;&nbsp;&nbsp;&nbsp;data2: 'x2'
 &nbsp;&nbsp;}
 }</code></pre>
 </div>
@@ -2012,7 +2012,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <pre><code class='html javascript'>data: {
 &nbsp;&nbsp;names: {
 &nbsp;&nbsp;&nbsp;&nbsp;data1: 'Data Name 1',
-&nbsp;&nbsp;&nbsp;&nbsp;data2: 'Data Name 2',
+&nbsp;&nbsp;&nbsp;&nbsp;data2: 'Data Name 2'
 &nbsp;&nbsp;}
 }</code></pre>
 </div>
@@ -2039,7 +2039,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <pre><code class='html javascript'>data: {
 &nbsp;&nbsp;classes: {
 &nbsp;&nbsp;&nbsp;&nbsp;data1: 'additional-data1-class',
-&nbsp;&nbsp;&nbsp;&nbsp;data2: 'additional-data2-class',
+&nbsp;&nbsp;&nbsp;&nbsp;data2: 'additional-data2-class'
 &nbsp;&nbsp;}
 }</code></pre>
 </div>
@@ -2058,7 +2058,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <pre><code class='html javascript'>data: {
 &nbsp;&nbsp;groups: [
 &nbsp;&nbsp;&nbsp;&nbsp;['data1', 'data2'],
-&nbsp;&nbsp;&nbsp;&nbsp;['data3'],
+&nbsp;&nbsp;&nbsp;&nbsp;['data3']
 &nbsp;&nbsp;]
 }</code></pre>
 </div>
@@ -2444,9 +2444,9 @@ bindto: d3.select('#myContainer')</code></pre>
 </h3>
 <p>Set multiple data points selection enabled.</p>
 <br>
-<p>If this option set <code>true</code>, multile data points can have the selected state at the same time. If <code>false</code> set, only one data point can have the selected state and the others will be unselected when the new data point is selected.</p>
+<p>If this option set <code>true</code>, multiple data points can have the selected state at the same time. If <code>false</code> set, only one data point can have the selected state and the others will be unselected when the new data point is selected.</p>
 <h5>Default:</h5>
-<code>false</code>
+<code>true</code>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>data: {
@@ -3011,7 +3011,7 @@ bindto: d3.select('#myContainer')</code></pre>
 &nbsp;&nbsp;x: {
 &nbsp;&nbsp;&nbsp;&nbsp;padding: {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;left: 0,
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right: 0,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;right: 0
 &nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;}
 }</code></pre>
@@ -3097,8 +3097,8 @@ bindto: d3.select('#myContainer')</code></pre>
 <pre><code class='html javascript'>axis: {
 &nbsp;&nbsp;x: {
 &nbsp;&nbsp;&nbsp;&nbsp;label: {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your X Axis',
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-center',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text: 'Your X Axis',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: 'outer-center'
 &nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;}
 }</code></pre>
@@ -3270,8 +3270,8 @@ bindto: d3.select('#myContainer')</code></pre>
 <pre><code class='html javascript'>axis: {
 &nbsp;&nbsp;y: {
 &nbsp;&nbsp;&nbsp;&nbsp;label: {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your Y Axis',
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-middle',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text: 'Your Y Axis',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: 'outer-middle'
 &nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;}
 }</code></pre>
@@ -3575,8 +3575,8 @@ bindto: d3.select('#myContainer')</code></pre>
 <pre><code class='html javascript'>axis: {
 &nbsp;&nbsp;y2: {
 &nbsp;&nbsp;&nbsp;&nbsp;label: {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; text: 'Your Y2 Axis',
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; position: 'outer-middle',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text: 'Your Y2 Axis',
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;position: 'outer-middle'
 &nbsp;&nbsp;&nbsp;&nbsp;}
 &nbsp;&nbsp;}
 }</code></pre>
@@ -3762,7 +3762,7 @@ bindto: d3.select('#myContainer')</code></pre>
 &nbsp;&nbsp;x: {
 &nbsp;&nbsp;&nbsp;&nbsp;lines: [
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 2, text: 'Label on 2'},
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 5, text: 'Label on 5', class: 'label-5'}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 5, text: 'Label on 5', class: 'label-5'},
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 6, text: 'Label on 6', position: 'start'}
 &nbsp;&nbsp;&nbsp;&nbsp;]
 &nbsp;&nbsp;}
@@ -3817,7 +3817,7 @@ bindto: d3.select('#myContainer')</code></pre>
 &nbsp;&nbsp;y: {
 &nbsp;&nbsp;&nbsp;&nbsp;lines: [
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 100, text: 'Label on 100'},
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 200, text: 'Label on 200', class: 'label-200'}
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 200, text: 'Label on 200', class: 'label-200'},
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{value: 300, text: 'Label on 300', position: 'middle'}
 &nbsp;&nbsp;&nbsp;&nbsp;]
 &nbsp;&nbsp;}
@@ -3853,7 +3853,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>regions: [
-&nbsp;&nbsp;{axis: 'x', start: 1, end: 4, class: 'region-1-4'},
+&nbsp;&nbsp;{axis: 'x', start: 1, end: 4, class: 'region-1-4'}
 ]</code></pre>
 </div>
 <h5>Example:</h5>
@@ -3960,7 +3960,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <div class='sourcecode'>
 <pre><code class='html javascript'>legend: {
 &nbsp;&nbsp;inset: {
-&nbsp;&nbsp;&nbsp;&nbsp;anchor: 'top-right'
+&nbsp;&nbsp;&nbsp;&nbsp;anchor: 'top-right',
 &nbsp;&nbsp;&nbsp;&nbsp;x: 20,
 &nbsp;&nbsp;&nbsp;&nbsp;y: 10,
 &nbsp;&nbsp;&nbsp;&nbsp;step: 2
@@ -4178,7 +4178,7 @@ bindto: d3.select('#myContainer')</code></pre>
 <div class='sourcecode'>
 <pre><code class='html javascript'>tooltip: {
 &nbsp;&nbsp;position: function (data, width, height, element) {
-&nbsp;&nbsp;&nbsp;&nbsp;return {top: 0, left: 0}
+&nbsp;&nbsp;&nbsp;&nbsp;return {top: 0, left: 0};
 &nbsp;&nbsp;}
 }</code></pre>
 </div>
@@ -4497,14 +4497,14 @@ bindto: d3.select('#myContainer')</code></pre>
 <hr>
 <section>
 <h3>
-<a href='#line-step_type'>line.step_type</a>
+<a href='#line-step-type'>line.step.type</a>
 
 </h3>
 <p>Change step type for step chart.</p>
 <br>
 <p><span class="code">step</span>, <span class="code">step-before</span> and <span class="code">step-after</span> can be used.</p>
 <h5>Default:</h5>
-<code>step</code>
+<code>'step'</code>
 <h5>Format:</h5>
 <div class='sourcecode'>
 <pre><code class='html javascript'>line: {
@@ -5197,7 +5197,7 @@ chart.flow({
 &nbsp;&nbsp;&nbsp;&nbsp;['x', '2013-01-11', '2013-01-21'],
 &nbsp;&nbsp;&nbsp;&nbsp;['data1', 500, 200],
 &nbsp;&nbsp;&nbsp;&nbsp;['data2', 100, 300],
-&nbsp;&nbsp;&nbsp;&nbsp;['data3', 200, 120],
+&nbsp;&nbsp;&nbsp;&nbsp;['data3', 200, 120]
 &nbsp;&nbsp;],
 &nbsp;&nbsp;done: function () {
 &nbsp;&nbsp;&nbsp;&nbsp;chart.flow({
@@ -5207,7 +5207,7 @@ chart.flow({
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['data2', 100, 90, 40, 120],
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;['data3', 100, 100, 300, 500]
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;],
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length: 0,
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length: 0
 &nbsp;&nbsp;&nbsp;&nbsp;});
 &nbsp;&nbsp;}
 });</code></pre>
@@ -5904,7 +5904,7 @@ chart.axis.range({
 &nbsp;&nbsp;&nbsp;&nbsp;x: 100,
 &nbsp;&nbsp;&nbsp;&nbsp;y: 1000,
 &nbsp;&nbsp;&nbsp;&nbsp;y2: 10000
-&nbsp;&nbsp;},
+&nbsp;&nbsp;}
 });</code></pre>
 </div>
 <ul>
