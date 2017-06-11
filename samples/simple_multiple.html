@@ -115,7 +115,7 @@ setTimeout(function () {
 <script src="/js/foundation.min-1dfe8110.js" type="text/javascript"></script>
 <script src="/js/highlight.pack-4af5004d.js" type="text/javascript"></script>
 <script src="/js/d3-3.5.6.min-77adef17.js" type="text/javascript"></script>
-<script src="/js/c3.min-4c5bef8f.js" type="text/javascript"></script>
+<script src="/js/c3.min-5bc33fb8.js" type="text/javascript"></script>
 <script>
   hljs.initHighlightingOnLoad();
   $(document).foundation();
@@ -144,6 +144,7 @@ setTimeout(function () {
   
   editor.setTheme("ace/theme/tomorrow");
   editor.getSession().setMode("ace/mode/javascript");
+  editor.commands.removeCommand('gotoline') // Disables the override of Command-L
 </script>
 
 <script src="/js/samples/simple_multiple-64e9fd22.js" type="text/javascript"></script>
