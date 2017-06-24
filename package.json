@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run build",
     "build": "bundle exec middleman build",
-    "publish": "npm run build && gh-pages -d build"
+    "publish": "npm run build && gh-pages -d build -m \"chore: update gh-pages [skip ci]\""
   },
   "repository": {
     "type": "git",
