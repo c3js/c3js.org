@@ -1,0 +1,28 @@
+{
+  "name": "c3js.org",
+  "version": "1.0.0",
+  "description": "http://c3js.org/",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build",
+    "build": "bundle exec middleman build",
+    "publish": "npm run build && gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c3js/c3js.org.git"
+  },
+  "keywords": [
+    "c3",
+    "website"
+  ],
+  "author": "c3 community",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/c3js/c3js.org/issues"
+  },
+  "homepage": "https://github.com/c3js/c3js.org#readme",
+  "devDependencies": {
+    "gh-pages": "^1.0.0"
+  }
+}
