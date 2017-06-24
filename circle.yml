@@ -1,0 +1,11 @@
+machine:
+  node:
+    version: 6
+test:
+  override:
+    - npm run build
+deployment:
+  publish:
+    branch: master
+    commands:
+      - npm run publish
