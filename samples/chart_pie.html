@@ -130,7 +130,19 @@ setTimeout(function () {
   var editor = ace.edit('javascript-editor'),
       error  = document.getElementById('ace-error');
   
-  editor.on('change', function(e) {
+  function debounce(func, wait) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        func.apply(context, args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
+  };
+  
+  editor.on('change', debounce(function(e) {
     try {
       eval(editor.getValue());
       error.innerHTML = '';
@@ -138,7 +150,7 @@ setTimeout(function () {
     catch(e) {
       error.innerHTML = e;
     }
-  });
+  }, 300));
   
   editor.setOption("maxLines", 100);
   editor.setOption("showLineNumbers", false);
