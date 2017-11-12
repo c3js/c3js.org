@@ -7,8 +7,8 @@ var chart = c3.generate({
     grid: {
         x: {
             lines: [
-                {value: 1, text: 'Lable 1'},
-                {value: 3, text: 'Lable 3', position: 'middle'},
+                {value: 1, text: 'Label 1'},
+                {value: 3, text: 'Label 3', position: 'middle'},
                 {value: 4.5, text: 'Lable 4.5', position: 'start'}
             ]
         }
