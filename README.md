@@ -1,3 +1,5 @@
+- :construction: [DEPRECATED] :construction: The source code of this repository has moved to https://github.com/c3js/c3
+
 c3js.org
 ========
 
